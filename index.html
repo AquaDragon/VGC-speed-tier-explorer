@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pokémon VGC Speed Tier Explorer</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Pokémon VGC Speed Tier Explorer</h1>
+  <div class="container">
+    <div class="left-column">
+      <div id="tableContainer">
+        <div id="speedTable">
+          <!-- Pokémon data table will be displayed here -->
+        </div>
+      </div>
+    </div>
+    <div class="right-column">
+      <div>
+        <button id="generateButton">Generate Speed Tiers</button>
+      </div>
+      <div id="buttonContainer">
+        <p><label for="selectFormat">Format: </label>
+        <select id="selectFormat">
+          <option value="National Dex">National Dex</option>
+          <option value="VGC 2024 Regulation D">VGC 2024 Regulation D</option>
+          <option value="VGC 2024 Regulation E">VGC 2024 Regulation E</option>
+        </select> (does not work)</p>
+        <button id="sortButton">Sort Ascending/Descending</button>
+        <button id="evolutionToggle">Exclude Non-Fully Evolved</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="imports/pokedex.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
