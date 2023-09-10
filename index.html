@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokémon VGC Speed Tier Explorer</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -9,31 +11,35 @@
   <div class="container">
     <div class="left-column">
       <div id="tableContainer">
-        <div id="speedTable">
+        <div id="displayTable">
           <!-- Pokémon data table will be displayed here -->
         </div>
       </div>
     </div>
     <div class="right-column">
       <div>
-        <button id="generateButton">Generate Speed Tiers</button>
+        <button id="updateTable" class="tableButtons">Generate Table</button>
+        <button id="resetTable" class="tableButtons">Reset Rules</button>
       </div>
       <div id="buttonContainer">
-        <p><label for="selectFormat">Format: </label>
-        <select id="selectFormat">
-          <option value="National Dex">National Dex</option>
-          <option value="VGC 2024 Regulation D">VGC 2024 Regulation D</option>
-          <option value="VGC 2024 Regulation E">VGC 2024 Regulation E</option>
-        </select> (does not work)</p>
-        <button id="sortButton">Sort Ascending/Descending</button>
-        <button id="evolutionToggle">Exclude Non-Fully Evolved</button>
+        <h2>Table Rules</h2>
+        <p>
+          <label for="selectFormat">Format: </label>
+          <select id="selectFormat">
+            <option value="National Dex">National Dex</option>
+            <option value="VGC 2024 Regulation D">VGC 2024 Regulation D</option>
+            <option value="VGC 2024 Regulation E">VGC 2024 Regulation E</option>
+          </select> (does not work)
+        </p>
+        <button id="sortAscending">Sort Ascending/Descending</button>
+        <button id="filterNonFullyEvolved">Exclude Non-Fully Evolved</button>
       </div>
-
     </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="imports/pokedex.js"></script>
+  <script src="imports/nature_data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

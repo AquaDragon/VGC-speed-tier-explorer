@@ -1,133 +1,175 @@
-// Get the HTML elements
-var speedTable = document.getElementById("speedTable");
-var generateButton = document.getElementById("generateButton");
-var sortButton = document.getElementById("sortButton");
-var evolutionToggle = document.getElementById("evolutionToggle"); // Get the evolution toggle button
-var buttonContainer = document.getElementById("buttonContainer"); // Get the button container
+// Get HTML elements
+var displayTable = document.getElementById("displayTable");
+var buttonContainer = document.getElementById("buttonContainer");
 
-// Initialize sorting direction (descending by default)
-var isAscending = false;
+// Get HTML buttons
+var updateTable = document.getElementById("updateTable");
+var resetTable = document.getElementById("resetTable");
+var sortAscending = document.getElementById("sortAscending");
+var filterNonFullyEvolved = document.getElementById("filterNonFullyEvolved");
 
-// Initialize the evolution filter flag (exclude non-fully evolved by default)
-var includeNonFullyEvolved = false;
+// Initialize initial sort orders & display filters
+var isAscending = false; // descending by default
+var includeNonFullyEvolved = false; // exclude non-fully evolved by default
 
-// Function to sort Pokémon names alphabetically
+function calcSpeedStat(base, ivs, evs, nature) {
+  const level = 50;
+  const natureMods = nature ? NATURES[nature] : ['', ''];
+  const natureBoost = natureMods[0] === "sp" ? 1.1 : natureMods[1] === "sp" ? 0.9 : 1;
+
+  return Math.floor((Math.floor((base * 2 + ivs + Math.floor(evs / 4)) * level / 100) + 5) * natureBoost);
+}
+
 function sortAlphabetically(data) {
-  return Object.keys(data).sort(function(a, b) {
+  return Object.keys(data).sort(function (a, b) {
     return a.localeCompare(b);
   });
 }
 
-// Function to update button text based on current settings
+// Update the button texts based on current display settings
 function updateButtonText() {
-  // Update the evolution toggle button text
-  evolutionToggle.textContent = includeNonFullyEvolved
-    ? "Exclude Non-Fully Evolved"
-    : "Include Non-Fully Evolved";
-
-  // Update the sort button text
-  sortButton.textContent = isAscending
-    ? "Sort Descending"
-    : "Sort Ascending";
+  filterNonFullyEvolved.textContent = includeNonFullyEvolved ? "Exclude Non-Fully Evolved" : "Include Non-Fully Evolved";
+  sortAscending.textContent = isAscending ? "Sort Descending" : "Sort Ascending";
 }
 
-// Function to show the buttons
-function showButtons() {
-  buttonContainer.style.display = "inline-block"; // Display the button container inline
+// Function to generate data for each Pokémon and return an array of objects
+function generateTableData() {
+  const tableData = [];
+  const sortedDexSV = sortAlphabetically(POKEDEX_SV);
+
+  // Loop through the sorted names and generate data for each Pokémon
+  sortedDexSV.forEach(function (pokemonName) {
+    const pokemon = POKEDEX_SV[pokemonName];
+    const baseStat = pokemon.bs.sp;
+    const iv = 0;
+    const evs = 252;
+    const nature = 'Hasty';
+    const item = null;
+    const stat = calcSpeedStat(baseStat, iv, evs, nature);
+
+    // Check if the evolution filter allows including this Pokémon
+    if (includeNonFullyEvolved || !pokemon.canEvolve) {
+      // Create an object to store Pokémon data
+      const pokemonData = {
+        name: pokemonName,
+        baseStat: baseStat,
+        iv: iv,
+        ev: evs,
+        nature: nature,
+        item: item,
+        stat: stat,
+      };
+
+      tableData.push(pokemonData);
+    }
+  });
+
+  return tableData;
 }
 
-// Function to hide the buttons
-function hideButtons() {
-  buttonContainer.style.display = "none"; // Hide the button container
-}
-
-// Function to generate the Pokémon table based on the evolution filter
+// Function to generate the Pokémon table based on sort order & filters
 function generateTable() {
   // Clear the existing table
-  speedTable.innerHTML = '';
+  displayTable.innerHTML = '';
 
   // Create a table header
   var tableHeader = document.createElement("div");
   tableHeader.classList.add("table-row");
-  tableHeader.innerHTML = '<div class="table-cell speed">Base Speed</div><div class="table-cell pokemon-names">Pokémon</div>';
-  speedTable.appendChild(tableHeader);
+  tableHeader.innerHTML = `
+    <div class="table-cell">Speed</div>
+    <div class="table-cell">BST</div>
+    <div class="table-cell">IV</div>
+    <div class="table-cell">EV</div>
+    <div class="table-cell">Item</div>
+    <div class="table-cell poke-names">Pokémon</div>
+  `;
+  displayTable.appendChild(tableHeader);
 
-  // Create an object to store Pokémon grouped by speed
-  var groupedPokemon = {};
+  // Generate the Pokémon data
+  const pokemonData = generateTableData(); // Pass sortedNames as a parameter
 
-  // Sort the Pokémon names alphabetically
-  var sortedNames = sortAlphabetically(POKEDEX_SV);
+  // Sort the Pokémon data based on the sorting direction
+  pokemonData.sort(function (a, b) {
+    return isAscending ? a.stat - b.stat : b.stat - a.stat;
+  });
 
-  // Loop through the sorted names and organize Pokémon by speed
-  sortedNames.forEach(function(pokemonName) {
-    var pokemon = POKEDEX_SV[pokemonName];
-    var speed = pokemon.bs.sp;
-
-    // Check if the evolution filter allows including this Pokémon
-    if (includeNonFullyEvolved || !pokemon.canEvolve) {
-      // Check if the speed already exists in the groupedPokemon object
-      if (groupedPokemon[speed]) {
-        groupedPokemon[speed].push(pokemonName);
-      } else {
-        // Create a new entry for this speed
-        groupedPokemon[speed] = [pokemonName];
-      }
+  // Group Pokémon with identical baseStat, iv, and evs
+  const groupedPokemon = {};
+  pokemonData.forEach(function (poke) {
+    const key = `${poke.baseStat}-${poke.iv}-${poke.ev}`;
+    if (!groupedPokemon[key]) {
+      groupedPokemon[key] = [];
     }
+    groupedPokemon[key].push(poke);
   });
 
-  // Sort the Pokémon by speed based on the sorting direction
-  var sortedSpeeds = Object.keys(groupedPokemon).sort(function(a, b) {
-    return isAscending ? a - b : b - a;
-  });
+  // Loop through grouped Pokémon and create table rows
+  for (const key in groupedPokemon) {
+    if (groupedPokemon.hasOwnProperty(key)) {
+      const pokemonGroup = groupedPokemon[key];
+      const stat = pokemonGroup[0].stat;
+      const pokemonNames = pokemonGroup.map((poke) => poke.name).join(', ');
 
-  // Loop through sorted speeds and create table rows
-  sortedSpeeds.forEach(function(speed) {
-    var pokemon = groupedPokemon[speed].join(', ');
-    var tableRow = document.createElement("div");
-    tableRow.classList.add("table-row");
-    tableRow.innerHTML = `<div class="table-cell speed">${speed}</div><div class="table-cell pokemon-names">${pokemon}</div>`;
-    speedTable.appendChild(tableRow);
-  });
+      const natureMods = pokemonGroup[0].nature ? NATURES[pokemonGroup[0].nature] : ['', ''];
+      const natureIndicator = natureMods[0] === "sp" ? '+' : natureMods[1] === "sp" ? '-' : '';
+
+      var tableRow = document.createElement("div");
+      tableRow.classList.add("table-row");
+      tableRow.innerHTML = `
+        <div class="table-cell">${stat}</div>
+        <div class="table-cell">${pokemonGroup[0].baseStat}</div>
+        <div class="table-cell">${pokemonGroup[0].iv}</div>
+        <div class="table-cell">${pokemonGroup[0].ev}${natureIndicator}</div>
+        <div class="table-cell">
+          ${pokemonGroup[0].item !== null && pokemonGroup[0].item !== '' ? pokemonGroup[0].item : '-'}
+        </div>
+        <div class="table-cell poke-names">${pokemonNames}</div>`;
+      displayTable.appendChild(tableRow);
+    }
+  }
 
   // Update button text based on current settings
   updateButtonText();
-  // Show the sort and evolution toggle buttons
-  showButtons();
-  
+
   // Change the Generate button to a Reset button
-  generateButton.textContent = "Reset";
-  generateButton.removeEventListener("click", generateTable); // Remove the generateTable click event listener
-  generateButton.addEventListener("click", resetTable); // Add the resetTable click event listener
+  updateTable.textContent = "Clear Table";
+  updateTable.removeEventListener("click", generateTable); // Remove the generateTable click event listener
+  updateTable.addEventListener("click", clearTable); // Add the resetTable click event listener
+}
+
+// Function to clear the table
+function clearTable() {
+  displayTable.innerHTML = ''; // Clear the table
+  updateTable.textContent = "Generate Table"; // Change the button text back to Generate
+  updateTable.removeEventListener("click", clearTable); // Remove the resetTable click event listener
+  updateTable.addEventListener("click", generateTable); // Add the generateTable click event listener
 }
 
 // Function to reset the table to its initial state
-function resetTable() {
-  speedTable.innerHTML = ''; // Clear the table
-  generateButton.textContent = "Generate Speed Tiers"; // Change the button text back to Generate
-  generateButton.removeEventListener("click", resetTable); // Remove the resetTable click event listener
-  generateButton.addEventListener("click", generateTable); // Add the generateTable click event listener
-  // Hide the sort and evolution toggle buttons
-  hideButtons();
+function resetTableRules() {
+  // clearTable();
+  // updateTable.removeEventListener("click", resetTable); // Remove the resetTable click event listener
+  // updateTable.addEventListener("click", generateTable); // Add the generateTable click event listener
 }
 
 // Add a click event listener to the generate button
-generateButton.addEventListener("click", generateTable);
+updateTable.addEventListener("click", generateTable);
+resetTable.addEventListener("click", resetTableRules);
 
-// Function to toggle the evolution filter and regenerate the table
+// Function to toggle the evolution filter and update table
 function toggleEvolutionFilter() {
   includeNonFullyEvolved = !includeNonFullyEvolved;
   generateTable();
 }
 
-// Function to toggle sorting direction and regenerate the table
+// Function to toggle sorting direction and update table
 function toggleSortDirection() {
   isAscending = !isAscending;
   generateTable();
 }
 
-// Add click event listeners to the sortButton and evolutionToggle buttons
-sortButton.addEventListener("click", toggleSortDirection);
-evolutionToggle.addEventListener("click", toggleEvolutionFilter);
+// Add click event listeners to the sortAscending and filterNonFullyEvolved buttons
+sortAscending.addEventListener("click", toggleSortDirection);
+filterNonFullyEvolved.addEventListener("click", toggleEvolutionFilter);
 
-// Initially hide the buttons
-hideButtons();
+updateButtonText();

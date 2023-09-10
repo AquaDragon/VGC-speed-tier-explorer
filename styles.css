@@ -1,3 +1,4 @@
+/* Reset some default styles */
 body {
   font-family: sans-serif;
   margin: 0;
@@ -5,13 +6,15 @@ body {
   overflow-y: scroll;
 }
 
+/* Header styles */
 h1 {
-  text-align: center; /* Center-align the text */
-  padding: 10px; /* Add padding to the header */
-  background-color: #f9f9f9; /* Set a background color */
-  margin: 0; /* Remove default margin */
+  text-align: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin: 0;
 }
 
+/* Container styles */
 .container {
   display: flex;
   justify-content: space-between;
@@ -26,8 +29,8 @@ h1 {
   width: 45%; /* Adjust the width as needed */
 }
 
-
-#speedTable {
+/* Table styles */
+#displayTable {
   border: 1px solid #ccc;
   padding: 10px;
   margin: 10px;
@@ -47,24 +50,27 @@ h1 {
   padding: 2px;
 }
 
+/* Adjust specific table cell styles */
 .table-cell.speed {
-  flex: 1; /* Adjust the width for the speed column */
+  flex: 1;
 }
 
-.table-cell.pokemon-names {
-  flex: 5; /* Adjust the width for the Pokémon names column */
+.table-cell.poke-names {
+  flex: 5;
 }
 
+/* Style the first row with bold text */
 .table-row:first-child .table-cell {
   font-weight: bold;
 }
 
-#generateButton {
+/* Button styles */
+.tableButtons {
   font-size: 16pt;
-  width: 250px;
+  width: 200px;
   padding: 5px;
 }
 
 #buttonContainer {
-  display: block;
+  display: inline-block;
 }
