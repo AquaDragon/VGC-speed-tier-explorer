@@ -11,11 +11,12 @@ var filterNonFullyEvolved = document.getElementById("filterNonFullyEvolved");
 // Initialize initial sort orders & display filters
 var isAscending = false; // descending by default
 var includeNonFullyEvolved = false; // exclude non-fully evolved by default
+var setFastBST = 90; // BST above which IV=31, EV=252 & nature is boosting
+var setSlowBST = 70; // BST below which IV=0, EV=0 & nature is hindering
 
 function calcSpeedStat(base, ivs, evs, nature) {
   const level = 50;
-  const natureMods = nature ? NATURES[nature] : ['', ''];
-  const natureBoost = natureMods[0] === "sp" ? 1.1 : natureMods[1] === "sp" ? 0.9 : 1;
+  const natureBoost = nature === '+' ? 1.1 : nature === '-' ? 0.9 : 1;
 
   return Math.floor((Math.floor((base * 2 + ivs + Math.floor(evs / 4)) * level / 100) + 5) * natureBoost);
 }
@@ -32,6 +33,31 @@ function updateButtonText() {
   sortAscending.textContent = isAscending ? "Sort Descending" : "Sort Ascending";
 }
 
+function addBulletPoints() {
+  const buttonContainer = document.getElementById("buttonContainer");
+
+  const slowBSTBullet = document.createElement("p");
+  slowBSTBullet.innerHTML = `Pokemon with base speeds below <strong>${setSlowBST}</strong> are included in this list.`;
+
+  const fastBSTBullet = document.createElement("p");
+  fastBSTBullet.innerHTML = `Pokemon with base speeds above <strong>${setFastBST}</strong> are included in this list.`;
+
+  buttonContainer.appendChild(slowBSTBullet);
+  buttonContainer.appendChild(fastBSTBullet);
+}
+
+function generateTableEntry(pokemonName, baseStat, ivs, evs, nature, item) {
+  return {
+    name: pokemonName,
+    baseStat: baseStat,
+    iv: ivs,
+    ev: evs,
+    nature: nature,
+    item: item,
+    stat: calcSpeedStat(baseStat, ivs, evs, nature),
+  };
+}
+
 // Function to generate data for each Pokémon and return an array of objects
 function generateTableData() {
   const tableData = [];
@@ -40,32 +66,34 @@ function generateTableData() {
   // Loop through the sorted names and generate data for each Pokémon
   sortedDexSV.forEach(function (pokemonName) {
     const pokemon = POKEDEX_SV[pokemonName];
-    const baseStat = pokemon.bs.sp;
-    const iv = 0;
-    const evs = 252;
-    const nature = 'Hasty';
-    const item = null;
-    const stat = calcSpeedStat(baseStat, iv, evs, nature);
 
-    // Check if the evolution filter allows including this Pokémon
+    // Check if the filters allow including this Pokémon
     if (includeNonFullyEvolved || !pokemon.canEvolve) {
-      // Create an object to store Pokémon data
-      const pokemonData = {
-        name: pokemonName,
-        baseStat: baseStat,
-        iv: iv,
-        ev: evs,
-        nature: nature,
-        item: item,
-        stat: stat,
-      };
+      const baseStat = pokemon.bs.sp;
+      let ivs, evs, nature, stat, pokemonData;
 
+      // Neutral speed (always populate)
+      pokemonData = generateTableEntry(pokemonName, baseStat, 31, 0, '', null);
       tableData.push(pokemonData);
+
+      // Slow speed
+      if (baseStat <= setSlowBST) {
+        pokemonData = generateTableEntry(pokemonName, baseStat, 0, 0, '-', null);
+        tableData.push(pokemonData);
+      } 
+
+      // Fast speed
+      if (baseStat >= setFastBST) {
+        pokemonData = generateTableEntry(pokemonName, baseStat, 31, 252, '+', null);
+        tableData.push(pokemonData);
+      }
+
     }
   });
 
   return tableData;
 }
+
 
 // Function to generate the Pokémon table based on sort order & filters
 function generateTable() {
@@ -76,10 +104,10 @@ function generateTable() {
   var tableHeader = document.createElement("div");
   tableHeader.classList.add("table-row");
   tableHeader.innerHTML = `
-    <div class="table-cell">Speed</div>
+    <div class="table-cell speed-header">Speed</div>
     <div class="table-cell">BST</div>
-    <div class="table-cell">IV</div>
-    <div class="table-cell">EV</div>
+    <div class="table-cell">IVs</div>
+    <div class="table-cell">EVs</div>
     <div class="table-cell">Item</div>
     <div class="table-cell poke-names">Pokémon</div>
   `;
@@ -110,16 +138,13 @@ function generateTable() {
       const stat = pokemonGroup[0].stat;
       const pokemonNames = pokemonGroup.map((poke) => poke.name).join(', ');
 
-      const natureMods = pokemonGroup[0].nature ? NATURES[pokemonGroup[0].nature] : ['', ''];
-      const natureIndicator = natureMods[0] === "sp" ? '+' : natureMods[1] === "sp" ? '-' : '';
-
       var tableRow = document.createElement("div");
       tableRow.classList.add("table-row");
       tableRow.innerHTML = `
-        <div class="table-cell">${stat}</div>
+        <div class="table-cell speed">${stat}</div>
         <div class="table-cell">${pokemonGroup[0].baseStat}</div>
         <div class="table-cell">${pokemonGroup[0].iv}</div>
-        <div class="table-cell">${pokemonGroup[0].ev}${natureIndicator}</div>
+        <div class="table-cell">${pokemonGroup[0].ev}${pokemonGroup[0].nature}</div>
         <div class="table-cell">
           ${pokemonGroup[0].item !== null && pokemonGroup[0].item !== '' ? pokemonGroup[0].item : '-'}
         </div>
@@ -173,3 +198,4 @@ sortAscending.addEventListener("click", toggleSortDirection);
 filterNonFullyEvolved.addEventListener("click", toggleEvolutionFilter);
 
 updateButtonText();
+addBulletPoints();

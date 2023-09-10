@@ -51,12 +51,17 @@ h1 {
 }
 
 /* Adjust specific table cell styles */
+.table-cell.speed-header {
+  flex: 1.5;
+}
+
 .table-cell.speed {
-  flex: 1;
+  flex: 1.5;
+  font-size: 16pt;
 }
 
 .table-cell.poke-names {
-  flex: 5;
+  flex: 7;
 }
 
 /* Style the first row with bold text */
