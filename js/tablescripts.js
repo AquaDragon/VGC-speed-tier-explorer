@@ -13,8 +13,8 @@ var cboxSlowBST = document.getElementById('cboxSlowBST');
 // Initialize initial sort orders & display filters
 var isAscending = false; // descending by default
 var hasNonFullyEvolved = false; // exclude non-fully evolved by default
-var setFastBST = parseInt(dropdownFastBST.value, 10);
-var setSlowBST = parseInt(dropdownSlowBST.value, 10);
+var setFastBST = parseInt(selectFastBST.value, 10);
+var setSlowBST = parseInt(selectSlowBST.value, 10);
 
 // Function to reset the table to its initial state
 function defaultTableRules() {
@@ -22,15 +22,15 @@ function defaultTableRules() {
   hasNonFullyEvolved = false;
   updateButtonText();
 
-  selectFormat.value = 'VGC 2024 Regulation E';
+  selectFormat.value = 'SV Ranked Battle Regulation E';
 
   cboxFastBST.checked = true;
-  dropdownFastBST.value = '90';
-  setFastBST = parseInt(dropdownFastBST.value, 10);
+  selectFastBST.value = '90';
+  setFastBST = parseInt(selectFastBST.value, 10);
 
   cboxSlowBST.checked = true;
-  dropdownSlowBST.value = '70';
-  setSlowBST = parseInt(dropdownSlowBST.value, 10);
+  selectSlowBST.value = '70';
+  setSlowBST = parseInt(selectSlowBST.value, 10);
 
   clearTable();
 }
@@ -208,15 +208,15 @@ cboxSlowBST.addEventListener('change', function () {
   generateTable();
 });
 
-// Event listeners for dropdown value changes
-dropdownFastBST.addEventListener('change', function () {
-  setFastBST = parseInt(dropdownFastBST.value, 10);
+// Event listeners for select value changes
+selectFastBST.addEventListener('change', function () {
+  setFastBST = parseInt(selectFastBST.value, 10);
   generateTableData();
   generateTable();
 });
 
-dropdownSlowBST.addEventListener('change', function () {
-  setSlowBST = parseInt(dropdownSlowBST.value, 10);
+selectSlowBST.addEventListener('change', function () {
+  setSlowBST = parseInt(selectSlowBST.value, 10);
   generateTableData();
   generateTable();
 });

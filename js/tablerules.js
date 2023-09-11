@@ -1,11 +1,29 @@
 // Get HTML elements
 var selectFormat = document.getElementById('selectFormat');
 
-var dropdownFastBST = document.getElementById('dropdownFastBST');
-var dropdownSlowBST = document.getElementById('dropdownSlowBST');
+var selectFastBST = document.getElementById('selectFastBST');
+var selectSlowBST = document.getElementById('selectSlowBST');
 
-// Initialize dropdown box options for selecting MIN & MAX speeds
-function initalizeBSTDropdown() {
+function initializeFormatSelect() {
+  const formatOptions = [
+    { value: 'SV Ranked Battle Regulation E', text: 'SV Ranked Battle Regulation E' },
+    { value: 'SV Ranked Battle Regulation D', text: 'SV Ranked Battle Regulation D' },
+    { value: 'SV National Dex', text: 'SV National Dex' },
+  ];
+
+  formatOptions.forEach((optionData) => {
+    const option = document.createElement('option');
+    option.value = optionData.value;
+    option.text = optionData.text;
+    selectFormat.appendChild(option);
+  });
+
+  // Set default value
+  selectFormat.value = 'SV Ranked Battle Regulation E';
+}
+
+// Initialize dropdown options for selecting MIN & MAX speeds
+function initalizeBSTselect() {
   let fastOptions = [];
   let slowOptions = [];
 
@@ -14,23 +32,24 @@ function initalizeBSTDropdown() {
     option.value = i;
     option.text = i;
     fastOptions.push(option);
-    slowOptions.push(option.cloneNode(true)); // Clone the option for the slow dropdown
+    slowOptions.push(option.cloneNode(true)); // Clone the option for the slow select
   }
 
   fastOptions.sort((a, b) => b.value - a.value);
   slowOptions.sort((a, b) => a.value - b.value);
 
   fastOptions.forEach((option) => {
-    dropdownFastBST.appendChild(option);
+    selectFastBST.appendChild(option);
   });
 
   slowOptions.forEach((option) => {
-    dropdownSlowBST.appendChild(option);
+    selectSlowBST.appendChild(option);
   });
 
   // Set default values
-  dropdownFastBST.value = '90';
-  dropdownSlowBST.value = '70';
+  selectFastBST.value = '90';
+  selectSlowBST.value = '70';
 }
 
-initalizeBSTDropdown();
+initializeFormatSelect();
+initalizeBSTselect();
