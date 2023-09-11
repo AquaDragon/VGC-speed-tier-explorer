@@ -18,8 +18,8 @@
       </div>
       <div class="right-column">
         <div>
-          <button id="updateTable" class="tableButtons">Generate Table</button>
-          <button id="resetTable" class="tableButtons">Reset Rules</button>
+          <button id="btnUpdateTable" class="tableButtons">Generate Table</button>
+          <button id="btnResetTable" class="tableButtons">Reset Rules</button>
         </div>
         <div id="buttonContainer">
           <h2>Table Rules</h2>
@@ -32,19 +32,19 @@
             </select>
             (does not work)
           </p>
-          <button id="sortAscending">Sort Ascending/Descending</button>
-          <button id="filterNonFullyEvolved">Exclude Non-Fully Evolved</button>
+          <button id="btnSortAscending">Sort Ascending/Descending</button>
+          <button id="btnFilterNonFullyEvolved">Exclude Non-Fully Evolved</button>
         </div>
         <div>
-          <label for="fastBSTCheckbox">
-            <input type="checkbox" id="fastBSTCheckbox" checked />Include MAX
+          <label for="cboxFastBST">
+            <input type="checkbox" id="cboxFastBST" checked />Include MAX
             speeds for Pokemon with base speeds above
-            <select id="fastBSTDropdown"></select>. 
+            <select id="dropdownFastBST"></select>. 
           </label><br />
-          <label for="slowBSTCheckbox">
-            <input type="checkbox" id="slowBSTCheckbox" checked />Include MIN
+          <label for="cboxSlowBST">
+            <input type="checkbox" id="cboxSlowBST" checked />Include MIN
             speeds for Pokemon with base speeds below
-            <select id="slowBSTDropdown"></select>.
+            <select id="dropdownSlowBST"></select>.
           </label>
         </div>
       </div>
@@ -53,6 +53,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="imports/pokedex.js"></script>
     <script src="imports/nature_data.js"></script>
-    <script src="script.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/tablerules.js"></script>
+    <script src="js/tablescripts.js"></script>
   </body>
 </html>

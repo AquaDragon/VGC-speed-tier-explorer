@@ -1,72 +1,36 @@
 // Get HTML elements
 var displayTable = document.getElementById('displayTable');
-var buttonContainer = document.getElementById('buttonContainer');
 
 // Get HTML buttons
-var updateTable = document.getElementById('updateTable');
-var resetTable = document.getElementById('resetTable');
-var sortAscending = document.getElementById('sortAscending');
-var filterNonFullyEvolved = document.getElementById('filterNonFullyEvolved');
+var btnUpdateTable = document.getElementById('btnUpdateTable');
+var btnResetTable = document.getElementById('btnResetTable');
+var btnSortAscending = document.getElementById('btnSortAscending');
+var btnFilterNonFullyEvolved = document.getElementById('btnFilterNonFullyEvolved');
 
-// Get HTML form elements
-var selectFormat = document.getElementById('selectFormat');
-var fastBSTCheckbox = document.getElementById('fastBSTCheckbox');
-var fastBSTLabel = document.querySelector('label[for="fastBSTCheckbox"]');
-var fastBSTInput = document.getElementById('fastBSTInput');
-var slowBSTCheckbox = document.getElementById('slowBSTCheckbox');
-var slowBSTLabel = document.querySelector('label[for="slowBSTCheckbox"]');
-var slowBSTInput = document.getElementById('slowBSTInput');
+var cboxFastBST = document.getElementById('cboxFastBST');
+var cboxSlowBST = document.getElementById('cboxSlowBST');
 
 // Initialize initial sort orders & display filters
 var isAscending = false; // descending by default
-var includeNonFullyEvolved = false; // exclude non-fully evolved by default
-
-const fastBSTDropdown = document.getElementById('fastBSTDropdown');
-const slowBSTDropdown = document.getElementById('slowBSTDropdown');
-
-let fastOptions = [];
-let slowOptions = [];
-
-// Generate dropdown options in increments of 5 from 5 to 200
-for (let i = 5; i <= 200; i += 5) {
-  const option = document.createElement('option');
-  option.value = i;
-  option.text = i;
-  fastOptions.push(option);
-  slowOptions.push(option.cloneNode(true)); // Clone the option for the slow dropdown
-}
-
-fastOptions.sort((a, b) => b.value - a.value);
-slowOptions.sort((a, b) => a.value - b.value);
-
-fastOptions.forEach((option) => {
-  fastBSTDropdown.appendChild(option);
-});
-
-slowOptions.forEach((option) => {
-  slowBSTDropdown.appendChild(option);
-});
-
-fastBSTDropdown.value = '90';
-slowBSTDropdown.value = '70';
-var setFastBST = parseInt(fastBSTDropdown.value, 10);
-var setSlowBST = parseInt(slowBSTDropdown.value, 10);
+var hasNonFullyEvolved = false; // exclude non-fully evolved by default
+var setFastBST = parseInt(dropdownFastBST.value, 10);
+var setSlowBST = parseInt(dropdownSlowBST.value, 10);
 
 // Function to reset the table to its initial state
 function defaultTableRules() {
   isAscending = false;
-  includeNonFullyEvolved = false;
+  hasNonFullyEvolved = false;
   updateButtonText();
 
   selectFormat.value = 'VGC 2024 Regulation E';
 
-  fastBSTCheckbox.checked = true;
-  fastBSTDropdown.value = '90';
-  setFastBST = parseInt(fastBSTDropdown.value, 10);
+  cboxFastBST.checked = true;
+  dropdownFastBST.value = '90';
+  setFastBST = parseInt(dropdownFastBST.value, 10);
 
-  slowBSTCheckbox.checked = true;
-  slowBSTDropdown.value = '70';
-  setSlowBST = parseInt(slowBSTDropdown.value, 10);
+  cboxSlowBST.checked = true;
+  dropdownSlowBST.value = '70';
+  setSlowBST = parseInt(dropdownSlowBST.value, 10);
 
   clearTable();
 }
@@ -75,25 +39,16 @@ function calcSpeedStat(base, ivs, evs, nature) {
   const level = 50;
   const natureBoost = nature === '+' ? 1.1 : nature === '-' ? 0.9 : 1;
   return Math.floor(
-    (Math.floor(((base * 2 + ivs + Math.floor(evs / 4)) * level) / 100) + 5) *
-      natureBoost
+    (Math.floor(((base * 2 + ivs + Math.floor(evs / 4)) * level) / 100) + 5) * natureBoost
   );
-}
-
-function sortAlphabetically(data) {
-  return Object.keys(data).sort(function (a, b) {
-    return a.localeCompare(b);
-  });
 }
 
 // Update the button texts based on current display settings
 function updateButtonText() {
-  filterNonFullyEvolved.textContent = includeNonFullyEvolved
+  btnFilterNonFullyEvolved.textContent = hasNonFullyEvolved
     ? 'Exclude Non-Fully Evolved'
     : 'Include Non-Fully Evolved';
-  sortAscending.textContent = isAscending
-    ? 'Sort Descending'
-    : 'Sort Ascending';
+  btnSortAscending.textContent = isAscending ? 'Sort Descending' : 'Sort Ascending';
 }
 
 function generateTableEntry(pokemonName, baseStat, ivs, evs, nature, item) {
@@ -118,7 +73,7 @@ function generateTableData() {
     const pokemon = POKEDEX_SV[pokemonName];
 
     // Check if the filters allow including this Pokémon
-    if (includeNonFullyEvolved || !pokemon.canEvolve) {
+    if (hasNonFullyEvolved || !pokemon.canEvolve) {
       const baseStat = pokemon.bs.sp;
       let ivs, evs, nature, stat, pokemonData;
 
@@ -127,28 +82,14 @@ function generateTableData() {
       tableData.push(pokemonData);
 
       // Slow speed
-      if (baseStat <= setSlowBST && slowBSTCheckbox.checked) {
-        pokemonData = generateTableEntry(
-          pokemonName,
-          baseStat,
-          0,
-          0,
-          '-',
-          null
-        );
+      if (baseStat <= setSlowBST && cboxSlowBST.checked) {
+        pokemonData = generateTableEntry(pokemonName, baseStat, 0, 0, '-', null);
         tableData.push(pokemonData);
       }
 
       // Fast speed
-      if (baseStat >= setFastBST && fastBSTCheckbox.checked) {
-        pokemonData = generateTableEntry(
-          pokemonName,
-          baseStat,
-          31,
-          252,
-          '+',
-          null
-        );
+      if (baseStat >= setFastBST && cboxFastBST.checked) {
+        pokemonData = generateTableEntry(pokemonName, baseStat, 31, 252, '+', null);
         tableData.push(pokemonData);
       }
     }
@@ -206,9 +147,7 @@ function generateTable() {
         <div class="table-cell speed">${stat}</div>
         <div class="table-cell">${pokemonGroup[0].baseStat}</div>
         <div class="table-cell">${pokemonGroup[0].iv}</div>
-        <div class="table-cell">${pokemonGroup[0].ev}${
-          pokemonGroup[0].nature
-        }</div>
+        <div class="table-cell">${pokemonGroup[0].ev}${pokemonGroup[0].nature}</div>
         <div class="table-cell">
           ${
             pokemonGroup[0].item !== null && pokemonGroup[0].item !== ''
@@ -225,26 +164,26 @@ function generateTable() {
   updateButtonText();
 
   // Change the Generate button to a Reset button
-  updateTable.textContent = 'Clear Table';
-  updateTable.removeEventListener('click', generateTable); // Remove the generateTable click event listener
-  updateTable.addEventListener('click', clearTable); // Add the resetTable click event listener
+  btnUpdateTable.textContent = 'Clear Table';
+  btnUpdateTable.removeEventListener('click', generateTable); // Remove the generateTable click event listener
+  btnUpdateTable.addEventListener('click', clearTable); // Add the btnResetTable click event listener
 }
 
 // Function to clear the table
 function clearTable() {
   displayTable.innerHTML = ''; // Clear the table
-  updateTable.textContent = 'Generate Table'; // Change the button text back to Generate
-  updateTable.removeEventListener('click', clearTable); // Remove the resetTable click event listener
-  updateTable.addEventListener('click', generateTable); // Add the generateTable click event listener
+  btnUpdateTable.textContent = 'Generate Table'; // Change the button text back to Generate
+  btnUpdateTable.removeEventListener('click', clearTable); // Remove the btnResetTable click event listener
+  btnUpdateTable.addEventListener('click', generateTable); // Add the generateTable click event listener
 }
 
 // Add a click event listener to the generate button
-updateTable.addEventListener('click', generateTable);
-resetTable.addEventListener('click', defaultTableRules);
+btnUpdateTable.addEventListener('click', generateTable);
+btnResetTable.addEventListener('click', defaultTableRules);
 
 // Function to toggle the evolution filter and update table
 function toggleEvolutionFilter() {
-  includeNonFullyEvolved = !includeNonFullyEvolved;
+  hasNonFullyEvolved = !hasNonFullyEvolved;
   generateTable();
 }
 
@@ -254,30 +193,30 @@ function toggleSortDirection() {
   generateTable();
 }
 
-// Add click event listeners to the sortAscending and filterNonFullyEvolved buttons
-sortAscending.addEventListener('click', toggleSortDirection);
-filterNonFullyEvolved.addEventListener('click', toggleEvolutionFilter);
+// Add click event listeners to the btnSortAscending and btnFilterNonFullyEvolved buttons
+btnSortAscending.addEventListener('click', toggleSortDirection);
+btnFilterNonFullyEvolved.addEventListener('click', toggleEvolutionFilter);
 
 // Event listeners for checkboxes
-fastBSTCheckbox.addEventListener('change', function () {
+cboxFastBST.addEventListener('change', function () {
   generateTableData();
   generateTable();
 });
 
-slowBSTCheckbox.addEventListener('change', function () {
+cboxSlowBST.addEventListener('change', function () {
   generateTableData();
   generateTable();
 });
 
 // Event listeners for dropdown value changes
-fastBSTDropdown.addEventListener('change', function () {
-  setFastBST = parseInt(fastBSTDropdown.value, 10);
+dropdownFastBST.addEventListener('change', function () {
+  setFastBST = parseInt(dropdownFastBST.value, 10);
   generateTableData();
   generateTable();
 });
 
-slowBSTDropdown.addEventListener('change', function () {
-  setSlowBST = parseInt(slowBSTDropdown.value, 10);
+dropdownSlowBST.addEventListener('change', function () {
+  setSlowBST = parseInt(dropdownSlowBST.value, 10);
   generateTableData();
   generateTable();
 });
