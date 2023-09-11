@@ -8,16 +8,72 @@ var resetTable = document.getElementById("resetTable");
 var sortAscending = document.getElementById("sortAscending");
 var filterNonFullyEvolved = document.getElementById("filterNonFullyEvolved");
 
+// Get HTML form elements
+var selectFormat = document.getElementById("selectFormat");
+var fastBSTCheckbox = document.getElementById("fastBSTCheckbox");
+var fastBSTLabel = document.querySelector('label[for="fastBSTCheckbox"]');
+var fastBSTInput = document.getElementById("fastBSTInput");
+var slowBSTCheckbox = document.getElementById("slowBSTCheckbox");
+var slowBSTLabel = document.querySelector('label[for="slowBSTCheckbox"]');
+var slowBSTInput = document.getElementById("slowBSTInput");
+
 // Initialize initial sort orders & display filters
 var isAscending = false; // descending by default
 var includeNonFullyEvolved = false; // exclude non-fully evolved by default
-var setFastBST = 90; // BST above which IV=31, EV=252 & nature is boosting
-var setSlowBST = 70; // BST below which IV=0, EV=0 & nature is hindering
+
+const fastBSTDropdown = document.getElementById("fastBSTDropdown");
+const slowBSTDropdown = document.getElementById("slowBSTDropdown");
+
+let fastOptions = [];
+let slowOptions = [];
+
+// Generate dropdown options in increments of 5 from 5 to 200
+for (let i = 5; i <= 200; i += 5) {
+  const option = document.createElement("option");
+  option.value = i;
+  option.text = i;
+  fastOptions.push(option);
+  slowOptions.push(option.cloneNode(true)); // Clone the option for the slow dropdown
+}
+
+fastOptions.sort((a, b) => b.value - a.value);
+slowOptions.sort((a, b) => a.value - b.value);
+
+fastOptions.forEach((option) => {
+  fastBSTDropdown.appendChild(option);
+});
+
+slowOptions.forEach((option) => {
+  slowBSTDropdown.appendChild(option);
+});
+
+fastBSTDropdown.value = "90";
+slowBSTDropdown.value = "70";
+var setFastBST = parseInt(fastBSTDropdown.value, 10);
+var setSlowBST = parseInt(slowBSTDropdown.value, 10);
+
+// Function to reset the table to its initial state
+function defaultTableRules() {
+  isAscending = false;
+  includeNonFullyEvolved = false;
+  updateButtonText();
+
+  selectFormat.value = "VGC 2024 Regulation E";
+
+  fastBSTCheckbox.checked = true;
+  fastBSTDropdown.value = "90";
+  setFastBST = parseInt(fastBSTDropdown.value, 10);
+
+  slowBSTCheckbox.checked = true;
+  slowBSTDropdown.value = "70";
+  setSlowBST = parseInt(slowBSTDropdown.value, 10);
+  
+  clearTable();
+}
 
 function calcSpeedStat(base, ivs, evs, nature) {
   const level = 50;
   const natureBoost = nature === '+' ? 1.1 : nature === '-' ? 0.9 : 1;
-
   return Math.floor((Math.floor((base * 2 + ivs + Math.floor(evs / 4)) * level / 100) + 5) * natureBoost);
 }
 
@@ -31,19 +87,6 @@ function sortAlphabetically(data) {
 function updateButtonText() {
   filterNonFullyEvolved.textContent = includeNonFullyEvolved ? "Exclude Non-Fully Evolved" : "Include Non-Fully Evolved";
   sortAscending.textContent = isAscending ? "Sort Descending" : "Sort Ascending";
-}
-
-function addBulletPoints() {
-  const buttonContainer = document.getElementById("buttonContainer");
-
-  const slowBSTBullet = document.createElement("p");
-  slowBSTBullet.innerHTML = `Pokemon with base speeds below <strong>${setSlowBST}</strong> are included in this list.`;
-
-  const fastBSTBullet = document.createElement("p");
-  fastBSTBullet.innerHTML = `Pokemon with base speeds above <strong>${setFastBST}</strong> are included in this list.`;
-
-  buttonContainer.appendChild(slowBSTBullet);
-  buttonContainer.appendChild(fastBSTBullet);
 }
 
 function generateTableEntry(pokemonName, baseStat, ivs, evs, nature, item) {
@@ -77,17 +120,16 @@ function generateTableData() {
       tableData.push(pokemonData);
 
       // Slow speed
-      if (baseStat <= setSlowBST) {
+      if (baseStat <= setSlowBST && slowBSTCheckbox.checked) {
         pokemonData = generateTableEntry(pokemonName, baseStat, 0, 0, '-', null);
         tableData.push(pokemonData);
       } 
 
       // Fast speed
-      if (baseStat >= setFastBST) {
+      if (baseStat >= setFastBST && fastBSTCheckbox.checked) {
         pokemonData = generateTableEntry(pokemonName, baseStat, 31, 252, '+', null);
         tableData.push(pokemonData);
       }
-
     }
   });
 
@@ -170,16 +212,9 @@ function clearTable() {
   updateTable.addEventListener("click", generateTable); // Add the generateTable click event listener
 }
 
-// Function to reset the table to its initial state
-function resetTableRules() {
-  // clearTable();
-  // updateTable.removeEventListener("click", resetTable); // Remove the resetTable click event listener
-  // updateTable.addEventListener("click", generateTable); // Add the generateTable click event listener
-}
-
 // Add a click event listener to the generate button
 updateTable.addEventListener("click", generateTable);
-resetTable.addEventListener("click", resetTableRules);
+resetTable.addEventListener("click", defaultTableRules);
 
 // Function to toggle the evolution filter and update table
 function toggleEvolutionFilter() {
@@ -197,5 +232,28 @@ function toggleSortDirection() {
 sortAscending.addEventListener("click", toggleSortDirection);
 filterNonFullyEvolved.addEventListener("click", toggleEvolutionFilter);
 
+// Event listeners for checkboxes
+fastBSTCheckbox.addEventListener("change", function () {
+  generateTableData();
+  generateTable();
+});
+
+slowBSTCheckbox.addEventListener("change", function () {
+  generateTableData();
+  generateTable();
+});
+
+// Event listeners for dropdown value changes
+fastBSTDropdown.addEventListener("change", function () {
+  setFastBST = parseInt(fastBSTDropdown.value, 10);
+  generateTableData();
+  generateTable();
+});
+
+slowBSTDropdown.addEventListener("change", function () {
+  setSlowBST = parseInt(slowBSTDropdown.value, 10);
+  generateTableData();
+  generateTable();
+});
+
 updateButtonText();
-addBulletPoints();
