@@ -1,55 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokémon VGC Speed Tier Explorer</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <h1>Pokémon VGC Speed Tier Explorer</h1>
-  <div class="container">
-    <div class="left-column">
-      <div id="tableContainer">
-        <div id="displayTable">
-          <!-- Pokémon data table will be displayed here -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon VGC Speed Tier Explorer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <h1>Pokémon VGC Speed Tier Explorer</h1>
+    <div class="container">
+      <div class="left-column">
+        <div id="tableContainer">
+          <div id="displayTable">
+            <!-- Pokémon data table will be displayed here -->
+          </div>
+        </div>
+      </div>
+      <div class="right-column">
+        <div>
+          <button id="updateTable" class="tableButtons">Generate Table</button>
+          <button id="resetTable" class="tableButtons">Reset Rules</button>
+        </div>
+        <div id="buttonContainer">
+          <h2>Table Rules</h2>
+          <p>
+            <label for="selectFormat">Format: </label>
+            <select id="selectFormat">
+              <option value="National Dex">National Dex</option>
+              <option value="VGC 2024 Regulation D">VGC 2024 Regulation D</option>
+              <option value="VGC 2024 Regulation E">VGC 2024 Regulation E</option>
+            </select>
+            (does not work)
+          </p>
+          <button id="sortAscending">Sort Ascending/Descending</button>
+          <button id="filterNonFullyEvolved">Exclude Non-Fully Evolved</button>
+        </div>
+        <div>
+          <label for="fastBSTCheckbox">
+            <input type="checkbox" id="fastBSTCheckbox" checked />Include MAX
+            speeds for Pokemon with base speeds above
+            <select id="fastBSTDropdown"></select>. 
+          </label><br />
+          <label for="slowBSTCheckbox">
+            <input type="checkbox" id="slowBSTCheckbox" checked />Include MIN
+            speeds for Pokemon with base speeds below
+            <select id="slowBSTDropdown"></select>.
+          </label>
         </div>
       </div>
     </div>
-    <div class="right-column">
-      <div>
-        <button id="updateTable" class="tableButtons">Generate Table</button>
-        <button id="resetTable" class="tableButtons">Reset Rules</button>
-      </div>
-      <div id="buttonContainer">
-        <h2>Table Rules</h2>
-        <p>
-          <label for="selectFormat">Format: </label>
-          <select id="selectFormat">
-            <option value="National Dex">National Dex</option>
-            <option value="VGC 2024 Regulation D">VGC 2024 Regulation D</option>
-            <option value="VGC 2024 Regulation E">VGC 2024 Regulation E</option>
-          </select> (does not work)
-        </p>
-        <button id="sortAscending">Sort Ascending/Descending</button>
-        <button id="filterNonFullyEvolved">Exclude Non-Fully Evolved</button>
-      </div>
-      <div>
-        <label for="fastBSTCheckbox">
-          <input type="checkbox" id="fastBSTCheckbox" checked>Include MAX speeds for Pokemon with base speeds above
-          <select id="fastBSTDropdown"></select>.
-        </label><br/>
-        <label for="slowBSTCheckbox">
-          <input type="checkbox" id="slowBSTCheckbox" checked>Include MIN speeds for Pokemon with base speeds below
-          <select id="slowBSTDropdown"></select>.
-        </label>
-      </div>
-    </div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="imports/pokedex.js"></script>
-  <script src="imports/nature_data.js"></script>
-  <script src="script.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="imports/pokedex.js"></script>
+    <script src="imports/nature_data.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

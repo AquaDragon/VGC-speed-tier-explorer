@@ -1,0 +1,2 @@
+# Exclude files and folders from Prettier formatting
+/imports/**
