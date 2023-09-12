@@ -22,7 +22,7 @@ function defaultTableRules() {
   hasNonFullyEvolved = false;
   updateButtonText();
 
-  selectFormat.value = 'SV Ranked Battle Regulation E';
+  selectFormat.value = 'FORMAT_SV_REGULATION_E';
 
   cboxFastBST.checked = true;
   selectFastBST.value = '90';
@@ -66,13 +66,13 @@ function generateTableEntry(pokemonName, baseStat, ivs, evs, nature, item) {
 // Function to generate data for each Pokémon and return an array of objects
 function generateTableData() {
   const tableData = [];
-  const sortedDexSV = sortAlphabetically(POKEDEX_SV);
+  const selectedFormat = formatOptions.find((option) => option.value === selectFormat.value).var;
+  const format = selectedFormat ? sortAlphaGetKeys(selectedFormat) : sortAlphaGetKeys(POKEDEX_SV);
 
   // Loop through the sorted names and generate data for each Pokémon
-  sortedDexSV.forEach(function (pokemonName) {
-    const pokemon = POKEDEX_SV[pokemonName];
+  format.forEach(function (pokemonName) {
+    const pokemon = POKEDEX_SV_NATDEX[pokemonName];
 
-    // Check if the filters allow including this Pokémon
     if (hasNonFullyEvolved || !pokemon.canEvolve) {
       const baseStat = pokemon.bs.sp;
       let ivs, evs, nature, stat, pokemonData;
@@ -209,6 +209,11 @@ cboxSlowBST.addEventListener('change', function () {
 });
 
 // Event listeners for select value changes
+selectFormat.addEventListener('change', function () {
+  generateTableData();
+  generateTable();
+});
+
 selectFastBST.addEventListener('change', function () {
   setFastBST = parseInt(selectFastBST.value, 10);
   generateTableData();

@@ -7,7 +7,6 @@ A tool for exploring Pokémon speed tiers in various VGC formats. Optimized for 
 https://aquadragon.github.io/vgc-speed-tier-explorer/
 
 ### To-do (not in any order):
-- Filter allowed Pokémon based on each format ⭐
 - Add boosts from items: Choice Scarf (x1.5), Iron Ball (x0.5)
 - Add boosts from abilities: Protosynthesis/Quark Drive (x1.5), weather-based abilities (x2), Unburden (x2), Commander (+2)
 - Add boosts from moves: Tailwind (x2), Dragon Dance/Quiver Dance (+1)

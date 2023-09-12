@@ -4,13 +4,28 @@ var selectFormat = document.getElementById('selectFormat');
 var selectFastBST = document.getElementById('selectFastBST');
 var selectSlowBST = document.getElementById('selectSlowBST');
 
-function initializeFormatSelect() {
-  const formatOptions = [
-    { value: 'SV Ranked Battle Regulation E', text: 'SV Ranked Battle Regulation E' },
-    { value: 'SV Ranked Battle Regulation D', text: 'SV Ranked Battle Regulation D' },
-    { value: 'SV National Dex', text: 'SV National Dex' },
-  ];
+const formatOptions = [
+  { value: 'SV National Dex', text: 'National Dex', var: null },
+  {
+    value: 'FORMAT_SV_REGULATION_E',
+    text: 'Ranked Battle Regulation Set E (unconfirmed)',
+    var: FORMAT_SV_REGULATION_E,
+  },
+  {
+    value: 'FORMAT_SV_REGULATION_D',
+    text: 'Ranked Battle Regulation Set D',
+    var: FORMAT_SV_REGULATION_D,
+  },
+  {
+    value: 'FORMAT_SV_REGULATION_C',
+    text: 'Ranked Battle Regulation Set C',
+    var: FORMAT_SV_REGULATION_C,
+  },
+  { value: 'FORMAT_SV_SERIES_2', text: 'Ranked Battle Series 2', var: FORMAT_SV_SERIES_2 },
+  { value: 'FORMAT_SV_SERIES_1', text: 'Ranked Battle Series 1', var: FORMAT_SV_SERIES_1 },
+];
 
+function initializeFormatSelect() {
   formatOptions.forEach((optionData) => {
     const option = document.createElement('option');
     option.value = optionData.value;
@@ -19,7 +34,7 @@ function initializeFormatSelect() {
   });
 
   // Set default value
-  selectFormat.value = 'SV Ranked Battle Regulation E';
+  selectFormat.value = 'FORMAT_SV_REGULATION_E';
 }
 
 // Initialize dropdown options for selecting MIN & MAX speeds
