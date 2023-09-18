@@ -13,3 +13,11 @@ https://aquadragon.github.io/vgc-speed-tier-explorer/
 - Group regional formes into a single entry if they have the same base speed
 - Update visuals: sprites, buttons & layout
 - Allow user to add custom entries to the table
+
+
+### Development
+- Run `npm run format` to format the code using Prettier.
+
+
+## Credits
+- Ability & Pokédex source data: https://github.com/nerd-of-now/NCP-VGC-Damage-Calculator/
