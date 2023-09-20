@@ -75,14 +75,19 @@ h1 {
 
 /* Button styles */
 .tableButtons {
-  font-size: 16pt;
-  width: 200px;
+  font-size: 12pt;
+  width: 150px;
   padding: 5px;
 }
 
 #buttonContainer {
   display: inline-block;
   padding: 10px 0;
+}
+
+.selectFormat {
+  font-size: 12pt;
+  padding: 5px;
 }
 
 input[type='number'] {

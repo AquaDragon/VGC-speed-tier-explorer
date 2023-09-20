@@ -17,15 +17,13 @@
         </div>
       </div>
       <div class="right-column">
-        <div>
-          <button id="btnUpdateTable" class="tableButtons">Generate Table</button>
-          <button id="btnResetTable" class="tableButtons">Reset Rules</button>
-        </div>
         <div id="buttonContainer">
-          <h2>Table Rules</h2>
+          <h2>Selection Rules</h2>
+          <button id="btnResetTable" class="tableButtons">Reset to Default</button>
+          <button id="btnDeselectAll" class="tableButtons">Deselect All</button>
           <p>
             <label for="selectFormat">Format: </label>
-            <select id="selectFormat"></select>
+            <select id="selectFormat" class="selectFormat"></select>
           </p>
           <button id="btnSortAscending">Sort Ascending/Descending</button>
           <button id="btnFilterNonFullyEvolved">Exclude Non-Fully Evolved</button>

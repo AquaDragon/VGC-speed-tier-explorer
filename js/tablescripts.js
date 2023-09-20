@@ -2,8 +2,8 @@
 var displayTable = document.getElementById('displayTable');
 
 // Get HTML buttons
-var btnUpdateTable = document.getElementById('btnUpdateTable');
 var btnResetTable = document.getElementById('btnResetTable');
+var btnDeselectAll = document.getElementById('btnDeselectAll');
 var btnSortAscending = document.getElementById('btnSortAscending');
 var btnFilterNonFullyEvolved = document.getElementById('btnFilterNonFullyEvolved');
 
@@ -50,7 +50,18 @@ function defaultTableRules() {
 
   cboxAbilities.checked = true;
 
-  clearTable();
+  updateTable();
+}
+
+// Deselecting all rules is equivalent to showing neutral base speed table
+function deselectAllRules() {
+  cboxFastBST.checked = false;
+  cboxSlowBST.checked = false;
+  cboxChoiceScarf.checked = false;
+  cboxIronBall.checked = false;
+  cboxAbilities.checked = false;
+
+  updateTable();
 }
 
 function calcSpeedStat(base, ivs, evs, nature) {
@@ -138,18 +149,19 @@ function generateTableData() {
       }
 
       // Abilities: Weather boost
-      if (cboxAbilities.checked && abilityList.includes(ability)) {
-        pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, ability); // Max speed
-        tableData.push(pokemonData);
-        pokemonData2 = generateTableEntry(pokeName, baseStat, 31, 252, '', null, ability); // 252 speed EVs, neutral nature
-        tableData.push(pokemonData2);
-      }
-      if (cboxAbilities.checked && abilityList.includes(ability2)) {
-        pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, ability2); // Max speed
-        tableData.push(pokemonData);
-        pokemonData2 = generateTableEntry(pokeName, baseStat, 31, 252, '', null, ability2); // 252 speed EVs, neutral nature
-        tableData.push(pokemonData2);
-      }
+      const abList = [ability, ability2];
+
+      abList.forEach((ab) => {
+        if (cboxAbilities.checked && abilityList.includes(ab)) {
+          // Max speed
+          const pokemonData1 = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, ab);
+          tableData.push(pokemonData1);
+
+          // 252 speed EVs, neutral nature
+          const pokemonData2 = generateTableEntry(pokeName, baseStat, 31, 252, '', null, ab);
+          tableData.push(pokemonData2);
+        }
+      });
     }
   });
 
@@ -215,46 +227,36 @@ function generateTable() {
 
   // Update button text based on current settings
   updateButtonText();
-
-  // Change the Generate button to a Reset button
-  btnUpdateTable.textContent = 'Clear Table';
-  btnUpdateTable.removeEventListener('click', generateTable); // Remove the generateTable click event listener
-  btnUpdateTable.addEventListener('click', clearTable); // Add the btnResetTable click event listener
 }
 
-// Function to clear the table
-function clearTable() {
-  displayTable.innerHTML = ''; // Clear the table
-  btnUpdateTable.textContent = 'Generate Table'; // Change the button text back to Generate
-  btnUpdateTable.removeEventListener('click', clearTable); // Remove the btnResetTable click event listener
-  btnUpdateTable.addEventListener('click', generateTable); // Add the generateTable click event listener
+function updateTable() {
+  generateTableData();
+  generateTable();
 }
-
-// Add a click event listener to the generate button
-btnUpdateTable.addEventListener('click', generateTable);
-btnResetTable.addEventListener('click', defaultTableRules);
 
 // Function to toggle the evolution filter and update table
 function toggleEvolutionFilter() {
   hasNonFullyEvolved = !hasNonFullyEvolved;
-  generateTable();
+  updateTable();
 }
 
 // Function to toggle sorting direction and update table
 function toggleSortDirection() {
   isAscending = !isAscending;
-  generateTable();
+  updateTable();
 }
 
-// Add click event listeners to the btnSortAscending and btnFilterNonFullyEvolved buttons
+// Click event listeners for buttons
+btnResetTable.addEventListener('click', defaultTableRules);
+btnDeselectAll.addEventListener('click', deselectAllRules);
+
 btnSortAscending.addEventListener('click', toggleSortDirection);
 btnFilterNonFullyEvolved.addEventListener('click', toggleEvolutionFilter);
 
 // Event listeners for checkboxes
 function cboxEventListener(cbox) {
   cbox.addEventListener('change', function () {
-    generateTableData();
-    generateTable();
+    updateTable();
   });
 }
 
@@ -268,8 +270,7 @@ cboxEventListener(cboxAbilities);
 function addChangeListener(s, updateFunction) {
   s.addEventListener('change', function () {
     updateFunction(parseInt(s.value, 10));
-    generateTableData();
-    generateTable();
+    updateTable();
   });
 }
 
@@ -280,3 +281,4 @@ addChangeListener(selectChoiceScarfBST, (value) => (setChoiceScarfBST = value));
 addChangeListener(selectIronBallBST, (value) => (setIronBallBST = value));
 
 updateButtonText();
+updateTable();
