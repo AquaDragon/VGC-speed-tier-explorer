@@ -4,6 +4,9 @@ var selectFormat = document.getElementById('selectFormat');
 var selectFastBST = document.getElementById('selectFastBST');
 var selectSlowBST = document.getElementById('selectSlowBST');
 
+var selectChoiceScarfBST = document.getElementById('selectChoiceScarfBST');
+var selectIronBallBST = document.getElementById('selectIronBallBST');
+
 const formatOptions = [
   { value: 'SV National Dex', text: 'National Dex', var: null },
   {
@@ -41,6 +44,8 @@ function initializeFormatSelect() {
 function initalizeBSTselect() {
   let fastOptions = [];
   let slowOptions = [];
+  let scarfOptions = [];
+  let ironBallOptions = [];
 
   for (let i = 5; i <= 200; i += 5) {
     const option = document.createElement('option');
@@ -48,10 +53,14 @@ function initalizeBSTselect() {
     option.text = i;
     fastOptions.push(option);
     slowOptions.push(option.cloneNode(true)); // Clone the option for the slow select
+    scarfOptions.push(option.cloneNode(true));
+    ironBallOptions.push(option.cloneNode(true));
   }
 
   fastOptions.sort((a, b) => b.value - a.value);
   slowOptions.sort((a, b) => a.value - b.value);
+  scarfOptions.sort((a, b) => b.value - a.value);
+  ironBallOptions.sort((a, b) => a.value - b.value);
 
   fastOptions.forEach((option) => {
     selectFastBST.appendChild(option);
@@ -61,9 +70,20 @@ function initalizeBSTselect() {
     selectSlowBST.appendChild(option);
   });
 
+  scarfOptions.forEach((option) => {
+    selectChoiceScarfBST.appendChild(option);
+  });
+
+  ironBallOptions.forEach((option) => {
+    selectIronBallBST.appendChild(option);
+  });
+
   // Set default values
   selectFastBST.value = '90';
   selectSlowBST.value = '70';
+
+  selectChoiceScarfBST.value = '75';
+  selectIronBallBST.value = '50';
 }
 
 initializeFormatSelect();

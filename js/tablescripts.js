@@ -9,12 +9,16 @@ var btnFilterNonFullyEvolved = document.getElementById('btnFilterNonFullyEvolved
 
 var cboxFastBST = document.getElementById('cboxFastBST');
 var cboxSlowBST = document.getElementById('cboxSlowBST');
+var cboxChoiceScarf = document.getElementById('cboxChoiceScarf');
+var cboxIronBall = document.getElementById('cboxIronBall');
 
 // Initialize initial sort orders & display filters
 var isAscending = false; // descending by default
 var hasNonFullyEvolved = false; // exclude non-fully evolved by default
 var setFastBST = parseInt(selectFastBST.value, 10);
 var setSlowBST = parseInt(selectSlowBST.value, 10);
+var setChoiceScarfBST = parseInt(selectChoiceScarfBST.value, 10);
+var setIronBallBST = parseInt(selectIronBallBST.value, 10);
 
 // Function to reset the table to its initial state
 function defaultTableRules() {
@@ -31,6 +35,14 @@ function defaultTableRules() {
   cboxSlowBST.checked = true;
   selectSlowBST.value = '70';
   setSlowBST = parseInt(selectSlowBST.value, 10);
+
+  cboxChoiceScarf.checked = true;
+  selectChoiceScarfBST.value = '75';
+  setChoiceScarfBST = parseInt(selectChoiceScarfBST.value, 10);
+
+  cboxIronBall.checked = false;
+  selectIronBallBST.value = '50';
+  setIronBallBST = parseInt(selectIronBallBST.value, 10);
 
   clearTable();
 }
@@ -52,6 +64,14 @@ function updateButtonText() {
 }
 
 function generateTableEntry(pokemonName, baseStat, ivs, evs, nature, item) {
+  let speedStat = 0;
+  if (item === 'Choice Scarf') {
+    speedStat = Math.floor(calcSpeedStat(baseStat, ivs, evs, nature) * 1.5);
+  } else if (item === 'Iron Ball') {
+    speedStat = Math.floor(calcSpeedStat(baseStat, ivs, evs, nature) * 0.5);
+  } else {
+    speedStat = calcSpeedStat(baseStat, ivs, evs, nature);
+  }
   return {
     name: pokemonName,
     baseStat: baseStat,
@@ -59,7 +79,7 @@ function generateTableEntry(pokemonName, baseStat, ivs, evs, nature, item) {
     ev: evs,
     nature: nature,
     item: item,
-    stat: calcSpeedStat(baseStat, ivs, evs, nature),
+    stat: speedStat,
   };
 }
 
@@ -81,15 +101,27 @@ function generateTableData() {
       pokemonData = generateTableEntry(pokemonName, baseStat, 31, 0, '', null);
       tableData.push(pokemonData);
 
+      // Fast speed
+      if (baseStat >= setFastBST && cboxFastBST.checked) {
+        pokemonData = generateTableEntry(pokemonName, baseStat, 31, 252, '+', null);
+        tableData.push(pokemonData);
+      }
+
       // Slow speed
       if (baseStat <= setSlowBST && cboxSlowBST.checked) {
         pokemonData = generateTableEntry(pokemonName, baseStat, 0, 0, '-', null);
         tableData.push(pokemonData);
       }
 
-      // Fast speed
-      if (baseStat >= setFastBST && cboxFastBST.checked) {
-        pokemonData = generateTableEntry(pokemonName, baseStat, 31, 252, '+', null);
+      // Choice Scarf
+      if (baseStat >= setChoiceScarfBST && cboxChoiceScarf.checked) {
+        pokemonData = generateTableEntry(pokemonName, baseStat, 31, 252, '+', 'Choice Scarf');
+        tableData.push(pokemonData);
+      }
+
+      // Iron Ball
+      if (baseStat <= setIronBallBST && cboxIronBall.checked) {
+        pokemonData = generateTableEntry(pokemonName, baseStat, 0, 0, '-', 'Iron Ball');
         tableData.push(pokemonData);
       }
     }
@@ -127,7 +159,7 @@ function generateTable() {
   // Group Pokémon with identical baseStat, iv, and evs
   const groupedPokemon = {};
   pokemonData.forEach(function (poke) {
-    const key = `${poke.baseStat}-${poke.iv}-${poke.ev}`;
+    const key = `${poke.baseStat}-${poke.iv}-${poke.ev}-${poke.item}`;
     if (!groupedPokemon[key]) {
       groupedPokemon[key] = [];
     }
@@ -198,32 +230,31 @@ btnSortAscending.addEventListener('click', toggleSortDirection);
 btnFilterNonFullyEvolved.addEventListener('click', toggleEvolutionFilter);
 
 // Event listeners for checkboxes
-cboxFastBST.addEventListener('change', function () {
-  generateTableData();
-  generateTable();
-});
+function cboxEventListener(cbox) {
+  cbox.addEventListener('change', function () {
+    generateTableData();
+    generateTable();
+  });
+}
 
-cboxSlowBST.addEventListener('change', function () {
-  generateTableData();
-  generateTable();
-});
+cboxEventListener(cboxFastBST);
+cboxEventListener(cboxSlowBST);
+cboxEventListener(cboxChoiceScarf);
+cboxEventListener(cboxIronBall);
 
 // Event listeners for select value changes
-selectFormat.addEventListener('change', function () {
-  generateTableData();
-  generateTable();
-});
+function addChangeListener(s, updateFunction) {
+  s.addEventListener('change', function () {
+    updateFunction(parseInt(s.value, 10));
+    generateTableData();
+    generateTable();
+  });
+}
 
-selectFastBST.addEventListener('change', function () {
-  setFastBST = parseInt(selectFastBST.value, 10);
-  generateTableData();
-  generateTable();
-});
-
-selectSlowBST.addEventListener('change', function () {
-  setSlowBST = parseInt(selectSlowBST.value, 10);
-  generateTableData();
-  generateTable();
-});
+addChangeListener(selectFormat, () => {});
+addChangeListener(selectFastBST, (value) => (setFastBST = value));
+addChangeListener(selectSlowBST, (value) => (setSlowBST = value));
+addChangeListener(selectChoiceScarfBST, (value) => (setChoiceScarfBST = value));
+addChangeListener(selectIronBallBST, (value) => (setIronBallBST = value));
 
 updateButtonText();
