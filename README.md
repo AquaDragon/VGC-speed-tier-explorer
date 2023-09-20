@@ -7,7 +7,6 @@ A tool for exploring Pokémon speed tiers in various VGC formats. Optimized for 
 https://aquadragon.github.io/vgc-speed-tier-explorer/
 
 ### To-do (not in any order):
-- Add Tailwind boosts (x2)
 - Add stage boosts: Dragon Dance/Quiver Dance (+1), Commander (+2)
 - Group regional formes into a single entry if they have the same speed
 - Update visuals: sprites, buttons & layout

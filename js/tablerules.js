@@ -7,6 +7,9 @@ var selectSlowBST = document.getElementById('selectSlowBST');
 var selectChoiceScarfBST = document.getElementById('selectChoiceScarfBST');
 var selectIronBallBST = document.getElementById('selectIronBallBST');
 
+var selectTailwindBST = document.getElementById('selectTailwindBST');
+var selectTailwindMaxBST = document.getElementById('selectTailwindMaxBST');
+
 const formatOptions = [
   { value: 'SV National Dex', text: 'National Dex', var: null },
   {
@@ -42,41 +45,47 @@ function initializeFormatSelect() {
 
 // Initialize dropdown options for selecting MIN & MAX speeds
 function initalizeBSTselect() {
-  let fastOptions = [];
-  let slowOptions = [];
-  let scarfOptions = [];
-  let ironBallOptions = [];
+  let opFast = [];
+  let opSlow = [];
+  let opChoiceScarf = [];
+  let opIronBall = [];
+  let opTailwind = [];
+  let opTailwindMax = [];
 
   for (let i = 5; i <= 200; i += 5) {
     const option = document.createElement('option');
     option.value = i;
     option.text = i;
-    fastOptions.push(option);
-    slowOptions.push(option.cloneNode(true)); // Clone the option for the slow select
-    scarfOptions.push(option.cloneNode(true));
-    ironBallOptions.push(option.cloneNode(true));
+    opFast.push(option);
+    opSlow.push(option.cloneNode(true)); // Clone the option for the slow select
+    opChoiceScarf.push(option.cloneNode(true));
+    opIronBall.push(option.cloneNode(true));
+    opTailwind.push(option.cloneNode(true));
+    opTailwindMax.push(option.cloneNode(true));
   }
 
-  fastOptions.sort((a, b) => b.value - a.value);
-  slowOptions.sort((a, b) => a.value - b.value);
-  scarfOptions.sort((a, b) => b.value - a.value);
-  ironBallOptions.sort((a, b) => a.value - b.value);
+  opFast.sort((a, b) => b.value - a.value);
+  opSlow.sort((a, b) => a.value - b.value);
+  opChoiceScarf.sort((a, b) => b.value - a.value);
+  opIronBall.sort((a, b) => a.value - b.value);
+  opTailwind.sort((a, b) => b.value - a.value);
+  opTailwindMax.sort((a, b) => b.value - a.value);
 
-  fastOptions.forEach((option) => {
-    selectFastBST.appendChild(option);
-  });
+  function appendOption(options, select, onUpdate) {
+    options.forEach((option) => {
+      select.appendChild(option);
+      option.addEventListener('change', function () {
+        onUpdate(option.value);
+      });
+    });
+  }
 
-  slowOptions.forEach((option) => {
-    selectSlowBST.appendChild(option);
-  });
-
-  scarfOptions.forEach((option) => {
-    selectChoiceScarfBST.appendChild(option);
-  });
-
-  ironBallOptions.forEach((option) => {
-    selectIronBallBST.appendChild(option);
-  });
+  appendOption(opFast, selectFastBST, (value) => (selectFastBST = value));
+  appendOption(opSlow, selectSlowBST, (value) => (selectSlowBST = value));
+  appendOption(opChoiceScarf, selectChoiceScarfBST, (value) => (selectChoiceScarfBST = value));
+  appendOption(opIronBall, selectIronBallBST, (value) => (selectIronBallBST = value));
+  appendOption(opTailwind, selectTailwindBST, (value) => (selectTailwindBST = value));
+  appendOption(opTailwindMax, selectTailwindMaxBST, (value) => (selectTailwindMaxBST = value));
 
   // Set default values
   selectFastBST.value = '90';
@@ -84,6 +93,9 @@ function initalizeBSTselect() {
 
   selectChoiceScarfBST.value = '75';
   selectIronBallBST.value = '50';
+
+  selectTailwindBST.value = '65';
+  selectTailwindMaxBST.value = '65';
 }
 
 initializeFormatSelect();

@@ -12,6 +12,8 @@ var cboxSlowBST = document.getElementById('cboxSlowBST');
 var cboxChoiceScarf = document.getElementById('cboxChoiceScarf');
 var cboxIronBall = document.getElementById('cboxIronBall');
 var cboxAbilities = document.getElementById('cboxAbilities');
+var cboxTailwind = document.getElementById('cboxTailwind');
+var cboxTailwindMax = document.getElementById('cboxTailwindMax');
 
 // Initialize initial sort orders & display filters
 var isAscending = false; // descending by default
@@ -20,6 +22,8 @@ var setFastBST = parseInt(selectFastBST.value, 10);
 var setSlowBST = parseInt(selectSlowBST.value, 10);
 var setChoiceScarfBST = parseInt(selectChoiceScarfBST.value, 10);
 var setIronBallBST = parseInt(selectIronBallBST.value, 10);
+var setTailwindBST = parseInt(selectTailwindBST.value, 10);
+var setTailwindMaxBST = parseInt(selectTailwindBST.value, 10);
 
 const abilityList = ['Chlorophyll', 'Swift Swim', 'Sand Rush', 'Slush Rush', 'Unburden']; // x2
 const abParadox = ['Quark Drive', 'Protosynthesis']; // x1.5 with Booster Energy
@@ -50,6 +54,14 @@ function defaultTableRules() {
 
   cboxAbilities.checked = true;
 
+  cboxTailwind.checked = true;
+  selectTailwindBST.value = '65';
+  setTailwindBST = parseInt(selectTailwindBST.value, 10);
+
+  cboxTailwindMax.checked = true;
+  selectTailwindMaxBST.value = '65';
+  setTailwindMaxBST = parseInt(selectTailwindMaxBST.value, 10);
+
   updateTable();
 }
 
@@ -60,6 +72,8 @@ function deselectAllRules() {
   cboxChoiceScarf.checked = false;
   cboxIronBall.checked = false;
   cboxAbilities.checked = false;
+  cboxTailwind.checked = false;
+  cboxTailwindMax.checked = false;
 
   updateTable();
 }
@@ -76,18 +90,23 @@ function updateButtonText() {
   btnSortAscending.textContent = isAscending ? 'Sort Descending' : 'Sort Ascending';
 }
 
-function generateTableEntry(pokeName, baseStat, ivs, evs, nature, item, ability) {
-  let speedStat = 0;
+function generateTableEntry(pokeName, baseStat, ivs, evs, nature, item, ability, field) {
+  let speedStat = calcSpeedStat(baseStat, ivs, evs, nature);
 
   if (['Choice Scarf', 'Booster Energy'].includes(item)) {
-    speedStat = Math.floor(calcSpeedStat(baseStat, ivs, evs, nature) * 1.5);
+    speedStat = Math.floor(speedStat * 1.5);
   } else if (item === 'Iron Ball') {
-    speedStat = Math.floor(calcSpeedStat(baseStat, ivs, evs, nature) * 0.5);
-  } else if (abilityList.includes(ability)) {
-    speedStat = calcSpeedStat(baseStat, ivs, evs, nature) * 2;
-  } else {
-    speedStat = calcSpeedStat(baseStat, ivs, evs, nature);
+    speedStat = Math.floor(speedStat * 0.5);
   }
+
+  if (abilityList.includes(ability)) {
+    speedStat = speedStat * 2;
+  }
+
+  if (field === 'Tailwind') {
+    speedStat = speedStat * 2;
+  }
+
   return {
     name: pokeName,
     baseStat: baseStat,
@@ -96,6 +115,7 @@ function generateTableEntry(pokeName, baseStat, ivs, evs, nature, item, ability)
     nature: nature,
     item: item,
     ability: ability,
+    field: field,
     stat: speedStat,
   };
 }
@@ -117,34 +137,34 @@ function generateTableData() {
       const ability2 = pokemon.ab2 ? pokemon.ab2 : null; // check for 2nd ability
 
       // Neutral speed (always populate)
-      pokemonData = generateTableEntry(pokeName, baseStat, 31, 0, '', null, null);
+      pokemonData = generateTableEntry(pokeName, baseStat, 31, 0, '', null, null, null);
       tableData.push(pokemonData);
 
-      // Fast speed
+      // BST: Fast
       if (baseStat >= setFastBST && cboxFastBST.checked) {
-        pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, null);
+        pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, null, null);
         tableData.push(pokemonData);
       }
 
-      // Slow speed
+      // BST: Slow
       if (baseStat <= setSlowBST && cboxSlowBST.checked) {
-        pokemonData = generateTableEntry(pokeName, baseStat, 0, 0, '-', null, null);
+        pokemonData = generateTableEntry(pokeName, baseStat, 0, 0, '-', null, null, null);
         tableData.push(pokemonData);
       }
 
       // Item: Choice Scarf / Booster Energy (paradox mons)
       if (baseStat >= setChoiceScarfBST && cboxChoiceScarf.checked) {
         if (abParadox.includes(ability)) {
-          pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', 'Booster Energy', null);
+          pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', 'Booster Energy', null, null);
         } else {
-          pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', 'Choice Scarf', null);
+          pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', 'Choice Scarf', null, null);
         }
         tableData.push(pokemonData);
       }
 
       // Item: Iron Ball
       if (baseStat <= setIronBallBST && cboxIronBall.checked) {
-        pokemonData = generateTableEntry(pokeName, baseStat, 0, 0, '-', 'Iron Ball', null);
+        pokemonData = generateTableEntry(pokeName, baseStat, 0, 0, '-', 'Iron Ball', null, null);
         tableData.push(pokemonData);
       }
 
@@ -154,14 +174,25 @@ function generateTableData() {
       abList.forEach((ab) => {
         if (cboxAbilities.checked && abilityList.includes(ab)) {
           // Max speed
-          const pokemonData1 = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, ab);
+          const pokemonData1 = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, ab, null);
           tableData.push(pokemonData1);
 
           // 252 speed EVs, neutral nature
-          const pokemonData2 = generateTableEntry(pokeName, baseStat, 31, 252, '', null, ab);
+          const pokemonData2 = generateTableEntry(pokeName, baseStat, 31, 252, '', null, ab, null);
           tableData.push(pokemonData2);
         }
       });
+
+      // Field: Tailwind  (Note: exclude mons that gain x2 speed from ability)
+      if (baseStat >= setTailwindBST && cboxTailwind.checked && !abilityList.includes(ability)) {
+        pokemonData = generateTableEntry(pokeName, baseStat, 31, 0, '', null, null, 'Tailwind');
+        tableData.push(pokemonData);
+      }
+
+      if (baseStat >= setTailwindMaxBST && cboxTailwindMax.checked && !abilityList.includes(ability)) {
+        pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, null, 'Tailwind');
+        tableData.push(pokemonData);
+      }
     }
   });
 
@@ -181,7 +212,7 @@ function generateTable() {
     <div class="table-cell">BST</div>
     <div class="table-cell">IVs</div>
     <div class="table-cell">EVs</div>
-    <div class="table-cell mods">Item / Ability</div>
+    <div class="table-cell mods">Item / Ability / Field</div>
     <div class="table-cell poke-names">Pokémon</div>
   `;
   displayTable.appendChild(tableHeader);
@@ -197,7 +228,7 @@ function generateTable() {
   // Group Pokémon with identical baseStat, iv, and evs
   const groupedPokemon = {};
   pokemonData.forEach(function (poke) {
-    const key = `${poke.baseStat}-${poke.iv}-${poke.ev}-${poke.nature}-${poke.item}-${poke.ability}`;
+    const key = `${poke.baseStat}-${poke.iv}-${poke.ev}-${poke.nature}-${poke.item}-${poke.ability}-${poke.field}`;
     if (!groupedPokemon[key]) {
       groupedPokemon[key] = [];
     }
@@ -210,7 +241,7 @@ function generateTable() {
       const pokemonGroup = groupedPokemon[key];
       const stat = pokemonGroup[0].stat;
       const pokeNames = pokemonGroup.map((poke) => poke.name).join(', ');
-      const mods = [pokemonGroup[0].item, pokemonGroup[0].ability].filter(Boolean).join(', ');
+      const mods = [pokemonGroup[0].item, pokemonGroup[0].ability, pokemonGroup[0].field].filter(Boolean).join(', ');
 
       var tableRow = document.createElement('div');
       tableRow.classList.add('table-row');
@@ -265,6 +296,8 @@ cboxEventListener(cboxSlowBST);
 cboxEventListener(cboxChoiceScarf);
 cboxEventListener(cboxIronBall);
 cboxEventListener(cboxAbilities);
+cboxEventListener(cboxTailwind);
+cboxEventListener(cboxTailwindMax);
 
 // Event listeners for select value changes
 function addChangeListener(s, updateFunction) {
@@ -279,6 +312,8 @@ addChangeListener(selectFastBST, (value) => (setFastBST = value));
 addChangeListener(selectSlowBST, (value) => (setSlowBST = value));
 addChangeListener(selectChoiceScarfBST, (value) => (setChoiceScarfBST = value));
 addChangeListener(selectIronBallBST, (value) => (setIronBallBST = value));
+addChangeListener(selectTailwindBST, (value) => (setTailwindBST = value));
+addChangeListener(selectTailwindMaxBST, (value) => (setTailwindMaxBST = value));
 
 updateButtonText();
 updateTable();
