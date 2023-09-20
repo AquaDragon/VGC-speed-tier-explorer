@@ -60,6 +60,10 @@ h1 {
   font-size: 16pt;
 }
 
+.table-cell.mods {
+  flex: 2;
+}
+
 .table-cell.poke-names {
   flex: 7;
 }
