@@ -1,2 +1,3 @@
 # Exclude files and folders from Prettier formatting
-/imports/**
+/imports/dmgcalc/**
+/imports/ps/items.js
