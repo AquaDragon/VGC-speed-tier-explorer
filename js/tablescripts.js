@@ -212,7 +212,8 @@ function generateTable() {
     <div class="table-cell">BST</div>
     <div class="table-cell">IVs</div>
     <div class="table-cell">EVs</div>
-    <div class="table-cell mods">Item / Ability / Field</div>
+    <div class="table-cell">Item</div>
+    <div class="table-cell mods">Ability / Field</div>
     <div class="table-cell poke-names">Pokémon</div>
   `;
   displayTable.appendChild(tableHeader);
@@ -241,7 +242,7 @@ function generateTable() {
       const pokemonGroup = groupedPokemon[key];
       const stat = pokemonGroup[0].stat;
       const pokeNames = pokemonGroup.map((poke) => poke.name).join(', ');
-      const mods = [pokemonGroup[0].item, pokemonGroup[0].ability, pokemonGroup[0].field].filter(Boolean).join(', ');
+      const mods = [pokemonGroup[0].ability, pokemonGroup[0].field].filter(Boolean).join(', ');
 
       var tableRow = document.createElement('div');
       tableRow.classList.add('table-row');
@@ -250,6 +251,9 @@ function generateTable() {
         <div class="table-cell">${pokemonGroup[0].baseStat}</div>
         <div class="table-cell">${pokemonGroup[0].iv}</div>
         <div class="table-cell">${pokemonGroup[0].ev}${pokemonGroup[0].nature}</div>
+        <div class="table-cell">
+          <span class='item-icon' style="${getItemIcon(pokemonGroup[0].item)}" title="${pokemonGroup[0].item}"></span>
+        </div>
         <div class="table-cell mods">${mods ? mods : '-'}</div>
         <div class="table-cell poke-names">${pokeNames}</div>`;
       displayTable.appendChild(tableRow);

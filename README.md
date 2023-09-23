@@ -20,3 +20,4 @@ https://aquadragon.github.io/vgc-speed-tier-explorer/
 
 ## Credits
 - Ability & Pokédex source data: https://github.com/nerd-of-now/NCP-VGC-Damage-Calculator/
+- Item sprite sheet: https://play.pokemonshowdown.com/sprites/
