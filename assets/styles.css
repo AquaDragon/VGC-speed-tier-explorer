@@ -21,12 +21,20 @@ h1 {
   padding: 20px;
 }
 
-.left-column {
-  width: 50%;
+#ruleSelectionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.right-column {
-  width: 45%;
+.buttonContainer {
+  padding: 10px;
+}
+
+#tableContainer {
+  display: flex;
+  justify-content: center;
+  padding: 0 15%;
 }
 
 /* Table styles */
@@ -101,11 +109,6 @@ h1 {
   font-size: 12pt;
   width: 150px;
   padding: 5px;
-}
-
-#buttonContainer {
-  display: inline-block;
-  padding: 10px 0;
 }
 
 .selectFormat {

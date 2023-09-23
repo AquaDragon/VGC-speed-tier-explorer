@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -8,58 +8,53 @@
   </head>
   <body>
     <h1>Pokémon VGC Speed Tier Explorer</h1>
-    <div class="container">
-      <div class="left-column">
-        <div id="tableContainer">
-          <div id="displayTable">
-            <!-- Pokémon data table will be displayed here -->
-          </div>
-        </div>
+    <div id="ruleSelectionContainer">
+      <div class="buttonContainer">
+        <h2>Selection Rules</h2>
+        <button id="btnResetTable" class="tableButtons">Reset to Default</button>
+        <button id="btnDeselectAll" class="tableButtons">Deselect All</button>
+        <p>
+          <label for="selectFormat">Format: </label>
+          <select id="selectFormat" class="selectFormat"></select>
+        </p>
+        <button id="btnSortAscending">Sort Ascending/Descending</button>
+        <button id="btnFilterNonFullyEvolved">Exclude Non-Fully Evolved</button>
       </div>
-      <div class="right-column">
-        <div id="buttonContainer">
-          <h2>Selection Rules</h2>
-          <button id="btnResetTable" class="tableButtons">Reset to Default</button>
-          <button id="btnDeselectAll" class="tableButtons">Deselect All</button>
-          <p>
-            <label for="selectFormat">Format: </label>
-            <select id="selectFormat" class="selectFormat"></select>
-          </p>
-          <button id="btnSortAscending">Sort Ascending/Descending</button>
-          <button id="btnFilterNonFullyEvolved">Exclude Non-Fully Evolved</button>
-        </div>
-        <div>
-          <label for="cboxFastBST">
-            <input type="checkbox" id="cboxFastBST" checked />Include MAX speed if base speed is above
-            <select id="selectFastBST"></select>. 
-          </label><br/>
-          <label for="cboxSlowBST">
-            <input type="checkbox" id="cboxSlowBST" checked />Include MIN speed if base speed is below
-            <select id="selectSlowBST"></select>.
-          </label><br/>
-          <label for="cboxChoiceScarf">
-            <input type="checkbox" id="cboxChoiceScarf" checked />Include <b>Choice Scarf / Booster Energy</b> if base speed is above
-            <select id="selectChoiceScarfBST"></select>.
-          </label><br/>
-          <label for="cboxIronBall">
-            <input type="checkbox" id="cboxIronBall" />Include <b>Iron Ball</b> if base speed is below
-            <select id="selectIronBallBST"></select>.
-          </label><br/>
-          <label for="cboxAbilities">
-            <input type="checkbox" id="cboxAbilities" checked />Include abilities (e.g. Chlorophyll, Swift Swim, Sand Rush, Slush Rush, Unburden)
-          </label><br/>
-          <label for="cboxTailwind">
-            <input type="checkbox" id="cboxTailwind" checked />Include Tailwind (neutral) if base speed is above
-            <select id="selectTailwindBST"></select>.
-          </label><br/>
-          <label for="cboxTailwindMax">
-            <input type="checkbox" id="cboxTailwindMax" checked />Include Tailwind (MAX) if base speed is above
-            <select id="selectTailwindMaxBST"></select>.
-          </label>
-        </div>
+      <div class="buttonContainer">
+        <label for="cboxFastBST">
+          <input type="checkbox" id="cboxFastBST" checked />Include MAX speed if base speed is above
+          <select id="selectFastBST"></select>
+        </label><br />
+        <label for="cboxSlowBST">
+          <input type="checkbox" id="cboxSlowBST" checked />Include MIN speed if base speed is below
+          <select id="selectSlowBST"></select>
+        </label><br />
+        <label for="cboxChoiceScarf">
+          <input type="checkbox" id="cboxChoiceScarf" checked />Include <b>Choice Scarf / Booster Energy</b> if base speed is above
+          <select id="selectChoiceScarfBST"></select>
+        </label><br />
+        <label for="cboxIronBall">
+          <input type="checkbox" id="cboxIronBall" />Include <b>Iron Ball</b> if base speed is below
+          <select id="selectIronBallBST"></select>
+        </label><br />
+        <label for="cboxAbilities">
+          <input type="checkbox" id="cboxAbilities" checked />Include abilities (e.g. Chlorophyll, Swift Swim, Sand Rush, Slush Rush, Unburden)
+        </label><br />
+        <label for="cboxTailwind">
+          <input type="checkbox" id="cboxTailwind" checked />Include Tailwind (neutral) if base speed is above
+          <select id="selectTailwindBST"></select>
+        </label><br />
+        <label for="cboxTailwindMax">
+          <input type="checkbox" id="cboxTailwindMax" checked />Include Tailwind (MAX) if base speed is above
+          <select id="selectTailwindMaxBST"></select>
+        </label>
+      </div>
+    </div><br />
+    <div id="tableContainer">
+      <div id="displayTable">
+        <!-- Pokémon data table will be displayed here -->
       </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="imports/dmgcalc/pokedex.js"></script>
     <script src="imports/dmgcalc/nature_data.js"></script>
