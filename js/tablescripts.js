@@ -127,14 +127,14 @@ function generateTableData() {
   const format = selectedFormat ? sortAlphaGetKeys(selectedFormat) : sortAlphaGetKeys(POKEDEX_SV);
 
   // Loop through the sorted names and generate data for each Pokémon
-  format.forEach(function (pokeName) {
-    const pokemon = POKEDEX_SV_NATDEX[pokeName];
+  format.forEach(function (poke) {
+    const pokemon = PS_BATTLE_POKEDEX[toID(poke)] || PS_BATTLE_POKEDEX[toID(DMGCALC_TO_SHOWDOWN_NAMES[poke])];
+    const pokeName = pokemon.name;
 
-    if (hasNonFullyEvolved || !pokemon.canEvolve) {
-      const baseStat = pokemon.bs.sp;
+    if (hasNonFullyEvolved || pokemon.evos === undefined) {
+      const baseStat = pokemon.baseStats.spe;
       let ivs, evs, nature, stat, pokemonData;
-      const ability = pokemon.ab; // this is default ab display on the damage calc
-      const ability2 = pokemon.ab2 ? pokemon.ab2 : null; // check for 2nd ability
+      const pokeAbility = Object.values(pokemon.abilities);
 
       // Neutral speed (always populate)
       pokemonData = generateTableEntry(pokeName, baseStat, 31, 0, '', null, null, null);
@@ -154,7 +154,7 @@ function generateTableData() {
 
       // Item: Choice Scarf / Booster Energy (paradox mons)
       if (baseStat >= setChoiceScarfBST && cboxChoiceScarf.checked) {
-        if (abParadox.includes(ability)) {
+        if (pokeAbility.some((ability) => abParadox.includes(ability))) {
           pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', 'Booster Energy', null, null);
         } else {
           pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', 'Choice Scarf', null, null);
@@ -169,9 +169,7 @@ function generateTableData() {
       }
 
       // Abilities: Weather boost
-      const abList = [ability, ability2];
-
-      abList.forEach((ab) => {
+      pokeAbility.forEach((ab) => {
         if (cboxAbilities.checked && abilityList.includes(ab)) {
           // Max speed
           const pokemonData1 = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, ab, null);
@@ -184,12 +182,20 @@ function generateTableData() {
       });
 
       // Field: Tailwind  (Note: exclude mons that gain x2 speed from ability)
-      if (baseStat >= setTailwindBST && cboxTailwind.checked && !abilityList.includes(ability)) {
+      if (
+        baseStat >= setTailwindBST &&
+        cboxTailwind.checked &&
+        !pokeAbility.some((ability) => abilityList.includes(ability))
+      ) {
         pokemonData = generateTableEntry(pokeName, baseStat, 31, 0, '', null, null, 'Tailwind');
         tableData.push(pokemonData);
       }
 
-      if (baseStat >= setTailwindMaxBST && cboxTailwindMax.checked && !abilityList.includes(ability)) {
+      if (
+        baseStat >= setTailwindMaxBST &&
+        cboxTailwindMax.checked &&
+        !pokeAbility.some((ability) => abilityList.includes(ability))
+      ) {
         pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, null, 'Tailwind');
         tableData.push(pokemonData);
       }

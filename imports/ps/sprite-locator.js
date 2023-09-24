@@ -39,13 +39,24 @@ function getItemIcon(item) {
   return 'background: transparent url(' + spritesheetURL + ') no-repeat scroll -' + left + 'px -' + top + 'px';
 }
 
+/*
+  Get sprite index numbers for alternate formes from PS_BATTLE_POKEDEX and BattlePokemonIconIndexes
+*/
+var PS_POKEMON_MINISPRITES = {};
+
+for (const key in PS_BATTLE_POKEDEX) {
+  const num = BattlePokemonIconIndexes[key] !== undefined ? BattlePokemonIconIndexes[key] : PS_BATTLE_POKEDEX[key].num;
+
+  PS_POKEMON_MINISPRITES[key] = { num };
+}
+
 // Copy getItemIcon
 function getMiniSpriteIcon(poke) {
   var _poke;
   var num = 0;
 
-  if (typeof poke === 'string' && PS_BATTLE_POKEMON_MINISPRITES) {
-    poke = PS_BATTLE_POKEMON_MINISPRITES[toID(poke)];
+  if (typeof poke === 'string' && PS_POKEMON_MINISPRITES) {
+    poke = PS_POKEMON_MINISPRITES[toID(poke)];
   }
 
   if ((_poke = poke) != null && _poke.num) {

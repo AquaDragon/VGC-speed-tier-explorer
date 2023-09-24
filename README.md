@@ -9,7 +9,7 @@ https://aquadragon.github.io/vgc-speed-tier-explorer/
 ### To-do (not in any order):
 - Add stage boosts: Dragon Dance/Quiver Dance (+1), Commander (+2)
 - Group regional formes into a single entry if they have the same speed
-- Update visuals: sprites, buttons & layout
+- Update visuals: buttons & layout
 - Allow user to add custom entries to the table
 - Update Pokédex to include other abilities
 
@@ -19,5 +19,6 @@ https://aquadragon.github.io/vgc-speed-tier-explorer/
 
 
 ## Credits
-- Ability & Pokédex source data: https://github.com/nerd-of-now/NCP-VGC-Damage-Calculator/
+- Ability data & Pokémon by formats: https://github.com/nerd-of-now/NCP-VGC-Damage-Calculator/
 - Item & Pokémon sprite sheet: https://play.pokemonshowdown.com/sprites/
+- Pokédex data from Pokémon Showdown
