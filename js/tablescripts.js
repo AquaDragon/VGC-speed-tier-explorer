@@ -247,16 +247,20 @@ function generateTable() {
     if (groupedPokemon.hasOwnProperty(key)) {
       const pokemonGroup = groupedPokemon[key];
       const stat = pokemonGroup[0].stat;
-      // const pokeNames = pokemonGroup.map((poke) => poke.name).join(', ');
       const mods = [pokemonGroup[0].ability, pokemonGroup[0].field].filter(Boolean).join(', ');
 
       const pokeEntries = pokemonGroup
         .map((poke) => {
+          const types = PS_BATTLE_POKEDEX[toID(poke.name)].types;
+          const type1 = typeColors[types[0]];
+          const type2 = types.length > 1 ? typeColors[types[1]] : type1;
           return `
-            <div class="poke-entry">
+          <div class="poke-entry-outer">
+            <div class="poke-entry" style="background-color: ${type1}10; border-color: ${type2}50;">
               <span class="minisprite-icon" style="${getMiniSpriteIcon(poke.name)}" title="${poke.name}"></span>
               <span class="poke-name">${poke.name}</span>
-            </div>`;
+            </div>
+          </div>`;
         })
         .join('');
 

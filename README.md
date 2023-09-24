@@ -1,8 +1,8 @@
 # VGC Speed Tier Explorer
 
-A tool for exploring Pokémon speed tiers in various VGC formats. Optimized for Pokémon Scarlet & Violet.
+A tool for exploring speed tiers in various Pokémon VGC formats. Optimized for Pokémon Scarlet & Violet.
 
-**Note:** Currently in development and some features may not work correctly.
+Currently in development and some features may not work correctly.
 
 https://aquadragon.github.io/vgc-speed-tier-explorer/
 
