@@ -35,6 +35,12 @@ h1 {
   display: flex;
   justify-content: center;
   padding: 0 15%;
+  width: 70%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 /* Table styles */
