@@ -13,13 +13,13 @@ var selectTailwindMaxBST = document.getElementById('selectTailwindMaxBST');
 const formatOptions = [
   { value: 'SV National Dex', text: 'National Dex', var: null },
   {
-    value: 'SV_REG_E_TOP_META_2023_SEP_25',
-    text: 'Ranked Battle Regulation Set E (Top 55 by Usage, 25 Sep 2023)',
-    var: SV_REG_E_TOP_META_2023_SEP_25,
+    value: 'SV_REG_E_TOP_META_2023_SEP_30',
+    text: 'Ranked Battle Regulation Set E (Top 50 by Usage, 30 Sep 2023)',
+    var: SV_REG_E_TOP_META_2023_SEP_30,
   },
   {
     value: 'FORMAT_SV_REGULATION_E',
-    text: 'Ranked Battle Regulation Set E (unconfirmed)',
+    text: 'Ranked Battle Regulation Set E',
     var: FORMAT_SV_REGULATION_E,
   },
   {

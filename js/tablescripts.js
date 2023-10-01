@@ -48,7 +48,7 @@ function defaultTableRules() {
   selectChoiceScarfBST.value = '75';
   setChoiceScarfBST = parseInt(selectChoiceScarfBST.value, 10);
 
-  cboxIronBall.checked = false;
+  cboxIronBall.checked = true;
   selectIronBallBST.value = '50';
   setIronBallBST = parseInt(selectIronBallBST.value, 10);
 
