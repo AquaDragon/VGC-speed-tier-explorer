@@ -19,6 +19,7 @@ var cboxTailwindMax = document.getElementById('cboxTailwindMax');
 var isAscending = false; // descending by default
 var hasNonFullyEvolved = false; // exclude non-fully evolved by default
 var setFastBST = parseInt(selectFastBST.value, 10);
+var setNeutral252BST = parseInt(selectNeutral252BST.value, 10);
 var setSlowBST = parseInt(selectSlowBST.value, 10);
 var setChoiceScarfBST = parseInt(selectChoiceScarfBST.value, 10);
 var setIronBallBST = parseInt(selectIronBallBST.value, 10);
@@ -39,6 +40,10 @@ function defaultTableRules() {
   cboxFastBST.checked = true;
   selectFastBST.value = '90';
   setFastBST = parseInt(selectFastBST.value, 10);
+
+  cboxNeutral252BST.checked = true;
+  selectNeutral252BST.value = '70';
+  setNeutral252BST = parseInt(selectNeutral252BST.value, 10);
 
   cboxSlowBST.checked = true;
   selectSlowBST.value = '70';
@@ -68,6 +73,7 @@ function defaultTableRules() {
 // Deselecting all rules is equivalent to showing neutral base speed table
 function deselectAllRules() {
   cboxFastBST.checked = false;
+  cboxNeutral252BST.checked = false;
   cboxSlowBST.checked = false;
   cboxChoiceScarf.checked = false;
   cboxIronBall.checked = false;
@@ -143,6 +149,12 @@ function generateTableData() {
       // BST: Fast
       if (baseStat >= setFastBST && cboxFastBST.checked) {
         pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, null, null);
+        tableData.push(pokemonData);
+      }
+
+      // BST: Neutral 252
+      if (baseStat >= setNeutral252BST && cboxNeutral252BST.checked) {
+        pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '', null, null, null);
         tableData.push(pokemonData);
       }
 
@@ -316,6 +328,7 @@ function cboxEventListener(cbox) {
 }
 
 cboxEventListener(cboxFastBST);
+cboxEventListener(cboxNeutral252BST);
 cboxEventListener(cboxSlowBST);
 cboxEventListener(cboxChoiceScarf);
 cboxEventListener(cboxIronBall);
@@ -333,6 +346,7 @@ function addChangeListener(s, updateFunction) {
 
 addChangeListener(selectFormat, () => {});
 addChangeListener(selectFastBST, (value) => (setFastBST = value));
+addChangeListener(selectNeutral252BST, (value) => (setNeutral252BST = value));
 addChangeListener(selectSlowBST, (value) => (setSlowBST = value));
 addChangeListener(selectChoiceScarfBST, (value) => (setChoiceScarfBST = value));
 addChangeListener(selectIronBallBST, (value) => (setIronBallBST = value));

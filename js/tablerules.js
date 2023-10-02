@@ -2,6 +2,7 @@
 var selectFormat = document.getElementById('selectFormat');
 
 var selectFastBST = document.getElementById('selectFastBST');
+var selectNeutral252BST = document.getElementById('selectNeutral252BST');
 var selectSlowBST = document.getElementById('selectSlowBST');
 
 var selectChoiceScarfBST = document.getElementById('selectChoiceScarfBST');
@@ -51,6 +52,7 @@ function initializeFormatSelect() {
 // Initialize dropdown options for selecting MIN & MAX speeds
 function initalizeBSTselect() {
   let opFast = [];
+  let opNeutral252 = [];
   let opSlow = [];
   let opChoiceScarf = [];
   let opIronBall = [];
@@ -62,7 +64,8 @@ function initalizeBSTselect() {
     option.value = i;
     option.text = i;
     opFast.push(option);
-    opSlow.push(option.cloneNode(true)); // Clone the option for the slow select
+    opNeutral252.push(option.cloneNode(true)); // Clone the option for the slow select
+    opSlow.push(option.cloneNode(true));
     opChoiceScarf.push(option.cloneNode(true));
     opIronBall.push(option.cloneNode(true));
     opTailwind.push(option.cloneNode(true));
@@ -70,6 +73,7 @@ function initalizeBSTselect() {
   }
 
   opFast.sort((a, b) => b.value - a.value);
+  opNeutral252.sort((a, b) => a.value - b.value);
   opSlow.sort((a, b) => a.value - b.value);
   opChoiceScarf.sort((a, b) => b.value - a.value);
   opIronBall.sort((a, b) => a.value - b.value);
@@ -86,6 +90,7 @@ function initalizeBSTselect() {
   }
 
   appendOption(opFast, selectFastBST, (value) => (selectFastBST = value));
+  appendOption(opNeutral252, selectNeutral252BST, (value) => (selectNeutral252BST = value));
   appendOption(opSlow, selectSlowBST, (value) => (selectSlowBST = value));
   appendOption(opChoiceScarf, selectChoiceScarfBST, (value) => (selectChoiceScarfBST = value));
   appendOption(opIronBall, selectIronBallBST, (value) => (selectIronBallBST = value));
@@ -94,6 +99,7 @@ function initalizeBSTselect() {
 
   // Set default values
   selectFastBST.value = '90';
+  selectNeutral252BST.value = '70';
   selectSlowBST.value = '70';
 
   selectChoiceScarfBST.value = '75';
