@@ -10,7 +10,10 @@ https://aquadragon.github.io/VGC-speed-tier-explorer/
 - Add stage boosts: Dragon Dance/Quiver Dance (+1), Commander (+2)
 - Group regional formes into a single entry if they have the same speed
 - Update visuals: buttons & layout
-- Allow user to add custom entries to the table
+- Allow user to edit table entries (add/remove uncommon situations)
+- Visual indicator for weighted lists (e.g. top 50/100 usage)
+- Read smogon usage stats to determine most common speeds
+- Add stat distribution chart
 
 
 ## Development

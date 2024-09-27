@@ -18,11 +18,16 @@ const formatOptions = [
     text: 'Ranked Battle Regulation Set H',
     var: FORMAT_SV_REGULATION_H,
   },
-  // {
-  //   value: 'SV_REG_E_TOP_META_2023_SEP_30',
-  //   text: 'Ranked Battle Regulation Set E (Top 50 by Usage, 30 Sep 2023)',
-  //   var: SV_REG_E_TOP_META_2023_SEP_30,
-  // },
+  {
+    value: 'SV_REG_H_SHOWDOWN_TOP_50_ELO_1500_AUG_2024',
+    text: 'Ranked Battle Regulation Set H (PS! Aug 2024 Top 50, 1500 Elo)',
+    var: SV_REG_H_SHOWDOWN_TOP_50_ELO_1500_AUG_2024,
+  },
+  {
+    value: 'SV_REG_H_SHOWDOWN_TOP_100_ELO_1500_AUG_2024',
+    text: 'Ranked Battle Regulation Set H (PS! Aug 2024 Top 100, 1500 Elo)',
+    var: SV_REG_H_SHOWDOWN_TOP_100_ELO_1500_AUG_2024,
+  },
   {
     value: 'FORMAT_SV_REGULATION_E',
     text: 'Ranked Battle Regulation Set E',
