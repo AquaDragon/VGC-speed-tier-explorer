@@ -1,6 +1,6 @@
 /* 
   Source: play.pokemonshowdown.com/data/pokedex.js
-  Extracted 23 Sep 2023
+  Extracted 27 Sep 2024
 */
 
 // exports.BattlePokedex = {
@@ -64,6 +64,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     eggGroups: ['Monster', 'Grass'],
     requiredItem: 'Venusaurite',
+    isNonstandard: 'Past',
   },
   venusaurgmax: {
     num: 3,
@@ -74,11 +75,12 @@ var PS_BATTLE_POKEDEX = {
     genderRatio: { M: 0.875, F: 0.125 },
     baseStats: { hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80 },
     abilities: { 0: 'Overgrow', H: 'Chlorophyll' },
-    heightm: 2,
+    heightm: 24,
     weightkg: 0,
     color: 'Green',
     eggGroups: ['Monster', 'Grass'],
     changesFrom: 'Venusaur',
+    isNonstandard: 'Past',
   },
   charmander: {
     num: 4,
@@ -139,6 +141,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Black',
     eggGroups: ['Monster', 'Dragon'],
     requiredItem: 'Charizardite X',
+    isNonstandard: 'Past',
   },
   charizardmegay: {
     num: 6,
@@ -154,6 +157,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     eggGroups: ['Monster', 'Dragon'],
     requiredItem: 'Charizardite Y',
+    isNonstandard: 'Past',
   },
   charizardgmax: {
     num: 6,
@@ -169,6 +173,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     eggGroups: ['Monster', 'Dragon'],
     changesFrom: 'Charizard',
+    isNonstandard: 'Past',
   },
   squirtle: {
     num: 7,
@@ -229,6 +234,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     eggGroups: ['Monster', 'Water 1'],
     requiredItem: 'Blastoisinite',
+    isNonstandard: 'Past',
   },
   blastoisegmax: {
     num: 9,
@@ -239,11 +245,12 @@ var PS_BATTLE_POKEDEX = {
     genderRatio: { M: 0.875, F: 0.125 },
     baseStats: { hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78 },
     abilities: { 0: 'Torrent', H: 'Rain Dish' },
-    heightm: 1.6,
+    heightm: 25,
     weightkg: 0,
     color: 'Blue',
     eggGroups: ['Monster', 'Water 1'],
     changesFrom: 'Blastoise',
+    isNonstandard: 'Past',
   },
   caterpie: {
     num: 10,
@@ -256,6 +263,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     evos: ['Metapod'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   metapod: {
     num: 11,
@@ -270,6 +278,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 7,
     evos: ['Butterfree'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   butterfree: {
     num: 12,
@@ -284,6 +293,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 10,
     eggGroups: ['Bug'],
     canGigantamax: 'G-Max Befuddle',
+    isNonstandard: 'Past',
   },
   butterfreegmax: {
     num: 12,
@@ -298,6 +308,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     eggGroups: ['Bug'],
     changesFrom: 'Butterfree',
+    isNonstandard: 'Past',
   },
   weedle: {
     num: 13,
@@ -310,6 +321,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Kakuna'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   kakuna: {
     num: 14,
@@ -324,6 +336,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 7,
     evos: ['Beedrill'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   beedrill: {
     num: 15,
@@ -339,6 +352,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Bug'],
     otherFormes: ['Beedrill-Mega'],
     formeOrder: ['Beedrill', 'Beedrill-Mega'],
+    isNonstandard: 'Past',
   },
   beedrillmega: {
     num: 15,
@@ -353,6 +367,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     eggGroups: ['Bug'],
     requiredItem: 'Beedrillite',
+    isNonstandard: 'Past',
   },
   pidgey: {
     num: 16,
@@ -365,6 +380,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Pidgeotto'],
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   pidgeotto: {
     num: 17,
@@ -379,6 +395,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 18,
     evos: ['Pidgeot'],
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   pidgeot: {
     num: 18,
@@ -394,6 +411,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Flying'],
     otherFormes: ['Pidgeot-Mega'],
     formeOrder: ['Pidgeot', 'Pidgeot-Mega'],
+    isNonstandard: 'Past',
   },
   pidgeotmega: {
     num: 18,
@@ -408,6 +426,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     eggGroups: ['Flying'],
     requiredItem: 'Pidgeotite',
+    isNonstandard: 'Past',
   },
   rattata: {
     num: 19,
@@ -422,6 +441,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field'],
     otherFormes: ['Rattata-Alola'],
     formeOrder: ['Rattata', 'Rattata-Alola'],
+    isNonstandard: 'Past',
   },
   rattataalola: {
     num: 19,
@@ -436,6 +456,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Black',
     evos: ['Raticate-Alola'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   raticate: {
     num: 20,
@@ -451,6 +472,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field'],
     otherFormes: ['Raticate-Alola', 'Raticate-Alola-Totem'],
     formeOrder: ['Raticate', 'Raticate-Alola', 'Raticate-Alola-Totem'],
+    isNonstandard: 'Past',
   },
   raticatealola: {
     num: 20,
@@ -467,6 +489,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 20,
     evoCondition: 'at night',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   raticatealolatotem: {
     num: 20,
@@ -480,6 +503,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 105,
     color: 'Black',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   spearow: {
     num: 21,
@@ -492,6 +516,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Fearow'],
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   fearow: {
     num: 22,
@@ -505,6 +530,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Spearow',
     evoLevel: 20,
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   ekans: {
     num: 23,
@@ -595,6 +621,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     eggGroups: ['Undiscovered'],
     gen: 6,
+    isNonstandard: 'Past',
   },
   pikachurockstar: {
     num: 25,
@@ -611,6 +638,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     changesFrom: 'Pikachu-Cosplay',
     gen: 6,
+    isNonstandard: 'Past',
   },
   pikachubelle: {
     num: 25,
@@ -627,6 +655,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     changesFrom: 'Pikachu-Cosplay',
     gen: 6,
+    isNonstandard: 'Past',
   },
   pikachupopstar: {
     num: 25,
@@ -643,6 +672,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     changesFrom: 'Pikachu-Cosplay',
     gen: 6,
+    isNonstandard: 'Past',
   },
   pikachuphd: {
     num: 25,
@@ -659,6 +689,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     changesFrom: 'Pikachu-Cosplay',
     gen: 6,
+    isNonstandard: 'Past',
   },
   pikachulibre: {
     num: 25,
@@ -675,6 +706,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     changesFrom: 'Pikachu-Cosplay',
     gen: 6,
+    isNonstandard: 'Past',
   },
   pikachuoriginal: {
     num: 25,
@@ -793,6 +825,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 6,
     color: 'Yellow',
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'LGPE',
   },
   pikachugmax: {
     num: 25,
@@ -807,6 +840,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     eggGroups: ['Field', 'Fairy'],
     changesFrom: 'Pikachu',
+    isNonstandard: 'Past',
   },
   pikachuworld: {
     num: 25,
@@ -927,6 +961,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Nidorina'],
     eggGroups: ['Monster', 'Field'],
+    isNonstandard: 'Past',
   },
   nidorina: {
     num: 30,
@@ -942,6 +977,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 16,
     evos: ['Nidoqueen'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   nidoqueen: {
     num: 31,
@@ -957,6 +993,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'useItem',
     evoItem: 'Moon Stone',
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   nidoranm: {
     num: 32,
@@ -970,6 +1007,8 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     evos: ['Nidorino'],
     eggGroups: ['Monster', 'Field'],
+    mother: 'nidoranf',
+    isNonstandard: 'Past',
   },
   nidorino: {
     num: 33,
@@ -985,6 +1024,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 16,
     evos: ['Nidoking'],
     eggGroups: ['Monster', 'Field'],
+    isNonstandard: 'Past',
   },
   nidoking: {
     num: 34,
@@ -1000,6 +1040,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'useItem',
     evoItem: 'Moon Stone',
     eggGroups: ['Monster', 'Field'],
+    isNonstandard: 'Past',
   },
   clefairy: {
     num: 35,
@@ -1136,6 +1177,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     evos: ['Golbat'],
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   golbat: {
     num: 42,
@@ -1150,6 +1192,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 22,
     evos: ['Crobat'],
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   oddish: {
     num: 43,
@@ -1202,6 +1245,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     evos: ['Parasect'],
     eggGroups: ['Bug', 'Grass'],
+    isNonstandard: 'Past',
   },
   parasect: {
     num: 47,
@@ -1215,6 +1259,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Paras',
     evoLevel: 24,
     eggGroups: ['Bug', 'Grass'],
+    isNonstandard: 'Past',
   },
   venonat: {
     num: 48,
@@ -1355,6 +1400,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     eggGroups: ['Field'],
     changesFrom: 'Meowth',
+    isNonstandard: 'Past',
   },
   persian: {
     num: 53,
@@ -1553,6 +1599,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Kadabra'],
     eggGroups: ['Human-Like'],
+    isNonstandard: 'Past',
   },
   kadabra: {
     num: 64,
@@ -1568,6 +1615,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 16,
     evos: ['Alakazam'],
     eggGroups: ['Human-Like'],
+    isNonstandard: 'Past',
   },
   alakazam: {
     num: 65,
@@ -1584,6 +1632,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Human-Like'],
     otherFormes: ['Alakazam-Mega'],
     formeOrder: ['Alakazam', 'Alakazam-Mega'],
+    isNonstandard: 'Past',
   },
   alakazammega: {
     num: 65,
@@ -1599,6 +1648,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     eggGroups: ['Human-Like'],
     requiredItem: 'Alakazite',
+    isNonstandard: 'Past',
   },
   machop: {
     num: 66,
@@ -1612,6 +1662,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     evos: ['Machoke'],
     eggGroups: ['Human-Like'],
+    isNonstandard: 'Past',
   },
   machoke: {
     num: 67,
@@ -1627,6 +1678,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 28,
     evos: ['Machamp'],
     eggGroups: ['Human-Like'],
+    isNonstandard: 'Past',
   },
   machamp: {
     num: 68,
@@ -1642,6 +1694,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'trade',
     eggGroups: ['Human-Like'],
     canGigantamax: 'G-Max Chi Strike',
+    isNonstandard: 'Past',
   },
   machampgmax: {
     num: 68,
@@ -1657,6 +1710,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     eggGroups: ['Human-Like'],
     changesFrom: 'Machamp',
+    isNonstandard: 'Past',
   },
   bellsprout: {
     num: 69,
@@ -1826,6 +1880,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field'],
     otherFormes: ['Ponyta-Galar'],
     formeOrder: ['Ponyta', 'Ponyta-Galar'],
+    isNonstandard: 'Past',
   },
   ponytagalar: {
     num: 77,
@@ -1840,6 +1895,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     evos: ['Rapidash-Galar'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   rapidash: {
     num: 78,
@@ -1855,6 +1911,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field'],
     otherFormes: ['Rapidash-Galar'],
     formeOrder: ['Rapidash', 'Rapidash-Galar'],
+    isNonstandard: 'Past',
   },
   rapidashgalar: {
     num: 78,
@@ -1870,6 +1927,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Ponyta-Galar',
     evoLevel: 40,
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   slowpoke: {
     num: 79,
@@ -1927,6 +1985,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Pink',
     eggGroups: ['Monster', 'Water 1'],
     requiredItem: 'Slowbronite',
+    isNonstandard: 'Past',
   },
   slowbrogalar: {
     num: 80,
@@ -1984,6 +2043,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Flying', 'Field'],
     otherFormes: ['Farfetchâ€™d-Galar'],
     formeOrder: ['Farfetchâ€™d', 'Farfetchâ€™d-Galar'],
+    isNonstandard: 'Past',
   },
   farfetchdgalar: {
     num: 83,
@@ -1998,6 +2058,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Sirfetchâ€™d'],
     eggGroups: ['Flying', 'Field'],
+    isNonstandard: 'Past',
   },
   doduo: {
     num: 84,
@@ -2188,6 +2249,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     eggGroups: ['Amorphous'],
     requiredItem: 'Gengarite',
+    isNonstandard: 'Past',
   },
   gengargmax: {
     num: 94,
@@ -2202,6 +2264,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     eggGroups: ['Amorphous'],
     changesFrom: 'Gengar',
+    isNonstandard: 'Past',
   },
   onix: {
     num: 95,
@@ -2214,6 +2277,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     evos: ['Steelix'],
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   drowzee: {
     num: 96,
@@ -2251,6 +2315,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     evos: ['Kingler'],
     eggGroups: ['Water 3'],
+    isNonstandard: 'Past',
   },
   kingler: {
     num: 99,
@@ -2265,6 +2330,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 28,
     eggGroups: ['Water 3'],
     canGigantamax: 'G-Max Foam Burst',
+    isNonstandard: 'Past',
   },
   kinglergmax: {
     num: 99,
@@ -2279,6 +2345,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     eggGroups: ['Water 3'],
     changesFrom: 'Kingler',
+    isNonstandard: 'Past',
   },
   voltorb: {
     num: 100,
@@ -2399,6 +2466,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Marowak', 'Marowak-Alola'],
     eggGroups: ['Monster'],
+    isNonstandard: 'Past',
   },
   marowak: {
     num: 105,
@@ -2414,6 +2482,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Monster'],
     otherFormes: ['Marowak-Alola', 'Marowak-Alola-Totem'],
     formeOrder: ['Marowak', 'Marowak-Alola', 'Marowak-Alola-Totem'],
+    isNonstandard: 'Past',
   },
   marowakalola: {
     num: 105,
@@ -2431,6 +2500,7 @@ var PS_BATTLE_POKEDEX = {
     evoCondition: 'at night',
     evoRegion: 'Alola',
     eggGroups: ['Monster'],
+    isNonstandard: 'Past',
   },
   marowakalolatotem: {
     num: 105,
@@ -2444,6 +2514,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 98,
     color: 'Purple',
     eggGroups: ['Monster'],
+    isNonstandard: 'Past',
   },
   hitmonlee: {
     num: 106,
@@ -2486,6 +2557,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Pink',
     evos: ['Lickilicky'],
     eggGroups: ['Monster'],
+    isNonstandard: 'Past',
   },
   koffing: {
     num: 109,
@@ -2585,6 +2657,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Tangrowth'],
     eggGroups: ['Grass'],
+    isNonstandard: 'Past',
   },
   kangaskhan: {
     num: 115,
@@ -2599,6 +2672,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Monster'],
     otherFormes: ['Kangaskhan-Mega'],
     formeOrder: ['Kangaskhan', 'Kangaskhan-Mega'],
+    isNonstandard: 'Past',
   },
   kangaskhanmega: {
     num: 115,
@@ -2614,6 +2688,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     eggGroups: ['Monster'],
     requiredItem: 'Kangaskhanite',
+    isNonstandard: 'Past',
   },
   horsea: {
     num: 116,
@@ -2652,6 +2727,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     evos: ['Seaking'],
     eggGroups: ['Water 2'],
+    isNonstandard: 'Past',
   },
   seaking: {
     num: 119,
@@ -2665,6 +2741,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Goldeen',
     evoLevel: 33,
     eggGroups: ['Water 2'],
+    isNonstandard: 'Past',
   },
   staryu: {
     num: 120,
@@ -2678,6 +2755,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Starmie'],
     eggGroups: ['Water 3'],
+    isNonstandard: 'Past',
   },
   starmie: {
     num: 121,
@@ -2693,6 +2771,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'useItem',
     evoItem: 'Water Stone',
     eggGroups: ['Water 3'],
+    isNonstandard: 'Past',
   },
   mrmime: {
     num: 122,
@@ -2710,6 +2789,7 @@ var PS_BATTLE_POKEDEX = {
     canHatch: true,
     otherFormes: ['Mr. Mime-Galar'],
     formeOrder: ['Mr. Mime', 'Mr. Mime-Galar'],
+    isNonstandard: 'Past',
   },
   mrmimegalar: {
     num: 122,
@@ -2729,6 +2809,7 @@ var PS_BATTLE_POKEDEX = {
     evos: ['Mr. Rime'],
     eggGroups: ['Human-Like'],
     canHatch: true,
+    isNonstandard: 'Past',
   },
   scyther: {
     num: 123,
@@ -2755,6 +2836,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Smoochum',
     evoLevel: 30,
     eggGroups: ['Human-Like'],
+    isNonstandard: 'Past',
   },
   electabuzz: {
     num: 125,
@@ -2798,6 +2880,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Bug'],
     otherFormes: ['Pinsir-Mega'],
     formeOrder: ['Pinsir', 'Pinsir-Mega'],
+    isNonstandard: 'Past',
   },
   pinsirmega: {
     num: 127,
@@ -2812,6 +2895,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     eggGroups: ['Bug'],
     requiredItem: 'Pinsirite',
+    isNonstandard: 'Past',
   },
   tauros: {
     num: 128,
@@ -2909,6 +2993,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     eggGroups: ['Water 2', 'Dragon'],
     requiredItem: 'Gyaradosite',
+    isNonstandard: 'Past',
   },
   lapras: {
     num: 131,
@@ -2935,6 +3020,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     eggGroups: ['Monster', 'Water 1'],
     changesFrom: 'Lapras',
+    isNonstandard: 'Past',
   },
   ditto: {
     num: 132,
@@ -2977,6 +3063,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 6.5,
     color: 'Brown',
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'LGPE',
   },
   eeveegmax: {
     num: 133,
@@ -2992,6 +3079,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     eggGroups: ['Field'],
     changesFrom: 'Eevee',
+    isNonstandard: 'Past',
   },
   vaporeon: {
     num: 134,
@@ -3063,6 +3151,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Omastar'],
     eggGroups: ['Water 1', 'Water 3'],
+    isNonstandard: 'Past',
   },
   omastar: {
     num: 139,
@@ -3077,6 +3166,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Omanyte',
     evoLevel: 40,
     eggGroups: ['Water 1', 'Water 3'],
+    isNonstandard: 'Past',
   },
   kabuto: {
     num: 140,
@@ -3090,6 +3180,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Kabutops'],
     eggGroups: ['Water 1', 'Water 3'],
+    isNonstandard: 'Past',
   },
   kabutops: {
     num: 141,
@@ -3104,6 +3195,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Kabuto',
     evoLevel: 40,
     eggGroups: ['Water 1', 'Water 3'],
+    isNonstandard: 'Past',
   },
   aerodactyl: {
     num: 142,
@@ -3118,6 +3210,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Flying'],
     otherFormes: ['Aerodactyl-Mega'],
     formeOrder: ['Aerodactyl', 'Aerodactyl-Mega'],
+    isNonstandard: 'Past',
   },
   aerodactylmega: {
     num: 142,
@@ -3133,6 +3226,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     eggGroups: ['Flying'],
     requiredItem: 'Aerodactylite',
+    isNonstandard: 'Past',
   },
   snorlax: {
     num: 143,
@@ -3164,6 +3258,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Black',
     eggGroups: ['Monster'],
     changesFrom: 'Snorlax',
+    isNonstandard: 'Past',
   },
   articuno: {
     num: 144,
@@ -3320,6 +3415,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     eggGroups: ['Undiscovered'],
     requiredItem: 'Mewtwonite X',
+    isNonstandard: 'Past',
   },
   mewtwomegay: {
     num: 150,
@@ -3335,6 +3431,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     eggGroups: ['Undiscovered'],
     requiredItem: 'Mewtwonite Y',
+    isNonstandard: 'Past',
   },
   mew: {
     num: 151,
@@ -3554,6 +3651,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     evos: ['Ledian'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   ledian: {
     num: 166,
@@ -3567,6 +3665,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Ledyba',
     evoLevel: 18,
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   spinarak: {
     num: 167,
@@ -3605,6 +3704,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Golbat',
     evoType: 'levelFriendship',
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   chinchou: {
     num: 170,
@@ -3659,6 +3759,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     eggGroups: ['Undiscovered'],
     gen: 4,
+    isNonstandard: 'Past',
   },
   cleffa: {
     num: 173,
@@ -3701,6 +3802,7 @@ var PS_BATTLE_POKEDEX = {
     evos: ['Togetic'],
     eggGroups: ['Undiscovered'],
     canHatch: true,
+    isNonstandard: 'Past',
   },
   togetic: {
     num: 176,
@@ -3716,6 +3818,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'levelFriendship',
     evos: ['Togekiss'],
     eggGroups: ['Flying', 'Fairy'],
+    isNonstandard: 'Past',
   },
   natu: {
     num: 177,
@@ -3728,6 +3831,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     evos: ['Xatu'],
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   xatu: {
     num: 178,
@@ -3741,6 +3845,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Natu',
     evoLevel: 25,
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   mareep: {
     num: 179,
@@ -3796,6 +3901,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     eggGroups: ['Monster', 'Field'],
     requiredItem: 'Ampharosite',
+    isNonstandard: 'Past',
   },
   bellossom: {
     num: 182,
@@ -4155,6 +4261,7 @@ var PS_BATTLE_POKEDEX = {
       'Unown-Exclamation',
       'Unown-Question',
     ],
+    isNonstandard: 'Past',
   },
   wobbuffet: {
     num: 202,
@@ -4169,6 +4276,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 15,
     eggGroups: ['Amorphous'],
     canHatch: true,
+    isNonstandard: 'Past',
   },
   girafarig: {
     num: 203,
@@ -4246,6 +4354,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Mineral'],
     otherFormes: ['Steelix-Mega'],
     formeOrder: ['Steelix', 'Steelix-Mega'],
+    isNonstandard: 'Past',
   },
   steelixmega: {
     num: 208,
@@ -4260,6 +4369,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     eggGroups: ['Mineral'],
     requiredItem: 'Steelixite',
+    isNonstandard: 'Past',
   },
   snubbull: {
     num: 209,
@@ -4344,6 +4454,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     eggGroups: ['Bug'],
     requiredItem: 'Scizorite',
+    isNonstandard: 'Past',
   },
   shuckle: {
     num: 213,
@@ -4355,6 +4466,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 20.5,
     color: 'Yellow',
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   heracross: {
     num: 214,
@@ -4382,6 +4494,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     eggGroups: ['Bug'],
     requiredItem: 'Heracronite',
+    isNonstandard: 'Past',
   },
   sneasel: {
     num: 215,
@@ -4501,6 +4614,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Water 1', 'Water 3'],
     otherFormes: ['Corsola-Galar'],
     formeOrder: ['Corsola', 'Corsola-Galar'],
+    isNonstandard: 'Past',
   },
   corsolagalar: {
     num: 222,
@@ -4516,6 +4630,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     evos: ['Cursola'],
     eggGroups: ['Water 1', 'Water 3'],
+    isNonstandard: 'Past',
   },
   remoraid: {
     num: 223,
@@ -4528,6 +4643,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     evos: ['Octillery'],
     eggGroups: ['Water 1', 'Water 2'],
+    isNonstandard: 'Past',
   },
   octillery: {
     num: 224,
@@ -4541,6 +4657,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Remoraid',
     evoLevel: 25,
     eggGroups: ['Water 1', 'Water 2'],
+    isNonstandard: 'Past',
   },
   delibird: {
     num: 225,
@@ -4567,6 +4684,7 @@ var PS_BATTLE_POKEDEX = {
     evoCondition: 'with a Remoraid in party',
     eggGroups: ['Water 1'],
     canHatch: true,
+    isNonstandard: 'Past',
   },
   skarmory: {
     num: 227,
@@ -4619,6 +4737,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Black',
     eggGroups: ['Field'],
     requiredItem: 'Houndoominite',
+    isNonstandard: 'Past',
   },
   kingdra: {
     num: 230,
@@ -4740,6 +4859,7 @@ var PS_BATTLE_POKEDEX = {
     evos: ['Jynx'],
     eggGroups: ['Undiscovered'],
     canHatch: true,
+    isNonstandard: 'Past',
   },
   elekid: {
     num: 239,
@@ -4780,6 +4900,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 75.5,
     color: 'Pink',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   blissey: {
     num: 242,
@@ -4888,6 +5009,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     eggGroups: ['Monster'],
     requiredItem: 'Tyranitarite',
+    isNonstandard: 'Past',
   },
   lugia: {
     num: 249,
@@ -4927,6 +5049,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     tags: ['Mythical'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   treecko: {
     num: 252,
@@ -4986,6 +5109,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     eggGroups: ['Monster', 'Dragon'],
     requiredItem: 'Sceptilite',
+    isNonstandard: 'Past',
   },
   torchic: {
     num: 255,
@@ -5045,6 +5169,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     eggGroups: ['Field'],
     requiredItem: 'Blazikenite',
+    isNonstandard: 'Past',
   },
   mudkip: {
     num: 258,
@@ -5104,6 +5229,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     eggGroups: ['Monster', 'Water 1'],
     requiredItem: 'Swampertite',
+    isNonstandard: 'Past',
   },
   poochyena: {
     num: 261,
@@ -5143,6 +5269,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field'],
     otherFormes: ['Zigzagoon-Galar'],
     formeOrder: ['Zigzagoon', 'Zigzagoon-Galar'],
+    isNonstandard: 'Past',
   },
   zigzagoongalar: {
     num: 263,
@@ -5157,6 +5284,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     evos: ['Linoone-Galar'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   linoone: {
     num: 264,
@@ -5172,6 +5300,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field'],
     otherFormes: ['Linoone-Galar'],
     formeOrder: ['Linoone', 'Linoone-Galar'],
+    isNonstandard: 'Past',
   },
   linoonegalar: {
     num: 264,
@@ -5188,6 +5317,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 20,
     evos: ['Obstagoon'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   wurmple: {
     num: 265,
@@ -5200,6 +5330,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     evos: ['Silcoon', 'Cascoon'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   silcoon: {
     num: 266,
@@ -5214,6 +5345,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 7,
     evos: ['Beautifly'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   beautifly: {
     num: 267,
@@ -5227,6 +5359,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Silcoon',
     evoLevel: 10,
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   cascoon: {
     num: 268,
@@ -5241,6 +5374,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 7,
     evos: ['Dustox'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   dustox: {
     num: 269,
@@ -5254,6 +5388,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Cascoon',
     evoLevel: 10,
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   lotad: {
     num: 270,
@@ -5346,6 +5481,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Swellow'],
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   swellow: {
     num: 277,
@@ -5359,6 +5495,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Taillow',
     evoLevel: 22,
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   wingull: {
     num: 278,
@@ -5439,6 +5576,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     eggGroups: ['Amorphous'],
     requiredItem: 'Gardevoirite',
+    isNonstandard: 'Past',
   },
   surskit: {
     num: 283,
@@ -5540,6 +5678,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     evos: ['Ninjask', 'Shedinja'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   ninjask: {
     num: 291,
@@ -5553,6 +5692,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Nincada',
     evoLevel: 20,
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   shedinja: {
     num: 292,
@@ -5568,6 +5708,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Nincada',
     evoLevel: 20,
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   whismur: {
     num: 293,
@@ -5580,6 +5721,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Pink',
     evos: ['Loudred'],
     eggGroups: ['Monster', 'Field'],
+    isNonstandard: 'Past',
   },
   loudred: {
     num: 294,
@@ -5594,6 +5736,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 20,
     evos: ['Exploud'],
     eggGroups: ['Monster', 'Field'],
+    isNonstandard: 'Past',
   },
   exploud: {
     num: 295,
@@ -5607,6 +5750,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Loudred',
     evoLevel: 40,
     eggGroups: ['Monster', 'Field'],
+    isNonstandard: 'Past',
   },
   makuhita: {
     num: 296,
@@ -5673,6 +5817,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Pink',
     evos: ['Delcatty'],
     eggGroups: ['Field', 'Fairy'],
+    isNonstandard: 'Past',
   },
   delcatty: {
     num: 301,
@@ -5688,6 +5833,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'useItem',
     evoItem: 'Moon Stone',
     eggGroups: ['Field', 'Fairy'],
+    isNonstandard: 'Past',
   },
   sableye: {
     num: 302,
@@ -5715,6 +5861,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     eggGroups: ['Human-Like'],
     requiredItem: 'Sablenite',
+    isNonstandard: 'Past',
   },
   mawile: {
     num: 303,
@@ -5728,6 +5875,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field', 'Fairy'],
     otherFormes: ['Mawile-Mega'],
     formeOrder: ['Mawile', 'Mawile-Mega'],
+    isNonstandard: 'Past',
   },
   mawilemega: {
     num: 303,
@@ -5742,6 +5890,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Black',
     eggGroups: ['Field', 'Fairy'],
     requiredItem: 'Mawilite',
+    isNonstandard: 'Past',
   },
   aron: {
     num: 304,
@@ -5754,6 +5903,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     evos: ['Lairon'],
     eggGroups: ['Monster'],
+    isNonstandard: 'Past',
   },
   lairon: {
     num: 305,
@@ -5768,6 +5918,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 32,
     evos: ['Aggron'],
     eggGroups: ['Monster'],
+    isNonstandard: 'Past',
   },
   aggron: {
     num: 306,
@@ -5783,6 +5934,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Monster'],
     otherFormes: ['Aggron-Mega'],
     formeOrder: ['Aggron', 'Aggron-Mega'],
+    isNonstandard: 'Past',
   },
   aggronmega: {
     num: 306,
@@ -5797,6 +5949,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     eggGroups: ['Monster'],
     requiredItem: 'Aggronite',
+    isNonstandard: 'Past',
   },
   meditite: {
     num: 307,
@@ -5838,6 +5991,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     eggGroups: ['Human-Like'],
     requiredItem: 'Medichamite',
+    isNonstandard: 'Past',
   },
   electrike: {
     num: 309,
@@ -5850,6 +6004,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     evos: ['Manectric'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   manectric: {
     num: 310,
@@ -5865,6 +6020,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field'],
     otherFormes: ['Manectric-Mega'],
     formeOrder: ['Manectric', 'Manectric-Mega'],
+    isNonstandard: 'Past',
   },
   manectricmega: {
     num: 310,
@@ -5879,6 +6035,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     eggGroups: ['Field'],
     requiredItem: 'Manectite',
+    isNonstandard: 'Past',
   },
   plusle: {
     num: 311,
@@ -5913,6 +6070,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 17.7,
     color: 'Gray',
     eggGroups: ['Bug', 'Human-Like'],
+    mother: 'illumise',
   },
   illumise: {
     num: 314,
@@ -5941,6 +6099,7 @@ var PS_BATTLE_POKEDEX = {
     evos: ['Roserade'],
     eggGroups: ['Fairy', 'Grass'],
     canHatch: true,
+    isNonstandard: 'Past',
   },
   gulpin: {
     num: 316,
@@ -5978,6 +6137,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     evos: ['Sharpedo'],
     eggGroups: ['Water 2'],
+    isNonstandard: 'Past',
   },
   sharpedo: {
     num: 319,
@@ -5993,6 +6153,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Water 2'],
     otherFormes: ['Sharpedo-Mega'],
     formeOrder: ['Sharpedo', 'Sharpedo-Mega'],
+    isNonstandard: 'Past',
   },
   sharpedomega: {
     num: 319,
@@ -6007,6 +6168,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     eggGroups: ['Water 2'],
     requiredItem: 'Sharpedonite',
+    isNonstandard: 'Past',
   },
   wailmer: {
     num: 320,
@@ -6019,6 +6181,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Wailord'],
     eggGroups: ['Field', 'Water 2'],
+    isNonstandard: 'Past',
   },
   wailord: {
     num: 321,
@@ -6032,6 +6195,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Wailmer',
     evoLevel: 40,
     eggGroups: ['Field', 'Water 2'],
+    isNonstandard: 'Past',
   },
   numel: {
     num: 322,
@@ -6073,6 +6237,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     eggGroups: ['Field'],
     requiredItem: 'Cameruptite',
+    isNonstandard: 'Past',
   },
   torkoal: {
     num: 324,
@@ -6120,6 +6285,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 5,
     color: 'Brown',
     eggGroups: ['Field', 'Human-Like'],
+    isNonstandard: 'Past',
   },
   trapinch: {
     num: 328,
@@ -6225,6 +6391,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     eggGroups: ['Flying', 'Dragon'],
     requiredItem: 'Altarianite',
+    isNonstandard: 'Past',
   },
   zangoose: {
     num: 335,
@@ -6259,6 +6426,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 168,
     color: 'Yellow',
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   solrock: {
     num: 338,
@@ -6271,6 +6439,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 154,
     color: 'Red',
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   barboach: {
     num: 339,
@@ -6334,6 +6503,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Claydol'],
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   claydol: {
     num: 344,
@@ -6348,6 +6518,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Baltoy',
     evoLevel: 36,
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   lileep: {
     num: 345,
@@ -6361,6 +6532,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     evos: ['Cradily'],
     eggGroups: ['Water 3'],
+    isNonstandard: 'Past',
   },
   cradily: {
     num: 346,
@@ -6375,6 +6547,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Lileep',
     evoLevel: 40,
     eggGroups: ['Water 3'],
+    isNonstandard: 'Past',
   },
   anorith: {
     num: 347,
@@ -6388,6 +6561,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     evos: ['Armaldo'],
     eggGroups: ['Water 3'],
+    isNonstandard: 'Past',
   },
   armaldo: {
     num: 348,
@@ -6402,6 +6576,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Anorith',
     evoLevel: 40,
     eggGroups: ['Water 3'],
+    isNonstandard: 'Past',
   },
   feebas: {
     num: 349,
@@ -6441,6 +6616,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Fairy', 'Amorphous'],
     otherFormes: ['Castform-Sunny', 'Castform-Rainy', 'Castform-Snowy'],
     formeOrder: ['Castform', 'Castform-Sunny', 'Castform-Rainy', 'Castform-Snowy'],
+    isNonstandard: 'Past',
   },
   castformsunny: {
     num: 351,
@@ -6456,6 +6632,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Fairy', 'Amorphous'],
     requiredAbility: 'Forecast',
     battleOnly: 'Castform',
+    isNonstandard: 'Past',
   },
   castformrainy: {
     num: 351,
@@ -6471,6 +6648,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Fairy', 'Amorphous'],
     requiredAbility: 'Forecast',
     battleOnly: 'Castform',
+    isNonstandard: 'Past',
   },
   castformsnowy: {
     num: 351,
@@ -6486,6 +6664,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Fairy', 'Amorphous'],
     requiredAbility: 'Forecast',
     battleOnly: 'Castform',
+    isNonstandard: 'Past',
   },
   kecleon: {
     num: 352,
@@ -6497,6 +6676,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 22,
     color: 'Green',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   shuppet: {
     num: 353,
@@ -6538,6 +6718,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Black',
     eggGroups: ['Amorphous'],
     requiredItem: 'Banettite',
+    isNonstandard: 'Past',
   },
   duskull: {
     num: 355,
@@ -6603,6 +6784,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field'],
     otherFormes: ['Absol-Mega'],
     formeOrder: ['Absol', 'Absol-Mega'],
+    isNonstandard: 'Past',
   },
   absolmega: {
     num: 359,
@@ -6617,6 +6799,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     eggGroups: ['Field'],
     requiredItem: 'Absolite',
+    isNonstandard: 'Past',
   },
   wynaut: {
     num: 360,
@@ -6630,6 +6813,7 @@ var PS_BATTLE_POKEDEX = {
     evos: ['Wobbuffet'],
     eggGroups: ['Undiscovered'],
     canHatch: true,
+    isNonstandard: 'Past',
   },
   snorunt: {
     num: 361,
@@ -6671,6 +6855,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     eggGroups: ['Fairy', 'Mineral'],
     requiredItem: 'Glalitite',
+    isNonstandard: 'Past',
   },
   spheal: {
     num: 363,
@@ -6683,6 +6868,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Sealeo'],
     eggGroups: ['Water 1', 'Field'],
+    isNonstandard: 'Past',
   },
   sealeo: {
     num: 364,
@@ -6697,6 +6883,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 32,
     evos: ['Walrein'],
     eggGroups: ['Water 1', 'Field'],
+    isNonstandard: 'Past',
   },
   walrein: {
     num: 365,
@@ -6710,6 +6897,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Sealeo',
     evoLevel: 44,
     eggGroups: ['Water 1', 'Field'],
+    isNonstandard: 'Past',
   },
   clamperl: {
     num: 366,
@@ -6722,6 +6910,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Huntail', 'Gorebyss'],
     eggGroups: ['Water 1'],
+    isNonstandard: 'Past',
   },
   huntail: {
     num: 367,
@@ -6736,6 +6925,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'trade',
     evoItem: 'Deep Sea Tooth',
     eggGroups: ['Water 1'],
+    isNonstandard: 'Past',
   },
   gorebyss: {
     num: 368,
@@ -6750,6 +6940,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'trade',
     evoItem: 'Deep Sea Scale',
     eggGroups: ['Water 1'],
+    isNonstandard: 'Past',
   },
   relicanth: {
     num: 369,
@@ -6762,6 +6953,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 23.4,
     color: 'Gray',
     eggGroups: ['Water 1', 'Water 2'],
+    isNonstandard: 'Past',
   },
   luvdisc: {
     num: 370,
@@ -6829,6 +7021,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     eggGroups: ['Dragon'],
     requiredItem: 'Salamencite',
+    isNonstandard: 'Past',
   },
   beldum: {
     num: 374,
@@ -6888,6 +7081,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     eggGroups: ['Mineral'],
     requiredItem: 'Metagrossite',
+    isNonstandard: 'Past',
   },
   regirock: {
     num: 377,
@@ -6957,6 +7151,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     eggGroups: ['Undiscovered'],
     requiredItem: 'Latiasite',
+    isNonstandard: 'Past',
   },
   latios: {
     num: 381,
@@ -6987,6 +7182,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     eggGroups: ['Undiscovered'],
     requiredItem: 'Latiosite',
+    isNonstandard: 'Past',
   },
   kyogre: {
     num: 382,
@@ -7017,6 +7213,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     eggGroups: ['Undiscovered'],
     requiredItem: 'Blue Orb',
+    isNonstandard: 'Past',
   },
   groudon: {
     num: 383,
@@ -7047,6 +7244,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     eggGroups: ['Undiscovered'],
     requiredItem: 'Red Orb',
+    isNonstandard: 'Past',
   },
   rayquaza: {
     num: 384,
@@ -7077,6 +7275,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     eggGroups: ['Undiscovered'],
     requiredMove: 'Dragon Ascent',
+    isNonstandard: 'Past',
   },
   jirachi: {
     num: 385,
@@ -7328,6 +7527,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Bibarel'],
     eggGroups: ['Water 1', 'Field'],
+    isNonstandard: 'Past',
   },
   bibarel: {
     num: 400,
@@ -7341,6 +7541,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Bidoof',
     evoLevel: 15,
     eggGroups: ['Water 1', 'Field'],
+    isNonstandard: 'Past',
   },
   kricketot: {
     num: 401,
@@ -7418,6 +7619,7 @@ var PS_BATTLE_POKEDEX = {
     evos: ['Roselia'],
     eggGroups: ['Undiscovered'],
     canHatch: true,
+    isNonstandard: 'Past',
   },
   roserade: {
     num: 407,
@@ -7432,6 +7634,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'useItem',
     evoItem: 'Shiny Stone',
     eggGroups: ['Fairy', 'Grass'],
+    isNonstandard: 'Past',
   },
   cranidos: {
     num: 408,
@@ -7501,6 +7704,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Bug'],
     cosmeticFormes: ['Burmy-Sandy', 'Burmy-Trash'],
     formeOrder: ['Burmy', 'Burmy-Sandy', 'Burmy-Trash'],
+    isNonstandard: 'Past',
   },
   wormadam: {
     num: 413,
@@ -7518,6 +7722,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Bug'],
     otherFormes: ['Wormadam-Sandy', 'Wormadam-Trash'],
     formeOrder: ['Wormadam', 'Wormadam-Sandy', 'Wormadam-Trash'],
+    isNonstandard: 'Past',
   },
   wormadamsandy: {
     num: 413,
@@ -7534,6 +7739,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Burmy',
     evoLevel: 20,
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   wormadamtrash: {
     num: 413,
@@ -7550,6 +7756,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Burmy',
     evoLevel: 20,
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   mothim: {
     num: 414,
@@ -7564,6 +7771,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Burmy',
     evoLevel: 20,
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   combee: {
     num: 415,
@@ -7639,6 +7847,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Pink',
     evos: ['Cherrim'],
     eggGroups: ['Fairy', 'Grass'],
+    isNonstandard: 'Past',
   },
   cherrim: {
     num: 421,
@@ -7655,6 +7864,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Fairy', 'Grass'],
     otherFormes: ['Cherrim-Sunshine'],
     formeOrder: ['Cherrim', 'Cherrim-Sunshine'],
+    isNonstandard: 'Past',
   },
   cherrimsunshine: {
     num: 421,
@@ -7670,6 +7880,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Fairy', 'Grass'],
     requiredAbility: 'Flower Gift',
     battleOnly: 'Cherrim',
+    isNonstandard: 'Past',
   },
   shellos: {
     num: 422,
@@ -7752,6 +7963,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Lopunny'],
     eggGroups: ['Field', 'Human-Like'],
+    isNonstandard: 'Past',
   },
   lopunny: {
     num: 428,
@@ -7767,6 +7979,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field', 'Human-Like'],
     otherFormes: ['Lopunny-Mega'],
     formeOrder: ['Lopunny', 'Lopunny-Mega'],
+    isNonstandard: 'Past',
   },
   lopunnymega: {
     num: 428,
@@ -7781,6 +7994,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     eggGroups: ['Field', 'Human-Like'],
     requiredItem: 'Lopunnite',
+    isNonstandard: 'Past',
   },
   mismagius: {
     num: 429,
@@ -7822,6 +8036,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     evos: ['Purugly'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   purugly: {
     num: 432,
@@ -7836,6 +8051,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Glameow',
     evoLevel: 38,
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   chingling: {
     num: 433,
@@ -7927,6 +8143,7 @@ var PS_BATTLE_POKEDEX = {
     evos: ['Mr. Mime', 'Mr. Mime-Galar'],
     eggGroups: ['Undiscovered'],
     canHatch: true,
+    isNonstandard: 'Past',
   },
   happiny: {
     num: 440,
@@ -7952,6 +8169,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 1.9,
     color: 'Black',
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   spiritomb: {
     num: 442,
@@ -8018,6 +8236,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     eggGroups: ['Monster', 'Dragon'],
     requiredItem: 'Garchompite',
+    isNonstandard: 'Past',
   },
   munchlax: {
     num: 446,
@@ -8078,6 +8297,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     eggGroups: ['Field', 'Human-Like'],
     requiredItem: 'Lucarionite',
+    isNonstandard: 'Past',
   },
   hippopotas: {
     num: 449,
@@ -8115,6 +8335,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     evos: ['Drapion'],
     eggGroups: ['Bug', 'Water 3'],
+    isNonstandard: 'Past',
   },
   drapion: {
     num: 452,
@@ -8128,6 +8349,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Skorupi',
     evoLevel: 40,
     eggGroups: ['Bug', 'Water 3'],
+    isNonstandard: 'Past',
   },
   croagunk: {
     num: 453,
@@ -8164,6 +8386,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 27,
     color: 'Green',
     eggGroups: ['Grass'],
+    isNonstandard: 'Past',
   },
   finneon: {
     num: 456,
@@ -8202,6 +8425,7 @@ var PS_BATTLE_POKEDEX = {
     evos: ['Mantine'],
     eggGroups: ['Undiscovered'],
     canHatch: true,
+    isNonstandard: 'Past',
   },
   snover: {
     num: 459,
@@ -8243,6 +8467,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     eggGroups: ['Monster', 'Grass'],
     requiredItem: 'Abomasite',
+    isNonstandard: 'Past',
   },
   weavile: {
     num: 461,
@@ -8287,6 +8512,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'levelMove',
     evoMove: 'Rollout',
     eggGroups: ['Monster'],
+    isNonstandard: 'Past',
   },
   rhyperior: {
     num: 464,
@@ -8315,6 +8541,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'levelMove',
     evoMove: 'Ancient Power',
     eggGroups: ['Grass'],
+    isNonstandard: 'Past',
   },
   electivire: {
     num: 466,
@@ -8360,6 +8587,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'useItem',
     evoItem: 'Shiny Stone',
     eggGroups: ['Flying', 'Fairy'],
+    isNonstandard: 'Past',
   },
   yanmega: {
     num: 469,
@@ -8480,6 +8708,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     eggGroups: ['Amorphous'],
     requiredItem: 'Galladite',
+    isNonstandard: 'Past',
   },
   probopass: {
     num: 476,
@@ -8678,7 +8907,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Pressure', H: 'Telepathy' },
     heightm: 7,
     weightkg: 850,
-    color: 'White',
+    color: 'Blue',
     eggGroups: ['Undiscovered'],
     requiredItem: 'Adamant Crystal',
     changesFrom: 'Dialga',
@@ -9194,6 +9423,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     tags: ['Mythical'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   snivy: {
     num: 495,
@@ -9350,6 +9580,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Watchog'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   watchog: {
     num: 505,
@@ -9363,6 +9594,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Patrat',
     evoLevel: 20,
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   lillipup: {
     num: 506,
@@ -9375,6 +9607,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Herdier'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   herdier: {
     num: 507,
@@ -9389,6 +9622,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 16,
     evos: ['Stoutland'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   stoutland: {
     num: 508,
@@ -9402,6 +9636,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Herdier',
     evoLevel: 32,
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   purrloin: {
     num: 509,
@@ -9414,6 +9649,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     evos: ['Liepard'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   liepard: {
     num: 510,
@@ -9427,6 +9663,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Purrloin',
     evoLevel: 20,
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   pansage: {
     num: 511,
@@ -9440,6 +9677,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     evos: ['Simisage'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   simisage: {
     num: 512,
@@ -9455,6 +9693,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'useItem',
     evoItem: 'Leaf Stone',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   pansear: {
     num: 513,
@@ -9468,6 +9707,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     evos: ['Simisear'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   simisear: {
     num: 514,
@@ -9483,6 +9723,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'useItem',
     evoItem: 'Fire Stone',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   panpour: {
     num: 515,
@@ -9496,6 +9737,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Simipour'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   simipour: {
     num: 516,
@@ -9511,6 +9753,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'useItem',
     evoItem: 'Water Stone',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   munna: {
     num: 517,
@@ -9523,6 +9766,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Pink',
     evos: ['Musharna'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   musharna: {
     num: 518,
@@ -9537,6 +9781,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'useItem',
     evoItem: 'Moon Stone',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   pidove: {
     num: 519,
@@ -9549,6 +9794,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     evos: ['Tranquill'],
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   tranquill: {
     num: 520,
@@ -9563,6 +9809,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 21,
     evos: ['Unfezant'],
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   unfezant: {
     num: 521,
@@ -9576,6 +9823,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Tranquill',
     evoLevel: 32,
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   blitzle: {
     num: 522,
@@ -9613,6 +9861,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Boldore'],
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   boldore: {
     num: 525,
@@ -9627,6 +9876,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 25,
     evos: ['Gigalith'],
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   gigalith: {
     num: 526,
@@ -9640,6 +9890,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Boldore',
     evoType: 'trade',
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   woobat: {
     num: 527,
@@ -9652,6 +9903,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Swoobat'],
     eggGroups: ['Flying', 'Field'],
+    isNonstandard: 'Past',
   },
   swoobat: {
     num: 528,
@@ -9665,6 +9917,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Woobat',
     evoType: 'levelFriendship',
     eggGroups: ['Flying', 'Field'],
+    isNonstandard: 'Past',
   },
   drilbur: {
     num: 529,
@@ -9703,6 +9956,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Fairy'],
     otherFormes: ['Audino-Mega'],
     formeOrder: ['Audino', 'Audino-Mega'],
+    isNonstandard: 'Past',
   },
   audinomega: {
     num: 531,
@@ -9717,6 +9971,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     eggGroups: ['Fairy'],
     requiredItem: 'Audinite',
+    isNonstandard: 'Past',
   },
   timburr: {
     num: 532,
@@ -9771,6 +10026,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Palpitoad'],
     eggGroups: ['Water 1'],
+    isNonstandard: 'Past',
   },
   palpitoad: {
     num: 536,
@@ -9785,6 +10041,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 25,
     evos: ['Seismitoad'],
     eggGroups: ['Water 1'],
+    isNonstandard: 'Past',
   },
   seismitoad: {
     num: 537,
@@ -9798,6 +10055,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Palpitoad',
     evoLevel: 36,
     eggGroups: ['Water 1'],
+    isNonstandard: 'Past',
   },
   throh: {
     num: 538,
@@ -9810,6 +10068,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 55.5,
     color: 'Red',
     eggGroups: ['Human-Like'],
+    isNonstandard: 'Past',
   },
   sawk: {
     num: 539,
@@ -9822,6 +10081,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 51,
     color: 'Blue',
     eggGroups: ['Human-Like'],
+    isNonstandard: 'Past',
   },
   sewaddle: {
     num: 540,
@@ -9873,6 +10133,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     evos: ['Whirlipede'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   whirlipede: {
     num: 544,
@@ -9887,6 +10148,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 22,
     evos: ['Scolipede'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   scolipede: {
     num: 545,
@@ -9900,6 +10162,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Whirlipede',
     evoLevel: 30,
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   cottonee: {
     num: 546,
@@ -10068,6 +10331,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field'],
     otherFormes: ['Darumaka-Galar'],
     formeOrder: ['Darumaka', 'Darumaka-Galar'],
+    isNonstandard: 'Past',
   },
   darumakagalar: {
     num: 554,
@@ -10082,6 +10346,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     evos: ['Darmanitan-Galar'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   darmanitan: {
     num: 555,
@@ -10098,6 +10363,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field'],
     otherFormes: ['Darmanitan-Zen', 'Darmanitan-Galar', 'Darmanitan-Galar-Zen'],
     formeOrder: ['Darmanitan', 'Darmanitan-Zen', 'Darmanitan-Galar', 'Darmanitan-Galar-Zen'],
+    isNonstandard: 'Past',
   },
   darmanitanzen: {
     num: 555,
@@ -10113,6 +10379,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field'],
     requiredAbility: 'Zen Mode',
     battleOnly: 'Darmanitan',
+    isNonstandard: 'Past',
   },
   darmanitangalar: {
     num: 555,
@@ -10129,6 +10396,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'useItem',
     evoItem: 'Ice Stone',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   darmanitangalarzen: {
     num: 555,
@@ -10144,6 +10412,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field'],
     requiredAbility: 'Zen Mode',
     battleOnly: 'Darmanitan-Galar',
+    isNonstandard: 'Past',
   },
   maractus: {
     num: 556,
@@ -10155,6 +10424,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 28,
     color: 'Green',
     eggGroups: ['Grass'],
+    isNonstandard: 'Past',
   },
   dwebble: {
     num: 557,
@@ -10167,6 +10437,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     evos: ['Crustle'],
     eggGroups: ['Bug', 'Mineral'],
+    isNonstandard: 'Past',
   },
   crustle: {
     num: 558,
@@ -10180,6 +10451,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Dwebble',
     evoLevel: 34,
     eggGroups: ['Bug', 'Mineral'],
+    isNonstandard: 'Past',
   },
   scraggy: {
     num: 559,
@@ -10216,6 +10488,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 14,
     color: 'Black',
     eggGroups: ['Flying'],
+    isNonstandard: 'Past',
   },
   yamask: {
     num: 562,
@@ -10230,6 +10503,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Mineral', 'Amorphous'],
     otherFormes: ['Yamask-Galar'],
     formeOrder: ['Yamask', 'Yamask-Galar'],
+    isNonstandard: 'Past',
   },
   yamaskgalar: {
     num: 562,
@@ -10244,6 +10518,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Black',
     evos: ['Runerigus'],
     eggGroups: ['Mineral', 'Amorphous'],
+    isNonstandard: 'Past',
   },
   cofagrigus: {
     num: 563,
@@ -10257,6 +10532,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Yamask',
     evoLevel: 34,
     eggGroups: ['Mineral', 'Amorphous'],
+    isNonstandard: 'Past',
   },
   tirtouga: {
     num: 564,
@@ -10270,6 +10546,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Carracosta'],
     eggGroups: ['Water 1', 'Water 3'],
+    isNonstandard: 'Past',
   },
   carracosta: {
     num: 565,
@@ -10284,6 +10561,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Tirtouga',
     evoLevel: 37,
     eggGroups: ['Water 1', 'Water 3'],
+    isNonstandard: 'Past',
   },
   archen: {
     num: 566,
@@ -10297,6 +10575,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     evos: ['Archeops'],
     eggGroups: ['Flying', 'Water 3'],
+    isNonstandard: 'Past',
   },
   archeops: {
     num: 567,
@@ -10311,6 +10590,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Archen',
     evoLevel: 37,
     eggGroups: ['Flying', 'Water 3'],
+    isNonstandard: 'Past',
   },
   trubbish: {
     num: 568,
@@ -10323,6 +10603,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     evos: ['Garbodor'],
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   garbodor: {
     num: 569,
@@ -10337,6 +10618,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 36,
     eggGroups: ['Mineral'],
     canGigantamax: 'G-Max Malodor',
+    isNonstandard: 'Past',
   },
   garbodorgmax: {
     num: 569,
@@ -10351,6 +10633,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     eggGroups: ['Mineral'],
     changesFrom: 'Garbodor',
+    isNonstandard: 'Past',
   },
   zorua: {
     num: 570,
@@ -10559,6 +10842,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     evos: ['Vanillish'],
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   vanillish: {
     num: 583,
@@ -10573,6 +10857,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 35,
     evos: ['Vanilluxe'],
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   vanilluxe: {
     num: 584,
@@ -10586,6 +10871,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Vanillish',
     evoLevel: 47,
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   deerling: {
     num: 585,
@@ -10628,6 +10914,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 5,
     color: 'White',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   karrablast: {
     num: 588,
@@ -10640,6 +10927,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Escavalier'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   escavalier: {
     num: 589,
@@ -10654,6 +10942,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'trade',
     evoCondition: 'with a Shelmet',
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   foongus: {
     num: 590,
@@ -10691,6 +10980,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     evos: ['Jellicent'],
     eggGroups: ['Amorphous'],
+    isNonstandard: 'Past',
   },
   jellicent: {
     num: 593,
@@ -10704,6 +10994,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Frillish',
     evoLevel: 40,
     eggGroups: ['Amorphous'],
+    isNonstandard: 'Past',
   },
   alomomola: {
     num: 594,
@@ -10752,6 +11043,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     evos: ['Ferrothorn'],
     eggGroups: ['Grass', 'Mineral'],
+    isNonstandard: 'Past',
   },
   ferrothorn: {
     num: 598,
@@ -10765,6 +11057,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Ferroseed',
     evoLevel: 40,
     eggGroups: ['Grass', 'Mineral'],
+    isNonstandard: 'Past',
   },
   klink: {
     num: 599,
@@ -10778,6 +11071,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     evos: ['Klang'],
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   klang: {
     num: 600,
@@ -10793,6 +11087,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 38,
     evos: ['Klinklang'],
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   klinklang: {
     num: 601,
@@ -10807,6 +11102,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Klang',
     evoLevel: 49,
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   tynamo: {
     num: 602,
@@ -10859,6 +11155,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Beheeyem'],
     eggGroups: ['Human-Like'],
+    isNonstandard: 'Past',
   },
   beheeyem: {
     num: 606,
@@ -10872,6 +11169,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Elgyem',
     evoLevel: 42,
     eggGroups: ['Human-Like'],
+    isNonstandard: 'Past',
   },
   litwick: {
     num: 607,
@@ -11000,6 +11298,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     evos: ['Accelgor'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   accelgor: {
     num: 617,
@@ -11014,6 +11313,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'trade',
     evoCondition: 'with a Karrablast',
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   stunfisk: {
     num: 618,
@@ -11027,6 +11327,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Water 1', 'Amorphous'],
     otherFormes: ['Stunfisk-Galar'],
     formeOrder: ['Stunfisk', 'Stunfisk-Galar'],
+    isNonstandard: 'Past',
   },
   stunfiskgalar: {
     num: 618,
@@ -11040,6 +11341,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 20.5,
     color: 'Green',
     eggGroups: ['Water 1', 'Amorphous'],
+    isNonstandard: 'Past',
   },
   mienfoo: {
     num: 619,
@@ -11076,6 +11378,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 139,
     color: 'Red',
     eggGroups: ['Monster', 'Dragon'],
+    isNonstandard: 'Past',
   },
   golett: {
     num: 622,
@@ -11140,6 +11443,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 94.6,
     color: 'Brown',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   rufflet: {
     num: 627,
@@ -11223,6 +11527,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 58,
     color: 'Red',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   durant: {
     num: 632,
@@ -11234,6 +11539,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 33,
     color: 'Gray',
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   deino: {
     num: 633,
@@ -11580,6 +11886,7 @@ var PS_BATTLE_POKEDEX = {
     tags: ['Mythical'],
     otherFormes: ['Genesect-Douse', 'Genesect-Shock', 'Genesect-Burn', 'Genesect-Chill'],
     formeOrder: ['Genesect', 'Genesect-Douse', 'Genesect-Shock', 'Genesect-Burn', 'Genesect-Chill'],
+    isNonstandard: 'Past',
   },
   genesectdouse: {
     num: 649,
@@ -11596,6 +11903,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Douse Drive',
     changesFrom: 'Genesect',
+    isNonstandard: 'Past',
   },
   genesectshock: {
     num: 649,
@@ -11612,6 +11920,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Shock Drive',
     changesFrom: 'Genesect',
+    isNonstandard: 'Past',
   },
   genesectburn: {
     num: 649,
@@ -11628,6 +11937,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Burn Drive',
     changesFrom: 'Genesect',
+    isNonstandard: 'Past',
   },
   genesectchill: {
     num: 649,
@@ -11644,6 +11954,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Chill Drive',
     changesFrom: 'Genesect',
+    isNonstandard: 'Past',
   },
   chespin: {
     num: 650,
@@ -11804,6 +12115,7 @@ var PS_BATTLE_POKEDEX = {
     requiredAbility: 'Battle Bond',
     battleOnly: 'Greninja-Bond',
     gen: 7,
+    isNonstandard: 'Past',
   },
   bunnelby: {
     num: 659,
@@ -11816,6 +12128,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Diggersby'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   diggersby: {
     num: 660,
@@ -11829,6 +12142,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Bunnelby',
     evoLevel: 20,
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   fletchling: {
     num: 661,
@@ -12054,6 +12368,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 0.9,
     color: 'White',
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   florges: {
     num: 671,
@@ -12109,6 +12424,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     evos: ['Pangoro'],
     eggGroups: ['Field', 'Human-Like'],
+    isNonstandard: 'Past',
   },
   pangoro: {
     num: 675,
@@ -12123,6 +12439,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 32,
     evoCondition: 'with a Dark-type in the party',
     eggGroups: ['Field', 'Human-Like'],
+    isNonstandard: 'Past',
   },
   furfrou: {
     num: 676,
@@ -12158,6 +12475,7 @@ var PS_BATTLE_POKEDEX = {
       'Furfrou-Kabuki',
       'Furfrou-Pharaoh',
     ],
+    isNonstandard: 'Past',
   },
   espurr: {
     num: 677,
@@ -12215,6 +12533,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Doublade'],
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   doublade: {
     num: 680,
@@ -12229,6 +12548,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 35,
     evos: ['Aegislash'],
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   aegislash: {
     num: 681,
@@ -12246,6 +12566,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Mineral'],
     otherFormes: ['Aegislash-Blade'],
     formeOrder: ['Aegislash', 'Aegislash-Blade'],
+    isNonstandard: 'Past',
   },
   aegislashblade: {
     num: 681,
@@ -12261,6 +12582,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Mineral'],
     requiredAbility: 'Stance Change',
     battleOnly: 'Aegislash',
+    isNonstandard: 'Past',
   },
   spritzee: {
     num: 682,
@@ -12273,6 +12595,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Pink',
     evos: ['Aromatisse'],
     eggGroups: ['Fairy'],
+    isNonstandard: 'Past',
   },
   aromatisse: {
     num: 683,
@@ -12287,6 +12610,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'trade',
     evoItem: 'Sachet',
     eggGroups: ['Fairy'],
+    isNonstandard: 'Past',
   },
   swirlix: {
     num: 684,
@@ -12299,6 +12623,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     evos: ['Slurpuff'],
     eggGroups: ['Fairy'],
+    isNonstandard: 'Past',
   },
   slurpuff: {
     num: 685,
@@ -12313,6 +12638,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'trade',
     evoItem: 'Whipped Dream',
     eggGroups: ['Fairy'],
+    isNonstandard: 'Past',
   },
   inkay: {
     num: 686,
@@ -12351,6 +12677,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Barbaracle'],
     eggGroups: ['Water 3'],
+    isNonstandard: 'Past',
   },
   barbaracle: {
     num: 689,
@@ -12364,6 +12691,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Binacle',
     evoLevel: 39,
     eggGroups: ['Water 3'],
+    isNonstandard: 'Past',
   },
   skrelp: {
     num: 690,
@@ -12426,6 +12754,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     evos: ['Heliolisk'],
     eggGroups: ['Monster', 'Dragon'],
+    isNonstandard: 'Past',
   },
   heliolisk: {
     num: 695,
@@ -12440,6 +12769,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'useItem',
     evoItem: 'Sun Stone',
     eggGroups: ['Monster', 'Dragon'],
+    isNonstandard: 'Past',
   },
   tyrunt: {
     num: 696,
@@ -12453,6 +12783,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Tyrantrum'],
     eggGroups: ['Monster', 'Dragon'],
+    isNonstandard: 'Past',
   },
   tyrantrum: {
     num: 697,
@@ -12468,6 +12799,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 39,
     evoCondition: 'during the day',
     eggGroups: ['Monster', 'Dragon'],
+    isNonstandard: 'Past',
   },
   amaura: {
     num: 698,
@@ -12481,6 +12813,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Aurorus'],
     eggGroups: ['Monster'],
+    isNonstandard: 'Past',
   },
   aurorus: {
     num: 699,
@@ -12496,6 +12829,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 39,
     evoCondition: 'at night',
     eggGroups: ['Monster'],
+    isNonstandard: 'Past',
   },
   sylveon: {
     num: 700,
@@ -12601,6 +12935,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     prevo: 'Sliggoo',
     evoLevel: 50,
+    evoCondition: 'during rain',
     eggGroups: ['Dragon'],
     otherFormes: ['Goodra-Hisui'],
     formeOrder: ['Goodra', 'Goodra-Hisui'],
@@ -12618,6 +12953,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     prevo: 'Sliggoo-Hisui',
     evoLevel: 50,
+    evoCondition: 'during rain',
     eggGroups: ['Dragon'],
   },
   klefki: {
@@ -12670,6 +13006,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Amorphous'],
     otherFormes: ['Pumpkaboo-Small', 'Pumpkaboo-Large', 'Pumpkaboo-Super'],
     formeOrder: ['Pumpkaboo', 'Pumpkaboo-Small', 'Pumpkaboo-Large', 'Pumpkaboo-Super'],
+    isNonstandard: 'Past',
   },
   pumpkaboosmall: {
     num: 710,
@@ -12684,6 +13021,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Gourgeist-Small'],
     eggGroups: ['Amorphous'],
+    isNonstandard: 'Past',
   },
   pumpkaboolarge: {
     num: 710,
@@ -12698,6 +13036,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Gourgeist-Large'],
     eggGroups: ['Amorphous'],
+    isNonstandard: 'Past',
   },
   pumpkaboosuper: {
     num: 710,
@@ -12712,6 +13051,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Gourgeist-Super'],
     eggGroups: ['Amorphous'],
+    isNonstandard: 'Past',
   },
   gourgeist: {
     num: 711,
@@ -12728,6 +13068,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Amorphous'],
     otherFormes: ['Gourgeist-Small', 'Gourgeist-Large', 'Gourgeist-Super'],
     formeOrder: ['Gourgeist', 'Gourgeist-Small', 'Gourgeist-Large', 'Gourgeist-Super'],
+    isNonstandard: 'Past',
   },
   gourgeistsmall: {
     num: 711,
@@ -12743,6 +13084,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Pumpkaboo-Small',
     evoType: 'trade',
     eggGroups: ['Amorphous'],
+    isNonstandard: 'Past',
   },
   gourgeistlarge: {
     num: 711,
@@ -12758,6 +13100,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Pumpkaboo-Large',
     evoType: 'trade',
     eggGroups: ['Amorphous'],
+    isNonstandard: 'Past',
   },
   gourgeistsuper: {
     num: 711,
@@ -12773,6 +13116,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Pumpkaboo-Super',
     evoType: 'trade',
     eggGroups: ['Amorphous'],
+    isNonstandard: 'Past',
   },
   bergmite: {
     num: 712,
@@ -12856,6 +13200,7 @@ var PS_BATTLE_POKEDEX = {
     tags: ['Restricted Legendary'],
     otherFormes: ['Xerneas-Neutral'],
     formeOrder: ['Xerneas-Neutral', 'Xerneas'],
+    isNonstandard: 'Past',
   },
   xerneasneutral: {
     num: 716,
@@ -12870,6 +13215,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 215,
     color: 'Blue',
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Custom',
   },
   yveltal: {
     num: 717,
@@ -12883,6 +13229,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     tags: ['Restricted Legendary'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   zygarde: {
     num: 718,
@@ -12899,6 +13246,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     otherFormes: ['Zygarde-10%', 'Zygarde-Complete'],
     formeOrder: ['Zygarde', 'Zygarde-10%', 'Zygarde-10%', 'Zygarde', 'Zygarde-Complete'],
+    isNonstandard: 'Past',
   },
   zygarde10: {
     num: 718,
@@ -12915,6 +13263,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     changesFrom: 'Zygarde',
     gen: 7,
+    isNonstandard: 'Past',
   },
   zygardecomplete: {
     num: 718,
@@ -12932,6 +13281,7 @@ var PS_BATTLE_POKEDEX = {
     requiredAbility: 'Power Construct',
     battleOnly: ['Zygarde', 'Zygarde-10%'],
     gen: 7,
+    isNonstandard: 'Past',
   },
   diancie: {
     num: 719,
@@ -12962,6 +13312,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Pink',
     eggGroups: ['Undiscovered'],
     requiredItem: 'Diancite',
+    isNonstandard: 'Past',
   },
   hoopa: {
     num: 720,
@@ -13230,6 +13581,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 60,
     color: 'Brown',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   grubbin: {
     num: 736,
@@ -13285,6 +13637,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 147.5,
     color: 'Blue',
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   crabrawler: {
     num: 739,
@@ -13411,6 +13764,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 2,
     color: 'Yellow',
     eggGroups: ['Bug', 'Fairy'],
+    isNonstandard: 'Past',
   },
   rockruff: {
     num: 744,
@@ -13488,6 +13842,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Water 2'],
     otherFormes: ['Wishiwashi-School'],
     formeOrder: ['Wishiwashi', 'Wishiwashi-School'],
+    isNonstandard: 'Past',
   },
   wishiwashischool: {
     num: 746,
@@ -13503,6 +13858,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Water 2'],
     requiredAbility: 'Schooling',
     battleOnly: 'Wishiwashi',
+    isNonstandard: 'Past',
   },
   mareanie: {
     num: 747,
@@ -13593,6 +13949,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 217.5,
     color: 'Green',
     eggGroups: ['Water 1', 'Bug'],
+    isNonstandard: 'Past',
   },
   fomantis: {
     num: 753,
@@ -13634,6 +13991,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 58,
     color: 'Pink',
     eggGroups: ['Grass'],
+    isNonstandard: 'Past',
   },
   morelull: {
     num: 755,
@@ -13646,6 +14004,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     evos: ['Shiinotic'],
     eggGroups: ['Grass'],
+    isNonstandard: 'Past',
   },
   shiinotic: {
     num: 756,
@@ -13659,6 +14018,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Morelull',
     evoLevel: 24,
     eggGroups: ['Grass'],
+    isNonstandard: 'Past',
   },
   salandit: {
     num: 757,
@@ -13702,6 +14062,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 81,
     color: 'Black',
     eggGroups: ['Monster', 'Dragon'],
+    isNonstandard: 'Past',
   },
   stufful: {
     num: 759,
@@ -13714,6 +14075,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Pink',
     evos: ['Bewear'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   bewear: {
     num: 760,
@@ -13727,6 +14089,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Stufful',
     evoLevel: 27,
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   bounsweet: {
     num: 761,
@@ -13816,6 +14179,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     evos: ['Golisopod'],
     eggGroups: ['Bug', 'Water 3'],
+    isNonstandard: 'Past',
   },
   golisopod: {
     num: 768,
@@ -13829,6 +14193,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Wimpod',
     evoLevel: 30,
     eggGroups: ['Bug', 'Water 3'],
+    isNonstandard: 'Past',
   },
   sandygast: {
     num: 769,
@@ -13865,6 +14230,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 1.2,
     color: 'Black',
     eggGroups: ['Water 1'],
+    isNonstandard: 'Past',
   },
   typenull: {
     num: 772,
@@ -13879,6 +14245,7 @@ var PS_BATTLE_POKEDEX = {
     tags: ['Sub-Legendary'],
     evos: ['Silvally'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   silvally: {
     num: 773,
@@ -13933,6 +14300,7 @@ var PS_BATTLE_POKEDEX = {
       'Silvally-Dark',
       'Silvally-Fairy',
     ],
+    isNonstandard: 'Past',
   },
   silvallybug: {
     num: 773,
@@ -13949,6 +14317,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Bug Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallydark: {
     num: 773,
@@ -13965,6 +14334,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Dark Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallydragon: {
     num: 773,
@@ -13981,6 +14351,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Dragon Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallyelectric: {
     num: 773,
@@ -13997,6 +14368,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Electric Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallyfairy: {
     num: 773,
@@ -14013,6 +14385,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Fairy Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallyfighting: {
     num: 773,
@@ -14029,6 +14402,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Fighting Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallyfire: {
     num: 773,
@@ -14045,6 +14419,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Fire Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallyflying: {
     num: 773,
@@ -14061,6 +14436,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Flying Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallyghost: {
     num: 773,
@@ -14077,6 +14453,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Ghost Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallygrass: {
     num: 773,
@@ -14093,6 +14470,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Grass Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallyground: {
     num: 773,
@@ -14109,6 +14487,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Ground Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallyice: {
     num: 773,
@@ -14125,6 +14504,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Ice Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallypoison: {
     num: 773,
@@ -14141,6 +14521,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Poison Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallypsychic: {
     num: 773,
@@ -14157,6 +14538,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Psychic Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallyrock: {
     num: 773,
@@ -14173,6 +14555,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Rock Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallysteel: {
     num: 773,
@@ -14189,6 +14572,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Steel Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   silvallywater: {
     num: 773,
@@ -14205,6 +14589,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Water Memory',
     changesFrom: 'Silvally',
+    isNonstandard: 'Past',
   },
   minior: {
     num: 774,
@@ -14274,6 +14659,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 212,
     color: 'Red',
     eggGroups: ['Monster', 'Dragon'],
+    isNonstandard: 'Past',
   },
   togedemaru: {
     num: 777,
@@ -14287,6 +14673,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Field', 'Fairy'],
     otherFormes: ['Togedemaru-Totem'],
     formeOrder: ['Togedemaru', 'Togedemaru-Totem'],
+    isNonstandard: 'Past',
   },
   togedemarutotem: {
     num: 777,
@@ -14300,6 +14687,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 13,
     color: 'Gray',
     eggGroups: ['Field', 'Fairy'],
+    isNonstandard: 'Past',
   },
   mimikyu: {
     num: 778,
@@ -14342,6 +14730,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 2.8,
     color: 'Yellow',
     eggGroups: ['Amorphous'],
+    isNonstandard: 'Past',
   },
   mimikyubustedtotem: {
     num: 778,
@@ -14357,6 +14746,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Amorphous'],
     requiredAbility: 'Disguise',
     battleOnly: 'Mimikyu-Totem',
+    isNonstandard: 'Past',
   },
   bruxish: {
     num: 779,
@@ -14379,6 +14769,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 185,
     color: 'White',
     eggGroups: ['Monster', 'Dragon'],
+    isNonstandard: 'Past',
   },
   dhelmise: {
     num: 781,
@@ -14391,6 +14782,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 210,
     color: 'Green',
     eggGroups: ['Mineral'],
+    isNonstandard: 'Past',
   },
   jangmoo: {
     num: 782,
@@ -14445,6 +14837,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 207.5,
     color: 'Gray',
     eggGroups: ['Dragon'],
+    isNonstandard: 'Past',
   },
   tapukoko: {
     num: 785,
@@ -14458,6 +14851,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     tags: ['Sub-Legendary'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   tapulele: {
     num: 786,
@@ -14471,6 +14865,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Pink',
     tags: ['Sub-Legendary'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   tapubulu: {
     num: 787,
@@ -14484,6 +14879,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     tags: ['Sub-Legendary'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   tapufini: {
     num: 788,
@@ -14497,6 +14893,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     tags: ['Sub-Legendary'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   cosmog: {
     num: 789,
@@ -14568,8 +14965,9 @@ var PS_BATTLE_POKEDEX = {
     heightm: 1.2,
     weightkg: 55.5,
     color: 'White',
-    tags: ['Sub-Legendary'],
+    tags: ['Ultra Beast'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   buzzwole: {
     num: 794,
@@ -14581,8 +14979,9 @@ var PS_BATTLE_POKEDEX = {
     heightm: 2.4,
     weightkg: 333.6,
     color: 'Red',
-    tags: ['Sub-Legendary'],
+    tags: ['Ultra Beast'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   pheromosa: {
     num: 795,
@@ -14594,8 +14993,9 @@ var PS_BATTLE_POKEDEX = {
     heightm: 1.8,
     weightkg: 25,
     color: 'White',
-    tags: ['Sub-Legendary'],
+    tags: ['Ultra Beast'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   xurkitree: {
     num: 796,
@@ -14607,8 +15007,9 @@ var PS_BATTLE_POKEDEX = {
     heightm: 3.8,
     weightkg: 100,
     color: 'Black',
-    tags: ['Sub-Legendary'],
+    tags: ['Ultra Beast'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   celesteela: {
     num: 797,
@@ -14620,8 +15021,9 @@ var PS_BATTLE_POKEDEX = {
     heightm: 9.2,
     weightkg: 999.9,
     color: 'Green',
-    tags: ['Sub-Legendary'],
+    tags: ['Ultra Beast'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   kartana: {
     num: 798,
@@ -14633,8 +15035,9 @@ var PS_BATTLE_POKEDEX = {
     heightm: 0.3,
     weightkg: 0.1,
     color: 'White',
-    tags: ['Sub-Legendary'],
+    tags: ['Ultra Beast'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   guzzlord: {
     num: 799,
@@ -14646,8 +15049,9 @@ var PS_BATTLE_POKEDEX = {
     heightm: 5.5,
     weightkg: 888,
     color: 'Black',
-    tags: ['Sub-Legendary'],
+    tags: ['Ultra Beast'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   necrozma: {
     num: 800,
@@ -14709,6 +15113,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Undiscovered'],
     requiredItem: 'Ultranecrozium Z',
     battleOnly: ['Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane'],
+    isNonstandard: 'Past',
   },
   magearna: {
     num: 801,
@@ -14751,6 +15156,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     tags: ['Mythical'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   poipole: {
     num: 803,
@@ -14762,9 +15168,10 @@ var PS_BATTLE_POKEDEX = {
     heightm: 0.6,
     weightkg: 1.8,
     color: 'Purple',
-    tags: ['Sub-Legendary'],
+    tags: ['Ultra Beast'],
     evos: ['Naganadel'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   naganadel: {
     num: 804,
@@ -14776,11 +15183,12 @@ var PS_BATTLE_POKEDEX = {
     heightm: 3.6,
     weightkg: 150,
     color: 'Purple',
-    tags: ['Sub-Legendary'],
+    tags: ['Ultra Beast'],
     prevo: 'Poipole',
     evoType: 'levelMove',
     evoMove: 'Dragon Pulse',
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   stakataka: {
     num: 805,
@@ -14792,8 +15200,9 @@ var PS_BATTLE_POKEDEX = {
     heightm: 5.5,
     weightkg: 820,
     color: 'Gray',
-    tags: ['Sub-Legendary'],
+    tags: ['Ultra Beast'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   blacephalon: {
     num: 806,
@@ -14805,8 +15214,9 @@ var PS_BATTLE_POKEDEX = {
     heightm: 1.8,
     weightkg: 13,
     color: 'White',
-    tags: ['Sub-Legendary'],
+    tags: ['Ultra Beast'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   zeraora: {
     num: 807,
@@ -14820,6 +15230,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     tags: ['Mythical'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   meltan: {
     num: 808,
@@ -14833,6 +15244,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     tags: ['Mythical'],
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   melmetal: {
     num: 809,
@@ -14847,6 +15259,7 @@ var PS_BATTLE_POKEDEX = {
     tags: ['Mythical'],
     eggGroups: ['Undiscovered'],
     canGigantamax: 'G-Max Meltdown',
+    isNonstandard: 'Past',
   },
   melmetalgmax: {
     num: 809,
@@ -14862,6 +15275,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Gray',
     eggGroups: ['Undiscovered'],
     changesFrom: 'Melmetal',
+    isNonstandard: 'Past',
   },
   grookey: {
     num: 810,
@@ -14915,11 +15329,12 @@ var PS_BATTLE_POKEDEX = {
     genderRatio: { M: 0.875, F: 0.125 },
     baseStats: { hp: 100, atk: 125, def: 90, spa: 60, spd: 70, spe: 85 },
     abilities: { 0: 'Overgrow', H: 'Grassy Surge' },
-    heightm: 3,
+    heightm: 28,
     weightkg: 0,
     color: 'Green',
     eggGroups: ['Field', 'Grass'],
     changesFrom: 'Rillaboom',
+    isNonstandard: 'Past',
   },
   scorbunny: {
     num: 813,
@@ -14973,11 +15388,12 @@ var PS_BATTLE_POKEDEX = {
     genderRatio: { M: 0.875, F: 0.125 },
     baseStats: { hp: 80, atk: 116, def: 75, spa: 65, spd: 75, spe: 119 },
     abilities: { 0: 'Blaze', H: 'Libero' },
-    heightm: 3,
+    heightm: 27,
     weightkg: 0,
     color: 'White',
     eggGroups: ['Field', 'Human-Like'],
     changesFrom: 'Cinderace',
+    isNonstandard: 'Past',
   },
   sobble: {
     num: 816,
@@ -15031,11 +15447,12 @@ var PS_BATTLE_POKEDEX = {
     genderRatio: { M: 0.875, F: 0.125 },
     baseStats: { hp: 70, atk: 85, def: 65, spa: 125, spd: 65, spe: 120 },
     abilities: { 0: 'Torrent', H: 'Sniper' },
-    heightm: 3,
+    heightm: 40,
     weightkg: 0,
     color: 'Blue',
     eggGroups: ['Water 1', 'Field'],
     changesFrom: 'Inteleon',
+    isNonstandard: 'Past',
   },
   skwovet: {
     num: 819,
@@ -15115,6 +15532,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     eggGroups: ['Flying'],
     changesFrom: 'Corviknight',
+    isNonstandard: 'Past',
   },
   blipbug: {
     num: 824,
@@ -15127,6 +15545,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Blue',
     evos: ['Dottler'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   dottler: {
     num: 825,
@@ -15141,6 +15560,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 10,
     evos: ['Orbeetle'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   orbeetle: {
     num: 826,
@@ -15155,6 +15575,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 30,
     eggGroups: ['Bug'],
     canGigantamax: 'G-Max Gravitas',
+    isNonstandard: 'Past',
   },
   orbeetlegmax: {
     num: 826,
@@ -15169,6 +15590,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     eggGroups: ['Bug'],
     changesFrom: 'Orbeetle',
+    isNonstandard: 'Past',
   },
   nickit: {
     num: 827,
@@ -15181,6 +15603,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Thievul'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   thievul: {
     num: 828,
@@ -15194,6 +15617,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Nickit',
     evoLevel: 18,
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   gossifleur: {
     num: 829,
@@ -15206,6 +15630,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     evos: ['Eldegoss'],
     eggGroups: ['Grass'],
+    isNonstandard: 'Past',
   },
   eldegoss: {
     num: 830,
@@ -15219,6 +15644,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Gossifleur',
     evoLevel: 20,
     eggGroups: ['Grass'],
+    isNonstandard: 'Past',
   },
   wooloo: {
     num: 831,
@@ -15231,6 +15657,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     evos: ['Dubwool'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   dubwool: {
     num: 832,
@@ -15244,6 +15671,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Wooloo',
     evoLevel: 24,
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   chewtle: {
     num: 833,
@@ -15284,6 +15712,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     eggGroups: ['Monster', 'Water 1'],
     changesFrom: 'Drednaw',
+    isNonstandard: 'Past',
   },
   yamper: {
     num: 835,
@@ -15296,6 +15725,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Yellow',
     evos: ['Boltund'],
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   boltund: {
     num: 836,
@@ -15309,6 +15739,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Yamper',
     evoLevel: 25,
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   rolycoly: {
     num: 837,
@@ -15363,6 +15794,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Black',
     eggGroups: ['Mineral'],
     changesFrom: 'Coalossal',
+    isNonstandard: 'Past',
   },
   applin: {
     num: 840,
@@ -15404,6 +15836,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     eggGroups: ['Grass', 'Dragon'],
     changesFrom: 'Flapple',
+    isNonstandard: 'Past',
   },
   appletun: {
     num: 842,
@@ -15433,6 +15866,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     eggGroups: ['Grass', 'Dragon'],
     changesFrom: 'Appletun',
+    isNonstandard: 'Past',
   },
   silicobra: {
     num: 843,
@@ -15473,6 +15907,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     eggGroups: ['Field', 'Dragon'],
     changesFrom: 'Sandaconda',
+    isNonstandard: 'Past',
   },
   cramorant: {
     num: 845,
@@ -15601,6 +16036,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     eggGroups: ['Human-Like'],
     changesFrom: 'Toxtricity',
+    isNonstandard: 'Past',
   },
   toxtricitylowkeygmax: {
     num: 849,
@@ -15616,6 +16052,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Human-Like'],
     battleOnly: 'Toxtricity-Low-Key',
     changesFrom: 'Toxtricity-Low-Key',
+    isNonstandard: 'Past',
   },
   sizzlipede: {
     num: 850,
@@ -15628,6 +16065,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     evos: ['Centiskorch'],
     eggGroups: ['Bug'],
+    isNonstandard: 'Past',
   },
   centiskorch: {
     num: 851,
@@ -15642,6 +16080,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 28,
     eggGroups: ['Bug'],
     canGigantamax: 'G-Max Centiferno',
+    isNonstandard: 'Past',
   },
   centiskorchgmax: {
     num: 851,
@@ -15656,6 +16095,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Red',
     eggGroups: ['Bug'],
     changesFrom: 'Centiskorch',
+    isNonstandard: 'Past',
   },
   clobbopus: {
     num: 852,
@@ -15668,6 +16108,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Brown',
     evos: ['Grapploct'],
     eggGroups: ['Water 1', 'Human-Like'],
+    isNonstandard: 'Past',
   },
   grapploct: {
     num: 853,
@@ -15682,6 +16123,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'levelMove',
     evoMove: 'Taunt',
     eggGroups: ['Water 1', 'Human-Like'],
+    isNonstandard: 'Past',
   },
   sinistea: {
     num: 854,
@@ -15806,6 +16248,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Pink',
     eggGroups: ['Fairy'],
     changesFrom: 'Hatterene',
+    isNonstandard: 'Past',
   },
   impidimp: {
     num: 859,
@@ -15864,6 +16307,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     eggGroups: ['Fairy', 'Human-Like'],
     changesFrom: 'Grimmsnarl',
+    isNonstandard: 'Past',
   },
   obstagoon: {
     num: 862,
@@ -15878,6 +16322,7 @@ var PS_BATTLE_POKEDEX = {
     evoLevel: 35,
     evoCondition: 'at night',
     eggGroups: ['Field'],
+    isNonstandard: 'Past',
   },
   perrserker: {
     num: 863,
@@ -15905,6 +16350,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Corsola-Galar',
     evoLevel: 38,
     eggGroups: ['Water 1', 'Water 3'],
+    isNonstandard: 'Past',
   },
   sirfetchd: {
     num: 865,
@@ -15919,6 +16365,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'other',
     evoCondition: 'Land 3 critical hits in 1 battle',
     eggGroups: ['Flying', 'Field'],
+    isNonstandard: 'Past',
   },
   mrrime: {
     num: 866,
@@ -15932,6 +16379,7 @@ var PS_BATTLE_POKEDEX = {
     prevo: 'Mr. Mime-Galar',
     evoLevel: 42,
     eggGroups: ['Human-Like'],
+    isNonstandard: 'Past',
   },
   runerigus: {
     num: 867,
@@ -15946,6 +16394,7 @@ var PS_BATTLE_POKEDEX = {
     evoType: 'other',
     evoCondition: 'Have 49+ HP lost and walk under stone sculpture in Dusty Bowl',
     eggGroups: ['Mineral', 'Amorphous'],
+    isNonstandard: 'Past',
   },
   milcery: {
     num: 868,
@@ -16009,9 +16458,10 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Sweet Veil', H: 'Aroma Veil' },
     heightm: 30,
     weightkg: 0,
-    color: 'White',
+    color: 'Yellow',
     eggGroups: ['Fairy', 'Amorphous'],
     changesFrom: 'Alcremie',
+    isNonstandard: 'Past',
   },
   falinks: {
     num: 870,
@@ -16115,6 +16565,7 @@ var PS_BATTLE_POKEDEX = {
     eggGroups: ['Fairy'],
     otherFormes: ['Indeedee-F'],
     formeOrder: ['Indeedee', 'Indeedee-F'],
+    mother: 'indeedeef',
   },
   indeedeef: {
     num: 876,
@@ -16197,6 +16648,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Green',
     eggGroups: ['Field', 'Mineral'],
     changesFrom: 'Copperajah',
+    isNonstandard: 'Past',
   },
   dracozolt: {
     num: 880,
@@ -16209,6 +16661,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 190,
     color: 'Green',
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   arctozolt: {
     num: 881,
@@ -16221,6 +16674,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 150,
     color: 'Blue',
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   dracovish: {
     num: 882,
@@ -16233,6 +16687,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 215,
     color: 'Green',
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   arctovish: {
     num: 883,
@@ -16245,6 +16700,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 175,
     color: 'Blue',
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Past',
   },
   duraludon: {
     num: 884,
@@ -16255,6 +16711,7 @@ var PS_BATTLE_POKEDEX = {
     heightm: 1.8,
     weightkg: 40,
     color: 'White',
+    evos: ['Archaludon'],
     eggGroups: ['Mineral', 'Dragon'],
     canGigantamax: 'G-Max Depletion',
   },
@@ -16271,6 +16728,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'White',
     eggGroups: ['Mineral', 'Dragon'],
     changesFrom: 'Duraludon',
+    isNonstandard: 'Past',
   },
   dreepy: {
     num: 885,
@@ -16409,6 +16867,7 @@ var PS_BATTLE_POKEDEX = {
     color: 'Purple',
     eggGroups: ['Undiscovered'],
     cannotDynamax: true,
+    isNonstandard: 'Past',
   },
   kubfu: {
     num: 891,
@@ -16471,11 +16930,12 @@ var PS_BATTLE_POKEDEX = {
     genderRatio: { M: 0.875, F: 0.125 },
     baseStats: { hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97 },
     abilities: { 0: 'Unseen Fist' },
-    heightm: 3,
+    heightm: 29,
     weightkg: 0,
     color: 'Gray',
     eggGroups: ['Undiscovered'],
     changesFrom: 'Urshifu',
+    isNonstandard: 'Past',
   },
   urshifurapidstrikegmax: {
     num: 892,
@@ -16486,12 +16946,13 @@ var PS_BATTLE_POKEDEX = {
     genderRatio: { M: 0.875, F: 0.125 },
     baseStats: { hp: 100, atk: 130, def: 100, spa: 63, spd: 60, spe: 97 },
     abilities: { 0: 'Unseen Fist' },
-    heightm: 1.9,
-    weightkg: 105,
+    heightm: 26,
+    weightkg: 0,
     color: 'Gray',
     eggGroups: ['Undiscovered'],
     battleOnly: 'Urshifu-Rapid-Strike',
     changesFrom: 'Urshifu-Rapid-Strike',
+    isNonstandard: 'Past',
   },
   zarude: {
     num: 893,
@@ -16627,7 +17088,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Intimidate', 1: 'Frisk', H: 'Sap Sipper' },
     heightm: 1.8,
     weightkg: 95.1,
-    color: 'White',
+    color: 'Gray',
     prevo: 'Stantler',
     evoType: 'other',
     evoCondition: 'Use Agile style Psyshield Bash 20 times',
@@ -16643,7 +17104,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 89,
     color: 'Brown',
     prevo: 'Scyther',
-    evoType: 'other',
+    evoType: 'useItem',
     evoCondition: 'Black Augurite',
     eggGroups: ['Bug'],
   },
@@ -16721,7 +17182,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Pressure', 1: 'Unburden', H: 'Poison Touch' },
     heightm: 1.3,
     weightkg: 43,
-    color: 'Purple',
+    color: 'Blue',
     prevo: 'Sneasel-Hisui',
     evoType: 'levelHold',
     evoItem: 'Razor Claw',
@@ -16736,7 +17197,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Poison Point', 1: 'Swift Swim', H: 'Intimidate' },
     heightm: 2.5,
     weightkg: 60.5,
-    color: 'Gray',
+    color: 'Black',
     prevo: 'Qwilfish-Hisui',
     evoType: 'other',
     evoCondition: 'Use Strong style Barb Barrage 20 times',
@@ -17270,7 +17731,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Flash Fire', H: 'Weak Armor' },
     heightm: 1.6,
     weightkg: 62,
-    color: 'Blue',
+    color: 'Purple',
     prevo: 'Charcadet',
     evoType: 'useItem',
     evoItem: 'Malicious Armor',
@@ -17803,7 +18264,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Commander', H: 'Storm Drain' },
     heightm: 0.3,
     weightkg: 8,
-    color: 'Pink',
+    color: 'Red',
     cosmeticFormes: ['Tatsugiri-Droopy', 'Tatsugiri-Stretchy'],
     formeOrder: ['Tatsugiri', 'Tatsugiri-Droopy', 'Tatsugiri-Stretchy'],
     eggGroups: ['Water 2'],
@@ -17931,7 +18392,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Protosynthesis' },
     heightm: 1.2,
     weightkg: 21,
-    color: 'Gray',
+    color: 'White',
     tags: ['Paradox'],
     eggGroups: ['Undiscovered'],
   },
@@ -17957,7 +18418,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Protosynthesis' },
     heightm: 3.2,
     weightkg: 92,
-    color: 'Red',
+    color: 'White',
     tags: ['Paradox'],
     eggGroups: ['Undiscovered'],
   },
@@ -18035,7 +18496,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Quark Drive' },
     heightm: 1.2,
     weightkg: 36,
-    color: 'Yellow',
+    color: 'White',
     tags: ['Paradox'],
     eggGroups: ['Undiscovered'],
   },
@@ -18072,7 +18533,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Thermal Exchange', H: 'Ice Body' },
     heightm: 0.8,
     weightkg: 30,
-    color: 'Gray',
+    color: 'Blue',
     prevo: 'Frigibax',
     evoLevel: 35,
     evos: ['Baxcalibur'],
@@ -18086,7 +18547,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Thermal Exchange', H: 'Ice Body' },
     heightm: 2.1,
     weightkg: 210,
-    color: 'Gray',
+    color: 'Blue',
     prevo: 'Arctibax',
     evoLevel: 54,
     eggGroups: ['Dragon', 'Mineral'],
@@ -18101,7 +18562,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Rattled' },
     heightm: 0.3,
     weightkg: 5,
-    color: 'Brown',
+    color: 'Red',
     evos: ['Gholdengo'],
     otherFormes: ['Gimmighoul-Roaming'],
     formeOrder: ['Gimmighoul', 'Gimmighoul-Roaming'],
@@ -18118,7 +18579,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Run Away' },
     heightm: 0.1,
     weightkg: 0.1,
-    color: 'Blue',
+    color: 'Gray',
     evos: ['Gholdengo'],
     eggGroups: ['Undiscovered'],
   },
@@ -18198,7 +18659,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Protosynthesis' },
     heightm: 2,
     weightkg: 380,
-    color: 'Green',
+    color: 'Blue',
     tags: ['Paradox'],
     eggGroups: ['Undiscovered'],
   },
@@ -18237,7 +18698,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Hadron Engine' },
     heightm: 3.5,
     weightkg: 240,
-    color: 'Blue',
+    color: 'Purple',
     tags: ['Restricted Legendary'],
     eggGroups: ['Undiscovered'],
   },
@@ -18277,6 +18738,7 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 4.4,
     color: 'Green',
     prevo: 'Applin',
+    evos: ['Hydrapple'],
     evoType: 'useItem',
     evoItem: 'Syrupy Apple',
     eggGroups: ['Grass', 'Dragon'],
@@ -18357,6 +18819,7 @@ var PS_BATTLE_POKEDEX = {
     heightm: 1.8,
     weightkg: 92,
     color: 'Black',
+    tags: ['Sub-Legendary'],
     eggGroups: ['Undiscovered'],
   },
   munkidori: {
@@ -18369,6 +18832,7 @@ var PS_BATTLE_POKEDEX = {
     heightm: 1,
     weightkg: 12.2,
     color: 'Black',
+    tags: ['Sub-Legendary'],
     eggGroups: ['Undiscovered'],
   },
   fezandipiti: {
@@ -18381,6 +18845,7 @@ var PS_BATTLE_POKEDEX = {
     heightm: 1.4,
     weightkg: 30.1,
     color: 'Black',
+    tags: ['Sub-Legendary'],
     eggGroups: ['Undiscovered'],
   },
   ogerpon: {
@@ -18394,6 +18859,7 @@ var PS_BATTLE_POKEDEX = {
     heightm: 1.2,
     weightkg: 39.8,
     color: 'Green',
+    tags: ['Sub-Legendary'],
     eggGroups: ['Undiscovered'],
     otherFormes: [
       'Ogerpon-Wellspring',
@@ -18427,7 +18893,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Water Absorb' },
     heightm: 1.2,
     weightkg: 39.8,
-    color: 'Green',
+    color: 'Blue',
     eggGroups: ['Undiscovered'],
     requiredItem: 'Wellspring Mask',
     changesFrom: 'Ogerpon',
@@ -18494,7 +18960,7 @@ var PS_BATTLE_POKEDEX = {
     abilities: { 0: 'Embody Aspect (Wellspring)' },
     heightm: 1.2,
     weightkg: 39.8,
-    color: 'Green',
+    color: 'Blue',
     eggGroups: ['Undiscovered'],
     requiredItem: 'Wellspring Mask',
     battleOnly: 'Ogerpon-Wellspring',
@@ -18534,6 +19000,140 @@ var PS_BATTLE_POKEDEX = {
     battleOnly: 'Ogerpon-Cornerstone',
     forceTeraType: 'Rock',
   },
+  archaludon: {
+    num: 1018,
+    name: 'Archaludon',
+    types: ['Steel', 'Dragon'],
+    baseStats: { hp: 90, atk: 105, def: 130, spa: 125, spd: 65, spe: 85 },
+    abilities: { 0: 'Stamina', 1: 'Sturdy', H: 'Stalwart' },
+    heightm: 2,
+    weightkg: 60,
+    color: 'White',
+    prevo: 'Duraludon',
+    evoType: 'useItem',
+    evoItem: 'Metal Alloy',
+    eggGroups: ['Mineral', 'Dragon'],
+  },
+  hydrapple: {
+    num: 1019,
+    name: 'Hydrapple',
+    types: ['Grass', 'Dragon'],
+    baseStats: { hp: 106, atk: 80, def: 110, spa: 120, spd: 80, spe: 44 },
+    abilities: { 0: 'Supersweet Syrup', 1: 'Regenerator', H: 'Sticky Hold' },
+    heightm: 1.8,
+    weightkg: 93,
+    color: 'Green',
+    prevo: 'Dipplin',
+    evoType: 'levelMove',
+    evoMove: 'Dragon Cheer',
+    eggGroups: ['Grass', 'Dragon'],
+  },
+  gougingfire: {
+    num: 1020,
+    name: 'Gouging Fire',
+    types: ['Fire', 'Dragon'],
+    gender: 'N',
+    baseStats: { hp: 105, atk: 115, def: 121, spa: 65, spd: 93, spe: 91 },
+    abilities: { 0: 'Protosynthesis' },
+    heightm: 3.5,
+    weightkg: 590,
+    color: 'Brown',
+    eggGroups: ['Undiscovered'],
+  },
+  ragingbolt: {
+    num: 1021,
+    name: 'Raging Bolt',
+    types: ['Electric', 'Dragon'],
+    gender: 'N',
+    baseStats: { hp: 125, atk: 73, def: 91, spa: 137, spd: 89, spe: 75 },
+    abilities: { 0: 'Protosynthesis' },
+    heightm: 5.2,
+    weightkg: 480,
+    color: 'Yellow',
+    eggGroups: ['Undiscovered'],
+  },
+  ironboulder: {
+    num: 1022,
+    name: 'Iron Boulder',
+    types: ['Rock', 'Psychic'],
+    gender: 'N',
+    baseStats: { hp: 90, atk: 120, def: 80, spa: 68, spd: 108, spe: 124 },
+    abilities: { 0: 'Quark Drive' },
+    heightm: 1.5,
+    weightkg: 162.5,
+    color: 'Gray',
+    eggGroups: ['Undiscovered'],
+  },
+  ironcrown: {
+    num: 1023,
+    name: 'Iron Crown',
+    types: ['Steel', 'Psychic'],
+    gender: 'N',
+    baseStats: { hp: 90, atk: 72, def: 100, spa: 122, spd: 108, spe: 98 },
+    abilities: { 0: 'Quark Drive' },
+    heightm: 1.6,
+    weightkg: 156,
+    color: 'Blue',
+    eggGroups: ['Undiscovered'],
+  },
+  terapagos: {
+    num: 1024,
+    name: 'Terapagos',
+    types: ['Normal'],
+    baseStats: { hp: 90, atk: 65, def: 85, spa: 65, spd: 85, spe: 60 },
+    abilities: { 0: 'Tera Shift' },
+    heightm: 0.2,
+    weightkg: 6.5,
+    color: 'Blue',
+    tags: ['Restricted Legendary'],
+    eggGroups: ['Undiscovered'],
+    otherFormes: ['Terapagos-Terastal', 'Terapagos-Stellar'],
+    formeOrder: ['Terapagos', 'Terapagos-Terastal', 'Terapagos-Stellar'],
+    forceTeraType: 'Stellar',
+  },
+  terapagosterastal: {
+    num: 1024,
+    name: 'Terapagos-Terastal',
+    baseSpecies: 'Terapagos',
+    forme: 'Terastal',
+    types: ['Normal'],
+    baseStats: { hp: 95, atk: 95, def: 110, spa: 105, spd: 110, spe: 85 },
+    abilities: { 0: 'Tera Shell' },
+    heightm: 0.3,
+    weightkg: 16,
+    color: 'Blue',
+    eggGroups: ['Undiscovered'],
+    battleOnly: 'Terapagos',
+    forceTeraType: 'Stellar',
+  },
+  terapagosstellar: {
+    num: 1024,
+    name: 'Terapagos-Stellar',
+    baseSpecies: 'Terapagos',
+    forme: 'Stellar',
+    types: ['Normal'],
+    baseStats: { hp: 160, atk: 105, def: 110, spa: 130, spd: 110, spe: 85 },
+    abilities: { 0: 'Teraform Zero' },
+    heightm: 1.7,
+    weightkg: 77,
+    color: 'Blue',
+    eggGroups: ['Undiscovered'],
+    battleOnly: 'Terapagos',
+    forceTeraType: 'Stellar',
+  },
+  pecharunt: {
+    num: 1025,
+    name: 'Pecharunt',
+    types: ['Poison', 'Ghost'],
+    gender: 'N',
+    baseStats: { hp: 88, atk: 88, def: 160, spa: 88, spd: 88, spe: 88 },
+    abilities: { 0: 'Poison Puppeteer' },
+    heightm: 0.3,
+    weightkg: 0.3,
+    color: 'Purple',
+    tags: ['Mythical'],
+    eggGroups: ['Undiscovered'],
+  },
   missingno: {
     num: 0,
     name: 'MissingNo.',
@@ -18544,5 +19144,6 @@ var PS_BATTLE_POKEDEX = {
     weightkg: 1590.8,
     color: 'Gray',
     eggGroups: ['Undiscovered'],
+    isNonstandard: 'Custom',
   },
 };
