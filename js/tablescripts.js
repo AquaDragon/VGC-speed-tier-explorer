@@ -35,7 +35,7 @@ function defaultTableRules() {
   hasNonFullyEvolved = false;
   updateButtonText();
 
-  selectFormat.value = 'FORMAT_SV_REGULATION_E';
+  selectFormat.value = 'FORMAT_SV_REGULATION_H';
 
   cboxFastBST.checked = true;
   selectFastBST.value = '90';

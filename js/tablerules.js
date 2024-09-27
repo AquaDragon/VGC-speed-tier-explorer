@@ -14,10 +14,15 @@ var selectTailwindMaxBST = document.getElementById('selectTailwindMaxBST');
 const formatOptions = [
   { value: 'SV National Dex', text: 'National Dex', var: null },
   {
-    value: 'SV_REG_E_TOP_META_2023_SEP_30',
-    text: 'Ranked Battle Regulation Set E (Top 50 by Usage, 30 Sep 2023)',
-    var: SV_REG_E_TOP_META_2023_SEP_30,
+    value: 'FORMAT_SV_REGULATION_H',
+    text: 'Ranked Battle Regulation Set H',
+    var: FORMAT_SV_REGULATION_H,
   },
+  // {
+  //   value: 'SV_REG_E_TOP_META_2023_SEP_30',
+  //   text: 'Ranked Battle Regulation Set E (Top 50 by Usage, 30 Sep 2023)',
+  //   var: SV_REG_E_TOP_META_2023_SEP_30,
+  // },
   {
     value: 'FORMAT_SV_REGULATION_E',
     text: 'Ranked Battle Regulation Set E',
@@ -46,7 +51,7 @@ function initializeFormatSelect() {
   });
 
   // Set default value
-  selectFormat.value = 'FORMAT_SV_REGULATION_E';
+  selectFormat.value = 'FORMAT_SV_REGULATION_H';
 }
 
 // Initialize dropdown options for selecting MIN & MAX speeds
