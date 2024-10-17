@@ -19,14 +19,14 @@ const formatOptions = [
     var: FORMAT_SV_REGULATION_H,
   },
   {
-    value: 'SV_REG_H_SHOWDOWN_TOP_50_ELO_1500_AUG_2024',
-    text: 'Ranked Battle Regulation Set H (PS! Aug 2024 Top 50, 1500 Elo)',
-    var: SV_REG_H_SHOWDOWN_TOP_50_ELO_1500_AUG_2024,
+    value: 'SV_REG_H_SHOWDOWN_TOP_50_ELO_1500_SEP_2024',
+    text: 'Ranked Battle Regulation Set H (PS! Sep 2024 Top 50, 1500 Elo)',
+    var: SV_REG_H_SHOWDOWN_TOP_50_ELO_1500_SEP_2024,
   },
   {
-    value: 'SV_REG_H_SHOWDOWN_TOP_100_ELO_1500_AUG_2024',
-    text: 'Ranked Battle Regulation Set H (PS! Aug 2024 Top 100, 1500 Elo)',
-    var: SV_REG_H_SHOWDOWN_TOP_100_ELO_1500_AUG_2024,
+    value: 'SV_REG_H_SHOWDOWN_TOP_129_ELO_1500_SEP_2024',
+    text: 'Ranked Battle Regulation Set H (PS! Sep 2024 Top 129, 1500 Elo)',
+    var: SV_REG_H_SHOWDOWN_TOP_129_ELO_1500_SEP_2024,
   },
   {
     value: 'FORMAT_SV_REGULATION_E',
