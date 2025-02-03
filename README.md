@@ -18,6 +18,7 @@ https://aquadragon.github.io/VGC-speed-tier-explorer/
 
 ## Development
 - Run `npm run format` to format the code using Prettier.
+- Generate smogon usage stats report: `node js/readchaos.js`
 
 
 ## Credits

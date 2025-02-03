@@ -19147,3 +19147,5 @@ var PS_BATTLE_POKEDEX = {
     isNonstandard: 'Custom',
   },
 };
+
+module.exports = { PS_BATTLE_POKEDEX };
