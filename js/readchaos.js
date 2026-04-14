@@ -3,7 +3,7 @@ const math = require('mathjs');
 const { PS_BATTLE_POKEDEX } = require('../imports/ps/pokedex');
 const path = require('path');
 
-const filePath = './js/chaos/gen9vgc2025regg-1500.json';
+const filePath = './js/chaos/2025-03-gen9vgc2025reggbo3-1500.json' ;//gen9vgc2025regg-1500.json';
 const outputFileName = path.basename(filePath, '.json') + '.txt'; // Use the base filename of the JSON file for the output file
 const outputDir = path.dirname(filePath); // original file directory
 const outputFilePath = path.join(outputDir, outputFileName); // save to same directory
@@ -158,7 +158,7 @@ Include if overall combined stat usage is above: ${pctRepresentThreshold}%
 
 `;
     results.forEach((result) => {
-      outputText += `${result.speedStat} ${result.pkmn} [${result.keylist}] --- ${result.pctRepresent}% [${result.pctUsage}% of ${result.pctMetaUsage}%] (Count = ${result.rawUsage})\n`;
+      outputText += `${result.speedStat} ${result.pkmn} [${result.keylist}] --- ${result.pctRepresent}% [${result.pctUsage}% usage, ${result.pctMetaUsage}% meta] (Count = ${result.rawUsage})\n`;
     });
 
     // Write the result to a file
