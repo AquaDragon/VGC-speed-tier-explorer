@@ -1,7 +1,7 @@
 /*
     Formatted with js beautifier
     Source: play.pokemonshowdown.com/data/items.js
-    24 Aug 2023
+    15 Apr 2026
 */
 
 // exports.BattleItems = {
@@ -15,29 +15,45 @@ var PS_BATTLE_ITEMS = {
         ignoreKlutz: true,
         num: 1881,
         gen: 9,
-        desc: "Holder's Ability cannot be changed by any effect."
+        desc: "Holder's Ability cannot be changed, suppressed, or ignored by any effect.",
+        shortDesc: "Holder's Ability cannot be changed, suppressed, or ignored by any effect."
     },
     abomasite: {
         name: "Abomasite",
         spritenum: 575,
-        megaStone: "Abomasnow-Mega",
-        megaEvolves: "Abomasnow",
+        megaStone: {
+            Abomasnow: "Abomasnow-Mega"
+        },
         itemUser: ["Abomasnow"],
         num: 674,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by an Abomasnow, this item allows it to Mega Evolve in battle."
+        desc: "If held by an Abomasnow, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by an Abomasnow, this item allows it to Mega Evolve in battle."
     },
     absolite: {
         name: "Absolite",
         spritenum: 576,
-        megaStone: "Absol-Mega",
-        megaEvolves: "Absol",
+        megaStone: {
+            Absol: "Absol-Mega"
+        },
         itemUser: ["Absol"],
         num: 677,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by an Absol, this item allows it to Mega Evolve in battle."
+        desc: "If held by an Absol, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by an Absol, this item allows it to Mega Evolve in battle."
+    },
+    absolitez: {
+        name: "Absolite Z",
+        spritenum: 576,
+        megaStone: {
+            Absol: "Absol-Mega-Z"
+        },
+        itemUser: ["Absol"],
+        num: 2638,
+        gen: 9,
+        isNonstandard: "Future"
     },
     absorbbulb: {
         name: "Absorb Bulb",
@@ -50,7 +66,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 545,
         gen: 5,
-        desc: "Raises holder's Sp. Atk by 1 stage if hit by a Water-type attack. Single use."
+        desc: "Raises holder's Sp. Atk by 1 stage if hit by a Water-type attack. Single use.",
+        shortDesc: "Raises holder's Sp. Atk by 1 stage if hit by a Water-type attack. Single use."
     },
     adamantcrystal: {
         name: "Adamant Crystal",
@@ -60,7 +77,8 @@ var PS_BATTLE_ITEMS = {
         itemUser: ["Dialga-Origin"],
         num: 1777,
         gen: 8,
-        desc: "If held by a Dialga, its Steel- and Dragon-type attacks have 1.2x power."
+        desc: "If held by a Dialga, its Steel- and Dragon-type attacks have 1.2x power.",
+        shortDesc: "If held by a Dialga, its Steel- and Dragon-type attacks have 1.2x power."
     },
     adamantorb: {
         name: "Adamant Orb",
@@ -72,7 +90,8 @@ var PS_BATTLE_ITEMS = {
         itemUser: ["Dialga"],
         num: 135,
         gen: 4,
-        desc: "If held by a Dialga, its Steel- and Dragon-type attacks have 1.2x power."
+        desc: "If held by a Dialga, its Steel- and Dragon-type attacks have 1.2x power.",
+        shortDesc: "If held by a Dialga, its Steel- and Dragon-type attacks have 1.2x power."
     },
     adrenalineorb: {
         name: "Adrenaline Orb",
@@ -85,29 +104,34 @@ var PS_BATTLE_ITEMS = {
         },
         num: 846,
         gen: 7,
-        desc: "Raises holder's Speed by 1 stage if it gets affected by Intimidate. Single use."
+        desc: "Raises holder's Speed by 1 stage if it gets affected by Intimidate. Single use.",
+        shortDesc: "Raises holder's Speed by 1 stage if it gets affected by Intimidate. Single use."
     },
     aerodactylite: {
         name: "Aerodactylite",
         spritenum: 577,
-        megaStone: "Aerodactyl-Mega",
-        megaEvolves: "Aerodactyl",
+        megaStone: {
+            Aerodactyl: "Aerodactyl-Mega"
+        },
         itemUser: ["Aerodactyl"],
         num: 672,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by an Aerodactyl, this item allows it to Mega Evolve in battle."
+        desc: "If held by an Aerodactyl, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by an Aerodactyl, this item allows it to Mega Evolve in battle."
     },
     aggronite: {
         name: "Aggronite",
         spritenum: 578,
-        megaStone: "Aggron-Mega",
-        megaEvolves: "Aggron",
+        megaStone: {
+            Aggron: "Aggron-Mega"
+        },
         itemUser: ["Aggron"],
         num: 667,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by an Aggron, this item allows it to Mega Evolve in battle."
+        desc: "If held by an Aggron, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by an Aggron, this item allows it to Mega Evolve in battle."
     },
     aguavberry: {
         name: "Aguav Berry",
@@ -119,7 +143,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 162,
         gen: 3,
-        desc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -SpD Nature. Single use."
+        desc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -SpD Nature. Single use.",
+        shortDesc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -SpD Nature. Single use."
     },
     airballoon: {
         name: "Air Balloon",
@@ -129,18 +154,21 @@ var PS_BATTLE_ITEMS = {
         },
         num: 541,
         gen: 5,
-        desc: "Holder is immune to Ground-type attacks. Pops when holder is hit."
+        desc: "Holder is immune to Ground-type attacks. Pops when holder is hit.",
+        shortDesc: "Holder is immune to Ground-type attacks. Pops when holder is hit."
     },
     alakazite: {
         name: "Alakazite",
         spritenum: 579,
-        megaStone: "Alakazam-Mega",
-        megaEvolves: "Alakazam",
+        megaStone: {
+            Alakazam: "Alakazam-Mega"
+        },
         itemUser: ["Alakazam"],
         num: 679,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by an Alakazam, this item allows it to Mega Evolve in battle."
+        desc: "If held by an Alakazam, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by an Alakazam, this item allows it to Mega Evolve in battle."
     },
     aloraichiumz: {
         name: "Aloraichium Z",
@@ -152,29 +180,34 @@ var PS_BATTLE_ITEMS = {
         num: 803,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If held by an Alolan Raichu with Thunderbolt, it can use Stoked Sparksurfer."
+        desc: "If held by an Alolan Raichu with Thunderbolt, it can use Stoked Sparksurfer.",
+        shortDesc: "If held by an Alolan Raichu with Thunderbolt, it can use Stoked Sparksurfer."
     },
     altarianite: {
         name: "Altarianite",
         spritenum: 615,
-        megaStone: "Altaria-Mega",
-        megaEvolves: "Altaria",
+        megaStone: {
+            Altaria: "Altaria-Mega"
+        },
         itemUser: ["Altaria"],
         num: 755,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by an Altaria, this item allows it to Mega Evolve in battle."
+        desc: "If held by an Altaria, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by an Altaria, this item allows it to Mega Evolve in battle."
     },
     ampharosite: {
         name: "Ampharosite",
         spritenum: 580,
-        megaStone: "Ampharos-Mega",
-        megaEvolves: "Ampharos",
+        megaStone: {
+            Ampharos: "Ampharos-Mega"
+        },
         itemUser: ["Ampharos"],
         num: 658,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by an Ampharos, this item allows it to Mega Evolve in battle."
+        desc: "If held by an Ampharos, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by an Ampharos, this item allows it to Mega Evolve in battle."
     },
     apicotberry: {
         name: "Apicot Berry",
@@ -186,7 +219,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 205,
         gen: 3,
-        desc: "Raises holder's Sp. Def by 1 stage when at 1/4 max HP or less. Single use."
+        desc: "Raises holder's Sp. Def by 1 stage when at 1/4 max HP or less. Single use.",
+        shortDesc: "Raises holder's Sp. Def by 1 stage when at 1/4 max HP or less. Single use."
     },
     armorfossil: {
         name: "Armor Fossil",
@@ -197,7 +231,8 @@ var PS_BATTLE_ITEMS = {
         num: 104,
         gen: 4,
         isNonstandard: "Past",
-        desc: "Can be revived into Shieldon."
+        desc: "Can be revived into Shieldon.",
+        shortDesc: "Can be revived into Shieldon."
     },
     aspearberry: {
         name: "Aspear Berry",
@@ -209,7 +244,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 153,
         gen: 3,
-        desc: "Holder is cured if it is frozen. Single use."
+        desc: "Holder is cured if it is frozen. Single use.",
+        shortDesc: "Holder is cured if it is frozen. Single use."
     },
     assaultvest: {
         name: "Assault Vest",
@@ -220,18 +256,21 @@ var PS_BATTLE_ITEMS = {
         onModifySpDPriority: 1,
         num: 640,
         gen: 6,
-        desc: "Holder's Sp. Def is 1.5x, but it can only select damaging moves."
+        desc: "Holder's Sp. Def is 1.5x, but it can only select damaging moves.",
+        shortDesc: "Holder's Sp. Def is 1.5x, but it can only select damaging moves."
     },
     audinite: {
         name: "Audinite",
         spritenum: 617,
-        megaStone: "Audino-Mega",
-        megaEvolves: "Audino",
+        megaStone: {
+            Audino: "Audino-Mega"
+        },
         itemUser: ["Audino"],
         num: 757,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by an Audino, this item allows it to Mega Evolve in battle."
+        desc: "If held by an Audino, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by an Audino, this item allows it to Mega Evolve in battle."
     },
     auspiciousarmor: {
         name: "Auspicious Armor",
@@ -241,7 +280,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 2344,
         gen: 9,
-        desc: "Evolves Charcadet into Armarouge when used."
+        desc: "Evolves Charcadet into Armarouge when used.",
+        shortDesc: "Evolves Charcadet into Armarouge when used."
     },
     babiriberry: {
         name: "Babiri Berry",
@@ -253,18 +293,45 @@ var PS_BATTLE_ITEMS = {
         },
         num: 199,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Steel-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Steel-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Steel-type attack. Single use."
     },
     banettite: {
         name: "Banettite",
         spritenum: 582,
-        megaStone: "Banette-Mega",
-        megaEvolves: "Banette",
+        megaStone: {
+            Banette: "Banette-Mega"
+        },
         itemUser: ["Banette"],
         num: 668,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Banette, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Banette, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Banette, this item allows it to Mega Evolve in battle."
+    },
+    barbaracite: {
+        name: "Barbaracite",
+        spritenum: 564,
+        megaStone: {
+            Barbaracle: "Barbaracle-Mega"
+        },
+        itemUser: ["Barbaracle"],
+        num: 2581,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Barbaracle, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Barbaracle, this item allows it to Mega Evolve in battle."
+    },
+    baxcalibrite: {
+        name: "Baxcalibrite",
+        spritenum: 0,
+        megaStone: {
+            Baxcalibur: "Baxcalibur-Mega"
+        },
+        itemUser: ["Baxcalibur"],
+        num: 2648,
+        gen: 9,
+        isNonstandard: "Future"
     },
     beastball: {
         name: "Beast Ball",
@@ -272,18 +339,21 @@ var PS_BATTLE_ITEMS = {
         num: 851,
         gen: 7,
         isPokeball: true,
-        desc: "A special Poke Ball designed to catch Ultra Beasts."
+        desc: "A special Poke Ball designed to catch Ultra Beasts.",
+        shortDesc: "A special Poke Ball designed to catch Ultra Beasts."
     },
     beedrillite: {
         name: "Beedrillite",
         spritenum: 628,
-        megaStone: "Beedrill-Mega",
-        megaEvolves: "Beedrill",
+        megaStone: {
+            Beedrill: "Beedrill-Mega"
+        },
         itemUser: ["Beedrill"],
         num: 770,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Beedrill, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Beedrill, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Beedrill, this item allows it to Mega Evolve in battle."
     },
     belueberry: {
         name: "Belue Berry",
@@ -297,7 +367,8 @@ var PS_BATTLE_ITEMS = {
         num: 183,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     berryjuice: {
         name: "Berry Juice",
@@ -308,7 +379,8 @@ var PS_BATTLE_ITEMS = {
         num: 43,
         gen: 2,
         isNonstandard: "Past",
-        desc: "Restores 20 HP when at 1/2 max HP or less. Single use."
+        desc: "Restores 20 HP when at 1/2 max HP or less. Single use.",
+        shortDesc: "Restores 20 HP when at 1/2 max HP or less. Single use."
     },
     berrysweet: {
         name: "Berry Sweet",
@@ -318,8 +390,19 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1111,
         gen: 8,
-        isNonstandard: "Past",
-        desc: "Evolves Milcery into Alcremie when held and spun around."
+        desc: "Evolves Milcery into Alcremie when held and spun around.",
+        shortDesc: "Evolves Milcery into Alcremie when held and spun around."
+    },
+    bignugget: {
+        name: "Big Nugget",
+        spritenum: 27,
+        fling: {
+            basePower: 130
+        },
+        num: 581,
+        gen: 5,
+        desc: "A big nugget of pure gold that gives off a lustrous gleam.",
+        shortDesc: "A big nugget of pure gold that gives off a lustrous gleam."
     },
     bigroot: {
         name: "Big Root",
@@ -330,7 +413,8 @@ var PS_BATTLE_ITEMS = {
         onTryHealPriority: 1,
         num: 296,
         gen: 4,
-        desc: "Holder gains 1.3x HP from draining/Aqua Ring/Ingrain/Leech Seed/Strength Sap."
+        desc: "Holder gains 1.3x HP from draining/Aqua Ring/Ingrain/Leech Seed/Strength Sap.",
+        shortDesc: "Holder gains 1.3x HP from draining/Aqua Ring/Ingrain/Leech Seed/Strength Sap."
     },
     bindingband: {
         name: "Binding Band",
@@ -340,7 +424,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 544,
         gen: 5,
-        desc: "Holder's partial-trapping moves deal 1/6 max HP per turn instead of 1/8."
+        desc: "Holder's partial-trapping moves deal 1/6 max HP per turn instead of 1/8.",
+        shortDesc: "Holder's partial-trapping moves deal 1/6 max HP per turn instead of 1/8."
     },
     blackbelt: {
         name: "Black Belt",
@@ -351,7 +436,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 241,
         gen: 2,
-        desc: "Holder's Fighting-type attacks have 1.2x power."
+        desc: "Holder's Fighting-type attacks have 1.2x power.",
+        shortDesc: "Holder's Fighting-type attacks have 1.2x power."
     },
     blackglasses: {
         name: "Black Glasses",
@@ -362,7 +448,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 240,
         gen: 2,
-        desc: "Holder's Dark-type attacks have 1.2x power."
+        desc: "Holder's Dark-type attacks have 1.2x power.",
+        shortDesc: "Holder's Dark-type attacks have 1.2x power."
     },
     blacksludge: {
         name: "Black Sludge",
@@ -374,38 +461,46 @@ var PS_BATTLE_ITEMS = {
         onResidualSubOrder: 4,
         num: 281,
         gen: 4,
-        desc: "Each turn, if holder is a Poison type, restores 1/16 max HP; loses 1/8 if not."
+        desc: "Each turn, if holder is a Poison type, restores 1/16 max HP; loses 1/8 if not.",
+        shortDesc: "Each turn, if holder is a Poison type, restores 1/16 max HP; loses 1/8 if not."
     },
     blastoisinite: {
         name: "Blastoisinite",
         spritenum: 583,
-        megaStone: "Blastoise-Mega",
-        megaEvolves: "Blastoise",
+        megaStone: {
+            Blastoise: "Blastoise-Mega"
+        },
         itemUser: ["Blastoise"],
         num: 661,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Blastoise, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Blastoise, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Blastoise, this item allows it to Mega Evolve in battle."
     },
     blazikenite: {
         name: "Blazikenite",
         spritenum: 584,
-        megaStone: "Blaziken-Mega",
-        megaEvolves: "Blaziken",
+        megaStone: {
+            Blaziken: "Blaziken-Mega"
+        },
         itemUser: ["Blaziken"],
         num: 664,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Blaziken, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Blaziken, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Blaziken, this item allows it to Mega Evolve in battle."
     },
     blueorb: {
         name: "Blue Orb",
         spritenum: 41,
+        onSwitchInPriority: -1,
         itemUser: ["Kyogre"],
+        isPrimalOrb: true,
         num: 535,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Kyogre, this item triggers its Primal Reversion in battle."
+        desc: "If held by a Kyogre, this item triggers its Primal Reversion in battle.",
+        shortDesc: "If held by a Kyogre, this item triggers its Primal Reversion in battle."
     },
     blukberry: {
         name: "Bluk Berry",
@@ -419,7 +514,8 @@ var PS_BATTLE_ITEMS = {
         num: 165,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     blunderpolicy: {
         name: "Blunder Policy",
@@ -429,7 +525,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1121,
         gen: 8,
-        desc: "If the holder misses due to accuracy, its Speed is raised by 2 stages. Single use."
+        desc: "If the holder misses due to accuracy, its Speed is raised by 2 stages. Single use.",
+        shortDesc: "If the holder misses due to accuracy, its Speed is raised by 2 stages. Single use."
     },
     boosterenergy: {
         name: "Booster Energy",
@@ -437,9 +534,11 @@ var PS_BATTLE_ITEMS = {
         fling: {
             basePower: 30
         },
+        onSwitchInPriority: -2,
         num: 1880,
         gen: 9,
-        desc: "Activates the Protosynthesis or Quark Drive Abilities. Single use."
+        desc: "Activates the Protosynthesis or Quark Drive Abilities. Single use.",
+        shortDesc: "Activates the Protosynthesis or Quark Drive Abilities. Single use."
     },
     bottlecap: {
         name: "Bottle Cap",
@@ -449,7 +548,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 795,
         gen: 7,
-        desc: "Used for Hyper Training. One of a Pokemon's stats is calculated with an IV of 31."
+        desc: "Used for Hyper Training. One of a Pokemon's stats is calculated with an IV of 31.",
+        shortDesc: "Used for Hyper Training. One of a Pokemon's stats is calculated with an IV of 31."
     },
     brightpowder: {
         name: "Bright Powder",
@@ -460,7 +560,8 @@ var PS_BATTLE_ITEMS = {
         onModifyAccuracyPriority: -2,
         num: 213,
         gen: 2,
-        desc: "The accuracy of attacks against the holder is 0.9x."
+        desc: "The accuracy of attacks against the holder is 0.9x.",
+        shortDesc: "The accuracy of attacks against the holder is 0.9x."
     },
     buggem: {
         name: "Bug Gem",
@@ -469,18 +570,8 @@ var PS_BATTLE_ITEMS = {
         num: 558,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Bug-type attack will have 1.3x power. Single use."
-    },
-    bugmemory: {
-        name: "Bug Memory",
-        spritenum: 673,
-        onMemory: "Bug",
-        forcedForme: "Silvally-Bug",
-        itemUser: ["Silvally-Bug"],
-        num: 909,
-        gen: 7,
-        isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Bug type."
+        desc: "Holder's first successful Bug-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Bug-type attack will have 1.3x power. Single use."
     },
     buginiumz: {
         name: "Buginium Z",
@@ -493,7 +584,20 @@ var PS_BATTLE_ITEMS = {
         num: 787,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Bug move, this item allows it to use a Bug Z-Move."
+        desc: "If holder has a Bug move, this item allows it to use a Bug Z-Move.",
+        shortDesc: "If holder has a Bug move, this item allows it to use a Bug Z-Move."
+    },
+    bugmemory: {
+        name: "Bug Memory",
+        spritenum: 673,
+        onMemory: "Bug",
+        forcedForme: "Silvally-Bug",
+        itemUser: ["Silvally-Bug"],
+        num: 909,
+        gen: 7,
+        isNonstandard: "Past",
+        desc: "Holder's Multi-Attack is Bug type.",
+        shortDesc: "Holder's Multi-Attack is Bug type."
     },
     burndrive: {
         name: "Burn Drive",
@@ -504,18 +608,21 @@ var PS_BATTLE_ITEMS = {
         num: 118,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's Techno Blast is Fire type."
+        desc: "Holder's Techno Blast is Fire type.",
+        shortDesc: "Holder's Techno Blast is Fire type."
     },
     cameruptite: {
         name: "Cameruptite",
         spritenum: 625,
-        megaStone: "Camerupt-Mega",
-        megaEvolves: "Camerupt",
+        megaStone: {
+            Camerupt: "Camerupt-Mega"
+        },
         itemUser: ["Camerupt"],
         num: 767,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Camerupt, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Camerupt, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Camerupt, this item allows it to Mega Evolve in battle."
     },
     cellbattery: {
         name: "Cell Battery",
@@ -528,7 +635,21 @@ var PS_BATTLE_ITEMS = {
         },
         num: 546,
         gen: 5,
-        desc: "Raises holder's Attack by 1 if hit by an Electric-type attack. Single use."
+        desc: "Raises holder's Attack by 1 if hit by an Electric-type attack. Single use.",
+        shortDesc: "Raises holder's Attack by 1 if hit by an Electric-type attack. Single use."
+    },
+    chandelurite: {
+        name: "Chandelurite",
+        spritenum: 557,
+        megaStone: {
+            Chandelure: "Chandelure-Mega"
+        },
+        itemUser: ["Chandelure"],
+        num: 2574,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Chandelure, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Chandelure, this item allows it to Mega Evolve in battle."
     },
     charcoal: {
         name: "Charcoal",
@@ -539,29 +660,34 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 249,
         gen: 2,
-        desc: "Holder's Fire-type attacks have 1.2x power."
+        desc: "Holder's Fire-type attacks have 1.2x power.",
+        shortDesc: "Holder's Fire-type attacks have 1.2x power."
     },
     charizarditex: {
         name: "Charizardite X",
         spritenum: 585,
-        megaStone: "Charizard-Mega-X",
-        megaEvolves: "Charizard",
+        megaStone: {
+            Charizard: "Charizard-Mega-X"
+        },
         itemUser: ["Charizard"],
         num: 660,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Charizard, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Charizard, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Charizard, this item allows it to Mega Evolve in battle."
     },
     charizarditey: {
         name: "Charizardite Y",
         spritenum: 586,
-        megaStone: "Charizard-Mega-Y",
-        megaEvolves: "Charizard",
+        megaStone: {
+            Charizard: "Charizard-Mega-Y"
+        },
         itemUser: ["Charizard"],
         num: 678,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Charizard, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Charizard, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Charizard, this item allows it to Mega Evolve in battle."
     },
     chartiberry: {
         name: "Charti Berry",
@@ -573,7 +699,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 195,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Rock-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Rock-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Rock-type attack. Single use."
     },
     cheriberry: {
         name: "Cheri Berry",
@@ -585,7 +712,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 149,
         gen: 3,
-        desc: "Holder cures itself if it is paralyzed. Single use."
+        desc: "Holder cures itself if it is paralyzed. Single use.",
+        shortDesc: "Holder cures itself if it is paralyzed. Single use."
     },
     cherishball: {
         name: "Cherish Ball",
@@ -594,7 +722,21 @@ var PS_BATTLE_ITEMS = {
         gen: 4,
         isPokeball: true,
         isNonstandard: "Unobtainable",
-        desc: "A rare Poke Ball that has been crafted to commemorate an occasion."
+        desc: "A rare Poke Ball that has been crafted to commemorate an occasion.",
+        shortDesc: "A rare Poke Ball that has been crafted to commemorate an occasion."
+    },
+    chesnaughtite: {
+        name: "Chesnaughtite",
+        spritenum: 558,
+        megaStone: {
+            Chesnaught: "Chesnaught-Mega"
+        },
+        itemUser: ["Chesnaught"],
+        num: 2575,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Chesnaught, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Chesnaught, this item allows it to Mega Evolve in battle."
     },
     chestoberry: {
         name: "Chesto Berry",
@@ -606,7 +748,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 150,
         gen: 3,
-        desc: "Holder wakes up if it is asleep. Single use."
+        desc: "Holder wakes up if it is asleep. Single use.",
+        shortDesc: "Holder wakes up if it is asleep. Single use."
     },
     chilanberry: {
         name: "Chilan Berry",
@@ -618,7 +761,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 200,
         gen: 4,
-        desc: "Halves damage taken from a Normal-type attack. Single use."
+        desc: "Halves damage taken from a Normal-type attack. Single use.",
+        shortDesc: "Halves damage taken from a Normal-type attack. Single use."
     },
     chilldrive: {
         name: "Chill Drive",
@@ -629,7 +773,19 @@ var PS_BATTLE_ITEMS = {
         num: 119,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's Techno Blast is Ice type."
+        desc: "Holder's Techno Blast is Ice type.",
+        shortDesc: "Holder's Techno Blast is Ice type."
+    },
+    chimechite: {
+        name: "Chimechite",
+        spritenum: 0,
+        megaStone: {
+            Chimecho: "Chimecho-Mega"
+        },
+        itemUser: ["Chimecho"],
+        num: 2637,
+        gen: 9,
+        isNonstandard: "Future"
     },
     chippedpot: {
         name: "Chipped Pot",
@@ -639,7 +795,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1254,
         gen: 8,
-        desc: "Evolves Sinistea-Antique into Polteageist-Antique when used."
+        desc: "Evolves Sinistea-Antique into Polteageist-Antique when used.",
+        shortDesc: "Evolves Sinistea-Antique into Polteageist-Antique when used."
     },
     choiceband: {
         name: "Choice Band",
@@ -651,7 +808,8 @@ var PS_BATTLE_ITEMS = {
         isChoice: true,
         num: 220,
         gen: 3,
-        desc: "Holder's Attack is 1.5x, but it can only select the first move it executes."
+        desc: "Holder's Attack is 1.5x, but it can only select the first move it executes.",
+        shortDesc: "Holder's Attack is 1.5x, but it can only select the first move it executes."
     },
     choicescarf: {
         name: "Choice Scarf",
@@ -662,7 +820,8 @@ var PS_BATTLE_ITEMS = {
         isChoice: true,
         num: 287,
         gen: 4,
-        desc: "Holder's Speed is 1.5x, but it can only select the first move it executes."
+        desc: "Holder's Speed is 1.5x, but it can only select the first move it executes.",
+        shortDesc: "Holder's Speed is 1.5x, but it can only select the first move it executes."
     },
     choicespecs: {
         name: "Choice Specs",
@@ -674,7 +833,8 @@ var PS_BATTLE_ITEMS = {
         isChoice: true,
         num: 297,
         gen: 4,
-        desc: "Holder's Sp. Atk is 1.5x, but it can only select the first move it executes."
+        desc: "Holder's Sp. Atk is 1.5x, but it can only select the first move it executes.",
+        shortDesc: "Holder's Sp. Atk is 1.5x, but it can only select the first move it executes."
     },
     chopleberry: {
         name: "Chople Berry",
@@ -686,7 +846,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 189,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Fighting-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Fighting-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Fighting-type attack. Single use."
     },
     clawfossil: {
         name: "Claw Fossil",
@@ -697,7 +858,8 @@ var PS_BATTLE_ITEMS = {
         num: 100,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Can be revived into Anorith."
+        desc: "Can be revived into Anorith.",
+        shortDesc: "Can be revived into Anorith."
     },
     clearamulet: {
         name: "Clear Amulet",
@@ -705,9 +867,24 @@ var PS_BATTLE_ITEMS = {
         fling: {
             basePower: 30
         },
+        onTryBoostPriority: 1,
         num: 1882,
         gen: 9,
-        desc: "Prevents other Pokemon from lowering the holder's stat stages."
+        desc: "Prevents other Pokemon from lowering the holder's stat stages.",
+        shortDesc: "Prevents other Pokemon from lowering the holder's stat stages."
+    },
+    clefablite: {
+        name: "Clefablite",
+        spritenum: 544,
+        megaStone: {
+            Clefable: "Clefable-Mega"
+        },
+        itemUser: ["Clefable"],
+        num: 2559,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Clefable, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Clefable, this item allows it to Mega Evolve in battle."
     },
     cloversweet: {
         name: "Clover Sweet",
@@ -717,8 +894,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1112,
         gen: 8,
-        isNonstandard: "Past",
-        desc: "Evolves Milcery into Alcremie when held and spun around."
+        desc: "Evolves Milcery into Alcremie when held and spun around.",
+        shortDesc: "Evolves Milcery into Alcremie when held and spun around."
     },
     cobaberry: {
         name: "Coba Berry",
@@ -730,7 +907,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 192,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Flying-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Flying-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Flying-type attack. Single use."
     },
     colburberry: {
         name: "Colbur Berry",
@@ -742,7 +920,22 @@ var PS_BATTLE_ITEMS = {
         },
         num: 198,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Dark-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Dark-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Dark-type attack. Single use."
+    },
+    cornerstonemask: {
+        name: "Cornerstone Mask",
+        spritenum: 758,
+        fling: {
+            basePower: 60
+        },
+        onBasePowerPriority: 15,
+        forcedForme: "Ogerpon-Cornerstone",
+        itemUser: ["Ogerpon-Cornerstone"],
+        num: 2406,
+        gen: 9,
+        desc: "Ogerpon-Cornerstone: 1.2x power attacks; Terastallize to gain Embody Aspect.",
+        shortDesc: "Ogerpon-Cornerstone: 1.2x power attacks; Terastallize to gain Embody Aspect."
     },
     cornnberry: {
         name: "Cornn Berry",
@@ -756,7 +949,8 @@ var PS_BATTLE_ITEMS = {
         num: 175,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     coverfossil: {
         name: "Cover Fossil",
@@ -767,7 +961,8 @@ var PS_BATTLE_ITEMS = {
         num: 572,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Can be revived into Tirtouga."
+        desc: "Can be revived into Tirtouga.",
+        shortDesc: "Can be revived into Tirtouga."
     },
     covertcloak: {
         name: "Covert Cloak",
@@ -777,7 +972,19 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1885,
         gen: 9,
-        desc: "Holder is not affected by the secondary effect of another Pokemon's attack."
+        desc: "The holder is not affected by the secondary effect of another Pokemon's attack. Attacks with secondary effects that are prevented include those with a chance (even 100%) to paralyze, sleep, freeze, burn, poison, confuse, cause the holder to flinch, cause the holder's stat stages to be lowered, as well as Anchor Shot, Eerie Spell, Fling, Psychic Noise, Salt Cure, Spirit Shackle, Syrup Bomb, and Throat Chop. The effect of Sparkling Aria is prevented if the holder is the only target. Secondary effects added by King's Rock, Razor Fang, and the Poison Touch, Stench, and Toxic Chain Abilities are also prevented against the holder.",
+        shortDesc: "Holder is not affected by the secondary effect of another Pokemon's attack."
+    },
+    crabominite: {
+        name: "Crabominite",
+        spritenum: 0,
+        megaStone: {
+            Crabominable: "Crabominable-Mega"
+        },
+        itemUser: ["Crabominable"],
+        num: 2644,
+        gen: 9,
+        isNonstandard: "Future"
     },
     crackedpot: {
         name: "Cracked Pot",
@@ -787,7 +994,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1253,
         gen: 8,
-        desc: "Evolves Sinistea into Polteageist when used."
+        desc: "Evolves Sinistea into Polteageist when used.",
+        shortDesc: "Evolves Sinistea into Polteageist when used."
     },
     custapberry: {
         name: "Custap Berry",
@@ -800,8 +1008,8 @@ var PS_BATTLE_ITEMS = {
         onFractionalPriorityPriority: -2,
         num: 210,
         gen: 4,
-        isNonstandard: "Unobtainable",
-        desc: "Holder moves first in its priority bracket when at 1/4 max HP or less. Single use."
+        desc: "Holder moves first in its priority bracket when at 1/4 max HP or less. Single use.",
+        shortDesc: "Holder moves first in its priority bracket when at 1/4 max HP or less. Single use."
     },
     damprock: {
         name: "Damp Rock",
@@ -811,7 +1019,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 285,
         gen: 4,
-        desc: "Holder's use of Rain Dance lasts 8 turns instead of 5."
+        desc: "Holder's use of Rain Dance lasts 8 turns instead of 5.",
+        shortDesc: "Holder's use of Rain Dance lasts 8 turns instead of 5."
     },
     darkgem: {
         name: "Dark Gem",
@@ -820,18 +1029,8 @@ var PS_BATTLE_ITEMS = {
         num: 562,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Dark-type attack will have 1.3x power. Single use."
-    },
-    darkmemory: {
-        name: "Dark Memory",
-        spritenum: 683,
-        onMemory: "Dark",
-        forcedForme: "Silvally-Dark",
-        itemUser: ["Silvally-Dark"],
-        num: 919,
-        gen: 7,
-        isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Dark type."
+        desc: "Holder's first successful Dark-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Dark-type attack will have 1.3x power. Single use."
     },
     darkiniumz: {
         name: "Darkinium Z",
@@ -844,7 +1043,31 @@ var PS_BATTLE_ITEMS = {
         num: 791,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Dark move, this item allows it to use a Dark Z-Move."
+        desc: "If holder has a Dark move, this item allows it to use a Dark Z-Move.",
+        shortDesc: "If holder has a Dark move, this item allows it to use a Dark Z-Move."
+    },
+    darkmemory: {
+        name: "Dark Memory",
+        spritenum: 683,
+        onMemory: "Dark",
+        forcedForme: "Silvally-Dark",
+        itemUser: ["Silvally-Dark"],
+        num: 919,
+        gen: 7,
+        isNonstandard: "Past",
+        desc: "Holder's Multi-Attack is Dark type.",
+        shortDesc: "Holder's Multi-Attack is Dark type."
+    },
+    darkranite: {
+        name: "Darkranite",
+        spritenum: 0,
+        megaStone: {
+            Darkrai: "Darkrai-Mega"
+        },
+        itemUser: ["Darkrai"],
+        num: 2568,
+        gen: 9,
+        isNonstandard: "Future"
     },
     dawnstone: {
         name: "Dawn Stone",
@@ -867,7 +1090,8 @@ var PS_BATTLE_ITEMS = {
         num: 798,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If held by a Decidueye with Spirit Shackle, it can use Sinister Arrow Raid."
+        desc: "If held by a Decidueye with Spirit Shackle, it can use Sinister Arrow Raid.",
+        shortDesc: "If held by a Decidueye with Spirit Shackle, it can use Sinister Arrow Raid."
     },
     deepseascale: {
         name: "Deep Sea Scale",
@@ -897,6 +1121,19 @@ var PS_BATTLE_ITEMS = {
         desc: "If held by a Clamperl, its Sp. Atk is doubled. Evolves Clamperl into Huntail when traded.",
         shortDesc: "If held by a Clamperl, its Sp. Atk is doubled."
     },
+    delphoxite: {
+        name: "Delphoxite",
+        spritenum: 559,
+        megaStone: {
+            Delphox: "Delphox-Mega"
+        },
+        itemUser: ["Delphox"],
+        num: 2576,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Delphox, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Delphox, this item allows it to Mega Evolve in battle."
+    },
     destinyknot: {
         name: "Destiny Knot",
         spritenum: 95,
@@ -906,18 +1143,21 @@ var PS_BATTLE_ITEMS = {
         onAttractPriority: -100,
         num: 280,
         gen: 4,
-        desc: "If holder becomes infatuated, the other Pokemon also becomes infatuated."
+        desc: "If holder becomes infatuated, the other Pokemon also becomes infatuated.",
+        shortDesc: "If holder becomes infatuated, the other Pokemon also becomes infatuated."
     },
     diancite: {
         name: "Diancite",
         spritenum: 624,
-        megaStone: "Diancie-Mega",
-        megaEvolves: "Diancie",
+        megaStone: {
+            Diancie: "Diancie-Mega"
+        },
         itemUser: ["Diancie"],
         num: 764,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Diancie, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Diancie, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Diancie, this item allows it to Mega Evolve in battle."
     },
     diveball: {
         name: "Dive Ball",
@@ -925,7 +1165,8 @@ var PS_BATTLE_ITEMS = {
         num: 7,
         gen: 3,
         isPokeball: true,
-        desc: "A Poke Ball that works especially well on Pokemon that live underwater."
+        desc: "A Poke Ball that works especially well on Pokemon that live underwater.",
+        shortDesc: "A Poke Ball that works especially well on Pokemon that live underwater."
     },
     domefossil: {
         name: "Dome Fossil",
@@ -936,7 +1177,8 @@ var PS_BATTLE_ITEMS = {
         num: 102,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Can be revived into Kabuto."
+        desc: "Can be revived into Kabuto.",
+        shortDesc: "Can be revived into Kabuto."
     },
     dousedrive: {
         name: "Douse Drive",
@@ -947,7 +1189,8 @@ var PS_BATTLE_ITEMS = {
         num: 116,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's Techno Blast is Water type."
+        desc: "Holder's Techno Blast is Water type.",
+        shortDesc: "Holder's Techno Blast is Water type."
     },
     dracoplate: {
         name: "Draco Plate",
@@ -957,7 +1200,21 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Dragon",
         num: 311,
         gen: 4,
-        desc: "Holder's Dragon-type attacks have 1.2x power. Judgment is Dragon type."
+        desc: "Holder's Dragon-type attacks have 1.2x power. Judgment is Dragon type.",
+        shortDesc: "Holder's Dragon-type attacks have 1.2x power. Judgment is Dragon type."
+    },
+    dragalgite: {
+        name: "Dragalgite",
+        spritenum: 565,
+        megaStone: {
+            Dragalge: "Dragalge-Mega"
+        },
+        itemUser: ["Dragalge"],
+        num: 2582,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Dragalge, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Dragalge, this item allows it to Mega Evolve in battle."
     },
     dragonfang: {
         name: "Dragon Fang",
@@ -968,7 +1225,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 250,
         gen: 2,
-        desc: "Holder's Dragon-type attacks have 1.2x power."
+        desc: "Holder's Dragon-type attacks have 1.2x power.",
+        shortDesc: "Holder's Dragon-type attacks have 1.2x power."
     },
     dragongem: {
         name: "Dragon Gem",
@@ -977,29 +1235,21 @@ var PS_BATTLE_ITEMS = {
         num: 561,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Dragon-type attack will have 1.3x power. Single use."
+        desc: "Holder's first successful Dragon-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Dragon-type attack will have 1.3x power. Single use."
     },
-    dragonmemory: {
-        name: "Dragon Memory",
-        spritenum: 682,
-        onMemory: "Dragon",
-        forcedForme: "Silvally-Dragon",
-        itemUser: ["Silvally-Dragon"],
-        num: 918,
-        gen: 7,
-        isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Dragon type."
-    },
-    dragonscale: {
-        name: "Dragon Scale",
-        spritenum: 108,
-        fling: {
-            basePower: 30
+    dragoninite: {
+        name: "Dragoninite",
+        spritenum: 547,
+        megaStone: {
+            Dragonite: "Dragonite-Mega"
         },
-        num: 235,
-        gen: 2,
-        isNonstandard: "Past",
-        desc: "Evolves Seadra into Kingdra when traded."
+        itemUser: ["Dragonite"],
+        num: 2562,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Dragonite, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Dragonite, this item allows it to Mega Evolve in battle."
     },
     dragoniumz: {
         name: "Dragonium Z",
@@ -1012,7 +1262,44 @@ var PS_BATTLE_ITEMS = {
         num: 790,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Dragon move, this item allows it to use a Dragon Z-Move."
+        desc: "If holder has a Dragon move, this item allows it to use a Dragon Z-Move.",
+        shortDesc: "If holder has a Dragon move, this item allows it to use a Dragon Z-Move."
+    },
+    dragonmemory: {
+        name: "Dragon Memory",
+        spritenum: 682,
+        onMemory: "Dragon",
+        forcedForme: "Silvally-Dragon",
+        itemUser: ["Silvally-Dragon"],
+        num: 918,
+        gen: 7,
+        isNonstandard: "Past",
+        desc: "Holder's Multi-Attack is Dragon type.",
+        shortDesc: "Holder's Multi-Attack is Dragon type."
+    },
+    dragonscale: {
+        name: "Dragon Scale",
+        spritenum: 108,
+        fling: {
+            basePower: 30
+        },
+        num: 235,
+        gen: 2,
+        desc: "Evolves Seadra into Kingdra when traded.",
+        shortDesc: "Evolves Seadra into Kingdra when traded."
+    },
+    drampanite: {
+        name: "Drampanite",
+        spritenum: 569,
+        megaStone: {
+            Drampa: "Drampa-Mega"
+        },
+        itemUser: ["Drampa"],
+        num: 2585,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Drampa, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Drampa, this item allows it to Mega Evolve in battle."
     },
     dreadplate: {
         name: "Dread Plate",
@@ -1022,7 +1309,8 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Dark",
         num: 312,
         gen: 4,
-        desc: "Holder's Dark-type attacks have 1.2x power. Judgment is Dark type."
+        desc: "Holder's Dark-type attacks have 1.2x power. Judgment is Dark type.",
+        shortDesc: "Holder's Dark-type attacks have 1.2x power. Judgment is Dark type."
     },
     dreamball: {
         name: "Dream Ball",
@@ -1030,7 +1318,8 @@ var PS_BATTLE_ITEMS = {
         num: 576,
         gen: 5,
         isPokeball: true,
-        desc: "A Poke Ball that makes it easier to catch wild PokÃ©mon while they're asleep."
+        desc: "A Poke Ball that makes it easier to catch wild PokÃ©mon while they're asleep.",
+        shortDesc: "A Poke Ball that makes it easier to catch wild PokÃ©mon while they're asleep."
     },
     dubiousdisc: {
         name: "Dubious Disc",
@@ -1040,8 +1329,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 324,
         gen: 4,
-        isNonstandard: "Past",
-        desc: "Evolves Porygon2 into Porygon-Z when traded."
+        desc: "Evolves Porygon2 into Porygon-Z when traded.",
+        shortDesc: "Evolves Porygon2 into Porygon-Z when traded."
     },
     durinberry: {
         name: "Durin Berry",
@@ -1055,7 +1344,8 @@ var PS_BATTLE_ITEMS = {
         num: 182,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     duskball: {
         name: "Dusk Ball",
@@ -1063,7 +1353,8 @@ var PS_BATTLE_ITEMS = {
         num: 13,
         gen: 4,
         isPokeball: true,
-        desc: "A Poke Ball that makes it easier to catch wild Pokemon at night or in caves."
+        desc: "A Poke Ball that makes it easier to catch wild Pokemon at night or in caves.",
+        shortDesc: "A Poke Ball that makes it easier to catch wild Pokemon at night or in caves."
     },
     duskstone: {
         name: "Dusk Stone",
@@ -1084,7 +1375,21 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Ground",
         num: 305,
         gen: 4,
-        desc: "Holder's Ground-type attacks have 1.2x power. Judgment is Ground type."
+        desc: "Holder's Ground-type attacks have 1.2x power. Judgment is Ground type.",
+        shortDesc: "Holder's Ground-type attacks have 1.2x power. Judgment is Ground type."
+    },
+    eelektrossite: {
+        name: "Eelektrossite",
+        spritenum: 556,
+        megaStone: {
+            Eelektross: "Eelektross-Mega"
+        },
+        itemUser: ["Eelektross"],
+        num: 2573,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by an Eelektross, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by an Eelektross, this item allows it to Mega Evolve in battle."
     },
     eeviumz: {
         name: "Eevium Z",
@@ -1096,7 +1401,8 @@ var PS_BATTLE_ITEMS = {
         num: 805,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If held by an Eevee with Last Resort, it can use Extreme Evoboost."
+        desc: "If held by an Eevee with Last Resort, it can use Extreme Evoboost.",
+        shortDesc: "If held by an Eevee with Last Resort, it can use Extreme Evoboost."
     },
     ejectbutton: {
         name: "Eject Button",
@@ -1107,7 +1413,8 @@ var PS_BATTLE_ITEMS = {
         onAfterMoveSecondaryPriority: 2,
         num: 547,
         gen: 5,
-        desc: "If holder survives a hit, it immediately switches out to a chosen ally. Single use."
+        desc: "If holder survives a hit, it immediately switches out to a chosen ally. Single use.",
+        shortDesc: "If holder survives a hit, it immediately switches out to a chosen ally. Single use."
     },
     ejectpack: {
         name: "Eject Pack",
@@ -1115,9 +1422,12 @@ var PS_BATTLE_ITEMS = {
         fling: {
             basePower: 50
         },
+        onAnySwitchInPriority: -4,
+        onResidualOrder: 29,
         num: 1119,
         gen: 8,
-        desc: "If the holder's stat stages are lowered, it switches to a chosen ally. Single use."
+        desc: "If the holder's stat stages are lowered, it switches to a chosen ally. Single use.",
+        shortDesc: "If the holder's stat stages are lowered, it switches to a chosen ally. Single use."
     },
     electirizer: {
         name: "Electirizer",
@@ -1127,8 +1437,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 322,
         gen: 4,
-        isNonstandard: "Past",
-        desc: "Evolves Electabuzz into Electivire when traded."
+        desc: "Evolves Electabuzz into Electivire when traded.",
+        shortDesc: "Evolves Electabuzz into Electivire when traded."
     },
     electricgem: {
         name: "Electric Gem",
@@ -1137,7 +1447,8 @@ var PS_BATTLE_ITEMS = {
         num: 550,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Electric-type attack will have 1.3x power. Single use."
+        desc: "Holder's first successful Electric-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Electric-type attack will have 1.3x power. Single use."
     },
     electricmemory: {
         name: "Electric Memory",
@@ -1148,7 +1459,8 @@ var PS_BATTLE_ITEMS = {
         num: 915,
         gen: 7,
         isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Electric type."
+        desc: "Holder's Multi-Attack is Electric type.",
+        shortDesc: "Holder's Multi-Attack is Electric type."
     },
     electricseed: {
         name: "Electric Seed",
@@ -1156,12 +1468,14 @@ var PS_BATTLE_ITEMS = {
         fling: {
             basePower: 10
         },
+        onSwitchInPriority: -1,
         boosts: {
             def: 1
         },
         num: 881,
         gen: 7,
-        desc: "If the terrain is Electric Terrain, raises holder's Defense by 1 stage. Single use."
+        desc: "If the terrain is Electric Terrain, raises holder's Defense by 1 stage. Single use.",
+        shortDesc: "If the terrain is Electric Terrain, raises holder's Defense by 1 stage. Single use."
     },
     electriumz: {
         name: "Electrium Z",
@@ -1174,7 +1488,21 @@ var PS_BATTLE_ITEMS = {
         num: 779,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has an Electric move, this item allows it to use an Electric Z-Move."
+        desc: "If holder has an Electric move, this item allows it to use an Electric Z-Move.",
+        shortDesc: "If holder has an Electric move, this item allows it to use an Electric Z-Move."
+    },
+    emboarite: {
+        name: "Emboarite",
+        spritenum: 552,
+        megaStone: {
+            Emboar: "Emboar-Mega"
+        },
+        itemUser: ["Emboar"],
+        num: 2569,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by an Emboar, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by an Emboar, this item allows it to Mega Evolve in battle."
     },
     enigmaberry: {
         name: "Enigma Berry",
@@ -1186,8 +1514,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 208,
         gen: 3,
-        isNonstandard: "Unobtainable",
-        desc: "Restores 1/4 max HP after holder is hit by a supereffective move. Single use."
+        desc: "Restores 1/4 max HP after holder is hit by a supereffective move. Single use.",
+        shortDesc: "Restores 1/4 max HP after holder is hit by a supereffective move. Single use."
     },
     eviolite: {
         name: "Eviolite",
@@ -1199,7 +1527,21 @@ var PS_BATTLE_ITEMS = {
         onModifySpDPriority: 2,
         num: 538,
         gen: 5,
-        desc: "If holder's species can evolve, its Defense and Sp. Def are 1.5x."
+        desc: "If holder's species can evolve, its Defense and Sp. Def are 1.5x.",
+        shortDesc: "If holder's species can evolve, its Defense and Sp. Def are 1.5x."
+    },
+    excadrite: {
+        name: "Excadrite",
+        spritenum: 553,
+        megaStone: {
+            Excadrill: "Excadrill-Mega"
+        },
+        itemUser: ["Excadrill"],
+        num: 2570,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by an Excadrill, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by an Excadrill, this item allows it to Mega Evolve in battle."
     },
     expertbelt: {
         name: "Expert Belt",
@@ -1209,7 +1551,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 268,
         gen: 4,
-        desc: "Holder's attacks that are super effective against the target do 1.2x damage."
+        desc: "Holder's attacks that are super effective against the target do 1.2x damage.",
+        shortDesc: "Holder's attacks that are super effective against the target do 1.2x damage."
     },
     fairiumz: {
         name: "Fairium Z",
@@ -1222,7 +1565,20 @@ var PS_BATTLE_ITEMS = {
         num: 793,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Fairy move, this item allows it to use a Fairy Z-Move."
+        desc: "If holder has a Fairy move, this item allows it to use a Fairy Z-Move.",
+        shortDesc: "If holder has a Fairy move, this item allows it to use a Fairy Z-Move."
+    },
+    fairyfeather: {
+        name: "Fairy Feather",
+        spritenum: 754,
+        fling: {
+            basePower: 10
+        },
+        onBasePowerPriority: 15,
+        num: 2401,
+        gen: 9,
+        desc: "Holder's Fairy-type attacks have 1.2x power.",
+        shortDesc: "Holder's Fairy-type attacks have 1.2x power."
     },
     fairygem: {
         name: "Fairy Gem",
@@ -1231,7 +1587,8 @@ var PS_BATTLE_ITEMS = {
         num: 715,
         gen: 6,
         isNonstandard: "Past",
-        desc: "Holder's first successful Fairy-type attack will have 1.3x power. Single use."
+        desc: "Holder's first successful Fairy-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Fairy-type attack will have 1.3x power. Single use."
     },
     fairymemory: {
         name: "Fairy Memory",
@@ -1242,7 +1599,21 @@ var PS_BATTLE_ITEMS = {
         num: 920,
         gen: 7,
         isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Fairy type."
+        desc: "Holder's Multi-Attack is Fairy type.",
+        shortDesc: "Holder's Multi-Attack is Fairy type."
+    },
+    falinksite: {
+        name: "Falinksite",
+        spritenum: 570,
+        megaStone: {
+            Falinks: "Falinks-Mega"
+        },
+        itemUser: ["Falinks"],
+        num: 2587,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Falinks, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Falinks, this item allows it to Mega Evolve in battle."
     },
     fastball: {
         name: "Fast Ball",
@@ -1250,7 +1621,21 @@ var PS_BATTLE_ITEMS = {
         num: 492,
         gen: 2,
         isPokeball: true,
-        desc: "A Poke Ball that makes it easier to catch Pokemon which are quick to run away."
+        desc: "A Poke Ball that makes it easier to catch Pokemon which are quick to run away.",
+        shortDesc: "A Poke Ball that makes it easier to catch Pokemon which are quick to run away."
+    },
+    feraligite: {
+        name: "Feraligite",
+        spritenum: 549,
+        megaStone: {
+            Feraligatr: "Feraligatr-Mega"
+        },
+        itemUser: ["Feraligatr"],
+        num: 2564,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Feraligatr, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Feraligatr, this item allows it to Mega Evolve in battle."
     },
     fightinggem: {
         name: "Fighting Gem",
@@ -1259,7 +1644,8 @@ var PS_BATTLE_ITEMS = {
         num: 553,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Fighting-type attack will have 1.3x power. Single use."
+        desc: "Holder's first successful Fighting-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Fighting-type attack will have 1.3x power. Single use."
     },
     fightingmemory: {
         name: "Fighting Memory",
@@ -1270,7 +1656,8 @@ var PS_BATTLE_ITEMS = {
         num: 904,
         gen: 7,
         isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Fighting type."
+        desc: "Holder's Multi-Attack is Fighting type.",
+        shortDesc: "Holder's Multi-Attack is Fighting type."
     },
     fightiniumz: {
         name: "Fightinium Z",
@@ -1283,7 +1670,8 @@ var PS_BATTLE_ITEMS = {
         num: 782,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Fighting move, this item allows it to use a Fighting Z-Move."
+        desc: "If holder has a Fighting move, this item allows it to use a Fighting Z-Move.",
+        shortDesc: "If holder has a Fighting move, this item allows it to use a Fighting Z-Move."
     },
     figyberry: {
         name: "Figy Berry",
@@ -1295,7 +1683,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 159,
         gen: 3,
-        desc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -Atk Nature. Single use."
+        desc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -Atk Nature. Single use.",
+        shortDesc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -Atk Nature. Single use."
     },
     firegem: {
         name: "Fire Gem",
@@ -1304,7 +1693,8 @@ var PS_BATTLE_ITEMS = {
         num: 548,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Fire-type attack will have 1.3x power. Single use."
+        desc: "Holder's first successful Fire-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Fire-type attack will have 1.3x power. Single use."
     },
     firememory: {
         name: "Fire Memory",
@@ -1315,7 +1705,8 @@ var PS_BATTLE_ITEMS = {
         num: 912,
         gen: 7,
         isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Fire type."
+        desc: "Holder's Multi-Attack is Fire type.",
+        shortDesc: "Holder's Multi-Attack is Fire type."
     },
     firestone: {
         name: "Fire Stone",
@@ -1339,7 +1730,8 @@ var PS_BATTLE_ITEMS = {
         num: 777,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Fire move, this item allows it to use a Fire Z-Move."
+        desc: "If holder has a Fire move, this item allows it to use a Fire Z-Move.",
+        shortDesc: "If holder has a Fire move, this item allows it to use a Fire Z-Move."
     },
     fistplate: {
         name: "Fist Plate",
@@ -1349,7 +1741,8 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Fighting",
         num: 303,
         gen: 4,
-        desc: "Holder's Fighting-type attacks have 1.2x power. Judgment is Fighting type."
+        desc: "Holder's Fighting-type attacks have 1.2x power. Judgment is Fighting type.",
+        shortDesc: "Holder's Fighting-type attacks have 1.2x power. Judgment is Fighting type."
     },
     flameorb: {
         name: "Flame Orb",
@@ -1362,7 +1755,8 @@ var PS_BATTLE_ITEMS = {
         onResidualSubOrder: 3,
         num: 273,
         gen: 4,
-        desc: "At the end of every turn, this item attempts to burn the holder."
+        desc: "At the end of every turn, this item attempts to burn the holder.",
+        shortDesc: "At the end of every turn, this item attempts to burn the holder."
     },
     flameplate: {
         name: "Flame Plate",
@@ -1372,7 +1766,8 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Fire",
         num: 298,
         gen: 4,
-        desc: "Holder's Fire-type attacks have 1.2x power. Judgment is Fire type."
+        desc: "Holder's Fire-type attacks have 1.2x power. Judgment is Fire type.",
+        shortDesc: "Holder's Fire-type attacks have 1.2x power. Judgment is Fire type."
     },
     floatstone: {
         name: "Float Stone",
@@ -1382,7 +1777,21 @@ var PS_BATTLE_ITEMS = {
         },
         num: 539,
         gen: 5,
-        desc: "Holder's weight is halved."
+        desc: "Holder's weight is halved.",
+        shortDesc: "Holder's weight is halved."
+    },
+    floettite: {
+        name: "Floettite",
+        spritenum: 562,
+        megaStone: {
+            "Floette-Eternal": "Floette-Mega"
+        },
+        itemUser: ["Floette-Eternal"],
+        num: 2579,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by an Eternal Flower Floette, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by an Eternal Flower Floette, this item allows it to Mega Evolve in battle."
     },
     flowersweet: {
         name: "Flower Sweet",
@@ -1392,8 +1801,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1113,
         gen: 8,
-        isNonstandard: "Past",
-        desc: "Evolves Milcery into Alcremie when held and spun around."
+        desc: "Evolves Milcery into Alcremie when held and spun around.",
+        shortDesc: "Evolves Milcery into Alcremie when held and spun around."
     },
     flyinggem: {
         name: "Flying Gem",
@@ -1402,7 +1811,8 @@ var PS_BATTLE_ITEMS = {
         num: 556,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Flying-type attack will have 1.3x power. Single use."
+        desc: "Holder's first successful Flying-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Flying-type attack will have 1.3x power. Single use."
     },
     flyingmemory: {
         name: "Flying Memory",
@@ -1413,7 +1823,8 @@ var PS_BATTLE_ITEMS = {
         num: 905,
         gen: 7,
         isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Flying type."
+        desc: "Holder's Multi-Attack is Flying type.",
+        shortDesc: "Holder's Multi-Attack is Flying type."
     },
     flyiniumz: {
         name: "Flyinium Z",
@@ -1426,7 +1837,8 @@ var PS_BATTLE_ITEMS = {
         num: 785,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Flying move, this item allows it to use a Flying Z-Move."
+        desc: "If holder has a Flying move, this item allows it to use a Flying Z-Move.",
+        shortDesc: "If holder has a Flying move, this item allows it to use a Flying Z-Move."
     },
     focusband: {
         name: "Focus Band",
@@ -1437,7 +1849,8 @@ var PS_BATTLE_ITEMS = {
         onDamagePriority: -40,
         num: 230,
         gen: 2,
-        desc: "Holder has a 10% chance to survive an attack that would KO it with 1 HP."
+        desc: "Holder has a 10% chance to survive an attack that would KO it with 1 HP.",
+        shortDesc: "Holder has a 10% chance to survive an attack that would KO it with 1 HP."
     },
     focussash: {
         name: "Focus Sash",
@@ -1448,7 +1861,8 @@ var PS_BATTLE_ITEMS = {
         onDamagePriority: -40,
         num: 275,
         gen: 4,
-        desc: "If holder's HP is full, will survive an attack that would KO it with 1 HP. Single use."
+        desc: "If holder's HP is full, will survive an attack that would KO it with 1 HP. Single use.",
+        shortDesc: "If holder's HP is full, will survive an attack that would KO it with 1 HP. Single use."
     },
     fossilizedbird: {
         name: "Fossilized Bird",
@@ -1459,7 +1873,8 @@ var PS_BATTLE_ITEMS = {
         num: 1105,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Can revive into Dracozolt with Fossilized Drake or Arctozolt with Fossilized Dino."
+        desc: "Can revive into Dracozolt with Fossilized Drake or Arctozolt with Fossilized Dino.",
+        shortDesc: "Can revive into Dracozolt with Fossilized Drake or Arctozolt with Fossilized Dino."
     },
     fossilizeddino: {
         name: "Fossilized Dino",
@@ -1470,7 +1885,8 @@ var PS_BATTLE_ITEMS = {
         num: 1108,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Can revive into Arctovish with Fossilized Fish or Arctozolt with Fossilized Bird."
+        desc: "Can revive into Arctovish with Fossilized Fish or Arctozolt with Fossilized Bird.",
+        shortDesc: "Can revive into Arctovish with Fossilized Fish or Arctozolt with Fossilized Bird."
     },
     fossilizeddrake: {
         name: "Fossilized Drake",
@@ -1481,7 +1897,8 @@ var PS_BATTLE_ITEMS = {
         num: 1107,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Can revive into Dracozolt with Fossilized Bird or Dracovish with Fossilized Fish."
+        desc: "Can revive into Dracozolt with Fossilized Bird or Dracovish with Fossilized Fish.",
+        shortDesc: "Can revive into Dracozolt with Fossilized Bird or Dracovish with Fossilized Fish."
     },
     fossilizedfish: {
         name: "Fossilized Fish",
@@ -1492,7 +1909,8 @@ var PS_BATTLE_ITEMS = {
         num: 1106,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Can revive into Dracovish with Fossilized Drake or Arctovish with Fossilized Dino."
+        desc: "Can revive into Dracovish with Fossilized Drake or Arctovish with Fossilized Dino.",
+        shortDesc: "Can revive into Dracovish with Fossilized Drake or Arctovish with Fossilized Dino."
     },
     friendball: {
         name: "Friend Ball",
@@ -1500,7 +1918,21 @@ var PS_BATTLE_ITEMS = {
         num: 497,
         gen: 2,
         isPokeball: true,
-        desc: "A Poke Ball that makes caught Pokemon more friendly."
+        desc: "A Poke Ball that makes caught Pokemon more friendly.",
+        shortDesc: "A Poke Ball that makes caught Pokemon more friendly."
+    },
+    froslassite: {
+        name: "Froslassite",
+        spritenum: 551,
+        megaStone: {
+            Froslass: "Froslass-Mega"
+        },
+        itemUser: ["Froslass"],
+        num: 2566,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Froslass, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Froslass, this item allows it to Mega Evolve in battle."
     },
     fullincense: {
         name: "Full Incense",
@@ -1512,7 +1944,8 @@ var PS_BATTLE_ITEMS = {
         num: 316,
         gen: 4,
         isNonstandard: "Past",
-        desc: "Holder moves last in its priority bracket."
+        desc: "Holder moves last in its priority bracket.",
+        shortDesc: "Holder moves last in its priority bracket."
     },
     galaricacuff: {
         name: "Galarica Cuff",
@@ -1522,8 +1955,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1582,
         gen: 8,
-        isNonstandard: "Unobtainable",
-        desc: "Evolves Galarian Slowpoke into Galarian Slowbro when used."
+        desc: "Evolves Galarian Slowpoke into Galarian Slowbro when used.",
+        shortDesc: "Evolves Galarian Slowpoke into Galarian Slowbro when used."
     },
     galaricawreath: {
         name: "Galarica Wreath",
@@ -1533,19 +1966,21 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1592,
         gen: 8,
-        isNonstandard: "Unobtainable",
-        desc: "Evolves Galarian Slowpoke into Galarian Slowking when used."
+        desc: "Evolves Galarian Slowpoke into Galarian Slowking when used.",
+        shortDesc: "Evolves Galarian Slowpoke into Galarian Slowking when used."
     },
     galladite: {
         name: "Galladite",
         spritenum: 616,
-        megaStone: "Gallade-Mega",
-        megaEvolves: "Gallade",
+        megaStone: {
+            Gallade: "Gallade-Mega"
+        },
         itemUser: ["Gallade"],
         num: 756,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Gallade, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Gallade, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Gallade, this item allows it to Mega Evolve in battle."
     },
     ganlonberry: {
         name: "Ganlon Berry",
@@ -1557,40 +1992,58 @@ var PS_BATTLE_ITEMS = {
         },
         num: 202,
         gen: 3,
-        desc: "Raises holder's Defense by 1 stage when at 1/4 max HP or less. Single use."
+        desc: "Raises holder's Defense by 1 stage when at 1/4 max HP or less. Single use.",
+        shortDesc: "Raises holder's Defense by 1 stage when at 1/4 max HP or less. Single use."
     },
     garchompite: {
         name: "Garchompite",
-        spritenum: 589,
-        megaStone: "Garchomp-Mega",
-        megaEvolves: "Garchomp",
+        spritenum: 573,
+        megaStone: {
+            Garchomp: "Garchomp-Mega"
+        },
         itemUser: ["Garchomp"],
         num: 683,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Garchomp, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Garchomp, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Garchomp, this item allows it to Mega Evolve in battle."
+    },
+    garchompitez: {
+        name: "Garchompite Z",
+        spritenum: 573,
+        megaStone: {
+            Garchomp: "Garchomp-Mega-Z"
+        },
+        itemUser: ["Garchomp"],
+        num: 2640,
+        gen: 9,
+        isNonstandard: "Future"
     },
     gardevoirite: {
         name: "Gardevoirite",
         spritenum: 587,
-        megaStone: "Gardevoir-Mega",
-        megaEvolves: "Gardevoir",
+        megaStone: {
+            Gardevoir: "Gardevoir-Mega"
+        },
         itemUser: ["Gardevoir"],
         num: 657,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Gardevoir, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Gardevoir, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Gardevoir, this item allows it to Mega Evolve in battle."
     },
     gengarite: {
         name: "Gengarite",
         spritenum: 588,
-        megaStone: "Gengar-Mega",
-        megaEvolves: "Gengar",
+        megaStone: {
+            Gengar: "Gengar-Mega"
+        },
         itemUser: ["Gengar"],
         num: 656,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Gengar, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Gengar, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Gengar, this item allows it to Mega Evolve in battle."
     },
     ghostgem: {
         name: "Ghost Gem",
@@ -1599,18 +2052,8 @@ var PS_BATTLE_ITEMS = {
         num: 560,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Ghost-type attack will have 1.3x power. Single use."
-    },
-    ghostmemory: {
-        name: "Ghost Memory",
-        spritenum: 674,
-        onMemory: "Ghost",
-        forcedForme: "Silvally-Ghost",
-        itemUser: ["Silvally-Ghost"],
-        num: 910,
-        gen: 7,
-        isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Ghost type."
+        desc: "Holder's first successful Ghost-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Ghost-type attack will have 1.3x power. Single use."
     },
     ghostiumz: {
         name: "Ghostium Z",
@@ -1623,18 +2066,44 @@ var PS_BATTLE_ITEMS = {
         num: 789,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Ghost move, this item allows it to use a Ghost Z-Move."
+        desc: "If holder has a Ghost move, this item allows it to use a Ghost Z-Move.",
+        shortDesc: "If holder has a Ghost move, this item allows it to use a Ghost Z-Move."
+    },
+    ghostmemory: {
+        name: "Ghost Memory",
+        spritenum: 674,
+        onMemory: "Ghost",
+        forcedForme: "Silvally-Ghost",
+        itemUser: ["Silvally-Ghost"],
+        num: 910,
+        gen: 7,
+        isNonstandard: "Past",
+        desc: "Holder's Multi-Attack is Ghost type.",
+        shortDesc: "Holder's Multi-Attack is Ghost type."
     },
     glalitite: {
         name: "Glalitite",
         spritenum: 623,
-        megaStone: "Glalie-Mega",
-        megaEvolves: "Glalie",
+        megaStone: {
+            Glalie: "Glalie-Mega"
+        },
         itemUser: ["Glalie"],
         num: 763,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Glalie, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Glalie, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Glalie, this item allows it to Mega Evolve in battle."
+    },
+    glimmoranite: {
+        name: "Glimmoranite",
+        spritenum: 0,
+        megaStone: {
+            Glimmora: "Glimmora-Mega"
+        },
+        itemUser: ["Glimmora"],
+        num: 2650,
+        gen: 9,
+        isNonstandard: "Future"
     },
     goldbottlecap: {
         name: "Gold Bottle Cap",
@@ -1644,7 +2113,30 @@ var PS_BATTLE_ITEMS = {
         },
         num: 796,
         gen: 7,
-        desc: "Used for Hyper Training. All of a Pokemon's stats are calculated with an IV of 31."
+        desc: "Used for Hyper Training. All of a Pokemon's stats are calculated with an IV of 31.",
+        shortDesc: "Used for Hyper Training. All of a Pokemon's stats are calculated with an IV of 31."
+    },
+    golisopite: {
+        name: "Golisopite",
+        spritenum: 0,
+        megaStone: {
+            Golisopod: "Golisopod-Mega"
+        },
+        itemUser: ["Golisopod"],
+        num: 2645,
+        gen: 9,
+        isNonstandard: "Future"
+    },
+    golurkite: {
+        name: "Golurkite",
+        spritenum: 0,
+        megaStone: {
+            Golurk: "Golurk-Mega"
+        },
+        itemUser: ["Golurk"],
+        num: 2642,
+        gen: 9,
+        isNonstandard: "Future"
     },
     grassgem: {
         name: "Grass Gem",
@@ -1653,18 +2145,8 @@ var PS_BATTLE_ITEMS = {
         num: 551,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Grass-type attack will have 1.3x power. Single use."
-    },
-    grassmemory: {
-        name: "Grass Memory",
-        spritenum: 678,
-        onMemory: "Grass",
-        forcedForme: "Silvally-Grass",
-        itemUser: ["Silvally-Grass"],
-        num: 914,
-        gen: 7,
-        isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Grass type."
+        desc: "Holder's first successful Grass-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Grass-type attack will have 1.3x power. Single use."
     },
     grassiumz: {
         name: "Grassium Z",
@@ -1677,7 +2159,20 @@ var PS_BATTLE_ITEMS = {
         num: 780,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Grass move, this item allows it to use a Grass Z-Move."
+        desc: "If holder has a Grass move, this item allows it to use a Grass Z-Move.",
+        shortDesc: "If holder has a Grass move, this item allows it to use a Grass Z-Move."
+    },
+    grassmemory: {
+        name: "Grass Memory",
+        spritenum: 678,
+        onMemory: "Grass",
+        forcedForme: "Silvally-Grass",
+        itemUser: ["Silvally-Grass"],
+        num: 914,
+        gen: 7,
+        isNonstandard: "Past",
+        desc: "Holder's Multi-Attack is Grass type.",
+        shortDesc: "Holder's Multi-Attack is Grass type."
     },
     grassyseed: {
         name: "Grassy Seed",
@@ -1685,12 +2180,14 @@ var PS_BATTLE_ITEMS = {
         fling: {
             basePower: 10
         },
+        onSwitchInPriority: -1,
         boosts: {
             def: 1
         },
         num: 884,
         gen: 7,
-        desc: "If the terrain is Grassy Terrain, raises holder's Defense by 1 stage. Single use."
+        desc: "If the terrain is Grassy Terrain, raises holder's Defense by 1 stage. Single use.",
+        shortDesc: "If the terrain is Grassy Terrain, raises holder's Defense by 1 stage. Single use."
     },
     greatball: {
         name: "Great Ball",
@@ -1698,7 +2195,21 @@ var PS_BATTLE_ITEMS = {
         num: 3,
         gen: 1,
         isPokeball: true,
-        desc: "A high-performance Ball that provides a higher catch rate than a Poke Ball."
+        desc: "A high-performance Ball that provides a higher catch rate than a Poke Ball.",
+        shortDesc: "A high-performance Ball that provides a higher catch rate than a Poke Ball."
+    },
+    greninjite: {
+        name: "Greninjite",
+        spritenum: 560,
+        megaStone: {
+            Greninja: "Greninja-Mega"
+        },
+        itemUser: ["Greninja"],
+        num: 2577,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Greninja, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Greninja, this item allows it to Mega Evolve in battle."
     },
     grepaberry: {
         name: "Grepa Berry",
@@ -1711,7 +2222,8 @@ var PS_BATTLE_ITEMS = {
         onEat: false,
         num: 173,
         gen: 3,
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     gripclaw: {
         name: "Grip Claw",
@@ -1721,7 +2233,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 286,
         gen: 4,
-        desc: "Holder's partial-trapping moves always last 7 turns."
+        desc: "Holder's partial-trapping moves always last 7 turns.",
+        shortDesc: "Holder's partial-trapping moves always last 7 turns."
     },
     griseouscore: {
         name: "Griseous Core",
@@ -1731,7 +2244,8 @@ var PS_BATTLE_ITEMS = {
         itemUser: ["Giratina-Origin"],
         num: 1779,
         gen: 8,
-        desc: "If held by a Giratina, its Ghost- and Dragon-type attacks have 1.2x power."
+        desc: "If held by a Giratina, its Ghost- and Dragon-type attacks have 1.2x power.",
+        shortDesc: "If held by a Giratina, its Ghost- and Dragon-type attacks have 1.2x power."
     },
     griseousorb: {
         name: "Griseous Orb",
@@ -1743,7 +2257,8 @@ var PS_BATTLE_ITEMS = {
         itemUser: ["Giratina"],
         num: 112,
         gen: 4,
-        desc: "If held by a Giratina, its Ghost- and Dragon-type attacks have 1.2x power."
+        desc: "If held by a Giratina, its Ghost- and Dragon-type attacks have 1.2x power.",
+        shortDesc: "If held by a Giratina, its Ghost- and Dragon-type attacks have 1.2x power."
     },
     groundgem: {
         name: "Ground Gem",
@@ -1752,18 +2267,8 @@ var PS_BATTLE_ITEMS = {
         num: 555,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Ground-type attack will have 1.3x power. Single use."
-    },
-    groundmemory: {
-        name: "Ground Memory",
-        spritenum: 671,
-        onMemory: "Ground",
-        forcedForme: "Silvally-Ground",
-        itemUser: ["Silvally-Ground"],
-        num: 907,
-        gen: 7,
-        isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Ground type."
+        desc: "Holder's first successful Ground-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Ground-type attack will have 1.3x power. Single use."
     },
     groundiumz: {
         name: "Groundium Z",
@@ -1776,18 +2281,33 @@ var PS_BATTLE_ITEMS = {
         num: 784,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Ground move, this item allows it to use a Ground Z-Move."
+        desc: "If holder has a Ground move, this item allows it to use a Ground Z-Move.",
+        shortDesc: "If holder has a Ground move, this item allows it to use a Ground Z-Move."
+    },
+    groundmemory: {
+        name: "Ground Memory",
+        spritenum: 671,
+        onMemory: "Ground",
+        forcedForme: "Silvally-Ground",
+        itemUser: ["Silvally-Ground"],
+        num: 907,
+        gen: 7,
+        isNonstandard: "Past",
+        desc: "Holder's Multi-Attack is Ground type.",
+        shortDesc: "Holder's Multi-Attack is Ground type."
     },
     gyaradosite: {
         name: "Gyaradosite",
         spritenum: 589,
-        megaStone: "Gyarados-Mega",
-        megaEvolves: "Gyarados",
+        megaStone: {
+            Gyarados: "Gyarados-Mega"
+        },
         itemUser: ["Gyarados"],
         num: 676,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Gyarados, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Gyarados, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Gyarados, this item allows it to Mega Evolve in battle."
     },
     habanberry: {
         name: "Haban Berry",
@@ -1799,7 +2319,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 197,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Dragon-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Dragon-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Dragon-type attack. Single use."
     },
     hardstone: {
         name: "Hard Stone",
@@ -1810,7 +2331,21 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 238,
         gen: 2,
-        desc: "Holder's Rock-type attacks have 1.2x power."
+        desc: "Holder's Rock-type attacks have 1.2x power.",
+        shortDesc: "Holder's Rock-type attacks have 1.2x power."
+    },
+    hawluchanite: {
+        name: "Hawluchanite",
+        spritenum: 566,
+        megaStone: {
+            Hawlucha: "Hawlucha-Mega"
+        },
+        itemUser: ["Hawlucha"],
+        num: 2583,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Hawlucha, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Hawlucha, this item allows it to Mega Evolve in battle."
     },
     healball: {
         name: "Heal Ball",
@@ -1818,7 +2353,33 @@ var PS_BATTLE_ITEMS = {
         num: 14,
         gen: 4,
         isPokeball: true,
-        desc: "A remedial Poke Ball that restores the caught Pokemon's HP and status problem."
+        desc: "A remedial Poke Ball that restores the caught Pokemon's HP and status problem.",
+        shortDesc: "A remedial Poke Ball that restores the caught Pokemon's HP and status problem."
+    },
+    hearthflamemask: {
+        name: "Hearthflame Mask",
+        spritenum: 760,
+        fling: {
+            basePower: 60
+        },
+        onBasePowerPriority: 15,
+        forcedForme: "Ogerpon-Hearthflame",
+        itemUser: ["Ogerpon-Hearthflame"],
+        num: 2408,
+        gen: 9,
+        desc: "Ogerpon-Hearthflame: 1.2x power attacks; Terastallize to gain Embody Aspect.",
+        shortDesc: "Ogerpon-Hearthflame: 1.2x power attacks; Terastallize to gain Embody Aspect."
+    },
+    heatranite: {
+        name: "Heatranite",
+        spritenum: 0,
+        megaStone: {
+            Heatran: "Heatran-Mega"
+        },
+        itemUser: ["Heatran"],
+        num: 2567,
+        gen: 9,
+        isNonstandard: "Future"
     },
     heatrock: {
         name: "Heat Rock",
@@ -1828,7 +2389,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 284,
         gen: 4,
-        desc: "Holder's use of Sunny Day lasts 8 turns instead of 5."
+        desc: "Holder's use of Sunny Day lasts 8 turns instead of 5.",
+        shortDesc: "Holder's use of Sunny Day lasts 8 turns instead of 5."
     },
     heavyball: {
         name: "Heavy Ball",
@@ -1836,7 +2398,8 @@ var PS_BATTLE_ITEMS = {
         num: 495,
         gen: 2,
         isPokeball: true,
-        desc: "A Poke Ball for catching very heavy Pokemon."
+        desc: "A Poke Ball for catching very heavy Pokemon.",
+        shortDesc: "A Poke Ball for catching very heavy Pokemon."
     },
     heavydutyboots: {
         name: "Heavy-Duty Boots",
@@ -1846,7 +2409,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1120,
         gen: 8,
-        desc: "When switching in, the holder is unaffected by hazards on its side of the field."
+        desc: "When switching in, the holder is unaffected by hazards on its side of the field.",
+        shortDesc: "When switching in, the holder is unaffected by hazards on its side of the field."
     },
     helixfossil: {
         name: "Helix Fossil",
@@ -1857,18 +2421,21 @@ var PS_BATTLE_ITEMS = {
         num: 101,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Can be revived into Omanyte."
+        desc: "Can be revived into Omanyte.",
+        shortDesc: "Can be revived into Omanyte."
     },
     heracronite: {
         name: "Heracronite",
         spritenum: 590,
-        megaStone: "Heracross-Mega",
-        megaEvolves: "Heracross",
+        megaStone: {
+            Heracross: "Heracross-Mega"
+        },
         itemUser: ["Heracross"],
         num: 680,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Heracross, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Heracross, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Heracross, this item allows it to Mega Evolve in battle."
     },
     hondewberry: {
         name: "Hondew Berry",
@@ -1881,18 +2448,21 @@ var PS_BATTLE_ITEMS = {
         onEat: false,
         num: 172,
         gen: 3,
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     houndoominite: {
         name: "Houndoominite",
         spritenum: 591,
-        megaStone: "Houndoom-Mega",
-        megaEvolves: "Houndoom",
+        megaStone: {
+            Houndoom: "Houndoom-Mega"
+        },
         itemUser: ["Houndoom"],
         num: 666,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Houndoom, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Houndoom, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Houndoom, this item allows it to Mega Evolve in battle."
     },
     iapapaberry: {
         name: "Iapapa Berry",
@@ -1904,7 +2474,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 163,
         gen: 3,
-        desc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -Def Nature. Single use."
+        desc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -Def Nature. Single use.",
+        shortDesc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -Def Nature. Single use."
     },
     icegem: {
         name: "Ice Gem",
@@ -1913,7 +2484,8 @@ var PS_BATTLE_ITEMS = {
         num: 552,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Ice-type attack will have 1.3x power. Single use."
+        desc: "Holder's first successful Ice-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Ice-type attack will have 1.3x power. Single use."
     },
     icememory: {
         name: "Ice Memory",
@@ -1924,7 +2496,8 @@ var PS_BATTLE_ITEMS = {
         num: 917,
         gen: 7,
         isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Ice type."
+        desc: "Holder's Multi-Attack is Ice type.",
+        shortDesc: "Holder's Multi-Attack is Ice type."
     },
     icestone: {
         name: "Ice Stone",
@@ -1945,7 +2518,8 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Ice",
         num: 302,
         gen: 4,
-        desc: "Holder's Ice-type attacks have 1.2x power. Judgment is Ice type."
+        desc: "Holder's Ice-type attacks have 1.2x power. Judgment is Ice type.",
+        shortDesc: "Holder's Ice-type attacks have 1.2x power. Judgment is Ice type."
     },
     iciumz: {
         name: "Icium Z",
@@ -1958,7 +2532,8 @@ var PS_BATTLE_ITEMS = {
         num: 781,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has an Ice move, this item allows it to use an Ice Z-Move."
+        desc: "If holder has an Ice move, this item allows it to use an Ice Z-Move.",
+        shortDesc: "If holder has an Ice move, this item allows it to use an Ice Z-Move."
     },
     icyrock: {
         name: "Icy Rock",
@@ -1968,7 +2543,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 282,
         gen: 4,
-        desc: "Holder's use of Hail lasts 8 turns instead of 5."
+        desc: "Holder's use of Snowscape lasts 8 turns instead of 5.",
+        shortDesc: "Holder's use of Snowscape lasts 8 turns instead of 5."
     },
     inciniumz: {
         name: "Incinium Z",
@@ -1980,7 +2556,8 @@ var PS_BATTLE_ITEMS = {
         num: 799,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If held by an Incineroar with Darkest Lariat, it can use Malicious Moonsault."
+        desc: "If held by an Incineroar with Darkest Lariat, it can use Malicious Moonsault.",
+        shortDesc: "If held by an Incineroar with Darkest Lariat, it can use Malicious Moonsault."
     },
     insectplate: {
         name: "Insect Plate",
@@ -1990,7 +2567,8 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Bug",
         num: 308,
         gen: 4,
-        desc: "Holder's Bug-type attacks have 1.2x power. Judgment is Bug type."
+        desc: "Holder's Bug-type attacks have 1.2x power. Judgment is Bug type.",
+        shortDesc: "Holder's Bug-type attacks have 1.2x power. Judgment is Bug type."
     },
     ironball: {
         name: "Iron Ball",
@@ -2000,7 +2578,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 278,
         gen: 4,
-        desc: "Holder is grounded, Speed halved. If Flying type, takes neutral Ground damage."
+        desc: "Holder is grounded, Speed halved. If Flying type, takes neutral Ground damage.",
+        shortDesc: "Holder is grounded, Speed halved. If Flying type, takes neutral Ground damage."
     },
     ironplate: {
         name: "Iron Plate",
@@ -2010,7 +2589,8 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Steel",
         num: 313,
         gen: 4,
-        desc: "Holder's Steel-type attacks have 1.2x power. Judgment is Steel type."
+        desc: "Holder's Steel-type attacks have 1.2x power. Judgment is Steel type.",
+        shortDesc: "Holder's Steel-type attacks have 1.2x power. Judgment is Steel type."
     },
     jabocaberry: {
         name: "Jaboca Berry",
@@ -2022,8 +2602,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 211,
         gen: 4,
-        isNonstandard: "Unobtainable",
-        desc: "If holder is hit by a physical move, attacker loses 1/8 of its max HP. Single use."
+        desc: "If holder is hit by a physical move, attacker loses 1/8 of its max HP. Single use.",
+        shortDesc: "If holder is hit by a physical move, attacker loses 1/8 of its max HP. Single use."
     },
     jawfossil: {
         name: "Jaw Fossil",
@@ -2034,7 +2614,21 @@ var PS_BATTLE_ITEMS = {
         num: 710,
         gen: 6,
         isNonstandard: "Past",
-        desc: "Can be revived into Tyrunt."
+        desc: "Can be revived into Tyrunt.",
+        shortDesc: "Can be revived into Tyrunt."
+    },
+    kangaskhanite: {
+        name: "Kangaskhanite",
+        spritenum: 592,
+        megaStone: {
+            Kangaskhan: "Kangaskhan-Mega"
+        },
+        itemUser: ["Kangaskhan"],
+        num: 675,
+        gen: 6,
+        isNonstandard: "Past",
+        desc: "If held by a Kangaskhan, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Kangaskhan, this item allows it to Mega Evolve in battle."
     },
     kasibberry: {
         name: "Kasib Berry",
@@ -2046,7 +2640,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 196,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Ghost-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Ghost-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Ghost-type attack. Single use."
     },
     kebiaberry: {
         name: "Kebia Berry",
@@ -2058,7 +2653,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 190,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Poison-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Poison-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Poison-type attack. Single use."
     },
     keeberry: {
         name: "Kee Berry",
@@ -2070,8 +2666,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 687,
         gen: 6,
-        isNonstandard: "Unobtainable",
-        desc: "Raises holder's Defense by 1 stage after it is hit by a physical attack. Single use."
+        desc: "Raises holder's Defense by 1 stage after it is hit by a physical attack. Single use.",
+        shortDesc: "Raises holder's Defense by 1 stage after it is hit by a physical attack. Single use."
     },
     kelpsyberry: {
         name: "Kelpsy Berry",
@@ -2084,18 +2680,8 @@ var PS_BATTLE_ITEMS = {
         onEat: false,
         num: 170,
         gen: 3,
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
-    },
-    kangaskhanite: {
-        name: "Kangaskhanite",
-        spritenum: 592,
-        megaStone: "Kangaskhan-Mega",
-        megaEvolves: "Kangaskhan",
-        itemUser: ["Kangaskhan"],
-        num: 675,
-        gen: 6,
-        isNonstandard: "Past",
-        desc: "If held by a Kangaskhan, this item allows it to Mega Evolve in battle."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     kingsrock: {
         name: "King's Rock",
@@ -2120,7 +2706,8 @@ var PS_BATTLE_ITEMS = {
         num: 926,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If held by a Kommo-o with Clanging Scales, it can use Clangorous Soulblaze."
+        desc: "If held by a Kommo-o with Clanging Scales, it can use Clangorous Soulblaze.",
+        shortDesc: "If held by a Kommo-o with Clanging Scales, it can use Clangorous Soulblaze."
     },
     laggingtail: {
         name: "Lagging Tail",
@@ -2131,7 +2718,8 @@ var PS_BATTLE_ITEMS = {
         onFractionalPriority: -0.1,
         num: 279,
         gen: 4,
-        desc: "Holder moves last in its priority bracket."
+        desc: "Holder moves last in its priority bracket.",
+        shortDesc: "Holder moves last in its priority bracket."
     },
     lansatberry: {
         name: "Lansat Berry",
@@ -2143,29 +2731,34 @@ var PS_BATTLE_ITEMS = {
         },
         num: 206,
         gen: 3,
-        desc: "Holder gains the Focus Energy effect when at 1/4 max HP or less. Single use."
+        desc: "Holder gains the Focus Energy effect when at 1/4 max HP or less. Single use.",
+        shortDesc: "Holder gains the Focus Energy effect when at 1/4 max HP or less. Single use."
     },
     latiasite: {
         name: "Latiasite",
         spritenum: 629,
-        megaStone: "Latias-Mega",
-        megaEvolves: "Latias",
+        megaStone: {
+            Latias: "Latias-Mega"
+        },
         itemUser: ["Latias"],
         num: 684,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Latias, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Latias, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Latias, this item allows it to Mega Evolve in battle."
     },
     latiosite: {
         name: "Latiosite",
         spritenum: 630,
-        megaStone: "Latios-Mega",
-        megaEvolves: "Latios",
+        megaStone: {
+            Latios: "Latios-Mega"
+        },
         itemUser: ["Latios"],
         num: 685,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Latios, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Latios, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Latios, this item allows it to Mega Evolve in battle."
     },
     laxincense: {
         name: "Lax Incense",
@@ -2177,7 +2770,8 @@ var PS_BATTLE_ITEMS = {
         num: 255,
         gen: 3,
         isNonstandard: "Past",
-        desc: "The accuracy of attacks against the holder is 0.9x."
+        desc: "The accuracy of attacks against the holder is 0.9x.",
+        shortDesc: "The accuracy of attacks against the holder is 0.9x."
     },
     leafstone: {
         name: "Leaf Stone",
@@ -2200,7 +2794,8 @@ var PS_BATTLE_ITEMS = {
         num: 259,
         gen: 8,
         isNonstandard: "Past",
-        desc: "If held by a Farfetchâ€™d or Sirfetchâ€™d, its critical hit ratio is raised by 2 stages."
+        desc: "If held by a Farfetchâ€™d or Sirfetchâ€™d, its critical hit ratio is raised by 2 stages.",
+        shortDesc: "If held by a Farfetchâ€™d or Sirfetchâ€™d, its critical hit ratio is raised by 2 stages."
     },
     leftovers: {
         name: "Leftovers",
@@ -2212,7 +2807,8 @@ var PS_BATTLE_ITEMS = {
         onResidualSubOrder: 4,
         num: 234,
         gen: 2,
-        desc: "At the end of every turn, holder restores 1/16 of its max HP."
+        desc: "At the end of every turn, holder restores 1/16 of its max HP.",
+        shortDesc: "At the end of every turn, holder restores 1/16 of its max HP."
     },
     leppaberry: {
         name: "Leppa Berry",
@@ -2224,7 +2820,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 154,
         gen: 3,
-        desc: "Restores 10 PP to the first of the holder's moves to reach 0 PP. Single use."
+        desc: "Restores 10 PP to the first of the holder's moves to reach 0 PP. Single use.",
+        shortDesc: "Restores 10 PP to the first of the holder's moves to reach 0 PP. Single use."
     },
     levelball: {
         name: "Level Ball",
@@ -2232,7 +2829,8 @@ var PS_BATTLE_ITEMS = {
         num: 493,
         gen: 2,
         isPokeball: true,
-        desc: "A Poke Ball for catching Pokemon that are a lower level than your own."
+        desc: "A Poke Ball for catching Pokemon that are a lower level than your own.",
+        shortDesc: "A Poke Ball for catching Pokemon that are a lower level than your own."
     },
     liechiberry: {
         name: "Liechi Berry",
@@ -2244,7 +2842,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 201,
         gen: 3,
-        desc: "Raises holder's Attack by 1 stage when at 1/4 max HP or less. Single use."
+        desc: "Raises holder's Attack by 1 stage when at 1/4 max HP or less. Single use.",
+        shortDesc: "Raises holder's Attack by 1 stage when at 1/4 max HP or less. Single use."
     },
     lifeorb: {
         name: "Life Orb",
@@ -2254,7 +2853,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 270,
         gen: 4,
-        desc: "Holder's attacks do 1.3x damage, and it loses 1/10 its max HP after the attack."
+        desc: "Holder's attacks do 1.3x damage, and it loses 1/10 its max HP after the attack.",
+        shortDesc: "Holder's attacks do 1.3x damage, and it loses 1/10 its max HP after the attack."
     },
     lightball: {
         name: "Light Ball",
@@ -2268,7 +2868,8 @@ var PS_BATTLE_ITEMS = {
         itemUser: ["Pikachu", "Pikachu-Cosplay", "Pikachu-Rock-Star", "Pikachu-Belle", "Pikachu-Pop-Star", "Pikachu-PhD", "Pikachu-Libre", "Pikachu-Original", "Pikachu-Hoenn", "Pikachu-Sinnoh", "Pikachu-Unova", "Pikachu-Kalos", "Pikachu-Alola", "Pikachu-Partner", "Pikachu-Starter", "Pikachu-World"],
         num: 236,
         gen: 2,
-        desc: "If held by a Pikachu, its Attack and Sp. Atk are doubled."
+        desc: "If held by a Pikachu, its Attack and Sp. Atk are doubled.",
+        shortDesc: "If held by a Pikachu, its Attack and Sp. Atk are doubled."
     },
     lightclay: {
         name: "Light Clay",
@@ -2278,7 +2879,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 269,
         gen: 4,
-        desc: "Holder's use of Aurora Veil, Light Screen, or Reflect lasts 8 turns instead of 5."
+        desc: "Holder's use of Aurora Veil, Light Screen, or Reflect lasts 8 turns instead of 5.",
+        shortDesc: "Holder's use of Aurora Veil, Light Screen, or Reflect lasts 8 turns instead of 5."
     },
     loadeddice: {
         name: "Loaded Dice",
@@ -2288,18 +2890,21 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1886,
         gen: 9,
-        desc: "Holder's moves that hit 2-5 times hit 4-5 times; Population Bomb hits 4-10 times."
+        desc: "The holder's moves that normally hit 2 to 5 times instead hit 4 or 5 times. If the first hit is successful, the holder's use of Triple Kick or Triple Axel hits 3 times, and Population Bomb hits 4 to 10 times, at random.",
+        shortDesc: "Holder's moves that hit 2-5 times hit 4-5 times; Population Bomb hits 4-10 times."
     },
     lopunnite: {
         name: "Lopunnite",
         spritenum: 626,
-        megaStone: "Lopunny-Mega",
-        megaEvolves: "Lopunny",
+        megaStone: {
+            Lopunny: "Lopunny-Mega"
+        },
         itemUser: ["Lopunny"],
         num: 768,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Lopunny, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Lopunny, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Lopunny, this item allows it to Mega Evolve in battle."
     },
     loveball: {
         name: "Love Ball",
@@ -2307,7 +2912,8 @@ var PS_BATTLE_ITEMS = {
         num: 496,
         gen: 2,
         isPokeball: true,
-        desc: "Poke Ball for catching Pokemon that are the opposite gender of your Pokemon."
+        desc: "Poke Ball for catching Pokemon that are the opposite gender of your Pokemon.",
+        shortDesc: "Poke Ball for catching Pokemon that are the opposite gender of your Pokemon."
     },
     lovesweet: {
         name: "Love Sweet",
@@ -2317,19 +2923,32 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1110,
         gen: 8,
-        isNonstandard: "Past",
-        desc: "Evolves Milcery into Alcremie when held and spun around."
+        desc: "Evolves Milcery into Alcremie when held and spun around.",
+        shortDesc: "Evolves Milcery into Alcremie when held and spun around."
     },
     lucarionite: {
         name: "Lucarionite",
         spritenum: 594,
-        megaStone: "Lucario-Mega",
-        megaEvolves: "Lucario",
+        megaStone: {
+            Lucario: "Lucario-Mega"
+        },
         itemUser: ["Lucario"],
         num: 673,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Lucario, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Lucario, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Lucario, this item allows it to Mega Evolve in battle."
+    },
+    lucarionitez: {
+        name: "Lucarionite Z",
+        spritenum: 594,
+        megaStone: {
+            Lucario: "Lucario-Mega-Z"
+        },
+        itemUser: ["Lucario"],
+        num: 2641,
+        gen: 9,
+        isNonstandard: "Future"
     },
     luckypunch: {
         name: "Lucky Punch",
@@ -2341,7 +2960,8 @@ var PS_BATTLE_ITEMS = {
         num: 256,
         gen: 2,
         isNonstandard: "Past",
-        desc: "If held by a Chansey, its critical hit ratio is raised by 2 stages."
+        desc: "If held by a Chansey, its critical hit ratio is raised by 2 stages.",
+        shortDesc: "If held by a Chansey, its critical hit ratio is raised by 2 stages."
     },
     lumberry: {
         name: "Lum Berry",
@@ -2354,7 +2974,8 @@ var PS_BATTLE_ITEMS = {
         onAfterSetStatusPriority: -1,
         num: 157,
         gen: 3,
-        desc: "Holder cures itself if it has a non-volatile status or is confused. Single use."
+        desc: "Holder cures itself if it has a non-volatile status or is confused. Single use.",
+        shortDesc: "Holder cures itself if it has a non-volatile status or is confused. Single use."
     },
     luminousmoss: {
         name: "Luminous Moss",
@@ -2367,7 +2988,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 648,
         gen: 6,
-        desc: "Raises holder's Sp. Def by 1 stage if hit by a Water-type attack. Single use."
+        desc: "Raises holder's Sp. Def by 1 stage if hit by a Water-type attack. Single use.",
+        shortDesc: "Raises holder's Sp. Def by 1 stage if hit by a Water-type attack. Single use."
     },
     lunaliumz: {
         name: "Lunalium Z",
@@ -2379,7 +3001,8 @@ var PS_BATTLE_ITEMS = {
         num: 922,
         gen: 7,
         isNonstandard: "Past",
-        desc: "Lunala or Dawn Wings Necrozma with Moongeist Beam can use a special Z-Move."
+        desc: "Lunala or Dawn Wings Necrozma with Moongeist Beam can use a special Z-Move.",
+        shortDesc: "Lunala or Dawn Wings Necrozma with Moongeist Beam can use a special Z-Move."
     },
     lureball: {
         name: "Lure Ball",
@@ -2387,7 +3010,8 @@ var PS_BATTLE_ITEMS = {
         num: 494,
         gen: 2,
         isPokeball: true,
-        desc: "A Poke Ball for catching Pokemon hooked by a Rod when fishing."
+        desc: "A Poke Ball for catching Pokemon hooked by a Rod when fishing.",
+        shortDesc: "A Poke Ball for catching Pokemon hooked by a Rod when fishing."
     },
     lustrousglobe: {
         name: "Lustrous Globe",
@@ -2397,7 +3021,8 @@ var PS_BATTLE_ITEMS = {
         itemUser: ["Palkia-Origin"],
         num: 1778,
         gen: 8,
-        desc: "If held by a Palkia, its Water- and Dragon-type attacks have 1.2x power."
+        desc: "If held by a Palkia, its Water- and Dragon-type attacks have 1.2x power.",
+        shortDesc: "If held by a Palkia, its Water- and Dragon-type attacks have 1.2x power."
     },
     lustrousorb: {
         name: "Lustrous Orb",
@@ -2409,7 +3034,8 @@ var PS_BATTLE_ITEMS = {
         itemUser: ["Palkia"],
         num: 136,
         gen: 4,
-        desc: "If held by a Palkia, its Water- and Dragon-type attacks have 1.2x power."
+        desc: "If held by a Palkia, its Water- and Dragon-type attacks have 1.2x power.",
+        shortDesc: "If held by a Palkia, its Water- and Dragon-type attacks have 1.2x power."
     },
     luxuryball: {
         name: "Luxury Ball",
@@ -2417,7 +3043,8 @@ var PS_BATTLE_ITEMS = {
         num: 11,
         gen: 3,
         isPokeball: true,
-        desc: "A comfortable Poke Ball that makes a caught wild Pokemon quickly grow friendly."
+        desc: "A comfortable Poke Ball that makes a caught wild Pokemon quickly grow friendly.",
+        shortDesc: "A comfortable Poke Ball that makes a caught wild Pokemon quickly grow friendly."
     },
     lycaniumz: {
         name: "Lycanium Z",
@@ -2429,7 +3056,8 @@ var PS_BATTLE_ITEMS = {
         num: 925,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If held by a Lycanroc forme with Stone Edge, it can use Splintered Stormshards."
+        desc: "If held by a Lycanroc forme with Stone Edge, it can use Splintered Stormshards.",
+        shortDesc: "If held by a Lycanroc forme with Stone Edge, it can use Splintered Stormshards."
     },
     machobrace: {
         name: "Macho Brace",
@@ -2441,7 +3069,20 @@ var PS_BATTLE_ITEMS = {
         num: 215,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
+        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect.",
+        shortDesc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
+    },
+    magearnite: {
+        name: "Magearnite",
+        spritenum: 0,
+        megaStone: {
+            Magearna: "Magearna-Mega",
+            "Magearna-Original": "Magearna-Original-Mega"
+        },
+        itemUser: ["Magearna", "Magearna-Original"],
+        num: 2646,
+        gen: 9,
+        isNonstandard: "Future"
     },
     magmarizer: {
         name: "Magmarizer",
@@ -2451,8 +3092,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 323,
         gen: 4,
-        isNonstandard: "Past",
-        desc: "Evolves Magmar into Magmortar when traded."
+        desc: "Evolves Magmar into Magmortar when traded.",
+        shortDesc: "Evolves Magmar into Magmortar when traded."
     },
     magnet: {
         name: "Magnet",
@@ -2463,7 +3104,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 242,
         gen: 2,
-        desc: "Holder's Electric-type attacks have 1.2x power."
+        desc: "Holder's Electric-type attacks have 1.2x power.",
+        shortDesc: "Holder's Electric-type attacks have 1.2x power."
     },
     magoberry: {
         name: "Mago Berry",
@@ -2475,7 +3117,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 161,
         gen: 3,
-        desc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -Spe Nature. Single use."
+        desc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -Spe Nature. Single use.",
+        shortDesc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -Spe Nature. Single use."
     },
     magostberry: {
         name: "Magost Berry",
@@ -2489,7 +3132,8 @@ var PS_BATTLE_ITEMS = {
         num: 176,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     mail: {
         name: "Mail",
@@ -2497,7 +3141,21 @@ var PS_BATTLE_ITEMS = {
         num: 137,
         gen: 2,
         isNonstandard: "Past",
-        desc: "Cannot be given to or taken from a Pokemon, except by Covet/Knock Off/Thief."
+        desc: "Cannot be given to or taken from a Pokemon, except by Covet/Knock Off/Thief.",
+        shortDesc: "Cannot be given to or taken from a Pokemon, except by Covet/Knock Off/Thief."
+    },
+    malamarite: {
+        name: "Malamarite",
+        spritenum: 563,
+        megaStone: {
+            Malamar: "Malamar-Mega"
+        },
+        itemUser: ["Malamar"],
+        num: 2580,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Malamar, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Malamar, this item allows it to Mega Evolve in battle."
     },
     maliciousarmor: {
         name: "Malicious Armor",
@@ -2507,18 +3165,21 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1861,
         gen: 9,
-        desc: "Evolves Charcadet into Ceruledge when used."
+        desc: "Evolves Charcadet into Ceruledge when used.",
+        shortDesc: "Evolves Charcadet into Ceruledge when used."
     },
     manectite: {
         name: "Manectite",
         spritenum: 596,
-        megaStone: "Manectric-Mega",
-        megaEvolves: "Manectric",
+        megaStone: {
+            Manectric: "Manectric-Mega"
+        },
         itemUser: ["Manectric"],
         num: 682,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Manectric, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Manectric, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Manectric, this item allows it to Mega Evolve in battle."
     },
     marangaberry: {
         name: "Maranga Berry",
@@ -2530,8 +3191,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 688,
         gen: 6,
-        isNonstandard: "Unobtainable",
-        desc: "Raises holder's Sp. Def by 1 stage after it is hit by a special attack. Single use."
+        desc: "Raises holder's Sp. Def by 1 stage after it is hit by a special attack. Single use.",
+        shortDesc: "Raises holder's Sp. Def by 1 stage after it is hit by a special attack. Single use."
     },
     marshadiumz: {
         name: "Marshadium Z",
@@ -2543,7 +3204,8 @@ var PS_BATTLE_ITEMS = {
         num: 802,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If held by Marshadow with Spectral Thief, it can use Soul-Stealing 7-Star Strike."
+        desc: "If held by Marshadow with Spectral Thief, it can use Soul-Stealing 7-Star Strike.",
+        shortDesc: "If held by Marshadow with Spectral Thief, it can use Soul-Stealing 7-Star Strike."
     },
     masterball: {
         name: "Master Ball",
@@ -2551,18 +3213,32 @@ var PS_BATTLE_ITEMS = {
         num: 1,
         gen: 1,
         isPokeball: true,
-        desc: "The best Ball with the ultimate performance. It will catch any wild Pokemon."
+        desc: "The best Ball with the ultimate performance. It will catch any wild Pokemon.",
+        shortDesc: "The best Ball with the ultimate performance. It will catch any wild Pokemon."
+    },
+    masterpieceteacup: {
+        name: "Masterpiece Teacup",
+        spritenum: 757,
+        fling: {
+            basePower: 80
+        },
+        num: 2404,
+        gen: 9,
+        desc: "Evolves Poltchageist-Artisan into Sinistcha-Masterpiece when used.",
+        shortDesc: "Evolves Poltchageist-Artisan into Sinistcha-Masterpiece when used."
     },
     mawilite: {
         name: "Mawilite",
         spritenum: 598,
-        megaStone: "Mawile-Mega",
-        megaEvolves: "Mawile",
+        megaStone: {
+            Mawile: "Mawile-Mega"
+        },
         itemUser: ["Mawile"],
         num: 681,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Mawile, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Mawile, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Mawile, this item allows it to Mega Evolve in battle."
     },
     meadowplate: {
         name: "Meadow Plate",
@@ -2572,18 +3248,34 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Grass",
         num: 301,
         gen: 4,
-        desc: "Holder's Grass-type attacks have 1.2x power. Judgment is Grass type."
+        desc: "Holder's Grass-type attacks have 1.2x power. Judgment is Grass type.",
+        shortDesc: "Holder's Grass-type attacks have 1.2x power. Judgment is Grass type."
     },
     medichamite: {
         name: "Medichamite",
         spritenum: 599,
-        megaStone: "Medicham-Mega",
-        megaEvolves: "Medicham",
+        megaStone: {
+            Medicham: "Medicham-Mega"
+        },
         itemUser: ["Medicham"],
         num: 665,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Medicham, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Medicham, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Medicham, this item allows it to Mega Evolve in battle."
+    },
+    meganiumite: {
+        name: "Meganiumite",
+        spritenum: 548,
+        megaStone: {
+            Meganium: "Meganium-Mega"
+        },
+        itemUser: ["Meganium"],
+        num: 2563,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Meganium, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Meganium, this item allows it to Mega Evolve in battle."
     },
     mentalherb: {
         name: "Mental Herb",
@@ -2593,18 +3285,41 @@ var PS_BATTLE_ITEMS = {
         },
         num: 219,
         gen: 3,
-        desc: "Cures holder of Attract, Disable, Encore, Heal Block, Taunt, Torment. Single use."
+        desc: "Cures holder of Attract, Disable, Encore, Heal Block, Taunt, Torment. Single use.",
+        shortDesc: "Cures holder of Attract, Disable, Encore, Heal Block, Taunt, Torment. Single use."
+    },
+    meowsticite: {
+        name: "Meowsticite",
+        spritenum: 0,
+        megaStone: {
+            Meowstic: "Meowstic-M-Mega",
+            "Meowstic-F": "Meowstic-F-Mega"
+        },
+        itemUser: ["Meowstic", "Meowstic-F"],
+        num: 2643,
+        gen: 9,
+        isNonstandard: "Future"
     },
     metagrossite: {
         name: "Metagrossite",
         spritenum: 618,
-        megaStone: "Metagross-Mega",
-        megaEvolves: "Metagross",
+        megaStone: {
+            Metagross: "Metagross-Mega"
+        },
         itemUser: ["Metagross"],
         num: 758,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Metagross, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Metagross, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Metagross, this item allows it to Mega Evolve in battle."
+    },
+    metalalloy: {
+        name: "Metal Alloy",
+        spritenum: 761,
+        num: 2482,
+        gen: 9,
+        desc: "Evolves Duraludon into Archaludon when used.",
+        shortDesc: "Evolves Duraludon into Archaludon when used."
     },
     metalcoat: {
         name: "Metal Coat",
@@ -2629,7 +3344,8 @@ var PS_BATTLE_ITEMS = {
         num: 257,
         gen: 2,
         isNonstandard: "Past",
-        desc: "If held by a Ditto that hasn't Transformed, its Defense is doubled."
+        desc: "If held by a Ditto that hasn't Transformed, its Defense is doubled.",
+        shortDesc: "If held by a Ditto that hasn't Transformed, its Defense is doubled."
     },
     metronome: {
         name: "Metronome",
@@ -2642,7 +3358,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 277,
         gen: 4,
-        desc: "Damage of moves used on consecutive turns is increased. Max 2x after 5 turns."
+        desc: "Damage of moves used on consecutive turns is increased. Max 2x after 5 turns.",
+        shortDesc: "Damage of moves used on consecutive turns is increased. Max 2x after 5 turns."
     },
     mewniumz: {
         name: "Mewnium Z",
@@ -2654,29 +3371,34 @@ var PS_BATTLE_ITEMS = {
         num: 806,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If held by a Mew with Psychic, it can use Genesis Supernova."
+        desc: "If held by a Mew with Psychic, it can use Genesis Supernova.",
+        shortDesc: "If held by a Mew with Psychic, it can use Genesis Supernova."
     },
     mewtwonitex: {
         name: "Mewtwonite X",
         spritenum: 600,
-        megaStone: "Mewtwo-Mega-X",
-        megaEvolves: "Mewtwo",
+        megaStone: {
+            Mewtwo: "Mewtwo-Mega-X"
+        },
         itemUser: ["Mewtwo"],
         num: 662,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Mewtwo, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Mewtwo, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Mewtwo, this item allows it to Mega Evolve in battle."
     },
     mewtwonitey: {
         name: "Mewtwonite Y",
         spritenum: 601,
-        megaStone: "Mewtwo-Mega-Y",
-        megaEvolves: "Mewtwo",
+        megaStone: {
+            Mewtwo: "Mewtwo-Mega-Y"
+        },
         itemUser: ["Mewtwo"],
         num: 663,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Mewtwo, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Mewtwo, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Mewtwo, this item allows it to Mega Evolve in battle."
     },
     micleberry: {
         name: "Micle Berry",
@@ -2691,8 +3413,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 209,
         gen: 4,
-        isNonstandard: "Unobtainable",
-        desc: "Holder's next move has 1.2x accuracy when at 1/4 max HP or less. Single use."
+        desc: "Holder's next move has 1.2x accuracy when at 1/4 max HP or less. Single use.",
+        shortDesc: "Holder's next move has 1.2x accuracy when at 1/4 max HP or less. Single use."
     },
     mimikiumz: {
         name: "Mimikium Z",
@@ -2704,7 +3426,8 @@ var PS_BATTLE_ITEMS = {
         num: 924,
         isNonstandard: "Past",
         gen: 7,
-        desc: "If held by a Mimikyu with Play Rough, it can use Let's Snuggle Forever."
+        desc: "If held by a Mimikyu with Play Rough, it can use Let's Snuggle Forever.",
+        shortDesc: "If held by a Mimikyu with Play Rough, it can use Let's Snuggle Forever."
     },
     mindplate: {
         name: "Mind Plate",
@@ -2714,7 +3437,8 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Psychic",
         num: 307,
         gen: 4,
-        desc: "Holder's Psychic-type attacks have 1.2x power. Judgment is Psychic type."
+        desc: "Holder's Psychic-type attacks have 1.2x power. Judgment is Psychic type.",
+        shortDesc: "Holder's Psychic-type attacks have 1.2x power. Judgment is Psychic type."
     },
     miracleseed: {
         name: "Miracle Seed",
@@ -2725,7 +3449,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 239,
         gen: 2,
-        desc: "Holder's Grass-type attacks have 1.2x power."
+        desc: "Holder's Grass-type attacks have 1.2x power.",
+        shortDesc: "Holder's Grass-type attacks have 1.2x power."
     },
     mirrorherb: {
         name: "Mirror Herb",
@@ -2733,9 +3458,12 @@ var PS_BATTLE_ITEMS = {
         fling: {
             basePower: 30
         },
+        onAnySwitchInPriority: -3,
+        onResidualOrder: 29,
         num: 1883,
         gen: 9,
-        desc: "When an opposing Pokemon raises a stat stage, the holder copies it. Single use."
+        desc: "When an opposing Pokemon raises a stat stage, the holder copies it. Single use.",
+        shortDesc: "When an opposing Pokemon raises a stat stage, the holder copies it. Single use."
     },
     mistyseed: {
         name: "Misty Seed",
@@ -2743,12 +3471,14 @@ var PS_BATTLE_ITEMS = {
         fling: {
             basePower: 10
         },
+        onSwitchInPriority: -1,
         boosts: {
             spd: 1
         },
         num: 883,
         gen: 7,
-        desc: "If the terrain is Misty Terrain, raises holder's Sp. Def by 1 stage. Single use."
+        desc: "If the terrain is Misty Terrain, raises holder's Sp. Def by 1 stage. Single use.",
+        shortDesc: "If the terrain is Misty Terrain, raises holder's Sp. Def by 1 stage. Single use."
     },
     moonball: {
         name: "Moon Ball",
@@ -2756,7 +3486,8 @@ var PS_BATTLE_ITEMS = {
         num: 498,
         gen: 2,
         isPokeball: true,
-        desc: "A Poke Ball for catching Pokemon that evolve using the Moon Stone."
+        desc: "A Poke Ball for catching Pokemon that evolve using the Moon Stone.",
+        shortDesc: "A Poke Ball for catching Pokemon that evolve using the Moon Stone."
     },
     moonstone: {
         name: "Moon Stone",
@@ -2778,7 +3509,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 16,
         num: 266,
         gen: 4,
-        desc: "Holder's physical attacks have 1.1x power."
+        desc: "Holder's physical attacks have 1.1x power.",
+        shortDesc: "Holder's physical attacks have 1.1x power."
     },
     mysticwater: {
         name: "Mystic Water",
@@ -2789,7 +3521,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 243,
         gen: 2,
-        desc: "Holder's Water-type attacks have 1.2x power."
+        desc: "Holder's Water-type attacks have 1.2x power.",
+        shortDesc: "Holder's Water-type attacks have 1.2x power."
     },
     nanabberry: {
         name: "Nanab Berry",
@@ -2803,7 +3536,8 @@ var PS_BATTLE_ITEMS = {
         num: 166,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     nestball: {
         name: "Nest Ball",
@@ -2811,7 +3545,8 @@ var PS_BATTLE_ITEMS = {
         num: 8,
         gen: 3,
         isPokeball: true,
-        desc: "A Poke Ball that works especially well on weaker Pokemon in the wild."
+        desc: "A Poke Ball that works especially well on weaker Pokemon in the wild.",
+        shortDesc: "A Poke Ball that works especially well on weaker Pokemon in the wild."
     },
     netball: {
         name: "Net Ball",
@@ -2819,7 +3554,8 @@ var PS_BATTLE_ITEMS = {
         num: 6,
         gen: 3,
         isPokeball: true,
-        desc: "A Poke Ball that works especially well on Water- and Bug-type Pokemon."
+        desc: "A Poke Ball that works especially well on Water- and Bug-type Pokemon.",
+        shortDesc: "A Poke Ball that works especially well on Water- and Bug-type Pokemon."
     },
     nevermeltice: {
         name: "Never-Melt Ice",
@@ -2830,7 +3566,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 246,
         gen: 2,
-        desc: "Holder's Ice-type attacks have 1.2x power."
+        desc: "Holder's Ice-type attacks have 1.2x power.",
+        shortDesc: "Holder's Ice-type attacks have 1.2x power."
     },
     nomelberry: {
         name: "Nomel Berry",
@@ -2844,7 +3581,8 @@ var PS_BATTLE_ITEMS = {
         num: 178,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     normalgem: {
         name: "Normal Gem",
@@ -2852,7 +3590,8 @@ var PS_BATTLE_ITEMS = {
         isGem: true,
         num: 564,
         gen: 5,
-        desc: "Holder's first successful Normal-type attack will have 1.3x power. Single use."
+        desc: "Holder's first successful Normal-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Normal-type attack will have 1.3x power. Single use."
     },
     normaliumz: {
         name: "Normalium Z",
@@ -2863,7 +3602,8 @@ var PS_BATTLE_ITEMS = {
         num: 776,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Normal move, this item allows it to use a Normal Z-Move."
+        desc: "If holder has a Normal move, this item allows it to use a Normal Z-Move.",
+        shortDesc: "If holder has a Normal move, this item allows it to use a Normal Z-Move."
     },
     occaberry: {
         name: "Occa Berry",
@@ -2875,7 +3615,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 184,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Fire-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Fire-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Fire-type attack. Single use."
     },
     oddincense: {
         name: "Odd Incense",
@@ -2887,7 +3628,8 @@ var PS_BATTLE_ITEMS = {
         num: 314,
         gen: 4,
         isNonstandard: "Past",
-        desc: "Holder's Psychic-type attacks have 1.2x power."
+        desc: "Holder's Psychic-type attacks have 1.2x power.",
+        shortDesc: "Holder's Psychic-type attacks have 1.2x power."
     },
     oldamber: {
         name: "Old Amber",
@@ -2898,7 +3640,8 @@ var PS_BATTLE_ITEMS = {
         num: 103,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Can be revived into Aerodactyl."
+        desc: "Can be revived into Aerodactyl.",
+        shortDesc: "Can be revived into Aerodactyl."
     },
     oranberry: {
         name: "Oran Berry",
@@ -2910,7 +3653,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 155,
         gen: 3,
-        desc: "Restores 10 HP when at 1/2 max HP or less. Single use."
+        desc: "Restores 10 HP when at 1/2 max HP or less. Single use.",
+        shortDesc: "Restores 10 HP when at 1/2 max HP or less. Single use."
     },
     ovalstone: {
         name: "Oval Stone",
@@ -2920,7 +3664,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 110,
         gen: 4,
-        desc: "Evolves Happiny into Chansey when held and leveled up during the day."
+        desc: "Evolves Happiny into Chansey when held and leveled up during the day.",
+        shortDesc: "Evolves Happiny into Chansey when held and leveled up during the day."
     },
     pamtreberry: {
         name: "Pamtre Berry",
@@ -2934,7 +3679,8 @@ var PS_BATTLE_ITEMS = {
         num: 180,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     parkball: {
         name: "Park Ball",
@@ -2943,7 +3689,8 @@ var PS_BATTLE_ITEMS = {
         gen: 4,
         isPokeball: true,
         isNonstandard: "Unobtainable",
-        desc: "A special Poke Ball for the Pal Park."
+        desc: "A special Poke Ball for the Pal Park.",
+        shortDesc: "A special Poke Ball for the Pal Park."
     },
     passhoberry: {
         name: "Passho Berry",
@@ -2955,7 +3702,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 185,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Water-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Water-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Water-type attack. Single use."
     },
     payapaberry: {
         name: "Payapa Berry",
@@ -2967,7 +3715,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 193,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Psychic-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Psychic-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Psychic-type attack. Single use."
     },
     pechaberry: {
         name: "Pecha Berry",
@@ -2979,7 +3728,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 151,
         gen: 3,
-        desc: "Holder is cured if it is poisoned. Single use."
+        desc: "Holder is cured if it is poisoned. Single use.",
+        shortDesc: "Holder is cured if it is poisoned. Single use."
     },
     persimberry: {
         name: "Persim Berry",
@@ -2991,7 +3741,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 156,
         gen: 3,
-        desc: "Holder is cured if it is confused. Single use."
+        desc: "Holder is cured if it is confused. Single use.",
+        shortDesc: "Holder is cured if it is confused. Single use."
     },
     petayaberry: {
         name: "Petaya Berry",
@@ -3003,18 +3754,21 @@ var PS_BATTLE_ITEMS = {
         },
         num: 204,
         gen: 3,
-        desc: "Raises holder's Sp. Atk by 1 stage when at 1/4 max HP or less. Single use."
+        desc: "Raises holder's Sp. Atk by 1 stage when at 1/4 max HP or less. Single use.",
+        shortDesc: "Raises holder's Sp. Atk by 1 stage when at 1/4 max HP or less. Single use."
     },
     pidgeotite: {
         name: "Pidgeotite",
         spritenum: 622,
-        megaStone: "Pidgeot-Mega",
-        megaEvolves: "Pidgeot",
+        megaStone: {
+            Pidgeot: "Pidgeot-Mega"
+        },
         itemUser: ["Pidgeot"],
         num: 762,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Pidgeot, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Pidgeot, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Pidgeot, this item allows it to Mega Evolve in battle."
     },
     pikaniumz: {
         name: "Pikanium Z",
@@ -3026,7 +3780,8 @@ var PS_BATTLE_ITEMS = {
         num: 794,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If held by a Pikachu with Volt Tackle, it can use Catastropika."
+        desc: "If held by a Pikachu with Volt Tackle, it can use Catastropika.",
+        shortDesc: "If held by a Pikachu with Volt Tackle, it can use Catastropika."
     },
     pikashuniumz: {
         name: "Pikashunium Z",
@@ -3038,7 +3793,8 @@ var PS_BATTLE_ITEMS = {
         num: 836,
         isNonstandard: "Past",
         gen: 7,
-        desc: "If held by cap Pikachu with Thunderbolt, it can use 10,000,000 Volt Thunderbolt."
+        desc: "If held by cap Pikachu with Thunderbolt, it can use 10,000,000 Volt Thunderbolt.",
+        shortDesc: "If held by cap Pikachu with Thunderbolt, it can use 10,000,000 Volt Thunderbolt."
     },
     pinapberry: {
         name: "Pinap Berry",
@@ -3052,18 +3808,21 @@ var PS_BATTLE_ITEMS = {
         num: 168,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     pinsirite: {
         name: "Pinsirite",
         spritenum: 602,
-        megaStone: "Pinsir-Mega",
-        megaEvolves: "Pinsir",
+        megaStone: {
+            Pinsir: "Pinsir-Mega"
+        },
         itemUser: ["Pinsir"],
         num: 671,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Pinsir, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Pinsir, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Pinsir, this item allows it to Mega Evolve in battle."
     },
     pixieplate: {
         name: "Pixie Plate",
@@ -3073,7 +3832,8 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Fairy",
         num: 644,
         gen: 6,
-        desc: "Holder's Fairy-type attacks have 1.2x power. Judgment is Fairy type."
+        desc: "Holder's Fairy-type attacks have 1.2x power. Judgment is Fairy type.",
+        shortDesc: "Holder's Fairy-type attacks have 1.2x power. Judgment is Fairy type."
     },
     plumefossil: {
         name: "Plume Fossil",
@@ -3084,7 +3844,8 @@ var PS_BATTLE_ITEMS = {
         num: 573,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Can be revived into Archen."
+        desc: "Can be revived into Archen.",
+        shortDesc: "Can be revived into Archen."
     },
     poisonbarb: {
         name: "Poison Barb",
@@ -3096,7 +3857,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 245,
         gen: 2,
-        desc: "Holder's Poison-type attacks have 1.2x power."
+        desc: "Holder's Poison-type attacks have 1.2x power.",
+        shortDesc: "Holder's Poison-type attacks have 1.2x power."
     },
     poisongem: {
         name: "Poison Gem",
@@ -3105,18 +3867,8 @@ var PS_BATTLE_ITEMS = {
         num: 554,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Poison-type attack will have 1.3x power. Single use."
-    },
-    poisonmemory: {
-        name: "Poison Memory",
-        spritenum: 670,
-        onMemory: "Poison",
-        forcedForme: "Silvally-Poison",
-        itemUser: ["Silvally-Poison"],
-        num: 906,
-        gen: 7,
-        isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Poison type."
+        desc: "Holder's first successful Poison-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Poison-type attack will have 1.3x power. Single use."
     },
     poisoniumz: {
         name: "Poisonium Z",
@@ -3129,7 +3881,20 @@ var PS_BATTLE_ITEMS = {
         num: 783,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Poison move, this item allows it to use a Poison Z-Move."
+        desc: "If holder has a Poison move, this item allows it to use a Poison Z-Move.",
+        shortDesc: "If holder has a Poison move, this item allows it to use a Poison Z-Move."
+    },
+    poisonmemory: {
+        name: "Poison Memory",
+        spritenum: 670,
+        onMemory: "Poison",
+        forcedForme: "Silvally-Poison",
+        itemUser: ["Silvally-Poison"],
+        num: 906,
+        gen: 7,
+        isNonstandard: "Past",
+        desc: "Holder's Multi-Attack is Poison type.",
+        shortDesc: "Holder's Multi-Attack is Poison type."
     },
     pokeball: {
         name: "Poke Ball",
@@ -3137,7 +3902,8 @@ var PS_BATTLE_ITEMS = {
         num: 4,
         gen: 1,
         isPokeball: true,
-        desc: "A device for catching wild Pokemon. It is designed as a capsule system."
+        desc: "A device for catching wild Pokemon. It is designed as a capsule system.",
+        shortDesc: "A device for catching wild Pokemon. It is designed as a capsule system."
     },
     pomegberry: {
         name: "Pomeg Berry",
@@ -3150,7 +3916,8 @@ var PS_BATTLE_ITEMS = {
         onEat: false,
         num: 169,
         gen: 3,
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     poweranklet: {
         name: "Power Anklet",
@@ -3161,7 +3928,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 293,
         gen: 4,
-        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
+        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect.",
+        shortDesc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
     },
     powerband: {
         name: "Power Band",
@@ -3172,7 +3940,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 292,
         gen: 4,
-        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
+        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect.",
+        shortDesc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
     },
     powerbelt: {
         name: "Power Belt",
@@ -3183,7 +3952,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 290,
         gen: 4,
-        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
+        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect.",
+        shortDesc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
     },
     powerbracer: {
         name: "Power Bracer",
@@ -3194,7 +3964,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 289,
         gen: 4,
-        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
+        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect.",
+        shortDesc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
     },
     powerherb: {
         name: "Power Herb",
@@ -3204,7 +3975,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 271,
         gen: 4,
-        desc: "Holder's two-turn moves complete in one turn (except Sky Drop). Single use."
+        desc: "Holder's two-turn moves complete in one turn (except Sky Drop). Single use.",
+        shortDesc: "Holder's two-turn moves complete in one turn (except Sky Drop). Single use."
     },
     powerlens: {
         name: "Power Lens",
@@ -3215,7 +3987,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 291,
         gen: 4,
-        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
+        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect.",
+        shortDesc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
     },
     powerweight: {
         name: "Power Weight",
@@ -3226,7 +3999,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 294,
         gen: 4,
-        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
+        desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect.",
+        shortDesc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect."
     },
     premierball: {
         name: "Premier Ball",
@@ -3234,7 +4008,19 @@ var PS_BATTLE_ITEMS = {
         num: 12,
         gen: 3,
         isPokeball: true,
-        desc: "A rare Poke Ball that has been crafted to commemorate an event."
+        desc: "A rare Poke Ball that has been crafted to commemorate an event.",
+        shortDesc: "A rare Poke Ball that has been crafted to commemorate an event."
+    },
+    prettyfeather: {
+        name: "Pretty Feather",
+        spritenum: 1,
+        fling: {
+            basePower: 20
+        },
+        num: 571,
+        gen: 5,
+        desc: "Though this feather is beautiful, it's just a regular feather and has no effect.",
+        shortDesc: "Though this feather is beautiful, it's just a regular feather and has no effect."
     },
     primariumz: {
         name: "Primarium Z",
@@ -3246,7 +4032,8 @@ var PS_BATTLE_ITEMS = {
         num: 800,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If held by a Primarina with Sparkling Aria, it can use Oceanic Operetta."
+        desc: "If held by a Primarina with Sparkling Aria, it can use Oceanic Operetta.",
+        shortDesc: "If held by a Primarina with Sparkling Aria, it can use Oceanic Operetta."
     },
     prismscale: {
         name: "Prism Scale",
@@ -3256,8 +4043,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 537,
         gen: 5,
-        isNonstandard: "Past",
-        desc: "Evolves Feebas into Milotic when traded."
+        desc: "Evolves Feebas into Milotic when traded.",
+        shortDesc: "Evolves Feebas into Milotic when traded."
     },
     protectivepads: {
         name: "Protective Pads",
@@ -3267,7 +4054,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 880,
         gen: 7,
-        desc: "Holder's moves are protected from adverse contact effects, except Pickpocket."
+        desc: "Holder's moves are protected from adverse contact effects, except Pickpocket.",
+        shortDesc: "Holder's moves are protected from adverse contact effects, except Pickpocket."
     },
     protector: {
         name: "Protector",
@@ -3277,8 +4065,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 321,
         gen: 4,
-        isNonstandard: "Past",
-        desc: "Evolves Rhydon into Rhyperior when traded."
+        desc: "Evolves Rhydon into Rhyperior when traded.",
+        shortDesc: "Evolves Rhydon into Rhyperior when traded."
     },
     psychicgem: {
         name: "Psychic Gem",
@@ -3287,7 +4075,8 @@ var PS_BATTLE_ITEMS = {
         num: 557,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Psychic-type attack will have 1.3x power. Single use."
+        desc: "Holder's first successful Psychic-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Psychic-type attack will have 1.3x power. Single use."
     },
     psychicmemory: {
         name: "Psychic Memory",
@@ -3298,7 +4087,8 @@ var PS_BATTLE_ITEMS = {
         num: 916,
         gen: 7,
         isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Psychic type."
+        desc: "Holder's Multi-Attack is Psychic type.",
+        shortDesc: "Holder's Multi-Attack is Psychic type."
     },
     psychicseed: {
         name: "Psychic Seed",
@@ -3306,12 +4096,14 @@ var PS_BATTLE_ITEMS = {
         fling: {
             basePower: 10
         },
+        onSwitchInPriority: -1,
         boosts: {
             spd: 1
         },
         num: 882,
         gen: 7,
-        desc: "If the terrain is Psychic Terrain, raises holder's Sp. Def by 1 stage. Single use."
+        desc: "If the terrain is Psychic Terrain, raises holder's Sp. Def by 1 stage. Single use.",
+        shortDesc: "If the terrain is Psychic Terrain, raises holder's Sp. Def by 1 stage. Single use."
     },
     psychiumz: {
         name: "Psychium Z",
@@ -3324,7 +4116,8 @@ var PS_BATTLE_ITEMS = {
         num: 786,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Psychic move, this item allows it to use a Psychic Z-Move."
+        desc: "If holder has a Psychic move, this item allows it to use a Psychic Z-Move.",
+        shortDesc: "If holder has a Psychic move, this item allows it to use a Psychic Z-Move."
     },
     punchingglove: {
         name: "Punching Glove",
@@ -3336,7 +4129,21 @@ var PS_BATTLE_ITEMS = {
         onModifyMovePriority: 1,
         num: 1884,
         gen: 9,
-        desc: "Holder's punch-based attacks have 1.1x power and do not make contact."
+        desc: "Holder's punch-based attacks have 1.1x power and do not make contact.",
+        shortDesc: "Holder's punch-based attacks have 1.1x power and do not make contact."
+    },
+    pyroarite: {
+        name: "Pyroarite",
+        spritenum: 561,
+        megaStone: {
+            Pyroar: "Pyroar-Mega"
+        },
+        itemUser: ["Pyroar"],
+        num: 2578,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Pyroar, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Pyroar, this item allows it to Mega Evolve in battle."
     },
     qualotberry: {
         name: "Qualot Berry",
@@ -3349,7 +4156,8 @@ var PS_BATTLE_ITEMS = {
         onEat: false,
         num: 171,
         gen: 3,
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     quickball: {
         name: "Quick Ball",
@@ -3357,7 +4165,8 @@ var PS_BATTLE_ITEMS = {
         num: 15,
         gen: 4,
         isPokeball: true,
-        desc: "A Poke Ball that provides a better catch rate at the start of a wild encounter."
+        desc: "A Poke Ball that provides a better catch rate at the start of a wild encounter.",
+        shortDesc: "A Poke Ball that provides a better catch rate at the start of a wild encounter."
     },
     quickclaw: {
         onFractionalPriorityPriority: -2,
@@ -3368,7 +4177,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 217,
         gen: 2,
-        desc: "Each turn, holder has a 20% chance to move first in its priority bracket."
+        desc: "Each turn, holder has a 20% chance to move first in its priority bracket.",
+        shortDesc: "Each turn, holder has a 20% chance to move first in its priority bracket."
     },
     quickpowder: {
         name: "Quick Powder",
@@ -3380,7 +4190,8 @@ var PS_BATTLE_ITEMS = {
         num: 274,
         gen: 4,
         isNonstandard: "Past",
-        desc: "If held by a Ditto that hasn't Transformed, its Speed is doubled."
+        desc: "If held by a Ditto that hasn't Transformed, its Speed is doubled.",
+        shortDesc: "If held by a Ditto that hasn't Transformed, its Speed is doubled."
     },
     rabutaberry: {
         name: "Rabuta Berry",
@@ -3394,7 +4205,30 @@ var PS_BATTLE_ITEMS = {
         num: 177,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+    },
+    raichunitex: {
+        name: "Raichunite X",
+        spritenum: 0,
+        megaStone: {
+            Raichu: "Raichu-Mega-X"
+        },
+        itemUser: ["Raichu"],
+        num: 2635,
+        gen: 9,
+        isNonstandard: "Future"
+    },
+    raichunitey: {
+        name: "Raichunite Y",
+        spritenum: 0,
+        megaStone: {
+            Raichu: "Raichu-Mega-Y"
+        },
+        itemUser: ["Raichu"],
+        num: 2636,
+        gen: 9,
+        isNonstandard: "Future"
     },
     rarebone: {
         name: "Rare Bone",
@@ -3404,7 +4238,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 106,
         gen: 4,
-        desc: "No competitive use other than when used with Fling."
+        desc: "No competitive use other than when used with Fling.",
+        shortDesc: "No competitive use other than when used with Fling."
     },
     rawstberry: {
         name: "Rawst Berry",
@@ -3416,7 +4251,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 152,
         gen: 3,
-        desc: "Holder is cured if it is burned. Single use."
+        desc: "Holder is cured if it is burned. Single use.",
+        shortDesc: "Holder is cured if it is burned. Single use."
     },
     razorclaw: {
         name: "Razor Claw",
@@ -3439,7 +4275,6 @@ var PS_BATTLE_ITEMS = {
         onModifyMovePriority: -1,
         num: 327,
         gen: 4,
-        isNonstandard: "Past",
         desc: "Holder's attacks without a chance to make the target flinch gain a 10% chance to make the target flinch. Evolves Gligar into Gliscor when held and leveled up during the night.",
         shortDesc: "Holder's attacks without a chance to flinch gain a 10% chance to flinch."
     },
@@ -3455,7 +4290,8 @@ var PS_BATTLE_ITEMS = {
         num: 164,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     reapercloth: {
         name: "Reaper Cloth",
@@ -3465,8 +4301,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 325,
         gen: 4,
-        isNonstandard: "Past",
-        desc: "Evolves Dusclops into Dusknoir when traded."
+        desc: "Evolves Dusclops into Dusknoir when traded.",
+        shortDesc: "Evolves Dusclops into Dusknoir when traded."
     },
     redcard: {
         name: "Red Card",
@@ -3476,16 +4312,20 @@ var PS_BATTLE_ITEMS = {
         },
         num: 542,
         gen: 5,
-        desc: "If holder survives a hit, attacker is forced to switch to a random ally. Single use."
+        desc: "If holder survives a hit, attacker is forced to switch to a random ally. Single use.",
+        shortDesc: "If holder survives a hit, attacker is forced to switch to a random ally. Single use."
     },
     redorb: {
         name: "Red Orb",
         spritenum: 390,
+        onSwitchInPriority: -1,
         itemUser: ["Groudon"],
+        isPrimalOrb: true,
         num: 534,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Groudon, this item triggers its Primal Reversion in battle."
+        desc: "If held by a Groudon, this item triggers its Primal Reversion in battle.",
+        shortDesc: "If held by a Groudon, this item triggers its Primal Reversion in battle."
     },
     repeatball: {
         name: "Repeat Ball",
@@ -3493,7 +4333,8 @@ var PS_BATTLE_ITEMS = {
         num: 9,
         gen: 3,
         isPokeball: true,
-        desc: "A Poke Ball that works well on Pokemon species that were previously caught."
+        desc: "A Poke Ball that works well on Pokemon species that were previously caught.",
+        shortDesc: "A Poke Ball that works well on Pokemon species that were previously caught."
     },
     ribbonsweet: {
         name: "Ribbon Sweet",
@@ -3503,8 +4344,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1115,
         gen: 8,
-        isNonstandard: "Past",
-        desc: "Evolves Milcery into Alcremie when held and spun around."
+        desc: "Evolves Milcery into Alcremie when held and spun around.",
+        shortDesc: "Evolves Milcery into Alcremie when held and spun around."
     },
     rindoberry: {
         name: "Rindo Berry",
@@ -3516,7 +4357,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 187,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Grass-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Grass-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Grass-type attack. Single use."
     },
     ringtarget: {
         name: "Ring Target",
@@ -3527,7 +4369,8 @@ var PS_BATTLE_ITEMS = {
         onNegateImmunity: false,
         num: 543,
         gen: 5,
-        desc: "The holder's type immunities granted solely by its typing are negated."
+        desc: "The holder's type immunities granted solely by its typing are negated.",
+        shortDesc: "The holder's type immunities granted solely by its typing are negated."
     },
     rockgem: {
         name: "Rock Gem",
@@ -3536,7 +4379,8 @@ var PS_BATTLE_ITEMS = {
         num: 559,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Rock-type attack will have 1.3x power. Single use."
+        desc: "Holder's first successful Rock-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Rock-type attack will have 1.3x power. Single use."
     },
     rockincense: {
         name: "Rock Incense",
@@ -3548,18 +4392,8 @@ var PS_BATTLE_ITEMS = {
         num: 315,
         gen: 4,
         isNonstandard: "Past",
-        desc: "Holder's Rock-type attacks have 1.2x power."
-    },
-    rockmemory: {
-        name: "Rock Memory",
-        spritenum: 672,
-        onMemory: "Rock",
-        forcedForme: "Silvally-Rock",
-        itemUser: ["Silvally-Rock"],
-        num: 908,
-        gen: 7,
-        isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Rock type."
+        desc: "Holder's Rock-type attacks have 1.2x power.",
+        shortDesc: "Holder's Rock-type attacks have 1.2x power."
     },
     rockiumz: {
         name: "Rockium Z",
@@ -3572,7 +4406,20 @@ var PS_BATTLE_ITEMS = {
         num: 788,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Rock move, this item allows it to use a Rock Z-Move."
+        desc: "If holder has a Rock move, this item allows it to use a Rock Z-Move.",
+        shortDesc: "If holder has a Rock move, this item allows it to use a Rock Z-Move."
+    },
+    rockmemory: {
+        name: "Rock Memory",
+        spritenum: 672,
+        onMemory: "Rock",
+        forcedForme: "Silvally-Rock",
+        itemUser: ["Silvally-Rock"],
+        num: 908,
+        gen: 7,
+        isNonstandard: "Past",
+        desc: "Holder's Multi-Attack is Rock type.",
+        shortDesc: "Holder's Multi-Attack is Rock type."
     },
     rockyhelmet: {
         name: "Rocky Helmet",
@@ -3583,7 +4430,8 @@ var PS_BATTLE_ITEMS = {
         onDamagingHitOrder: 2,
         num: 540,
         gen: 5,
-        desc: "If holder is hit by a contact move, the attacker loses 1/6 of its max HP."
+        desc: "If holder is hit by a contact move, the attacker loses 1/6 of its max HP.",
+        shortDesc: "If holder is hit by a contact move, the attacker loses 1/6 of its max HP."
     },
     roomservice: {
         name: "Room Service",
@@ -3591,12 +4439,14 @@ var PS_BATTLE_ITEMS = {
         fling: {
             basePower: 100
         },
+        onSwitchInPriority: -1,
         boosts: {
             spe: -1
         },
         num: 1122,
         gen: 8,
-        desc: "If Trick Room is active, the holder's Speed is lowered by 1 stage. Single use."
+        desc: "If Trick Room is active, the holder's Speed is lowered by 1 stage. Single use.",
+        shortDesc: "If Trick Room is active, the holder's Speed is lowered by 1 stage. Single use."
     },
     rootfossil: {
         name: "Root Fossil",
@@ -3607,7 +4457,8 @@ var PS_BATTLE_ITEMS = {
         num: 99,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Can be revived into Lileep."
+        desc: "Can be revived into Lileep.",
+        shortDesc: "Can be revived into Lileep."
     },
     roseincense: {
         name: "Rose Incense",
@@ -3619,7 +4470,8 @@ var PS_BATTLE_ITEMS = {
         num: 318,
         gen: 4,
         isNonstandard: "Past",
-        desc: "Holder's Grass-type attacks have 1.2x power."
+        desc: "Holder's Grass-type attacks have 1.2x power.",
+        shortDesc: "Holder's Grass-type attacks have 1.2x power."
     },
     roseliberry: {
         name: "Roseli Berry",
@@ -3631,7 +4483,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 686,
         gen: 6,
-        desc: "Halves damage taken from a supereffective Fairy-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Fairy-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Fairy-type attack. Single use."
     },
     rowapberry: {
         name: "Rowap Berry",
@@ -3643,8 +4496,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 212,
         gen: 4,
-        isNonstandard: "Unobtainable",
-        desc: "If holder is hit by a special move, attacker loses 1/8 of its max HP. Single use."
+        desc: "If holder is hit by a special move, attacker loses 1/8 of its max HP. Single use.",
+        shortDesc: "If holder is hit by a special move, attacker loses 1/8 of its max HP. Single use."
     },
     rustedshield: {
         name: "Rusted Shield",
@@ -3652,7 +4505,8 @@ var PS_BATTLE_ITEMS = {
         itemUser: ["Zamazenta-Crowned"],
         num: 1104,
         gen: 8,
-        desc: "If held by a Zamazenta, this item changes its forme to Crowned Shield."
+        desc: "If held by a Zamazenta, this item changes its forme to Crowned Shield.",
+        shortDesc: "If held by a Zamazenta, this item changes its forme to Crowned Shield."
     },
     rustedsword: {
         name: "Rusted Sword",
@@ -3660,18 +4514,21 @@ var PS_BATTLE_ITEMS = {
         itemUser: ["Zacian-Crowned"],
         num: 1103,
         gen: 8,
-        desc: "If held by a Zacian, this item changes its forme to Crowned Sword."
+        desc: "If held by a Zacian, this item changes its forme to Crowned Sword.",
+        shortDesc: "If held by a Zacian, this item changes its forme to Crowned Sword."
     },
     sablenite: {
         name: "Sablenite",
         spritenum: 614,
-        megaStone: "Sableye-Mega",
-        megaEvolves: "Sableye",
+        megaStone: {
+            Sableye: "Sableye-Mega"
+        },
         itemUser: ["Sableye"],
         num: 754,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Sableye, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Sableye, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Sableye, this item allows it to Mega Evolve in battle."
     },
     sachet: {
         name: "Sachet",
@@ -3682,7 +4539,8 @@ var PS_BATTLE_ITEMS = {
         num: 647,
         gen: 6,
         isNonstandard: "Past",
-        desc: "Evolves Spritzee into Aromatisse when traded."
+        desc: "Evolves Spritzee into Aromatisse when traded.",
+        shortDesc: "Evolves Spritzee into Aromatisse when traded."
     },
     safariball: {
         name: "Safari Ball",
@@ -3690,8 +4548,8 @@ var PS_BATTLE_ITEMS = {
         num: 5,
         gen: 1,
         isPokeball: true,
-        isNonstandard: "Unobtainable",
-        desc: "A special Poke Ball that is used only in the Safari Zone and Great Marsh."
+        desc: "A special Poke Ball that is used only in the Safari Zone and Great Marsh.",
+        shortDesc: "A special Poke Ball that is used only in the Safari Zone and Great Marsh."
     },
     safetygoggles: {
         name: "Safety Goggles",
@@ -3701,7 +4559,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 650,
         gen: 6,
-        desc: "Holder is immune to powder moves and damage from Sandstorm or Hail."
+        desc: "Holder is immune to powder moves and damage from Sandstorm or Hail.",
+        shortDesc: "Holder is immune to powder moves and damage from Sandstorm or Hail."
     },
     sailfossil: {
         name: "Sail Fossil",
@@ -3712,7 +4571,8 @@ var PS_BATTLE_ITEMS = {
         num: 711,
         gen: 6,
         isNonstandard: "Past",
-        desc: "Can be revived into Amaura."
+        desc: "Can be revived into Amaura.",
+        shortDesc: "Can be revived into Amaura."
     },
     salacberry: {
         name: "Salac Berry",
@@ -3724,40 +4584,60 @@ var PS_BATTLE_ITEMS = {
         },
         num: 203,
         gen: 3,
-        desc: "Raises holder's Speed by 1 stage when at 1/4 max HP or less. Single use."
+        desc: "Raises holder's Speed by 1 stage when at 1/4 max HP or less. Single use.",
+        shortDesc: "Raises holder's Speed by 1 stage when at 1/4 max HP or less. Single use."
     },
     salamencite: {
         name: "Salamencite",
         spritenum: 627,
-        megaStone: "Salamence-Mega",
-        megaEvolves: "Salamence",
+        megaStone: {
+            Salamence: "Salamence-Mega"
+        },
         itemUser: ["Salamence"],
         num: 769,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Salamence, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Salamence, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Salamence, this item allows it to Mega Evolve in battle."
     },
     sceptilite: {
         name: "Sceptilite",
         spritenum: 613,
-        megaStone: "Sceptile-Mega",
-        megaEvolves: "Sceptile",
+        megaStone: {
+            Sceptile: "Sceptile-Mega"
+        },
         itemUser: ["Sceptile"],
         num: 753,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Sceptile, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Sceptile, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Sceptile, this item allows it to Mega Evolve in battle."
     },
     scizorite: {
         name: "Scizorite",
         spritenum: 605,
-        megaStone: "Scizor-Mega",
-        megaEvolves: "Scizor",
+        megaStone: {
+            Scizor: "Scizor-Mega"
+        },
         itemUser: ["Scizor"],
         num: 670,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Scizor, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Scizor, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Scizor, this item allows it to Mega Evolve in battle."
+    },
+    scolipite: {
+        name: "Scolipite",
+        spritenum: 554,
+        megaStone: {
+            Scolipede: "Scolipede-Mega"
+        },
+        itemUser: ["Scolipede"],
+        num: 2571,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Scolipede, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Scolipede, this item allows it to Mega Evolve in battle."
     },
     scopelens: {
         name: "Scope Lens",
@@ -3767,7 +4647,32 @@ var PS_BATTLE_ITEMS = {
         },
         num: 232,
         gen: 2,
-        desc: "Holder's critical hit ratio is raised by 1 stage."
+        desc: "Holder's critical hit ratio is raised by 1 stage.",
+        shortDesc: "Holder's critical hit ratio is raised by 1 stage."
+    },
+    scovillainite: {
+        name: "Scovillainite",
+        spritenum: 0,
+        megaStone: {
+            Scovillain: "Scovillain-Mega"
+        },
+        itemUser: ["Scovillain"],
+        num: 2647,
+        gen: 9,
+        isNonstandard: "Future"
+    },
+    scraftinite: {
+        name: "Scraftinite",
+        spritenum: 555,
+        megaStone: {
+            Scrafty: "Scrafty-Mega"
+        },
+        itemUser: ["Scrafty"],
+        num: 2572,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Scrafty, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Scrafty, this item allows it to Mega Evolve in battle."
     },
     seaincense: {
         name: "Sea Incense",
@@ -3779,7 +4684,8 @@ var PS_BATTLE_ITEMS = {
         num: 254,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Holder's Water-type attacks have 1.2x power."
+        desc: "Holder's Water-type attacks have 1.2x power.",
+        shortDesc: "Holder's Water-type attacks have 1.2x power."
     },
     sharpbeak: {
         name: "Sharp Beak",
@@ -3790,18 +4696,21 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 244,
         gen: 2,
-        desc: "Holder's Flying-type attacks have 1.2x power."
+        desc: "Holder's Flying-type attacks have 1.2x power.",
+        shortDesc: "Holder's Flying-type attacks have 1.2x power."
     },
     sharpedonite: {
         name: "Sharpedonite",
         spritenum: 619,
-        megaStone: "Sharpedo-Mega",
-        megaEvolves: "Sharpedo",
+        megaStone: {
+            Sharpedo: "Sharpedo-Mega"
+        },
         itemUser: ["Sharpedo"],
         num: 759,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Sharpedo, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Sharpedo, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Sharpedo, this item allows it to Mega Evolve in battle."
     },
     shedshell: {
         name: "Shed Shell",
@@ -3810,9 +4719,11 @@ var PS_BATTLE_ITEMS = {
             basePower: 10
         },
         onTrapPokemonPriority: -10,
+        onMaybeTrapPokemonPriority: -10,
         num: 295,
         gen: 4,
-        desc: "Holder may switch out even when trapped by another Pokemon, or by Ingrain."
+        desc: "Holder cannot be prevented from choosing to switch out by any effect.",
+        shortDesc: "Holder cannot be prevented from choosing to switch out by any effect."
     },
     shellbell: {
         name: "Shell Bell",
@@ -3823,7 +4734,8 @@ var PS_BATTLE_ITEMS = {
         onAfterMoveSecondarySelfPriority: -1,
         num: 253,
         gen: 3,
-        desc: "After an attack, holder gains 1/8 of the damage in HP dealt to other Pokemon."
+        desc: "After an attack, holder gains 1/8 of the damage in HP dealt to other Pokemon.",
+        shortDesc: "After an attack, holder gains 1/8 of the damage in HP dealt to other Pokemon."
     },
     shinystone: {
         name: "Shiny Stone",
@@ -3845,7 +4757,8 @@ var PS_BATTLE_ITEMS = {
         num: 117,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's Techno Blast is Electric type."
+        desc: "Holder's Techno Blast is Electric type.",
+        shortDesc: "Holder's Techno Blast is Electric type."
     },
     shucaberry: {
         name: "Shuca Berry",
@@ -3857,7 +4770,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 191,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Ground-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Ground-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Ground-type attack. Single use."
     },
     silkscarf: {
         name: "Silk Scarf",
@@ -3868,7 +4782,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 251,
         gen: 3,
-        desc: "Holder's Normal-type attacks have 1.2x power."
+        desc: "Holder's Normal-type attacks have 1.2x power.",
+        shortDesc: "Holder's Normal-type attacks have 1.2x power."
     },
     silverpowder: {
         name: "Silver Powder",
@@ -3879,7 +4794,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 222,
         gen: 2,
-        desc: "Holder's Bug-type attacks have 1.2x power."
+        desc: "Holder's Bug-type attacks have 1.2x power.",
+        shortDesc: "Holder's Bug-type attacks have 1.2x power."
     },
     sitrusberry: {
         name: "Sitrus Berry",
@@ -3891,7 +4807,21 @@ var PS_BATTLE_ITEMS = {
         },
         num: 158,
         gen: 3,
-        desc: "Restores 1/4 max HP when at 1/2 max HP or less. Single use."
+        desc: "Restores 1/4 max HP when at 1/2 max HP or less. Single use.",
+        shortDesc: "Restores 1/4 max HP when at 1/2 max HP or less. Single use."
+    },
+    skarmorite: {
+        name: "Skarmorite",
+        spritenum: 550,
+        megaStone: {
+            Skarmory: "Skarmory-Mega"
+        },
+        itemUser: ["Skarmory"],
+        num: 2565,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Skarmory, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Skarmory, this item allows it to Mega Evolve in battle."
     },
     skullfossil: {
         name: "Skull Fossil",
@@ -3902,7 +4832,8 @@ var PS_BATTLE_ITEMS = {
         num: 105,
         gen: 4,
         isNonstandard: "Past",
-        desc: "Can be revived into Cranidos."
+        desc: "Can be revived into Cranidos.",
+        shortDesc: "Can be revived into Cranidos."
     },
     skyplate: {
         name: "Sky Plate",
@@ -3912,18 +4843,21 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Flying",
         num: 306,
         gen: 4,
-        desc: "Holder's Flying-type attacks have 1.2x power. Judgment is Flying type."
+        desc: "Holder's Flying-type attacks have 1.2x power. Judgment is Flying type.",
+        shortDesc: "Holder's Flying-type attacks have 1.2x power. Judgment is Flying type."
     },
     slowbronite: {
         name: "Slowbronite",
         spritenum: 620,
-        megaStone: "Slowbro-Mega",
-        megaEvolves: "Slowbro",
+        megaStone: {
+            Slowbro: "Slowbro-Mega"
+        },
         itemUser: ["Slowbro"],
         num: 760,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Slowbro, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Slowbro, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Slowbro, this item allows it to Mega Evolve in battle."
     },
     smoothrock: {
         name: "Smooth Rock",
@@ -3933,7 +4867,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 283,
         gen: 4,
-        desc: "Holder's use of Sandstorm lasts 8 turns instead of 5."
+        desc: "Holder's use of Sandstorm lasts 8 turns instead of 5.",
+        shortDesc: "Holder's use of Sandstorm lasts 8 turns instead of 5."
     },
     snorliumz: {
         name: "Snorlium Z",
@@ -3945,7 +4880,8 @@ var PS_BATTLE_ITEMS = {
         num: 804,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If held by a Snorlax with Giga Impact, it can use Pulverizing Pancake."
+        desc: "If held by a Snorlax with Giga Impact, it can use Pulverizing Pancake.",
+        shortDesc: "If held by a Snorlax with Giga Impact, it can use Pulverizing Pancake."
     },
     snowball: {
         name: "Snowball",
@@ -3958,7 +4894,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 649,
         gen: 6,
-        desc: "Raises holder's Attack by 1 if hit by an Ice-type attack. Single use."
+        desc: "Raises holder's Attack by 1 if hit by an Ice-type attack. Single use.",
+        shortDesc: "Raises holder's Attack by 1 if hit by an Ice-type attack. Single use."
     },
     softsand: {
         name: "Soft Sand",
@@ -3969,7 +4906,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 237,
         gen: 2,
-        desc: "Holder's Ground-type attacks have 1.2x power."
+        desc: "Holder's Ground-type attacks have 1.2x power.",
+        shortDesc: "Holder's Ground-type attacks have 1.2x power."
     },
     solganiumz: {
         name: "Solganium Z",
@@ -3981,7 +4919,8 @@ var PS_BATTLE_ITEMS = {
         num: 921,
         gen: 7,
         isNonstandard: "Past",
-        desc: "Solgaleo or Dusk Mane Necrozma with Sunsteel Strike can use a special Z-Move."
+        desc: "Solgaleo or Dusk Mane Necrozma with Sunsteel Strike can use a special Z-Move.",
+        shortDesc: "Solgaleo or Dusk Mane Necrozma with Sunsteel Strike can use a special Z-Move."
     },
     souldew: {
         name: "Soul Dew",
@@ -3993,8 +4932,8 @@ var PS_BATTLE_ITEMS = {
         itemUser: ["Latios", "Latias"],
         num: 225,
         gen: 3,
-        isNonstandard: "Past",
-        desc: "If held by a Latias/Latios, its Dragon- and Psychic-type moves have 1.2x power."
+        desc: "If held by a Latias/Latios, its Dragon- and Psychic-type moves have 1.2x power.",
+        shortDesc: "If held by a Latias/Latios, its Dragon- and Psychic-type moves have 1.2x power."
     },
     spelltag: {
         name: "Spell Tag",
@@ -4005,7 +4944,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 247,
         gen: 2,
-        desc: "Holder's Ghost-type attacks have 1.2x power."
+        desc: "Holder's Ghost-type attacks have 1.2x power.",
+        shortDesc: "Holder's Ghost-type attacks have 1.2x power."
     },
     spelonberry: {
         name: "Spelon Berry",
@@ -4019,7 +4959,8 @@ var PS_BATTLE_ITEMS = {
         num: 179,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     splashplate: {
         name: "Splash Plate",
@@ -4029,7 +4970,8 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Water",
         num: 299,
         gen: 4,
-        desc: "Holder's Water-type attacks have 1.2x power. Judgment is Water type."
+        desc: "Holder's Water-type attacks have 1.2x power. Judgment is Water type.",
+        shortDesc: "Holder's Water-type attacks have 1.2x power. Judgment is Water type."
     },
     spookyplate: {
         name: "Spooky Plate",
@@ -4039,7 +4981,8 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Ghost",
         num: 310,
         gen: 4,
-        desc: "Holder's Ghost-type attacks have 1.2x power. Judgment is Ghost type."
+        desc: "Holder's Ghost-type attacks have 1.2x power. Judgment is Ghost type.",
+        shortDesc: "Holder's Ghost-type attacks have 1.2x power. Judgment is Ghost type."
     },
     sportball: {
         name: "Sport Ball",
@@ -4047,8 +4990,19 @@ var PS_BATTLE_ITEMS = {
         num: 499,
         gen: 2,
         isPokeball: true,
-        isNonstandard: "Unobtainable",
-        desc: "A special Poke Ball for the Bug-Catching Contest."
+        desc: "A special Poke Ball for the Bug-Catching Contest.",
+        shortDesc: "A special Poke Ball for the Bug-Catching Contest."
+    },
+    staraptite: {
+        name: "Staraptite",
+        spritenum: 0,
+        megaStone: {
+            Staraptor: "Staraptor-Mega"
+        },
+        itemUser: ["Staraptor"],
+        num: 2639,
+        gen: 9,
+        isNonstandard: "Future"
     },
     starfberry: {
         name: "Starf Berry",
@@ -4060,7 +5014,21 @@ var PS_BATTLE_ITEMS = {
         },
         num: 207,
         gen: 3,
-        desc: "Raises a random stat by 2 when at 1/4 max HP or less (not acc/eva). Single use."
+        desc: "Raises a random stat by 2 when at 1/4 max HP or less (not acc/eva). Single use.",
+        shortDesc: "Raises a random stat by 2 when at 1/4 max HP or less (not acc/eva). Single use."
+    },
+    starminite: {
+        name: "Starminite",
+        spritenum: 546,
+        megaStone: {
+            Starmie: "Starmie-Mega"
+        },
+        itemUser: ["Starmie"],
+        num: 2561,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Starmie, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Starmie, this item allows it to Mega Evolve in battle."
     },
     starsweet: {
         name: "Star Sweet",
@@ -4070,19 +5038,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1114,
         gen: 8,
-        isNonstandard: "Past",
-        desc: "Evolves Milcery into Alcremie when held and spun around."
-    },
-    steelixite: {
-        name: "Steelixite",
-        spritenum: 621,
-        megaStone: "Steelix-Mega",
-        megaEvolves: "Steelix",
-        itemUser: ["Steelix"],
-        num: 761,
-        gen: 6,
-        isNonstandard: "Past",
-        desc: "If held by a Steelix, this item allows it to Mega Evolve in battle."
+        desc: "Evolves Milcery into Alcremie when held and spun around.",
+        shortDesc: "Evolves Milcery into Alcremie when held and spun around."
     },
     steelgem: {
         name: "Steel Gem",
@@ -4091,18 +5048,8 @@ var PS_BATTLE_ITEMS = {
         num: 563,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Steel-type attack will have 1.3x power. Single use."
-    },
-    steelmemory: {
-        name: "Steel Memory",
-        spritenum: 675,
-        onMemory: "Steel",
-        forcedForme: "Silvally-Steel",
-        itemUser: ["Silvally-Steel"],
-        num: 911,
-        gen: 7,
-        isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Steel type."
+        desc: "Holder's first successful Steel-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Steel-type attack will have 1.3x power. Single use."
     },
     steeliumz: {
         name: "Steelium Z",
@@ -4115,7 +5062,33 @@ var PS_BATTLE_ITEMS = {
         num: 792,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Steel move, this item allows it to use a Steel Z-Move."
+        desc: "If holder has a Steel move, this item allows it to use a Steel Z-Move.",
+        shortDesc: "If holder has a Steel move, this item allows it to use a Steel Z-Move."
+    },
+    steelixite: {
+        name: "Steelixite",
+        spritenum: 621,
+        megaStone: {
+            Steelix: "Steelix-Mega"
+        },
+        itemUser: ["Steelix"],
+        num: 761,
+        gen: 6,
+        isNonstandard: "Past",
+        desc: "If held by a Steelix, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Steelix, this item allows it to Mega Evolve in battle."
+    },
+    steelmemory: {
+        name: "Steel Memory",
+        spritenum: 675,
+        onMemory: "Steel",
+        forcedForme: "Silvally-Steel",
+        itemUser: ["Silvally-Steel"],
+        num: 911,
+        gen: 7,
+        isNonstandard: "Past",
+        desc: "Holder's Multi-Attack is Steel type.",
+        shortDesc: "Holder's Multi-Attack is Steel type."
     },
     stick: {
         name: "Stick",
@@ -4127,7 +5100,8 @@ var PS_BATTLE_ITEMS = {
         num: 259,
         gen: 2,
         isNonstandard: "Past",
-        desc: "If held by a Farfetchâ€™d, its critical hit ratio is raised by 2 stages."
+        desc: "If held by a Farfetchâ€™d, its critical hit ratio is raised by 2 stages.",
+        shortDesc: "If held by a Farfetchâ€™d, its critical hit ratio is raised by 2 stages."
     },
     stickybarb: {
         name: "Sticky Barb",
@@ -4139,7 +5113,8 @@ var PS_BATTLE_ITEMS = {
         onResidualSubOrder: 3,
         num: 288,
         gen: 4,
-        desc: "Each turn, holder loses 1/8 max HP. An attacker making contact can receive it."
+        desc: "Each turn, holder loses 1/8 max HP. An attacker making contact can receive it.",
+        shortDesc: "Each turn, holder loses 1/8 max HP. An attacker making contact can receive it."
     },
     stoneplate: {
         name: "Stone Plate",
@@ -4149,7 +5124,8 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Rock",
         num: 309,
         gen: 4,
-        desc: "Holder's Rock-type attacks have 1.2x power. Judgment is Rock type."
+        desc: "Holder's Rock-type attacks have 1.2x power. Judgment is Rock type.",
+        shortDesc: "Holder's Rock-type attacks have 1.2x power. Judgment is Rock type."
     },
     strangeball: {
         name: "Strange Ball",
@@ -4157,7 +5133,9 @@ var PS_BATTLE_ITEMS = {
         num: 1785,
         gen: 8,
         isPokeball: true,
-        isNonstandard: "Unobtainable"
+        isNonstandard: "Unobtainable",
+        desc: "Placeholder if caught in Poke Ball not in current game.",
+        shortDesc: "Placeholder if caught in Poke Ball not in current game."
     },
     strawberrysweet: {
         name: "Strawberry Sweet",
@@ -4167,8 +5145,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1109,
         gen: 8,
-        isNonstandard: "Past",
-        desc: "Evolves Milcery into Alcremie when held and spun around."
+        desc: "Evolves Milcery into Alcremie when held and spun around.",
+        shortDesc: "Evolves Milcery into Alcremie when held and spun around."
     },
     sunstone: {
         name: "Sun Stone",
@@ -4184,13 +5162,15 @@ var PS_BATTLE_ITEMS = {
     swampertite: {
         name: "Swampertite",
         spritenum: 612,
-        megaStone: "Swampert-Mega",
-        megaEvolves: "Swampert",
+        megaStone: {
+            Swampert: "Swampert-Mega"
+        },
         itemUser: ["Swampert"],
         num: 752,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Swampert, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Swampert, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Swampert, this item allows it to Mega Evolve in battle."
     },
     sweetapple: {
         name: "Sweet Apple",
@@ -4200,7 +5180,19 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1116,
         gen: 8,
-        desc: "Evolves Applin into Appletun when used."
+        desc: "Evolves Applin into Appletun when used.",
+        shortDesc: "Evolves Applin into Appletun when used."
+    },
+    syrupyapple: {
+        name: "Syrupy Apple",
+        spritenum: 755,
+        fling: {
+            basePower: 30
+        },
+        num: 2402,
+        gen: 9,
+        desc: "Evolves Applin into Dipplin when used.",
+        shortDesc: "Evolves Applin into Dipplin when used."
     },
     tamatoberry: {
         name: "Tamato Berry",
@@ -4213,7 +5205,8 @@ var PS_BATTLE_ITEMS = {
         onEat: false,
         num: 174,
         gen: 3,
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     tangaberry: {
         name: "Tanga Berry",
@@ -4225,7 +5218,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 194,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Bug-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Bug-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Bug-type attack. Single use."
     },
     tapuniumz: {
         name: "Tapunium Z",
@@ -4237,7 +5231,8 @@ var PS_BATTLE_ITEMS = {
         num: 801,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If held by a Tapu with Nature's Madness, it can use Guardian of Alola."
+        desc: "If held by a Tapu with Nature's Madness, it can use Guardian of Alola.",
+        shortDesc: "If held by a Tapu with Nature's Madness, it can use Guardian of Alola."
     },
     tartapple: {
         name: "Tart Apple",
@@ -4247,7 +5242,21 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1117,
         gen: 8,
-        desc: "Evolves Applin into Flapple when used."
+        desc: "Evolves Applin into Flapple when used.",
+        shortDesc: "Evolves Applin into Flapple when used."
+    },
+    tatsugirinite: {
+        name: "Tatsugirinite",
+        spritenum: 0,
+        megaStone: {
+            Tatsugiri: "Tatsugiri-Curly-Mega",
+            "Tatsugiri-Droopy": "Tatsugiri-Droopy-Mega",
+            "Tatsugiri-Stretchy": "Tatsugiri-Stretchy-Mega"
+        },
+        itemUser: ["Tatsugiri", "Tatsugiri-Droopy", "Tatsugiri-Stretchy"],
+        num: 2649,
+        gen: 9,
+        isNonstandard: "Future"
     },
     terrainextender: {
         name: "Terrain Extender",
@@ -4257,7 +5266,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 879,
         gen: 7,
-        desc: "Holder's use of Electric/Grassy/Misty/Psychic Terrain lasts 8 turns instead of 5."
+        desc: "Holder's use of Electric/Grassy/Misty/Psychic Terrain lasts 8 turns instead of 5.",
+        shortDesc: "Holder's use of Electric/Grassy/Misty/Psychic Terrain lasts 8 turns instead of 5."
     },
     thickclub: {
         name: "Thick Club",
@@ -4270,7 +5280,8 @@ var PS_BATTLE_ITEMS = {
         num: 258,
         gen: 2,
         isNonstandard: "Past",
-        desc: "If held by a Cubone or a Marowak, its Attack is doubled."
+        desc: "If held by a Cubone or a Marowak, its Attack is doubled.",
+        shortDesc: "If held by a Cubone or a Marowak, its Attack is doubled."
     },
     throatspray: {
         name: "Throat Spray",
@@ -4283,7 +5294,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1118,
         gen: 8,
-        desc: "Raises holder's Special Attack by 1 stage after it uses a sound move. Single use."
+        desc: "Raises holder's Special Attack by 1 stage after it uses a sound move. Single use.",
+        shortDesc: "Raises holder's Special Attack by 1 stage after it uses a sound move. Single use."
     },
     thunderstone: {
         name: "Thunder Stone",
@@ -4302,7 +5314,8 @@ var PS_BATTLE_ITEMS = {
         num: 10,
         gen: 3,
         isPokeball: true,
-        desc: "A Poke Ball that becomes better the more turns there are in a battle."
+        desc: "A Poke Ball that becomes better the more turns there are in a battle.",
+        shortDesc: "A Poke Ball that becomes better the more turns there are in a battle."
     },
     toxicorb: {
         name: "Toxic Orb",
@@ -4315,7 +5328,8 @@ var PS_BATTLE_ITEMS = {
         onResidualSubOrder: 3,
         num: 272,
         gen: 4,
-        desc: "At the end of every turn, this item attempts to badly poison the holder."
+        desc: "At the end of every turn, this item attempts to badly poison the holder.",
+        shortDesc: "At the end of every turn, this item attempts to badly poison the holder."
     },
     toxicplate: {
         name: "Toxic Plate",
@@ -4325,7 +5339,8 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Poison",
         num: 304,
         gen: 4,
-        desc: "Holder's Poison-type attacks have 1.2x power. Judgment is Poison type."
+        desc: "Holder's Poison-type attacks have 1.2x power. Judgment is Poison type.",
+        shortDesc: "Holder's Poison-type attacks have 1.2x power. Judgment is Poison type."
     },
     tr00: {
         name: "TR00",
@@ -4336,7 +5351,8 @@ var PS_BATTLE_ITEMS = {
         num: 1130,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Swords Dance. One use."
+        desc: "Teaches certain Pokemon the move Swords Dance. One use.",
+        shortDesc: "Teaches certain Pokemon the move Swords Dance. One use."
     },
     tr01: {
         name: "TR01",
@@ -4347,7 +5363,8 @@ var PS_BATTLE_ITEMS = {
         num: 1131,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Body Slam. One use."
+        desc: "Teaches certain Pokemon the move Body Slam. One use.",
+        shortDesc: "Teaches certain Pokemon the move Body Slam. One use."
     },
     tr02: {
         name: "TR02",
@@ -4358,7 +5375,8 @@ var PS_BATTLE_ITEMS = {
         num: 1132,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Flamethrower. One use."
+        desc: "Teaches certain Pokemon the move Flamethrower. One use.",
+        shortDesc: "Teaches certain Pokemon the move Flamethrower. One use."
     },
     tr03: {
         name: "TR03",
@@ -4369,7 +5387,8 @@ var PS_BATTLE_ITEMS = {
         num: 1133,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Hydro Pump. One use."
+        desc: "Teaches certain Pokemon the move Hydro Pump. One use.",
+        shortDesc: "Teaches certain Pokemon the move Hydro Pump. One use."
     },
     tr04: {
         name: "TR04",
@@ -4380,7 +5399,8 @@ var PS_BATTLE_ITEMS = {
         num: 1134,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Surf. One use."
+        desc: "Teaches certain Pokemon the move Surf. One use.",
+        shortDesc: "Teaches certain Pokemon the move Surf. One use."
     },
     tr05: {
         name: "TR05",
@@ -4391,7 +5411,8 @@ var PS_BATTLE_ITEMS = {
         num: 1135,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Ice Beam. One use."
+        desc: "Teaches certain Pokemon the move Ice Beam. One use.",
+        shortDesc: "Teaches certain Pokemon the move Ice Beam. One use."
     },
     tr06: {
         name: "TR06",
@@ -4402,7 +5423,8 @@ var PS_BATTLE_ITEMS = {
         num: 1136,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Blizzard. One use."
+        desc: "Teaches certain Pokemon the move Blizzard. One use.",
+        shortDesc: "Teaches certain Pokemon the move Blizzard. One use."
     },
     tr07: {
         name: "TR07",
@@ -4413,7 +5435,8 @@ var PS_BATTLE_ITEMS = {
         num: 1137,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Low Kick. One use."
+        desc: "Teaches certain Pokemon the move Low Kick. One use.",
+        shortDesc: "Teaches certain Pokemon the move Low Kick. One use."
     },
     tr08: {
         name: "TR08",
@@ -4424,7 +5447,8 @@ var PS_BATTLE_ITEMS = {
         num: 1138,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Thunderbolt. One use."
+        desc: "Teaches certain Pokemon the move Thunderbolt. One use.",
+        shortDesc: "Teaches certain Pokemon the move Thunderbolt. One use."
     },
     tr09: {
         name: "TR09",
@@ -4435,7 +5459,8 @@ var PS_BATTLE_ITEMS = {
         num: 1139,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Thunder. One use."
+        desc: "Teaches certain Pokemon the move Thunder. One use.",
+        shortDesc: "Teaches certain Pokemon the move Thunder. One use."
     },
     tr10: {
         name: "TR10",
@@ -4446,7 +5471,8 @@ var PS_BATTLE_ITEMS = {
         num: 1140,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Earthquake. One use."
+        desc: "Teaches certain Pokemon the move Earthquake. One use.",
+        shortDesc: "Teaches certain Pokemon the move Earthquake. One use."
     },
     tr11: {
         name: "TR11",
@@ -4457,7 +5483,8 @@ var PS_BATTLE_ITEMS = {
         num: 1141,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Psychic. One use."
+        desc: "Teaches certain Pokemon the move Psychic. One use.",
+        shortDesc: "Teaches certain Pokemon the move Psychic. One use."
     },
     tr12: {
         name: "TR12",
@@ -4468,7 +5495,8 @@ var PS_BATTLE_ITEMS = {
         num: 1142,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Agility. One use."
+        desc: "Teaches certain Pokemon the move Agility. One use.",
+        shortDesc: "Teaches certain Pokemon the move Agility. One use."
     },
     tr13: {
         name: "TR13",
@@ -4479,7 +5507,8 @@ var PS_BATTLE_ITEMS = {
         num: 1143,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Focus Energy. One use."
+        desc: "Teaches certain Pokemon the move Focus Energy. One use.",
+        shortDesc: "Teaches certain Pokemon the move Focus Energy. One use."
     },
     tr14: {
         name: "TR14",
@@ -4490,7 +5519,8 @@ var PS_BATTLE_ITEMS = {
         num: 1144,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Metronome. One use."
+        desc: "Teaches certain Pokemon the move Metronome. One use.",
+        shortDesc: "Teaches certain Pokemon the move Metronome. One use."
     },
     tr15: {
         name: "TR15",
@@ -4501,7 +5531,8 @@ var PS_BATTLE_ITEMS = {
         num: 1145,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Fire Blast. One use."
+        desc: "Teaches certain Pokemon the move Fire Blast. One use.",
+        shortDesc: "Teaches certain Pokemon the move Fire Blast. One use."
     },
     tr16: {
         name: "TR16",
@@ -4512,7 +5543,8 @@ var PS_BATTLE_ITEMS = {
         num: 1146,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Waterfall. One use."
+        desc: "Teaches certain Pokemon the move Waterfall. One use.",
+        shortDesc: "Teaches certain Pokemon the move Waterfall. One use."
     },
     tr17: {
         name: "TR17",
@@ -4523,7 +5555,8 @@ var PS_BATTLE_ITEMS = {
         num: 1147,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Amnesia. One use."
+        desc: "Teaches certain Pokemon the move Amnesia. One use.",
+        shortDesc: "Teaches certain Pokemon the move Amnesia. One use."
     },
     tr18: {
         name: "TR18",
@@ -4534,7 +5567,8 @@ var PS_BATTLE_ITEMS = {
         num: 1148,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Leech Life. One use."
+        desc: "Teaches certain Pokemon the move Leech Life. One use.",
+        shortDesc: "Teaches certain Pokemon the move Leech Life. One use."
     },
     tr19: {
         name: "TR19",
@@ -4545,7 +5579,8 @@ var PS_BATTLE_ITEMS = {
         num: 1149,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Tri Attack. One use."
+        desc: "Teaches certain Pokemon the move Tri Attack. One use.",
+        shortDesc: "Teaches certain Pokemon the move Tri Attack. One use."
     },
     tr20: {
         name: "TR20",
@@ -4556,7 +5591,8 @@ var PS_BATTLE_ITEMS = {
         num: 1150,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Substitute. One use."
+        desc: "Teaches certain Pokemon the move Substitute. One use.",
+        shortDesc: "Teaches certain Pokemon the move Substitute. One use."
     },
     tr21: {
         name: "TR21",
@@ -4567,7 +5603,8 @@ var PS_BATTLE_ITEMS = {
         num: 1151,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Reversal. One use."
+        desc: "Teaches certain Pokemon the move Reversal. One use.",
+        shortDesc: "Teaches certain Pokemon the move Reversal. One use."
     },
     tr22: {
         name: "TR22",
@@ -4578,7 +5615,8 @@ var PS_BATTLE_ITEMS = {
         num: 1152,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Sludge Bomb. One use."
+        desc: "Teaches certain Pokemon the move Sludge Bomb. One use.",
+        shortDesc: "Teaches certain Pokemon the move Sludge Bomb. One use."
     },
     tr23: {
         name: "TR23",
@@ -4589,7 +5627,8 @@ var PS_BATTLE_ITEMS = {
         num: 1153,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Spikes. One use."
+        desc: "Teaches certain Pokemon the move Spikes. One use.",
+        shortDesc: "Teaches certain Pokemon the move Spikes. One use."
     },
     tr24: {
         name: "TR24",
@@ -4600,7 +5639,8 @@ var PS_BATTLE_ITEMS = {
         num: 1154,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Outrage. One use."
+        desc: "Teaches certain Pokemon the move Outrage. One use.",
+        shortDesc: "Teaches certain Pokemon the move Outrage. One use."
     },
     tr25: {
         name: "TR25",
@@ -4611,7 +5651,8 @@ var PS_BATTLE_ITEMS = {
         num: 1155,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Psyshock. One use."
+        desc: "Teaches certain Pokemon the move Psyshock. One use.",
+        shortDesc: "Teaches certain Pokemon the move Psyshock. One use."
     },
     tr26: {
         name: "TR26",
@@ -4622,7 +5663,8 @@ var PS_BATTLE_ITEMS = {
         num: 1156,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Endure. One use."
+        desc: "Teaches certain Pokemon the move Endure. One use.",
+        shortDesc: "Teaches certain Pokemon the move Endure. One use."
     },
     tr27: {
         name: "TR27",
@@ -4633,7 +5675,8 @@ var PS_BATTLE_ITEMS = {
         num: 1157,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Sleep Talk. One use."
+        desc: "Teaches certain Pokemon the move Sleep Talk. One use.",
+        shortDesc: "Teaches certain Pokemon the move Sleep Talk. One use."
     },
     tr28: {
         name: "TR28",
@@ -4644,7 +5687,8 @@ var PS_BATTLE_ITEMS = {
         num: 1158,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Megahorn. One use."
+        desc: "Teaches certain Pokemon the move Megahorn. One use.",
+        shortDesc: "Teaches certain Pokemon the move Megahorn. One use."
     },
     tr29: {
         name: "TR29",
@@ -4655,7 +5699,8 @@ var PS_BATTLE_ITEMS = {
         num: 1159,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Baton Pass. One use."
+        desc: "Teaches certain Pokemon the move Baton Pass. One use.",
+        shortDesc: "Teaches certain Pokemon the move Baton Pass. One use."
     },
     tr30: {
         name: "TR30",
@@ -4666,7 +5711,8 @@ var PS_BATTLE_ITEMS = {
         num: 1160,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Encore. One use."
+        desc: "Teaches certain Pokemon the move Encore. One use.",
+        shortDesc: "Teaches certain Pokemon the move Encore. One use."
     },
     tr31: {
         name: "TR31",
@@ -4677,7 +5723,8 @@ var PS_BATTLE_ITEMS = {
         num: 1161,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Iron Tail. One use."
+        desc: "Teaches certain Pokemon the move Iron Tail. One use.",
+        shortDesc: "Teaches certain Pokemon the move Iron Tail. One use."
     },
     tr32: {
         name: "TR32",
@@ -4688,7 +5735,8 @@ var PS_BATTLE_ITEMS = {
         num: 1162,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Crunch. One use."
+        desc: "Teaches certain Pokemon the move Crunch. One use.",
+        shortDesc: "Teaches certain Pokemon the move Crunch. One use."
     },
     tr33: {
         name: "TR33",
@@ -4699,7 +5747,8 @@ var PS_BATTLE_ITEMS = {
         num: 1163,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Shadow Ball. One use."
+        desc: "Teaches certain Pokemon the move Shadow Ball. One use.",
+        shortDesc: "Teaches certain Pokemon the move Shadow Ball. One use."
     },
     tr34: {
         name: "TR34",
@@ -4710,7 +5759,8 @@ var PS_BATTLE_ITEMS = {
         num: 1164,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Future Sight. One use."
+        desc: "Teaches certain Pokemon the move Future Sight. One use.",
+        shortDesc: "Teaches certain Pokemon the move Future Sight. One use."
     },
     tr35: {
         name: "TR35",
@@ -4721,7 +5771,8 @@ var PS_BATTLE_ITEMS = {
         num: 1165,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Uproar. One use."
+        desc: "Teaches certain Pokemon the move Uproar. One use.",
+        shortDesc: "Teaches certain Pokemon the move Uproar. One use."
     },
     tr36: {
         name: "TR36",
@@ -4732,7 +5783,8 @@ var PS_BATTLE_ITEMS = {
         num: 1166,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Heat Wave. One use."
+        desc: "Teaches certain Pokemon the move Heat Wave. One use.",
+        shortDesc: "Teaches certain Pokemon the move Heat Wave. One use."
     },
     tr37: {
         name: "TR37",
@@ -4743,7 +5795,8 @@ var PS_BATTLE_ITEMS = {
         num: 1167,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Taunt. One use."
+        desc: "Teaches certain Pokemon the move Taunt. One use.",
+        shortDesc: "Teaches certain Pokemon the move Taunt. One use."
     },
     tr38: {
         name: "TR38",
@@ -4754,7 +5807,8 @@ var PS_BATTLE_ITEMS = {
         num: 1168,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Trick. One use."
+        desc: "Teaches certain Pokemon the move Trick. One use.",
+        shortDesc: "Teaches certain Pokemon the move Trick. One use."
     },
     tr39: {
         name: "TR39",
@@ -4765,7 +5819,8 @@ var PS_BATTLE_ITEMS = {
         num: 1169,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Superpower. One use."
+        desc: "Teaches certain Pokemon the move Superpower. One use.",
+        shortDesc: "Teaches certain Pokemon the move Superpower. One use."
     },
     tr40: {
         name: "TR40",
@@ -4776,7 +5831,8 @@ var PS_BATTLE_ITEMS = {
         num: 1170,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Skill Swap. One use."
+        desc: "Teaches certain Pokemon the move Skill Swap. One use.",
+        shortDesc: "Teaches certain Pokemon the move Skill Swap. One use."
     },
     tr41: {
         name: "TR41",
@@ -4787,7 +5843,8 @@ var PS_BATTLE_ITEMS = {
         num: 1171,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Blaze Kick. One use."
+        desc: "Teaches certain Pokemon the move Blaze Kick. One use.",
+        shortDesc: "Teaches certain Pokemon the move Blaze Kick. One use."
     },
     tr42: {
         name: "TR42",
@@ -4798,7 +5855,8 @@ var PS_BATTLE_ITEMS = {
         num: 1172,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Hyper Voice. One use."
+        desc: "Teaches certain Pokemon the move Hyper Voice. One use.",
+        shortDesc: "Teaches certain Pokemon the move Hyper Voice. One use."
     },
     tr43: {
         name: "TR43",
@@ -4809,7 +5867,8 @@ var PS_BATTLE_ITEMS = {
         num: 1173,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Overheat. One use."
+        desc: "Teaches certain Pokemon the move Overheat. One use.",
+        shortDesc: "Teaches certain Pokemon the move Overheat. One use."
     },
     tr44: {
         name: "TR44",
@@ -4820,7 +5879,8 @@ var PS_BATTLE_ITEMS = {
         num: 1174,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Cosmic Power. One use."
+        desc: "Teaches certain Pokemon the move Cosmic Power. One use.",
+        shortDesc: "Teaches certain Pokemon the move Cosmic Power. One use."
     },
     tr45: {
         name: "TR45",
@@ -4831,7 +5891,8 @@ var PS_BATTLE_ITEMS = {
         num: 1175,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Muddy Water. One use."
+        desc: "Teaches certain Pokemon the move Muddy Water. One use.",
+        shortDesc: "Teaches certain Pokemon the move Muddy Water. One use."
     },
     tr46: {
         name: "TR46",
@@ -4842,7 +5903,8 @@ var PS_BATTLE_ITEMS = {
         num: 1176,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Iron Defense. One use."
+        desc: "Teaches certain Pokemon the move Iron Defense. One use.",
+        shortDesc: "Teaches certain Pokemon the move Iron Defense. One use."
     },
     tr47: {
         name: "TR47",
@@ -4853,7 +5915,8 @@ var PS_BATTLE_ITEMS = {
         num: 1177,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Dragon Claw. One use."
+        desc: "Teaches certain Pokemon the move Dragon Claw. One use.",
+        shortDesc: "Teaches certain Pokemon the move Dragon Claw. One use."
     },
     tr48: {
         name: "TR48",
@@ -4864,7 +5927,8 @@ var PS_BATTLE_ITEMS = {
         num: 1178,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Bulk Up. One use."
+        desc: "Teaches certain Pokemon the move Bulk Up. One use.",
+        shortDesc: "Teaches certain Pokemon the move Bulk Up. One use."
     },
     tr49: {
         name: "TR49",
@@ -4875,7 +5939,8 @@ var PS_BATTLE_ITEMS = {
         num: 1179,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Calm Mind. One use."
+        desc: "Teaches certain Pokemon the move Calm Mind. One use.",
+        shortDesc: "Teaches certain Pokemon the move Calm Mind. One use."
     },
     tr50: {
         name: "TR50",
@@ -4886,7 +5951,8 @@ var PS_BATTLE_ITEMS = {
         num: 1180,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Leaf Blade. One use."
+        desc: "Teaches certain Pokemon the move Leaf Blade. One use.",
+        shortDesc: "Teaches certain Pokemon the move Leaf Blade. One use."
     },
     tr51: {
         name: "TR51",
@@ -4897,7 +5963,8 @@ var PS_BATTLE_ITEMS = {
         num: 1181,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Dragon Dance. One use."
+        desc: "Teaches certain Pokemon the move Dragon Dance. One use.",
+        shortDesc: "Teaches certain Pokemon the move Dragon Dance. One use."
     },
     tr52: {
         name: "TR52",
@@ -4908,7 +5975,8 @@ var PS_BATTLE_ITEMS = {
         num: 1182,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Gyro Ball. One use."
+        desc: "Teaches certain Pokemon the move Gyro Ball. One use.",
+        shortDesc: "Teaches certain Pokemon the move Gyro Ball. One use."
     },
     tr53: {
         name: "TR53",
@@ -4919,7 +5987,8 @@ var PS_BATTLE_ITEMS = {
         num: 1183,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Close Combat. One use."
+        desc: "Teaches certain Pokemon the move Close Combat. One use.",
+        shortDesc: "Teaches certain Pokemon the move Close Combat. One use."
     },
     tr54: {
         name: "TR54",
@@ -4930,7 +5999,8 @@ var PS_BATTLE_ITEMS = {
         num: 1184,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Toxic Spikes. One use."
+        desc: "Teaches certain Pokemon the move Toxic Spikes. One use.",
+        shortDesc: "Teaches certain Pokemon the move Toxic Spikes. One use."
     },
     tr55: {
         name: "TR55",
@@ -4941,7 +6011,8 @@ var PS_BATTLE_ITEMS = {
         num: 1185,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Flare Blitz. One use."
+        desc: "Teaches certain Pokemon the move Flare Blitz. One use.",
+        shortDesc: "Teaches certain Pokemon the move Flare Blitz. One use."
     },
     tr56: {
         name: "TR56",
@@ -4952,7 +6023,8 @@ var PS_BATTLE_ITEMS = {
         num: 1186,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Aura Sphere. One use."
+        desc: "Teaches certain Pokemon the move Aura Sphere. One use.",
+        shortDesc: "Teaches certain Pokemon the move Aura Sphere. One use."
     },
     tr57: {
         name: "TR57",
@@ -4963,7 +6035,8 @@ var PS_BATTLE_ITEMS = {
         num: 1187,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Poison Jab. One use."
+        desc: "Teaches certain Pokemon the move Poison Jab. One use.",
+        shortDesc: "Teaches certain Pokemon the move Poison Jab. One use."
     },
     tr58: {
         name: "TR58",
@@ -4974,7 +6047,8 @@ var PS_BATTLE_ITEMS = {
         num: 1188,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Dark Pulse. One use."
+        desc: "Teaches certain Pokemon the move Dark Pulse. One use.",
+        shortDesc: "Teaches certain Pokemon the move Dark Pulse. One use."
     },
     tr59: {
         name: "TR59",
@@ -4985,7 +6059,8 @@ var PS_BATTLE_ITEMS = {
         num: 1189,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Seed Bomb. One use."
+        desc: "Teaches certain Pokemon the move Seed Bomb. One use.",
+        shortDesc: "Teaches certain Pokemon the move Seed Bomb. One use."
     },
     tr60: {
         name: "TR60",
@@ -4996,7 +6071,8 @@ var PS_BATTLE_ITEMS = {
         num: 1190,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move X-Scissor. One use."
+        desc: "Teaches certain Pokemon the move X-Scissor. One use.",
+        shortDesc: "Teaches certain Pokemon the move X-Scissor. One use."
     },
     tr61: {
         name: "TR61",
@@ -5007,7 +6083,8 @@ var PS_BATTLE_ITEMS = {
         num: 1191,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Bug Buzz. One use."
+        desc: "Teaches certain Pokemon the move Bug Buzz. One use.",
+        shortDesc: "Teaches certain Pokemon the move Bug Buzz. One use."
     },
     tr62: {
         name: "TR62",
@@ -5018,7 +6095,8 @@ var PS_BATTLE_ITEMS = {
         num: 1192,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Dragon Pulse. One use."
+        desc: "Teaches certain Pokemon the move Dragon Pulse. One use.",
+        shortDesc: "Teaches certain Pokemon the move Dragon Pulse. One use."
     },
     tr63: {
         name: "TR63",
@@ -5029,7 +6107,8 @@ var PS_BATTLE_ITEMS = {
         num: 1193,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Power Gem. One use."
+        desc: "Teaches certain Pokemon the move Power Gem. One use.",
+        shortDesc: "Teaches certain Pokemon the move Power Gem. One use."
     },
     tr64: {
         name: "TR64",
@@ -5040,7 +6119,8 @@ var PS_BATTLE_ITEMS = {
         num: 1194,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Focus Blast. One use."
+        desc: "Teaches certain Pokemon the move Focus Blast. One use.",
+        shortDesc: "Teaches certain Pokemon the move Focus Blast. One use."
     },
     tr65: {
         name: "TR65",
@@ -5051,7 +6131,8 @@ var PS_BATTLE_ITEMS = {
         num: 1195,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Energy Ball. One use."
+        desc: "Teaches certain Pokemon the move Energy Ball. One use.",
+        shortDesc: "Teaches certain Pokemon the move Energy Ball. One use."
     },
     tr66: {
         name: "TR66",
@@ -5062,7 +6143,8 @@ var PS_BATTLE_ITEMS = {
         num: 1196,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Brave Bird. One use."
+        desc: "Teaches certain Pokemon the move Brave Bird. One use.",
+        shortDesc: "Teaches certain Pokemon the move Brave Bird. One use."
     },
     tr67: {
         name: "TR67",
@@ -5073,7 +6155,8 @@ var PS_BATTLE_ITEMS = {
         num: 1197,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Earth Power. One use."
+        desc: "Teaches certain Pokemon the move Earth Power. One use.",
+        shortDesc: "Teaches certain Pokemon the move Earth Power. One use."
     },
     tr68: {
         name: "TR68",
@@ -5084,7 +6167,8 @@ var PS_BATTLE_ITEMS = {
         num: 1198,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Nasty Plot. One use."
+        desc: "Teaches certain Pokemon the move Nasty Plot. One use.",
+        shortDesc: "Teaches certain Pokemon the move Nasty Plot. One use."
     },
     tr69: {
         name: "TR69",
@@ -5095,7 +6179,8 @@ var PS_BATTLE_ITEMS = {
         num: 1199,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Zen Headbutt. One use."
+        desc: "Teaches certain Pokemon the move Zen Headbutt. One use.",
+        shortDesc: "Teaches certain Pokemon the move Zen Headbutt. One use."
     },
     tr70: {
         name: "TR70",
@@ -5106,7 +6191,8 @@ var PS_BATTLE_ITEMS = {
         num: 1200,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Flash Cannon. One use."
+        desc: "Teaches certain Pokemon the move Flash Cannon. One use.",
+        shortDesc: "Teaches certain Pokemon the move Flash Cannon. One use."
     },
     tr71: {
         name: "TR71",
@@ -5117,7 +6203,8 @@ var PS_BATTLE_ITEMS = {
         num: 1201,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Leaf Storm. One use."
+        desc: "Teaches certain Pokemon the move Leaf Storm. One use.",
+        shortDesc: "Teaches certain Pokemon the move Leaf Storm. One use."
     },
     tr72: {
         name: "TR72",
@@ -5128,7 +6215,8 @@ var PS_BATTLE_ITEMS = {
         num: 1202,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Power Whip. One use."
+        desc: "Teaches certain Pokemon the move Power Whip. One use.",
+        shortDesc: "Teaches certain Pokemon the move Power Whip. One use."
     },
     tr73: {
         name: "TR73",
@@ -5139,7 +6227,8 @@ var PS_BATTLE_ITEMS = {
         num: 1203,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Gunk Shot. One use."
+        desc: "Teaches certain Pokemon the move Gunk Shot. One use.",
+        shortDesc: "Teaches certain Pokemon the move Gunk Shot. One use."
     },
     tr74: {
         name: "TR74",
@@ -5150,7 +6239,8 @@ var PS_BATTLE_ITEMS = {
         num: 1204,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Iron Head. One use."
+        desc: "Teaches certain Pokemon the move Iron Head. One use.",
+        shortDesc: "Teaches certain Pokemon the move Iron Head. One use."
     },
     tr75: {
         name: "TR75",
@@ -5161,7 +6251,8 @@ var PS_BATTLE_ITEMS = {
         num: 1205,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Stone Edge. One use."
+        desc: "Teaches certain Pokemon the move Stone Edge. One use.",
+        shortDesc: "Teaches certain Pokemon the move Stone Edge. One use."
     },
     tr76: {
         name: "TR76",
@@ -5172,7 +6263,8 @@ var PS_BATTLE_ITEMS = {
         num: 1206,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Stealth Rock. One use."
+        desc: "Teaches certain Pokemon the move Stealth Rock. One use.",
+        shortDesc: "Teaches certain Pokemon the move Stealth Rock. One use."
     },
     tr77: {
         name: "TR77",
@@ -5183,7 +6275,8 @@ var PS_BATTLE_ITEMS = {
         num: 1207,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Grass Knot. One use."
+        desc: "Teaches certain Pokemon the move Grass Knot. One use.",
+        shortDesc: "Teaches certain Pokemon the move Grass Knot. One use."
     },
     tr78: {
         name: "TR78",
@@ -5194,7 +6287,8 @@ var PS_BATTLE_ITEMS = {
         num: 1208,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Sludge Wave. One use."
+        desc: "Teaches certain Pokemon the move Sludge Wave. One use.",
+        shortDesc: "Teaches certain Pokemon the move Sludge Wave. One use."
     },
     tr79: {
         name: "TR79",
@@ -5205,7 +6299,8 @@ var PS_BATTLE_ITEMS = {
         num: 1209,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Heavy Slam. One use."
+        desc: "Teaches certain Pokemon the move Heavy Slam. One use.",
+        shortDesc: "Teaches certain Pokemon the move Heavy Slam. One use."
     },
     tr80: {
         name: "TR80",
@@ -5216,7 +6311,8 @@ var PS_BATTLE_ITEMS = {
         num: 1210,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Electro Ball. One use."
+        desc: "Teaches certain Pokemon the move Electro Ball. One use.",
+        shortDesc: "Teaches certain Pokemon the move Electro Ball. One use."
     },
     tr81: {
         name: "TR81",
@@ -5227,7 +6323,8 @@ var PS_BATTLE_ITEMS = {
         num: 1211,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Foul Play. One use."
+        desc: "Teaches certain Pokemon the move Foul Play. One use.",
+        shortDesc: "Teaches certain Pokemon the move Foul Play. One use."
     },
     tr82: {
         name: "TR82",
@@ -5238,7 +6335,8 @@ var PS_BATTLE_ITEMS = {
         num: 1212,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Stored Power. One use."
+        desc: "Teaches certain Pokemon the move Stored Power. One use.",
+        shortDesc: "Teaches certain Pokemon the move Stored Power. One use."
     },
     tr83: {
         name: "TR83",
@@ -5249,7 +6347,8 @@ var PS_BATTLE_ITEMS = {
         num: 1213,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Ally Switch. One use."
+        desc: "Teaches certain Pokemon the move Ally Switch. One use.",
+        shortDesc: "Teaches certain Pokemon the move Ally Switch. One use."
     },
     tr84: {
         name: "TR84",
@@ -5260,7 +6359,8 @@ var PS_BATTLE_ITEMS = {
         num: 1214,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Scald. One use."
+        desc: "Teaches certain Pokemon the move Scald. One use.",
+        shortDesc: "Teaches certain Pokemon the move Scald. One use."
     },
     tr85: {
         name: "TR85",
@@ -5271,7 +6371,8 @@ var PS_BATTLE_ITEMS = {
         num: 1215,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Work Up. One use."
+        desc: "Teaches certain Pokemon the move Work Up. One use.",
+        shortDesc: "Teaches certain Pokemon the move Work Up. One use."
     },
     tr86: {
         name: "TR86",
@@ -5282,7 +6383,8 @@ var PS_BATTLE_ITEMS = {
         num: 1216,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Wild Charge. One use."
+        desc: "Teaches certain Pokemon the move Wild Charge. One use.",
+        shortDesc: "Teaches certain Pokemon the move Wild Charge. One use."
     },
     tr87: {
         name: "TR87",
@@ -5293,7 +6395,8 @@ var PS_BATTLE_ITEMS = {
         num: 1217,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Drill Run. One use."
+        desc: "Teaches certain Pokemon the move Drill Run. One use.",
+        shortDesc: "Teaches certain Pokemon the move Drill Run. One use."
     },
     tr88: {
         name: "TR88",
@@ -5304,7 +6407,8 @@ var PS_BATTLE_ITEMS = {
         num: 1218,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Heat Crash. One use."
+        desc: "Teaches certain Pokemon the move Heat Crash. One use.",
+        shortDesc: "Teaches certain Pokemon the move Heat Crash. One use."
     },
     tr89: {
         name: "TR89",
@@ -5315,7 +6419,8 @@ var PS_BATTLE_ITEMS = {
         num: 1219,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Hurricane. One use."
+        desc: "Teaches certain Pokemon the move Hurricane. One use.",
+        shortDesc: "Teaches certain Pokemon the move Hurricane. One use."
     },
     tr90: {
         name: "TR90",
@@ -5326,7 +6431,8 @@ var PS_BATTLE_ITEMS = {
         num: 1220,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Play Rough. One use."
+        desc: "Teaches certain Pokemon the move Play Rough. One use.",
+        shortDesc: "Teaches certain Pokemon the move Play Rough. One use."
     },
     tr91: {
         name: "TR91",
@@ -5337,7 +6443,8 @@ var PS_BATTLE_ITEMS = {
         num: 1221,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Venom Drench. One use."
+        desc: "Teaches certain Pokemon the move Venom Drench. One use.",
+        shortDesc: "Teaches certain Pokemon the move Venom Drench. One use."
     },
     tr92: {
         name: "TR92",
@@ -5348,7 +6455,8 @@ var PS_BATTLE_ITEMS = {
         num: 1222,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Dazzling Gleam. One use."
+        desc: "Teaches certain Pokemon the move Dazzling Gleam. One use.",
+        shortDesc: "Teaches certain Pokemon the move Dazzling Gleam. One use."
     },
     tr93: {
         name: "TR93",
@@ -5359,7 +6467,8 @@ var PS_BATTLE_ITEMS = {
         num: 1223,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Darkest Lariat. One use."
+        desc: "Teaches certain Pokemon the move Darkest Lariat. One use.",
+        shortDesc: "Teaches certain Pokemon the move Darkest Lariat. One use."
     },
     tr94: {
         name: "TR94",
@@ -5370,7 +6479,8 @@ var PS_BATTLE_ITEMS = {
         num: 1224,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move High Horsepower. One use."
+        desc: "Teaches certain Pokemon the move High Horsepower. One use.",
+        shortDesc: "Teaches certain Pokemon the move High Horsepower. One use."
     },
     tr95: {
         name: "TR95",
@@ -5381,7 +6491,8 @@ var PS_BATTLE_ITEMS = {
         num: 1225,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Throat Chop. One use."
+        desc: "Teaches certain Pokemon the move Throat Chop. One use.",
+        shortDesc: "Teaches certain Pokemon the move Throat Chop. One use."
     },
     tr96: {
         name: "TR96",
@@ -5392,7 +6503,8 @@ var PS_BATTLE_ITEMS = {
         num: 1226,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Pollen Puff. One use."
+        desc: "Teaches certain Pokemon the move Pollen Puff. One use.",
+        shortDesc: "Teaches certain Pokemon the move Pollen Puff. One use."
     },
     tr97: {
         name: "TR97",
@@ -5403,7 +6515,8 @@ var PS_BATTLE_ITEMS = {
         num: 1227,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Psychic Fangs. One use."
+        desc: "Teaches certain Pokemon the move Psychic Fangs. One use.",
+        shortDesc: "Teaches certain Pokemon the move Psychic Fangs. One use."
     },
     tr98: {
         name: "TR98",
@@ -5414,7 +6527,8 @@ var PS_BATTLE_ITEMS = {
         num: 1228,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Liquidation. One use."
+        desc: "Teaches certain Pokemon the move Liquidation. One use.",
+        shortDesc: "Teaches certain Pokemon the move Liquidation. One use."
     },
     tr99: {
         name: "TR99",
@@ -5425,7 +6539,8 @@ var PS_BATTLE_ITEMS = {
         num: 1229,
         gen: 8,
         isNonstandard: "Past",
-        desc: "Teaches certain Pokemon the move Body Press. One use."
+        desc: "Teaches certain Pokemon the move Body Press. One use.",
+        shortDesc: "Teaches certain Pokemon the move Body Press. One use."
     },
     twistedspoon: {
         name: "Twisted Spoon",
@@ -5436,18 +6551,21 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 15,
         num: 248,
         gen: 2,
-        desc: "Holder's Psychic-type attacks have 1.2x power."
+        desc: "Holder's Psychic-type attacks have 1.2x power.",
+        shortDesc: "Holder's Psychic-type attacks have 1.2x power."
     },
     tyranitarite: {
         name: "Tyranitarite",
         spritenum: 607,
-        megaStone: "Tyranitar-Mega",
-        megaEvolves: "Tyranitar",
+        megaStone: {
+            Tyranitar: "Tyranitar-Mega"
+        },
         itemUser: ["Tyranitar"],
         num: 669,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Tyranitar, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Tyranitar, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Tyranitar, this item allows it to Mega Evolve in battle."
     },
     ultraball: {
         name: "Ultra Ball",
@@ -5455,7 +6573,8 @@ var PS_BATTLE_ITEMS = {
         num: 2,
         gen: 1,
         isPokeball: true,
-        desc: "An ultra-performance Ball that provides a higher catch rate than a Great Ball."
+        desc: "An ultra-performance Ball that provides a higher catch rate than a Great Ball.",
+        shortDesc: "An ultra-performance Ball that provides a higher catch rate than a Great Ball."
     },
     ultranecroziumz: {
         name: "Ultranecrozium Z",
@@ -5467,7 +6586,19 @@ var PS_BATTLE_ITEMS = {
         num: 923,
         gen: 7,
         isNonstandard: "Past",
-        desc: "Dusk Mane/Dawn Wings Necrozma: Ultra Burst, then Z-Move w/ Photon Geyser."
+        desc: "Dusk Mane/Dawn Wings Necrozma: Ultra Burst, then Z-Move w/ Photon Geyser.",
+        shortDesc: "Dusk Mane/Dawn Wings Necrozma: Ultra Burst, then Z-Move w/ Photon Geyser."
+    },
+    unremarkableteacup: {
+        name: "Unremarkable Teacup",
+        spritenum: 756,
+        fling: {
+            basePower: 80
+        },
+        num: 2403,
+        gen: 9,
+        desc: "Evolves Poltchageist into Sinistcha when used.",
+        shortDesc: "Evolves Poltchageist into Sinistcha when used."
     },
     upgrade: {
         name: "Up-Grade",
@@ -5477,8 +6608,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 252,
         gen: 2,
-        isNonstandard: "Past",
-        desc: "Evolves Porygon into Porygon2 when traded."
+        desc: "Evolves Porygon into Porygon2 when traded.",
+        shortDesc: "Evolves Porygon into Porygon2 when traded."
     },
     utilityumbrella: {
         name: "Utility Umbrella",
@@ -5488,19 +6619,34 @@ var PS_BATTLE_ITEMS = {
         },
         num: 1123,
         gen: 8,
-        desc: "The holder ignores rain- and sun-based effects. Damage and accuracy calculations from attacks used by the holder are affected by rain and sun, but not attacks used against the holder.",
+        desc: "The holder ignores rain- and sun-based effects, including those of its Ability unless it is Orichalcum Pulse or Protosynthesis. Damage and accuracy calculations from attacks used by the holder are affected by rain and sun, but not attacks used against the holder.",
         shortDesc: "The holder ignores rain- and sun-based effects."
     },
     venusaurite: {
         name: "Venusaurite",
         spritenum: 608,
-        megaStone: "Venusaur-Mega",
-        megaEvolves: "Venusaur",
+        megaStone: {
+            Venusaur: "Venusaur-Mega"
+        },
         itemUser: ["Venusaur"],
         num: 659,
         gen: 6,
         isNonstandard: "Past",
-        desc: "If held by a Venusaur, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Venusaur, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Venusaur, this item allows it to Mega Evolve in battle."
+    },
+    victreebelite: {
+        name: "Victreebelite",
+        spritenum: 545,
+        megaStone: {
+            Victreebel: "Victreebel-Mega"
+        },
+        itemUser: ["Victreebel"],
+        num: 2560,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Victreebel, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Victreebel, this item allows it to Mega Evolve in battle."
     },
     wacanberry: {
         name: "Wacan Berry",
@@ -5512,7 +6658,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 186,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Electric-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Electric-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Electric-type attack. Single use."
     },
     watergem: {
         name: "Water Gem",
@@ -5521,29 +6668,8 @@ var PS_BATTLE_ITEMS = {
         num: 549,
         gen: 5,
         isNonstandard: "Past",
-        desc: "Holder's first successful Water-type attack will have 1.3x power. Single use."
-    },
-    watermemory: {
-        name: "Water Memory",
-        spritenum: 677,
-        onMemory: "Water",
-        forcedForme: "Silvally-Water",
-        itemUser: ["Silvally-Water"],
-        num: 913,
-        gen: 7,
-        isNonstandard: "Past",
-        desc: "Holder's Multi-Attack is Water type."
-    },
-    waterstone: {
-        name: "Water Stone",
-        spritenum: 529,
-        fling: {
-            basePower: 30
-        },
-        num: 84,
-        gen: 1,
-        desc: "Evolves Poliwhirl into Poliwrath, Shellder into Cloyster, Staryu into Starmie, Eevee into Vaporeon, Lombre into Ludicolo, and Panpour into Simipour when used.",
-        shortDesc: "Evolves certain species of Pokemon when used."
+        desc: "Holder's first successful Water-type attack will have 1.3x power. Single use.",
+        shortDesc: "Holder's first successful Water-type attack will have 1.3x power. Single use."
     },
     wateriumz: {
         name: "Waterium Z",
@@ -5556,7 +6682,31 @@ var PS_BATTLE_ITEMS = {
         num: 778,
         gen: 7,
         isNonstandard: "Past",
-        desc: "If holder has a Water move, this item allows it to use a Water Z-Move."
+        desc: "If holder has a Water move, this item allows it to use a Water Z-Move.",
+        shortDesc: "If holder has a Water move, this item allows it to use a Water Z-Move."
+    },
+    watermemory: {
+        name: "Water Memory",
+        spritenum: 677,
+        onMemory: "Water",
+        forcedForme: "Silvally-Water",
+        itemUser: ["Silvally-Water"],
+        num: 913,
+        gen: 7,
+        isNonstandard: "Past",
+        desc: "Holder's Multi-Attack is Water type.",
+        shortDesc: "Holder's Multi-Attack is Water type."
+    },
+    waterstone: {
+        name: "Water Stone",
+        spritenum: 529,
+        fling: {
+            basePower: 30
+        },
+        num: 84,
+        gen: 1,
+        desc: "Evolves Poliwhirl into Poliwrath, Shellder into Cloyster, Staryu into Starmie, Eevee into Vaporeon, Lombre into Ludicolo, and Panpour into Simipour when used.",
+        shortDesc: "Evolves certain species of Pokemon when used."
     },
     watmelberry: {
         name: "Watmel Berry",
@@ -5570,7 +6720,8 @@ var PS_BATTLE_ITEMS = {
         num: 181,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     waveincense: {
         name: "Wave Incense",
@@ -5582,7 +6733,8 @@ var PS_BATTLE_ITEMS = {
         num: 317,
         gen: 4,
         isNonstandard: "Past",
-        desc: "Holder's Water-type attacks have 1.2x power."
+        desc: "Holder's Water-type attacks have 1.2x power.",
+        shortDesc: "Holder's Water-type attacks have 1.2x power."
     },
     weaknesspolicy: {
         name: "Weakness Policy",
@@ -5596,7 +6748,22 @@ var PS_BATTLE_ITEMS = {
         },
         num: 639,
         gen: 6,
-        desc: "If holder is hit super effectively, raises Attack, Sp. Atk by 2 stages. Single use."
+        desc: "If holder is hit super effectively, raises Attack, Sp. Atk by 2 stages. Single use.",
+        shortDesc: "If holder is hit super effectively, raises Attack, Sp. Atk by 2 stages. Single use."
+    },
+    wellspringmask: {
+        name: "Wellspring Mask",
+        spritenum: 759,
+        fling: {
+            basePower: 60
+        },
+        onBasePowerPriority: 15,
+        forcedForme: "Ogerpon-Wellspring",
+        itemUser: ["Ogerpon-Wellspring"],
+        num: 2407,
+        gen: 9,
+        desc: "Ogerpon-Wellspring: 1.2x power attacks; Terastallize to gain Embody Aspect.",
+        shortDesc: "Ogerpon-Wellspring: 1.2x power attacks; Terastallize to gain Embody Aspect."
     },
     wepearberry: {
         name: "Wepear Berry",
@@ -5610,7 +6777,8 @@ var PS_BATTLE_ITEMS = {
         num: 167,
         gen: 3,
         isNonstandard: "Past",
-        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
+        desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
+        shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck."
     },
     whippeddream: {
         name: "Whipped Dream",
@@ -5621,7 +6789,8 @@ var PS_BATTLE_ITEMS = {
         num: 646,
         gen: 6,
         isNonstandard: "Past",
-        desc: "Evolves Swirlix into Slurpuff when traded."
+        desc: "Evolves Swirlix into Slurpuff when traded.",
+        shortDesc: "Evolves Swirlix into Slurpuff when traded."
     },
     whiteherb: {
         name: "White Herb",
@@ -5629,9 +6798,12 @@ var PS_BATTLE_ITEMS = {
         fling: {
             basePower: 10
         },
+        onAnySwitchInPriority: -2,
+        onResidualOrder: 29,
         num: 214,
         gen: 3,
-        desc: "Restores all lowered stat stages to 0 when one is less than 0. Single use."
+        desc: "Restores all lowered stat stages to 0 when one is less than 0. Single use.",
+        shortDesc: "Restores all lowered stat stages to 0 when one is less than 0. Single use."
     },
     widelens: {
         name: "Wide Lens",
@@ -5642,7 +6814,8 @@ var PS_BATTLE_ITEMS = {
         onSourceModifyAccuracyPriority: -2,
         num: 265,
         gen: 4,
-        desc: "The accuracy of attacks by the holder is 1.1x."
+        desc: "The accuracy of attacks by the holder is 1.1x.",
+        shortDesc: "The accuracy of attacks by the holder is 1.1x."
     },
     wikiberry: {
         name: "Wiki Berry",
@@ -5654,7 +6827,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 160,
         gen: 3,
-        desc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -SpA Nature. Single use."
+        desc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -SpA Nature. Single use.",
+        shortDesc: "Restores 1/3 max HP at 1/4 max HP or less; confuses if -SpA Nature. Single use."
     },
     wiseglasses: {
         name: "Wise Glasses",
@@ -5665,7 +6839,8 @@ var PS_BATTLE_ITEMS = {
         onBasePowerPriority: 16,
         num: 267,
         gen: 4,
-        desc: "Holder's special attacks have 1.1x power."
+        desc: "Holder's special attacks have 1.1x power.",
+        shortDesc: "Holder's special attacks have 1.1x power."
     },
     yacheberry: {
         name: "Yache Berry",
@@ -5677,7 +6852,8 @@ var PS_BATTLE_ITEMS = {
         },
         num: 188,
         gen: 4,
-        desc: "Halves damage taken from a supereffective Ice-type attack. Single use."
+        desc: "Halves damage taken from a supereffective Ice-type attack. Single use.",
+        shortDesc: "Halves damage taken from a supereffective Ice-type attack. Single use."
     },
     zapplate: {
         name: "Zap Plate",
@@ -5687,7 +6863,19 @@ var PS_BATTLE_ITEMS = {
         forcedForme: "Arceus-Electric",
         num: 300,
         gen: 4,
-        desc: "Holder's Electric-type attacks have 1.2x power. Judgment is Electric type."
+        desc: "Holder's Electric-type attacks have 1.2x power. Judgment is Electric type.",
+        shortDesc: "Holder's Electric-type attacks have 1.2x power. Judgment is Electric type."
+    },
+    zeraorite: {
+        name: "Zeraorite",
+        spritenum: 0,
+        megaStone: {
+            Zeraora: "Zeraora-Mega"
+        },
+        itemUser: ["Zeraora"],
+        num: 2586,
+        gen: 9,
+        isNonstandard: "Future"
     },
     zoomlens: {
         name: "Zoom Lens",
@@ -5698,7 +6886,36 @@ var PS_BATTLE_ITEMS = {
         onSourceModifyAccuracyPriority: -2,
         num: 276,
         gen: 4,
-        desc: "The accuracy of attacks by the holder is 1.2x if it moves after its target."
+        desc: "The accuracy of attacks by the holder is 1.2x if it moves after its target.",
+        shortDesc: "The accuracy of attacks by the holder is 1.2x if it moves after its target."
+    },
+    zygardite: {
+        name: "Zygardite",
+        spritenum: 568,
+        megaStone: {
+            "Zygarde-Complete": "Zygarde-Mega"
+        },
+        itemUser: ["Zygarde-Complete"],
+        num: 2584,
+        gen: 9,
+        isNonstandard: "Future",
+        desc: "If held by a Zygarde in Complete Forme, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Zygarde in Complete Forme, this item allows it to Mega Evolve in battle."
+    },
+    berry: {
+        name: "Berry",
+        spritenum: 319,
+        isBerry: true,
+        naturalGift: {
+            basePower: 80,
+            type: "Poison"
+        },
+        onResidualOrder: 10,
+        num: 155,
+        gen: 2,
+        isNonstandard: "Past",
+        desc: "(Gen 2) Restores 10 HP when at 1/2 max HP or less. Single use.",
+        shortDesc: "(Gen 2) Restores 10 HP when at 1/2 max HP or less. Single use."
     },
     berserkgene: {
         name: "Berserk Gene",
@@ -5709,21 +6926,8 @@ var PS_BATTLE_ITEMS = {
         num: 0,
         gen: 2,
         isNonstandard: "Past",
-        desc: "(Gen 2) On switch-in, raises holder's Attack by 2 and confuses it. Single use."
-    },
-    berry: {
-        name: "Berry",
-        spritenum: 319,
-        isBerry: true,
-        naturalGift: {
-            basePower: 80,
-            type: "Poison"
-        },
-        onResidualOrder: 5,
-        num: 155,
-        gen: 2,
-        isNonstandard: "Past",
-        desc: "(Gen 2) Restores 10 HP when at 1/2 max HP or less. Single use."
+        desc: "(Gen 2) On switch-in, raises holder's Attack by 2 and confuses it. Single use.",
+        shortDesc: "(Gen 2) On switch-in, raises holder's Attack by 2 and confuses it. Single use."
     },
     bitterberry: {
         name: "Bitter Berry",
@@ -5736,7 +6940,8 @@ var PS_BATTLE_ITEMS = {
         num: 156,
         gen: 2,
         isNonstandard: "Past",
-        desc: "(Gen 2) Holder is cured if it is confused. Single use."
+        desc: "(Gen 2) Holder is cured if it is confused. Single use.",
+        shortDesc: "(Gen 2) Holder is cured if it is confused. Single use."
     },
     burntberry: {
         name: "Burnt Berry",
@@ -5749,7 +6954,8 @@ var PS_BATTLE_ITEMS = {
         num: 153,
         gen: 2,
         isNonstandard: "Past",
-        desc: "(Gen 2) Holder is cured if it is frozen. Single use."
+        desc: "(Gen 2) Holder is cured if it is frozen. Single use.",
+        shortDesc: "(Gen 2) Holder is cured if it is frozen. Single use."
     },
     goldberry: {
         name: "Gold Berry",
@@ -5759,11 +6965,12 @@ var PS_BATTLE_ITEMS = {
             basePower: 80,
             type: "Psychic"
         },
-        onResidualOrder: 5,
+        onResidualOrder: 10,
         num: 158,
         gen: 2,
         isNonstandard: "Past",
-        desc: "(Gen 2) Restores 30 HP when at 1/2 max HP or less. Single use."
+        desc: "(Gen 2) Restores 30 HP when at 1/2 max HP or less. Single use.",
+        shortDesc: "(Gen 2) Restores 30 HP when at 1/2 max HP or less. Single use."
     },
     iceberry: {
         name: "Ice Berry",
@@ -5776,7 +6983,8 @@ var PS_BATTLE_ITEMS = {
         num: 152,
         gen: 2,
         isNonstandard: "Past",
-        desc: "(Gen 2) Holder is cured if it is burned. Single use."
+        desc: "(Gen 2) Holder is cured if it is burned. Single use.",
+        shortDesc: "(Gen 2) Holder is cured if it is burned. Single use."
     },
     mintberry: {
         name: "Mint Berry",
@@ -5789,7 +6997,8 @@ var PS_BATTLE_ITEMS = {
         num: 150,
         gen: 2,
         isNonstandard: "Past",
-        desc: "(Gen 2) Holder wakes up if it is asleep. Single use."
+        desc: "(Gen 2) Holder wakes up if it is asleep. Single use.",
+        shortDesc: "(Gen 2) Holder wakes up if it is asleep. Single use."
     },
     miracleberry: {
         name: "Miracle Berry",
@@ -5802,7 +7011,8 @@ var PS_BATTLE_ITEMS = {
         num: 157,
         gen: 2,
         isNonstandard: "Past",
-        desc: "(Gen 2) Holder cures itself if it is confused or has a status condition. Single use."
+        desc: "(Gen 2) Holder cures itself if it is confused or has a status condition. Single use.",
+        shortDesc: "(Gen 2) Holder cures itself if it is confused or has a status condition. Single use."
     },
     mysteryberry: {
         name: "Mystery Berry",
@@ -5815,7 +7025,8 @@ var PS_BATTLE_ITEMS = {
         num: 154,
         gen: 2,
         isNonstandard: "Past",
-        desc: "(Gen 2) Restores 5 PP to the first of the holder's moves to reach 0 PP. Single use."
+        desc: "(Gen 2) Restores 5 PP to the first of the holder's moves to reach 0 PP. Single use.",
+        shortDesc: "(Gen 2) Restores 5 PP to the first of the holder's moves to reach 0 PP. Single use."
     },
     pinkbow: {
         name: "Pink Bow",
@@ -5823,7 +7034,8 @@ var PS_BATTLE_ITEMS = {
         num: 251,
         gen: 2,
         isNonstandard: "Past",
-        desc: "(Gen 2) Holder's Normal-type attacks have 1.1x power."
+        desc: "(Gen 2) Holder's Normal-type attacks have 1.1x power.",
+        shortDesc: "(Gen 2) Holder's Normal-type attacks have 1.1x power."
     },
     polkadotbow: {
         name: "Polkadot Bow",
@@ -5831,7 +7043,8 @@ var PS_BATTLE_ITEMS = {
         num: 251,
         gen: 2,
         isNonstandard: "Past",
-        desc: "(Gen 2) Holder's Normal-type attacks have 1.1x power."
+        desc: "(Gen 2) Holder's Normal-type attacks have 1.1x power.",
+        shortDesc: "(Gen 2) Holder's Normal-type attacks have 1.1x power."
     },
     przcureberry: {
         name: "PRZ Cure Berry",
@@ -5844,7 +7057,8 @@ var PS_BATTLE_ITEMS = {
         num: 149,
         gen: 2,
         isNonstandard: "Past",
-        desc: "(Gen 2) Holder cures itself if it is paralyzed. Single use."
+        desc: "(Gen 2) Holder cures itself if it is paralyzed. Single use.",
+        shortDesc: "(Gen 2) Holder cures itself if it is paralyzed. Single use."
     },
     psncureberry: {
         name: "PSN Cure Berry",
@@ -5857,18 +7071,21 @@ var PS_BATTLE_ITEMS = {
         num: 151,
         gen: 2,
         isNonstandard: "Past",
-        desc: "(Gen 2) Holder is cured if it is poisoned. Single use."
+        desc: "(Gen 2) Holder is cured if it is poisoned. Single use.",
+        shortDesc: "(Gen 2) Holder is cured if it is poisoned. Single use."
     },
     crucibellite: {
         name: "Crucibellite",
         spritenum: 577,
-        megaStone: "Crucibelle-Mega",
-        megaEvolves: "Crucibelle",
+        megaStone: {
+            Crucibelle: "Crucibelle-Mega"
+        },
         itemUser: ["Crucibelle"],
         num: -1,
         gen: 6,
         isNonstandard: "CAP",
-        desc: "If held by a Crucibelle, this item allows it to Mega Evolve in battle."
+        desc: "If held by a Crucibelle, this item allows it to Mega Evolve in battle.",
+        shortDesc: "If held by a Crucibelle, this item allows it to Mega Evolve in battle."
     },
     vilevial: {
         name: "Vile Vial",
@@ -5882,6 +7099,7 @@ var PS_BATTLE_ITEMS = {
         num: -2,
         gen: 8,
         isNonstandard: "CAP",
-        desc: "If held by a Venomicon, its Poison- and Flying-type attacks have 1.2x power."
+        desc: "If held by a Venomicon, its Poison- and Flying-type attacks have 1.2x power.",
+        shortDesc: "If held by a Venomicon, its Poison- and Flying-type attacks have 1.2x power."
     }
 };
