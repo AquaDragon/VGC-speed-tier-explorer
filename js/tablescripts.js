@@ -16,6 +16,7 @@ var cboxTailwind = document.getElementById('cboxTailwind');
 var cboxTailwindMax = document.getElementById('cboxTailwindMax');
 
 // Initialize initial sort orders & display filters
+var isChampions = 0;
 var isAscending = false; // descending by default
 var hasNonFullyEvolved = false; // exclude non-fully evolved by default
 var setFastBST = parseInt(selectFastBST.value, 10);
@@ -29,13 +30,24 @@ var setTailwindMaxBST = parseInt(selectTailwindBST.value, 10);
 const abilityList = ['Chlorophyll', 'Swift Swim', 'Sand Rush', 'Slush Rush', 'Unburden']; // x2
 const abParadox = ['Quark Drive', 'Protosynthesis']; // x1.5 with Booster Energy
 
+// Check if Champions format then update box? (IVs = 31, SP -> EVs)
+var formatBox = document.getElementById('formatBox');
+
+function updateFormatBox() {
+  const selectedOption = formatOptions.find((option) => option.value === selectFormat.value);
+
+  isChampions = selectedOption?.isChampions ? 1 : 0;
+  formatBox.textContent = isChampions ? 'Champions SPs' : 'Default EVs';
+}
+
 // Function to reset the table to its initial state
 function defaultTableRules() {
   isAscending = false;
   hasNonFullyEvolved = false;
   updateButtonText();
 
-  selectFormat.value = 'FORMAT_SV_REGULATION_H';
+  selectFormat.value = 'CHAMPIONS_REG_M_A';
+  updateFormatBox();
 
   cboxFastBST.checked = true;
   selectFastBST.value = '90';
@@ -98,6 +110,10 @@ function updateButtonText() {
 
 function generateTableEntry(pokeName, baseStat, ivs, evs, nature, item, ability, field) {
   let speedStat = calcSpeedStat(baseStat, ivs, evs, nature);
+
+  if (isChampions === 1) {
+    ivs = 31;
+  }
 
   if (['Choice Scarf', 'Booster Energy'].includes(item)) {
     speedStat = Math.floor(speedStat * 1.5);
@@ -344,7 +360,9 @@ function addChangeListener(s, updateFunction) {
   });
 }
 
-addChangeListener(selectFormat, () => {});
+addChangeListener(selectFormat, () => {
+  updateFormatBox();
+});
 addChangeListener(selectFastBST, (value) => (setFastBST = value));
 addChangeListener(selectNeutral252BST, (value) => (setNeutral252BST = value));
 addChangeListener(selectSlowBST, (value) => (setSlowBST = value));
@@ -354,4 +372,5 @@ addChangeListener(selectTailwindBST, (value) => (setTailwindBST = value));
 addChangeListener(selectTailwindMaxBST, (value) => (setTailwindMaxBST = value));
 
 updateButtonText();
+updateFormatBox();
 updateTable();

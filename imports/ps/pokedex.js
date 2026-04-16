@@ -20302,4 +20302,4 @@ var PS_BATTLE_POKEDEX = {
   },
 };
 
-module.exports = { PS_BATTLE_POKEDEX };
+// module.exports = { PS_BATTLE_POKEDEX };
