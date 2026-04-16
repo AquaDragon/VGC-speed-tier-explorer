@@ -1,4 +1,5 @@
 # Exclude files and folders from Prettier formatting
+/js/chaos/**
 /imports/dmgcalc/**
 /imports/ps/items.js
 /imports/ps/pokedex.js

@@ -1,15 +1,10 @@
 // Get HTML elements
 var selectFormat = document.getElementById('selectFormat');
 
-var selectFastBST = document.getElementById('selectFastBST');
 var selectNeutral252BST = document.getElementById('selectNeutral252BST');
-var selectSlowBST = document.getElementById('selectSlowBST');
-
 var selectChoiceScarfBST = document.getElementById('selectChoiceScarfBST');
 var selectIronBallBST = document.getElementById('selectIronBallBST');
-
 var selectTailwindBST = document.getElementById('selectTailwindBST');
-var selectTailwindMaxBST = document.getElementById('selectTailwindMaxBST');
 
 const formatOptions = [
   {
@@ -17,42 +12,43 @@ const formatOptions = [
     text: 'Champions Regulation M-A',
     var: CHAMPIONS_REG_M_A,
     isChampions: 1,
+    hasIronBall: 0,
   },
-  {
-    value: 'FORMAT_SV_REGULATION_H',
-    text: 'SV Ranked Battle Regulation Set H',
-    var: FORMAT_SV_REGULATION_H,
-  },
+  // {
+  //   value: 'FORMAT_SV_REGULATION_H',
+  //   text: 'SV Ranked Battle Regulation Set H',
+  //   var: FORMAT_SV_REGULATION_H,
+  // },
   {
     value: 'FORMAT_SV_REGULATION_G',
-    text: 'SV Ranked Battle Regulation Set G',
+    text: 'SV Ranked Battle Regulation Set I',  // G and I same mons
     var: FORMAT_SV_REGULATION_G,
   },
-  {
-    value: 'FORMAT_SV_REGULATION_E',
-    text: 'SV Ranked Battle Regulation Set E',
-    var: FORMAT_SV_REGULATION_E,
-  },
-  {
-    value: 'FORMAT_SV_REGULATION_D',
-    text: 'SV Ranked Battle Regulation Set D',
-    var: FORMAT_SV_REGULATION_D,
-  },
-  {
-    value: 'FORMAT_SV_REGULATION_C',
-    text: 'SV Ranked Battle Regulation Set C',
-    var: FORMAT_SV_REGULATION_C,
-  },
-  {
-    value: 'FORMAT_SV_SERIES_2',
-    text: 'SV Ranked Battle Series 2',
-    var: FORMAT_SV_SERIES_2,
-  },
-  {
-    value: 'FORMAT_SV_SERIES_1',
-    text: 'SV Ranked Battle Series 1',
-    var: FORMAT_SV_SERIES_1,
-  },
+  // {
+  //   value: 'FORMAT_SV_REGULATION_E',
+  //   text: 'SV Ranked Battle Regulation Set E',
+  //   var: FORMAT_SV_REGULATION_E,
+  // },
+  // {
+  //   value: 'FORMAT_SV_REGULATION_D',
+  //   text: 'SV Ranked Battle Regulation Set D',
+  //   var: FORMAT_SV_REGULATION_D,
+  // },
+  // {
+  //   value: 'FORMAT_SV_REGULATION_C',
+  //   text: 'SV Ranked Battle Regulation Set C',
+  //   var: FORMAT_SV_REGULATION_C,
+  // },
+  // {
+  //   value: 'FORMAT_SV_SERIES_2',
+  //   text: 'SV Ranked Battle Series 2',
+  //   var: FORMAT_SV_SERIES_2,
+  // },
+  // {
+  //   value: 'FORMAT_SV_SERIES_1',
+  //   text: 'SV Ranked Battle Series 1',
+  //   var: FORMAT_SV_SERIES_1,
+  // },
 ];
 
 function initializeFormatSelect() {
@@ -60,7 +56,8 @@ function initializeFormatSelect() {
     const option = document.createElement('option');
     option.value = optionData.value;
     option.text = optionData.text;
-    option.isChampions = option.isChampions ? 1 : 0;
+    option.isChampions = optionData.isChampions;
+    option.hasIronBall = optionData.hasIronBall;
     selectFormat.appendChild(option);
   });
 
@@ -70,34 +67,25 @@ function initializeFormatSelect() {
 
 // Initialize dropdown options for selecting MIN & MAX speeds
 function initalizeBSTselect() {
-  let opFast = [];
   let opNeutral252 = [];
-  let opSlow = [];
   let opChoiceScarf = [];
   let opIronBall = [];
   let opTailwind = [];
-  let opTailwindMax = [];
 
   for (let i = 5; i <= 200; i += 5) {
     const option = document.createElement('option');
     option.value = i;
     option.text = i;
-    opFast.push(option);
-    opNeutral252.push(option.cloneNode(true)); // Clone the option for the slow select
-    opSlow.push(option.cloneNode(true));
-    opChoiceScarf.push(option.cloneNode(true));
+    opNeutral252.push(option.cloneNode(true));
+    opChoiceScarf.push(option.cloneNode(true)); // Clone the option for the slow select
     opIronBall.push(option.cloneNode(true));
     opTailwind.push(option.cloneNode(true));
-    opTailwindMax.push(option.cloneNode(true));
   }
 
-  opFast.sort((a, b) => b.value - a.value);
   opNeutral252.sort((a, b) => a.value - b.value);
-  opSlow.sort((a, b) => a.value - b.value);
   opChoiceScarf.sort((a, b) => b.value - a.value);
   opIronBall.sort((a, b) => a.value - b.value);
   opTailwind.sort((a, b) => b.value - a.value);
-  opTailwindMax.sort((a, b) => b.value - a.value);
 
   function appendOption(options, select, onUpdate) {
     options.forEach((option) => {
@@ -108,24 +96,18 @@ function initalizeBSTselect() {
     });
   }
 
-  appendOption(opFast, selectFastBST, (value) => (selectFastBST = value));
   appendOption(opNeutral252, selectNeutral252BST, (value) => (selectNeutral252BST = value));
-  appendOption(opSlow, selectSlowBST, (value) => (selectSlowBST = value));
   appendOption(opChoiceScarf, selectChoiceScarfBST, (value) => (selectChoiceScarfBST = value));
   appendOption(opIronBall, selectIronBallBST, (value) => (selectIronBallBST = value));
   appendOption(opTailwind, selectTailwindBST, (value) => (selectTailwindBST = value));
-  appendOption(opTailwindMax, selectTailwindMaxBST, (value) => (selectTailwindMaxBST = value));
 
   // Set default values
-  selectFastBST.value = '90';
   selectNeutral252BST.value = '70';
-  selectSlowBST.value = '70';
 
   selectChoiceScarfBST.value = '75';
   selectIronBallBST.value = '50';
 
   selectTailwindBST.value = '65';
-  selectTailwindMaxBST.value = '65';
 }
 
 initializeFormatSelect();

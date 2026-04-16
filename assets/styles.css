@@ -100,23 +100,23 @@ h1 {
 }
 
 .table-cell {
-  flex: 1;
+  flex: 0.5;
   text-align: left;
-  padding: 2px;
+  padding: 0px;
 }
 
 /* Adjust specific table cell styles */
 .table-cell.speed-header {
-  flex: 1.5;
+  flex: 0.75;
 }
 
 .table-cell.speed {
-  flex: 1.5;
+  flex: 0.75; /* same as above */
   font-size: 16pt;
 }
 
 .table-cell.mods {
-  flex: 2;
+  flex: 1;
 }
 
 .table-cell.poke-names {

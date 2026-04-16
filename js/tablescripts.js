@@ -7,25 +7,20 @@ var btnDeselectAll = document.getElementById('btnDeselectAll');
 var btnSortAscending = document.getElementById('btnSortAscending');
 var btnFilterNonFullyEvolved = document.getElementById('btnFilterNonFullyEvolved');
 
-var cboxFastBST = document.getElementById('cboxFastBST');
-var cboxSlowBST = document.getElementById('cboxSlowBST');
 var cboxChoiceScarf = document.getElementById('cboxChoiceScarf');
 var cboxIronBall = document.getElementById('cboxIronBall');
 var cboxAbilities = document.getElementById('cboxAbilities');
 var cboxTailwind = document.getElementById('cboxTailwind');
-var cboxTailwindMax = document.getElementById('cboxTailwindMax');
 
 // Initialize initial sort orders & display filters
 var isChampions = 0;
+var hasIronBall = 1;
 var isAscending = false; // descending by default
 var hasNonFullyEvolved = false; // exclude non-fully evolved by default
-var setFastBST = parseInt(selectFastBST.value, 10);
 var setNeutral252BST = parseInt(selectNeutral252BST.value, 10);
-var setSlowBST = parseInt(selectSlowBST.value, 10);
 var setChoiceScarfBST = parseInt(selectChoiceScarfBST.value, 10);
 var setIronBallBST = parseInt(selectIronBallBST.value, 10);
 var setTailwindBST = parseInt(selectTailwindBST.value, 10);
-var setTailwindMaxBST = parseInt(selectTailwindBST.value, 10);
 
 const abilityList = ['Chlorophyll', 'Swift Swim', 'Sand Rush', 'Slush Rush', 'Unburden']; // x2
 const abParadox = ['Quark Drive', 'Protosynthesis']; // x1.5 with Booster Energy
@@ -37,7 +32,9 @@ function updateFormatBox() {
   const selectedOption = formatOptions.find((option) => option.value === selectFormat.value);
 
   isChampions = selectedOption?.isChampions ? 1 : 0;
-  formatBox.textContent = isChampions ? 'Champions SPs' : 'Default EVs';
+  formatBox.textContent = isChampions ? 'Champions SPs' : 'Default EVs / IVs';
+
+  hasIronBall = selectedOption?.hasIronBall ?? 1; // always 1 unless zero
 }
 
 // Function to reset the table to its initial state
@@ -49,17 +46,9 @@ function defaultTableRules() {
   selectFormat.value = 'CHAMPIONS_REG_M_A';
   updateFormatBox();
 
-  cboxFastBST.checked = true;
-  selectFastBST.value = '90';
-  setFastBST = parseInt(selectFastBST.value, 10);
-
   cboxNeutral252BST.checked = true;
   selectNeutral252BST.value = '70';
   setNeutral252BST = parseInt(selectNeutral252BST.value, 10);
-
-  cboxSlowBST.checked = true;
-  selectSlowBST.value = '70';
-  setSlowBST = parseInt(selectSlowBST.value, 10);
 
   cboxChoiceScarf.checked = true;
   selectChoiceScarfBST.value = '75';
@@ -75,23 +64,16 @@ function defaultTableRules() {
   selectTailwindBST.value = '65';
   setTailwindBST = parseInt(selectTailwindBST.value, 10);
 
-  cboxTailwindMax.checked = true;
-  selectTailwindMaxBST.value = '65';
-  setTailwindMaxBST = parseInt(selectTailwindMaxBST.value, 10);
-
   updateTable();
 }
 
 // Deselecting all rules is equivalent to showing neutral base speed table
 function deselectAllRules() {
-  cboxFastBST.checked = false;
   cboxNeutral252BST.checked = false;
-  cboxSlowBST.checked = false;
   cboxChoiceScarf.checked = false;
   cboxIronBall.checked = false;
   cboxAbilities.checked = false;
   cboxTailwind.checked = false;
-  cboxTailwindMax.checked = false;
 
   updateTable();
 }
@@ -152,36 +134,29 @@ function generateTableData() {
   format.forEach(function (poke) {
     const pokemon = PS_BATTLE_POKEDEX[toID(poke)] || PS_BATTLE_POKEDEX[toID(DMGCALC_TO_SHOWDOWN_NAMES[poke])];
     const pokeName = pokemon.name;
+    const pokeForme = pokemon.forme; // check for Megas (cannot have items)
 
     if (hasNonFullyEvolved || pokemon.evos === undefined) {
       const baseStat = pokemon.baseStats.spe;
       let ivs, evs, nature, stat, pokemonData;
       const pokeAbility = Object.values(pokemon.abilities);
 
-      // Neutral speed (always populate)
+      // Always populate: Max speed, Neutral speed, Min speed
+      pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, null, null);
+      tableData.push(pokemonData);
       pokemonData = generateTableEntry(pokeName, baseStat, 31, 0, '', null, null, null);
       tableData.push(pokemonData);
+      pokemonData = generateTableEntry(pokeName, baseStat, 0, 0, '-', null, null, null);
+      tableData.push(pokemonData);
 
-      // BST: Fast
-      if (baseStat >= setFastBST && cboxFastBST.checked) {
-        pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, null, null);
-        tableData.push(pokemonData);
-      }
-
-      // BST: Neutral 252
+      // Neutral 252 EVs / 32 SPs
       if (baseStat >= setNeutral252BST && cboxNeutral252BST.checked) {
         pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '', null, null, null);
         tableData.push(pokemonData);
       }
 
-      // BST: Slow
-      if (baseStat <= setSlowBST && cboxSlowBST.checked) {
-        pokemonData = generateTableEntry(pokeName, baseStat, 0, 0, '-', null, null, null);
-        tableData.push(pokemonData);
-      }
-
       // Item: Choice Scarf / Booster Energy (paradox mons)
-      if (baseStat >= setChoiceScarfBST && cboxChoiceScarf.checked) {
+      if (baseStat >= setChoiceScarfBST && cboxChoiceScarf.checked && pokeForme !== 'Mega') {
         if (pokeAbility.some((ability) => abParadox.includes(ability))) {
           pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', 'Booster Energy', null, null);
         } else {
@@ -191,7 +166,7 @@ function generateTableData() {
       }
 
       // Item: Iron Ball
-      if (baseStat <= setIronBallBST && cboxIronBall.checked) {
+      if (hasIronBall && baseStat <= setIronBallBST && cboxIronBall.checked && pokeForme !== 'Mega') {
         pokemonData = generateTableEntry(pokeName, baseStat, 0, 0, '-', 'Iron Ball', null, null);
         tableData.push(pokemonData);
       }
@@ -215,22 +190,21 @@ function generateTableData() {
         cboxTailwind.checked &&
         !pokeAbility.some((ability) => abilityList.includes(ability))
       ) {
-        pokemonData = generateTableEntry(pokeName, baseStat, 31, 0, '', null, null, 'Tailwind');
-        tableData.push(pokemonData);
-      }
-
-      if (
-        baseStat >= setTailwindMaxBST &&
-        cboxTailwindMax.checked &&
-        !pokeAbility.some((ability) => abilityList.includes(ability))
-      ) {
-        pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, null, 'Tailwind');
-        tableData.push(pokemonData);
+        tableData.push(generateTableEntry(pokeName, baseStat, 31, 252, '+', null, null, 'Tailwind'));
+        tableData.push(generateTableEntry(pokeName, baseStat, 31, 0, '', null, null, 'Tailwind'));
+        tableData.push(generateTableEntry(pokeName, baseStat, 0, 0, '-', null, null, 'Tailwind'));
       }
     }
   });
 
   return tableData;
+}
+
+// helper function to format EV/SP values
+function formatEV(evValue, nature) {
+  if (evValue === 32 && nature === '+') return 'Max';
+  if (evValue === 0 && nature === '-') return 'Min';
+  return `${evValue}${nature}`;
 }
 
 // Function to generate the Pokémon table based on sort order & filters
@@ -241,11 +215,15 @@ function generateTable() {
   // Create a table header
   var tableHeader = document.createElement('div');
   tableHeader.classList.add('table-row');
+
+  const ivHeader = isChampions ? '' : `<div class="table-cell">IVs</div>`;
+  const evHeader = isChampions ? `<div class="table-cell">SPs</div>` : `<div class="table-cell">EVs</div>`;
+
   tableHeader.innerHTML = `
     <div class="table-cell speed-header">Speed</div>
     <div class="table-cell">BST</div>
-    <div class="table-cell">IVs</div>
-    <div class="table-cell">EVs</div>
+    ${ivHeader}
+    ${evHeader}
     <div class="table-cell">Item</div>
     <div class="table-cell mods">Modifier</div>
     <div class="table-cell poke-names">Pokémon</div>
@@ -277,6 +255,10 @@ function generateTable() {
       const stat = pokemonGroup[0].stat;
       const mods = [pokemonGroup[0].ability, pokemonGroup[0].field].filter(Boolean).join(', ');
 
+      // construct the EV string
+      const evValue = isChampions ? Math.floor((pokemonGroup[0].ev + 4) / 8) : pokemonGroup[0].ev;
+      // const evDisplay = formatEV(evValue, pokemonGroup[0].nature);
+
       const pokeEntries = pokemonGroup
         .map((poke) => {
           const types = PS_BATTLE_POKEDEX[toID(poke.name)].types;
@@ -293,15 +275,16 @@ function generateTable() {
         .join('');
 
       var tableRow = document.createElement('div');
+      const ivCell = isChampions ? '' : `<div class="table-cell">${pokemonGroup[0].iv}</div>`;
+      const item = pokemonGroup[0].item;
+      const itemCell = item ? `<span class='item-icon' style="${getItemIcon(item)}" title="${item}"></span>` : '-';
       tableRow.classList.add('table-row');
       tableRow.innerHTML = `
         <div class="table-cell speed">${stat}</div>
         <div class="table-cell">${pokemonGroup[0].baseStat}</div>
-        <div class="table-cell">${pokemonGroup[0].iv}</div>
-        <div class="table-cell">${pokemonGroup[0].ev}${pokemonGroup[0].nature}</div>
-        <div class="table-cell">
-          <span class='item-icon' style="${getItemIcon(pokemonGroup[0].item)}" title="${pokemonGroup[0].item}"></span>
-        </div>
+        ${ivCell}
+        <div class="table-cell">${evValue}${pokemonGroup[0].nature}</div>
+        <div class="table-cell">${itemCell}</div>
         <div class="table-cell mods">${mods ? mods : '-'}</div>
         <div class="table-cell poke-names">${pokeEntries}</div>`;
       displayTable.appendChild(tableRow);
@@ -343,14 +326,11 @@ function cboxEventListener(cbox) {
   });
 }
 
-cboxEventListener(cboxFastBST);
 cboxEventListener(cboxNeutral252BST);
-cboxEventListener(cboxSlowBST);
 cboxEventListener(cboxChoiceScarf);
 cboxEventListener(cboxIronBall);
 cboxEventListener(cboxAbilities);
 cboxEventListener(cboxTailwind);
-cboxEventListener(cboxTailwindMax);
 
 // Event listeners for select value changes
 function addChangeListener(s, updateFunction) {
@@ -363,13 +343,10 @@ function addChangeListener(s, updateFunction) {
 addChangeListener(selectFormat, () => {
   updateFormatBox();
 });
-addChangeListener(selectFastBST, (value) => (setFastBST = value));
 addChangeListener(selectNeutral252BST, (value) => (setNeutral252BST = value));
-addChangeListener(selectSlowBST, (value) => (setSlowBST = value));
 addChangeListener(selectChoiceScarfBST, (value) => (setChoiceScarfBST = value));
 addChangeListener(selectIronBallBST, (value) => (setIronBallBST = value));
 addChangeListener(selectTailwindBST, (value) => (setTailwindBST = value));
-addChangeListener(selectTailwindMaxBST, (value) => (setTailwindMaxBST = value));
 
 updateButtonText();
 updateFormatBox();
