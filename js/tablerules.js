@@ -1,6 +1,8 @@
 // Get HTML elements
 var selectFormat = document.getElementById('selectFormat');
 
+var selectMaxSpeedBST = document.getElementById('selectMaxSpeedBST');
+var selectMinSpeedBST = document.getElementById('selectMinSpeedBST');
 var selectNeutral252BST = document.getElementById('selectNeutral252BST');
 var selectChoiceScarfBST = document.getElementById('selectChoiceScarfBST');
 var selectIronBallBST = document.getElementById('selectIronBallBST');
@@ -21,7 +23,7 @@ const formatOptions = [
   // },
   {
     value: 'FORMAT_SV_REGULATION_G',
-    text: 'SV Ranked Battle Regulation Set I',  // G and I same mons
+    text: 'SV Ranked Battle Regulation Set I', // G and I same mons
     var: FORMAT_SV_REGULATION_G,
   },
   // {
@@ -67,6 +69,8 @@ function initializeFormatSelect() {
 
 // Initialize dropdown options for selecting MIN & MAX speeds
 function initalizeBSTselect() {
+  let opMaxSpeed = [];
+  let opMinSpeed = [];
   let opNeutral252 = [];
   let opChoiceScarf = [];
   let opIronBall = [];
@@ -76,15 +80,19 @@ function initalizeBSTselect() {
     const option = document.createElement('option');
     option.value = i;
     option.text = i;
+    opMaxSpeed.push(option);
+    opMinSpeed.push(option.cloneNode(true));
     opNeutral252.push(option.cloneNode(true));
     opChoiceScarf.push(option.cloneNode(true)); // Clone the option for the slow select
     opIronBall.push(option.cloneNode(true));
     opTailwind.push(option.cloneNode(true));
   }
 
-  opNeutral252.sort((a, b) => a.value - b.value);
+  opMaxSpeed.sort((a, b) => b.value - a.value);
+  opMinSpeed.sort((a, b) => b.value - a.value);
+  opNeutral252.sort((a, b) => b.value - a.value);
   opChoiceScarf.sort((a, b) => b.value - a.value);
-  opIronBall.sort((a, b) => a.value - b.value);
+  opIronBall.sort((a, b) => b.value - a.value);
   opTailwind.sort((a, b) => b.value - a.value);
 
   function appendOption(options, select, onUpdate) {
@@ -96,12 +104,16 @@ function initalizeBSTselect() {
     });
   }
 
+  appendOption(opMaxSpeed, selectMaxSpeedBST, (value) => (selectMaxSpeedBST = value));
+  appendOption(opMinSpeed, selectMinSpeedBST, (value) => (selectMinSpeedBST = value));
   appendOption(opNeutral252, selectNeutral252BST, (value) => (selectNeutral252BST = value));
   appendOption(opChoiceScarf, selectChoiceScarfBST, (value) => (selectChoiceScarfBST = value));
   appendOption(opIronBall, selectIronBallBST, (value) => (selectIronBallBST = value));
   appendOption(opTailwind, selectTailwindBST, (value) => (selectTailwindBST = value));
 
   // Set default values
+  selectMaxSpeedBST.value = '90';
+  selectMinSpeedBST.value = '70';
   selectNeutral252BST.value = '70';
 
   selectChoiceScarfBST.value = '75';

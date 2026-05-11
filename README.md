@@ -1,19 +1,18 @@
 # VGC Speed Tier Explorer
 
-A tool for exploring speed tiers in various Pokémon VGC formats. Optimized for Pokémon Scarlet & Violet.
+A tool for exploring speed tiers in various Pokémon VGC formats. Optimized for Pokémon Champions.
 
-Currently in development and some features may not work correctly.
+Currently in development. Some features may not work correctly.
 
 https://aquadragon.github.io/VGC-speed-tier-explorer/
 
 ### To-do (not in any order):
-- Add stage boosts: Dragon Dance/Quiver Dance (+1), Commander (+2)
-- Group regional formes into a single entry if they have the same speed
-- Update visuals: buttons & layout
-- Allow user to edit table entries (add/remove uncommon situations)
-- Visual indicator for weighted lists (e.g. top 50/100 usage)
-- Read smogon usage stats to determine most common speeds
-- Add stat distribution chart
+- Add boosts from moves: Dragon Dance/Quiver Dance/Scale Shot/Clangorous Soul/Aura Wheel (+1), Shell Smash (+2)
+- Add boosts from abilities: Speed Boost (+1), Weak Armor/Surge Surfer/Commander\[SV] (+2)
+- Group multiple formes into a single entry if they have the same speed
+- Update layout: keep top panel in fixed position, improve visuals, add stat distribution chart
+- Allow user to input entries from team paste
+- Read smogon usage stats to determine common meta speeds
 
 
 ## Development

@@ -17,6 +17,8 @@ var isChampions = 0;
 var hasIronBall = 1;
 var isAscending = false; // descending by default
 var hasNonFullyEvolved = false; // exclude non-fully evolved by default
+var setMaxSpeedBST = parseInt(selectMaxSpeedBST.value, 10);
+var setMinSpeedBST = parseInt(selectMinSpeedBST.value, 10);
 var setNeutral252BST = parseInt(selectNeutral252BST.value, 10);
 var setChoiceScarfBST = parseInt(selectChoiceScarfBST.value, 10);
 var setIronBallBST = parseInt(selectIronBallBST.value, 10);
@@ -46,7 +48,15 @@ function defaultTableRules() {
   selectFormat.value = 'CHAMPIONS_REG_M_A';
   updateFormatBox();
 
-  cboxNeutral252BST.checked = true;
+  cboxMaxSpeed.checked = false;
+  selectMaxSpeedBST.value = '90';
+  setMaxSpeedBST = parseInt(selectMaxSpeedBST.value, 10);
+
+  cboxMinSpeed.checked = false;
+  selectMinSpeedBST.value = '70';
+  setMinSpeedBST = parseInt(selectMinSpeedBST.value, 10);
+
+  cboxNeutral252.checked = true;
   selectNeutral252BST.value = '70';
   setNeutral252BST = parseInt(selectNeutral252BST.value, 10);
 
@@ -54,7 +64,7 @@ function defaultTableRules() {
   selectChoiceScarfBST.value = '75';
   setChoiceScarfBST = parseInt(selectChoiceScarfBST.value, 10);
 
-  cboxIronBall.checked = true;
+  cboxIronBall.checked = false;
   selectIronBallBST.value = '50';
   setIronBallBST = parseInt(selectIronBallBST.value, 10);
 
@@ -69,7 +79,9 @@ function defaultTableRules() {
 
 // Deselecting all rules is equivalent to showing neutral base speed table
 function deselectAllRules() {
-  cboxNeutral252BST.checked = false;
+  cboxMaxSpeed.checked = false;
+  cboxMinSpeed.checked = false;
+  cboxNeutral252.checked = false;
   cboxChoiceScarf.checked = false;
   cboxIronBall.checked = false;
   cboxAbilities.checked = false;
@@ -141,53 +153,62 @@ function generateTableData() {
       let ivs, evs, nature, stat, pokemonData;
       const pokeAbility = Object.values(pokemon.abilities);
 
-      // Always populate: Max speed, Neutral speed, Min speed
-      pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, null, null);
-      tableData.push(pokemonData);
-      pokemonData = generateTableEntry(pokeName, baseStat, 31, 0, '', null, null, null);
-      tableData.push(pokemonData);
-      pokemonData = generateTableEntry(pokeName, baseStat, 0, 0, '-', null, null, null);
-      tableData.push(pokemonData);
+      // Always populate: Neutral speed
+      tableData.push(generateTableEntry(pokeName, baseStat, 31, 0, '', null, null, null));
+
+      // Max speed above setting
+      if (!(cboxMaxSpeed.checked && baseStat <= setMaxSpeedBST)) {
+        tableData.push(generateTableEntry(pokeName, baseStat, 31, 252, '+', null, null, null));
+      }
+
+      // Min speed below setting
+      if (!(cboxMinSpeed.checked && baseStat >= setMinSpeedBST)) {
+        tableData.push(generateTableEntry(pokeName, baseStat, 0, 0, '-', null, null, null));
+      }
 
       // Neutral 252 EVs / 32 SPs
-      if (baseStat >= setNeutral252BST && cboxNeutral252BST.checked) {
-        pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '', null, null, null);
-        tableData.push(pokemonData);
+      if (cboxNeutral252.checked && baseStat >= setNeutral252BST) {
+        tableData.push(generateTableEntry(pokeName, baseStat, 31, 252, '', null, null, null));
       }
 
       // Item: Choice Scarf / Booster Energy (paradox mons)
-      if (baseStat >= setChoiceScarfBST && cboxChoiceScarf.checked && pokeForme !== 'Mega') {
+      if (
+        cboxChoiceScarf.checked &&
+        baseStat >= setChoiceScarfBST &&
+        !['Mega', 'M-Mega', 'F-Mega'].includes(pokeForme)
+      ) {
         if (pokeAbility.some((ability) => abParadox.includes(ability))) {
-          pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', 'Booster Energy', null, null);
+          tableData.push(generateTableEntry(pokeName, baseStat, 31, 252, '+', 'Booster Energy', null, null));
         } else {
-          pokemonData = generateTableEntry(pokeName, baseStat, 31, 252, '+', 'Choice Scarf', null, null);
+          tableData.push(generateTableEntry(pokeName, baseStat, 31, 252, '+', 'Choice Scarf', null, null));
         }
-        tableData.push(pokemonData);
       }
 
       // Item: Iron Ball
-      if (hasIronBall && baseStat <= setIronBallBST && cboxIronBall.checked && pokeForme !== 'Mega') {
-        pokemonData = generateTableEntry(pokeName, baseStat, 0, 0, '-', 'Iron Ball', null, null);
-        tableData.push(pokemonData);
+      if (
+        cboxIronBall.checked &&
+        hasIronBall &&
+        baseStat <= setIronBallBST &&
+        !['Mega', 'M-Mega', 'F-Mega'].includes(pokeForme)
+      ) {
+        tableData.push(generateTableEntry(pokeName, baseStat, 0, 0, '-', 'Iron Ball', null, null));
       }
 
       // Abilities: Weather boost
       pokeAbility.forEach((ab) => {
         if (cboxAbilities.checked && abilityList.includes(ab)) {
           // Max speed
-          const pokemonData1 = generateTableEntry(pokeName, baseStat, 31, 252, '+', null, ab, null);
-          tableData.push(pokemonData1);
+          tableData.push(generateTableEntry(pokeName, baseStat, 31, 252, '+', null, ab, null));
 
           // 252 speed EVs, neutral nature
-          const pokemonData2 = generateTableEntry(pokeName, baseStat, 31, 252, '', null, ab, null);
-          tableData.push(pokemonData2);
+          tableData.push(generateTableEntry(pokeName, baseStat, 31, 252, '', null, ab, null));
         }
       });
 
       // Field: Tailwind  (Note: exclude mons that gain x2 speed from ability)
       if (
-        baseStat >= setTailwindBST &&
         cboxTailwind.checked &&
+        baseStat >= setTailwindBST &&
         !pokeAbility.some((ability) => abilityList.includes(ability))
       ) {
         tableData.push(generateTableEntry(pokeName, baseStat, 31, 252, '+', null, null, 'Tailwind'));
@@ -326,7 +347,9 @@ function cboxEventListener(cbox) {
   });
 }
 
-cboxEventListener(cboxNeutral252BST);
+cboxEventListener(cboxMaxSpeed);
+cboxEventListener(cboxMinSpeed);
+cboxEventListener(cboxNeutral252);
 cboxEventListener(cboxChoiceScarf);
 cboxEventListener(cboxIronBall);
 cboxEventListener(cboxAbilities);
@@ -343,6 +366,8 @@ function addChangeListener(s, updateFunction) {
 addChangeListener(selectFormat, () => {
   updateFormatBox();
 });
+addChangeListener(selectMaxSpeedBST, (value) => (setMaxSpeedBST = value));
+addChangeListener(selectMinSpeedBST, (value) => (setMinSpeedBST = value));
 addChangeListener(selectNeutral252BST, (value) => (setNeutral252BST = value));
 addChangeListener(selectChoiceScarfBST, (value) => (setChoiceScarfBST = value));
 addChangeListener(selectIronBallBST, (value) => (setIronBallBST = value));

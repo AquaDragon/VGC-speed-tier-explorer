@@ -21,24 +21,32 @@
         <button id="btnFilterNonFullyEvolved">Exclude Non-Fully Evolved</button>
       </div>
       <div class="buttonContainer">
-        <label for="cboxNeutral252BST">
-          <input type="checkbox" id="cboxNeutral252BST" checked />Include neutral 252 EV / 32 SP if base speed is above
-          <select id="selectNeutral252BST"></select>
+        <label for="cboxMaxSpeed">
+          <input type="checkbox" id="cboxMaxSpeed" checked /><b>Max Speed</b>: Do not include if base speed is below
+          <select id="selectMaxSpeedBST"></select>
         </label><br />
+        <label for="cboxMinSpeed">
+          <input type="checkbox" id="cboxMinSpeed" checked /><b>Min Speed</b>: Do not include if base speed is above
+          <select id="selectMinSpeedBST"></select>
+        </label><br />
+        <label for="cboxNeutral252">
+          <input type="checkbox" id="cboxNeutral252" checked /><b>Neutral 252 EV / 32 SP</b>: Include if base speed is above
+          <select id="selectNeutral252BST"></select>
+        </label><br /><br />
         <label for="cboxChoiceScarf">
-          <input type="checkbox" id="cboxChoiceScarf" checked />Include <b>Choice Scarf / Booster Energy</b> if base speed is above
+          <input type="checkbox" id="cboxChoiceScarf" checked /><b>Choice Scarf / Booster Energy:</b> Include if base speed is above
           <select id="selectChoiceScarfBST"></select>
         </label><br />
+        <label for="cboxIronBall">
+          <input type="checkbox" id="cboxIronBall" checked />(SV) <b>Iron Ball:</b> Include if base speed is below
+          <select id="selectIronBallBST"></select>
+        </label><br /><br />
         <label for="cboxAbilities">
-          <input type="checkbox" id="cboxAbilities" checked />Include speed-boosting abilities (e.g. Chlorophyll, Swift Swim, Sand Rush, Slush Rush, Unburden)
+          <input type="checkbox" id="cboxAbilities" checked /><b>Speed-boosting abilities:</b> Chlorophyll, Swift Swim, Sand Rush, Slush Rush, Unburden
         </label><br />
         <label for="cboxTailwind">
-          <input type="checkbox" id="cboxTailwind" checked />Include Tailwind if base speed is above
+          <input type="checkbox" id="cboxTailwind" checked /><b>Tailwind</b>: Include if base speed is above
           <select id="selectTailwindBST"></select>
-        </label><br /><br />
-        <label for="cboxIronBall">
-          <input type="checkbox" id="cboxIronBall" checked />(Reg I) Include <b>Iron Ball</b> if base speed is below
-          <select id="selectIronBallBST"></select>
         </label>
       </div>
     </div><br />
