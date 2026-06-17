@@ -45,7 +45,7 @@ function defaultTableRules() {
   hasNonFullyEvolved = false;
   updateButtonText();
 
-  selectFormat.value = 'CHAMPIONS_REG_M_A';
+  selectFormat.value = 'CHAMPIONS_REG_M_B';
   updateFormatBox();
 
   cboxMaxSpeed.checked = false;
@@ -175,7 +175,7 @@ function generateTableData() {
       if (
         cboxChoiceScarf.checked &&
         baseStat >= setChoiceScarfBST &&
-        !['Mega', 'M-Mega', 'F-Mega'].includes(pokeForme)
+        !['Mega', 'M-Mega', 'F-Mega', 'Mega-X', 'Mega-Y'].includes(pokeForme)
       ) {
         if (pokeAbility.some((ability) => abParadox.includes(ability))) {
           tableData.push(generateTableEntry(pokeName, baseStat, 31, 252, '+', 'Booster Energy', null, null));

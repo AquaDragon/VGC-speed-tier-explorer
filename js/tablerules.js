@@ -10,6 +10,13 @@ var selectTailwindBST = document.getElementById('selectTailwindBST');
 
 const formatOptions = [
   {
+    value: 'CHAMPIONS_REG_M_B',
+    text: 'Champions Regulation M-B',
+    var: CHAMPIONS_REG_M_B,
+    isChampions: 1,
+    hasIronBall: 0,
+  },
+  {
     value: 'CHAMPIONS_REG_M_A',
     text: 'Champions Regulation M-A',
     var: CHAMPIONS_REG_M_A,
@@ -64,7 +71,7 @@ function initializeFormatSelect() {
   });
 
   // Set default value
-  selectFormat.value = 'CHAMPIONS_REG_M_A';
+  selectFormat.value = 'CHAMPIONS_REG_M_B';
 }
 
 // Initialize dropdown options for selecting MIN & MAX speeds
